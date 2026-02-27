@@ -121,8 +121,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-  <link rel="preload" href="{{ asset('/facelift2/dentalgo.css') }}" rel="stylesheet" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
+
   <style>
     /* Padronização Global de Modais (GoClinic Style - Topo com Margem) */
     .modal-backdrop {
@@ -348,7 +347,7 @@ if (null !== Request()->segment(5)) {
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-  <script src="script.js"></script>
+  <script src="{{ asset('script.js') }}"></script>
 
   <!-- MODAL GIFTCARD  -->
   <div class="modal fade" id="ModalGift" tabindex="-1" aria-labelledby="ModalGift" aria-hidden="true">
