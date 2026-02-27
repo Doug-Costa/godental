@@ -361,7 +361,7 @@ if (null !== Request()->segment(5)) {
           <div class="logo-modal">
 
             <img style="max-height:39px; margin: 20px auto; display:block "
-              src="https://novo.dentalgo.com.br/imagens/logo_dentalgo_branco_site.png">
+              src="{{ asset('facelift2/img/logonovabranco.png') }}">
             <div class="modal-title tituloModal">
               <h5 class="modal-title" id="espacoParaAssinantesLabel">{{__("messages.ModGiftInf")}}</h5>
               <br>
@@ -441,7 +441,7 @@ if (null !== Request()->segment(5)) {
           <div class="logo-modal">
 
             <img style="max-height:39px; margin: 20px auto; display:block "
-              src="https://novo.dentalgo.com.br/imagens/logo_dentalgo_branco_site.png">
+              src="{{ asset('facelift2/img/logonovabranco.png') }}">
             <div class="modal-title tituloModal">
               <h5 class="modal-title" id="espacoParaAssinantesLabel">{{__("messages.ModMessgPlan")}}</h5>
               <p class="modal-title titulo-modalgeral1">{{__("messages.ModVenha")}}</p>
@@ -509,7 +509,7 @@ if (null !== Request()->segment(5)) {
           <div class="logo-modal">
 
             <img style="max-height:39px; margin: 20px auto; display:block "
-              src="https://novo.dentalgo.com.br/imagens/logo_dentalgo_branco_site.png">
+              src="{{ asset('facelift2/img/logonovabranco.png') }}">
             <div class="modal-title tituloModal">
               <h5 class="modal-title titulo-modalgeral" id="espacoParaAssinantesLabel">{{__("messages.ModTopo")}}</h5>
               <p class="modal-title titulo-modalgeral1">{{__("messages.ModVenha")}}</p>
@@ -575,7 +575,7 @@ if (null !== Request()->segment(5)) {
           <div class="logo-modal">
 
             <img style="max-height:39px; margin: 20px auto; display:block "
-              src="https://novo.dentalgo.com.br/imagens/logo_dentalgo_branco_site.png">
+              src="{{ asset('facelift2/img/logonovabranco.png') }}">
             <div class="modal-title tituloModal">
               <h5 class="modal-title" id="espacoParaAssinantesLabel">{{__("messages.ModTopoVenceu")}}</h5>
               <p class="modal-title">{{__("messages.ModRenove")}}</p>
@@ -645,7 +645,7 @@ if (null !== Request()->segment(5)) {
           <div class="logo-modal">
 
             <img style="max-height:39px; margin: 20px auto; display:block "
-              src="https://novo.dentalgo.com.br/imagens/logo_dentalgo_branco_site.png">
+              src="{{ asset('facelift2/img/logonovabranco.png') }}">
             <div class="modal-title text-justify">
               <h5 class="modal-title" id="termoDeUso" style="font-size:19px; color:#000;">
                 @php echo __("messages.ModalTermoDeUso") @endphp</h5>

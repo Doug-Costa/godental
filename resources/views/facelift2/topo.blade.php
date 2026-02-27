@@ -1,11 +1,4 @@
-<div
-  style="background: yellow; color: black; padding: 10px; font-size: 14px; z-index: 99999; position: relative; border: 3px solid red;">
-  <b>!!! DEBUG BAR (MUST BE VISIBLE) !!!</b><br>
-  URL: {{ request()->fullUrl() }} |
-  APP_URL: {{ env('APP_URL') }} |
-  CSS LINK: {{ asset('facelift2/dentalgo.css') }} |
-  LOG: {{ asset('facelift2/img/Screenshot_140.png') }}
-</div>
+<a class="visually-hidden-focusable skiplink" href="#conteudo">Pular para o conteúdo</a>
 
 <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 <aside class="sidebar" id="sidebar" aria-label="Menu lateral">
@@ -177,7 +170,7 @@
           </svg>
           <span class="fw-bold">Dental<span class="text-accent">Go</span></span> -->
         <a href="{{ route('facehome') }}">
-          <img class="logodentalgotopo" src="{{ asset('facelift2/img/Screenshot_140.png') }}" width="140px">
+          <img class="logodentalgotopo" src="{{ asset('facelift2/img/logonovabranco.png') }}" width="140px">
         </a>
 
       </a>
