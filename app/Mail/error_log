@@ -1,0 +1,264 @@
+[27-Dec-2023 00:10:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[02-Jan-2024 07:55:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[09-Jan-2024 06:33:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[10-Jan-2024 17:32:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[15-Jan-2024 12:16:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[24-Jan-2024 00:41:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[08-Feb-2024 01:42:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[08-Feb-2024 01:42:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[09-Feb-2024 13:38:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[15-Feb-2024 10:01:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[15-Feb-2024 13:59:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[18-Feb-2024 14:55:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[21-Feb-2024 21:29:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[25-Feb-2024 22:57:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[04-Mar-2024 06:43:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[16-Mar-2024 17:52:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[18-Mar-2024 00:54:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[18-Mar-2024 02:00:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[18-Mar-2024 02:46:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[19-Mar-2024 02:02:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[21-Mar-2024 01:40:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[22-Mar-2024 01:41:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[08-Apr-2024 00:53:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[13-Apr-2024 04:18:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[18-Apr-2024 13:51:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[19-Apr-2024 23:36:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[28-Apr-2024 00:21:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[07-May-2024 19:21:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[13-May-2024 11:21:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[19-May-2024 21:20:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[19-May-2024 23:52:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[06-Jun-2024 05:19:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[14-Jun-2024 15:00:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[28-Jun-2024 01:31:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[29-Jun-2024 15:00:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[18-Jul-2024 01:10:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[22-Jul-2024 07:38:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[31-Jul-2024 19:37:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[13-Aug-2024 05:40:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[19-Aug-2024 02:30:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[20-Aug-2024 17:27:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[23-Aug-2024 04:53:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[23-Aug-2024 16:02:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[28-Sep-2024 10:39:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[16-Nov-2024 19:00:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[21-Nov-2024 12:42:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[29-Nov-2024 17:54:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[04-Dec-2024 21:56:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[25-Dec-2024 17:51:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[28-Dec-2024 05:23:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[28-Dec-2024 20:10:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[29-Dec-2024 02:07:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[19-Jan-2025 17:15:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[01-Feb-2025 17:11:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[07-Feb-2025 03:25:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[13-Feb-2025 00:06:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[24-Feb-2025 02:33:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[01-Mar-2025 22:31:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[01-Mar-2025 22:43:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[07-Mar-2025 21:06:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[08-Mar-2025 05:39:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[08-Mar-2025 10:31:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[08-Mar-2025 15:54:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[14-Mar-2025 23:41:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[15-Mar-2025 01:17:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9
+[15-Mar-2025 02:20:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Mail\Mailable" not found in /home/dentalgo/public_html/app/Mail/ExemploEmail.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Mail/ExemploEmail.php on line 9

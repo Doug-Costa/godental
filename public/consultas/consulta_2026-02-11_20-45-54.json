@@ -1,0 +1,13 @@
+{
+    "patient_id": 8,
+    "patient_name": "Eric clapton",
+    "patient_identifier": "55987994565",
+    "consultation_type": "Avaliação",
+    "observations": "sir eric vai vir ver o que esta dificultando sua mordida",
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito. Paciente relata desconforto térmico ao contato com líquidos gelados. Presença de restauração infiltrada na face oclusal do dente 16. Indicação de radiografia panorâmica para planejamento cirúrgico.",
+    "duration": "00:20",
+    "timestamp": "2026-02-11 20:45:54",
+    "status": "transcribed",
+    "db_id": 14,
+    "audio_path": "consultas\/consulta_2026-02-11_20-45-54.webm"
+}

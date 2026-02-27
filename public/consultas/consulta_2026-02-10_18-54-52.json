@@ -1,0 +1,13 @@
+{
+    "patient_id": "2",
+    "patient_name": "Laurindo Furquim",
+    "patient_identifier": "44999185160",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando avaliação clínica do paciente.",
+    "duration": "00:06",
+    "timestamp": "2026-02-10 18:54:52",
+    "status": "transcribed",
+    "db_id": 6,
+    "audio_path": "consultas\/consulta_2026-02-10_18-54-52.webm"
+}

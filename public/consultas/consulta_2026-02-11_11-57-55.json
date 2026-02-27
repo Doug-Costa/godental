@@ -1,0 +1,13 @@
+{
+    "patient_id": "7",
+    "patient_name": "Lucas Gonçalves",
+    "patient_identifier": "4499998787",
+    "consultation_type": "Avaliação",
+    "observations": "retorno do lucas para ponhar apareio",
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito. Paciente relata desconforto térmico ao contato com líquidos gelados. Presença de restauração infiltrada na face oclusal do dente 16. Indicação de radiografia panorâmica para planejamento cirúrgico. Higiene bucal classificada como boa, porém requer profilaxia de rotina. Paciente concorda com o plano de tratamento proposto.",
+    "duration": "00:59",
+    "timestamp": "2026-02-11 11:57:55",
+    "status": "transcribed",
+    "db_id": 13,
+    "audio_path": "consultas\/consulta_2026-02-11_11-57-55.webm"
+}

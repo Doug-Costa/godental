@@ -1,0 +1,15 @@
+{
+    "patient_id": 22,
+    "patient_name": "caio ishkawa",
+    "patient_identifier": "44878962963",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Nenhuma voz detectada.",
+    "duration": "00:09",
+    "service_price_id": "1",
+    "valor": "200.00",
+    "timestamp": "2026-02-20 15:12:24",
+    "status": "transcribed",
+    "db_id": 20,
+    "audio_path": "consultas\/consulta_2026-02-20_15-12-24.webm"
+}

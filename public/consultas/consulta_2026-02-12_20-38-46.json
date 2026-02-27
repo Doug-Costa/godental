@@ -1,0 +1,15 @@
+{
+    "patient_id": 12,
+    "patient_name": "Paula Tejano",
+    "patient_identifier": "45988497657",
+    "consultation_type": "Retorno",
+    "observations": "chegou para fazer uma manutenção indicação de colega de pato branco",
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito.",
+    "duration": "00:10",
+    "service_price_id": "5",
+    "valor": "100.00",
+    "timestamp": "2026-02-12 20:38:47",
+    "status": "transcribed",
+    "db_id": 17,
+    "audio_path": "consultas\/consulta_2026-02-12_20-38-46.webm"
+}

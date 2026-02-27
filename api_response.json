@@ -1,0 +1,1275 @@
+﻿{
+    "status":  "ok",
+    "aluno":  {
+                  "id":  70,
+                  "nome":  "Pedro Ferreira",
+                  "email":  "souguespo@email.com",
+                  "telefone":  "11888888888",
+                  "cpf":  "",
+                  "instituicao_id":  4,
+                  "created_at":  "2025-10-08 18:28:47",
+                  "updated_at":  "2025-10-08 18:28:47"
+              },
+    "turmas":  [
+                   {
+                       "turma":  {
+                                     "id":  37,
+                                     "nome":  "Turma Teste 2025",
+                                     "numero":  "100",
+                                     "especialidade":  "Ortodontia",
+                                     "data_inicio":  "2025-02-01",
+                                     "periodicidade":  "mensal",
+                                     "data_final":  "2025-05-01",
+                                     "instituicao_id":  4,
+                                     "created_at":  "2025-10-09 14:41:52",
+                                     "updated_at":  "2025-10-09 14:41:52"
+                                 },
+                       "instituicao":  {
+                                           "id":  4,
+                                           "nome":  "Dental Press",
+                                           "limit_alunos":  100,
+                                           "telefone":  "(44) 99942-8200",
+                                           "email":  "thiago@gmail.com",
+                                           "logo":  "storage/instituicoes/Dental_Press/UAPLPJAlLkEpqswL2LXXT6FtjGrlGPGbNnEJd0Za.png",
+                                           "css":  null,
+                                           "endereco":  "Rua Luis Doutor Luis Teixeira Mendes",
+                                           "facebook":  "https://www.facebook.com/dentalpresseditora/",
+                                           "instagram":  "https://www.instagram.com/dental_press/?hl=pt",
+                                           "youtube":  "https://www.youtube.com/user/dentalpress",
+                                           "website":  null,
+                                           "blog":  null,
+                                           "dominio":  "dentalpress.com.br",
+                                           "created_at":  "2024-03-08 12:21:00",
+                                           "updated_at":  "2025-10-09 13:23:48"
+                                       },
+                       "contrato_vigente":  true,
+                       "banners":  [
+                                       {
+                                           "id":  3,
+                                           "id_instituicao":  4,
+                                           "data_inicio":  "2025-10-06",
+                                           "data_final":  "2025-12-31",
+                                           "imagem":  "/storage/banners/1759843069_0pbkC6xEcR.png",
+                                           "titulo":  "teste banner",
+                                           "descricao":  "Este é um banner de teste para demonstrar a nova funcionalidade com título, descrição e URL implementada no sistema DentalGo Evolution.",
+                                           "url":  "https://dentalgo.com.br",
+                                           "created_at":  "2025-10-06 19:21:34",
+                                           "updated_at":  "2025-10-07 13:17:49"
+                                       }
+                                   ],
+                       "apostilas":  [
+                                         {
+                                             "vinculo_apostila":  {
+                                                                      "id":  43,
+                                                                      "apostila_id":  84,
+                                                                      "ordem":  1,
+                                                                      "data_disponibilidade":  "2025-01-01",
+                                                                      "turma_id":  37,
+                                                                      "created_at":  "2025-10-09 14:41:52",
+                                                                      "updated_at":  "2025-10-09 14:55:40"
+                                                                  },
+                                             "apostila":  {
+                                                              "id":  84,
+                                                              "nome":  "Anatomia",
+                                                              "nome_ing":  null,
+                                                              "nome_pt":  null,
+                                                              "nome_es":  null,
+                                                              "descricao":  "Os estudos utilizam principalmente tomografia computadorizada de feixe cônico (TCFC) para analisar a complexidade dos canais radiculares em pré-molares, molares e incisivos inferiores, além de avaliar correlações entre a anatomia da base craniana e padrões faciais. Também são abordados aspectos anatômicos importantes para o planejamento de implantes na região anterior da maxila. O conteúdo fornece uma base anatômica sólida para diagnósticos precisos e tratamentos mais seguros, especialmente em endodontia, implantodontia e ortodontia.",
+                                                              "capa":  "capa/EztcxmUQyKiR3zEMunkSRUQ9V5XdDQfRdBHF1y8z.png",
+                                                              "valor":  "500.00",
+                                                              "data_publicacao":  "2025-03-26",
+                                                              "idioma":  "pt",
+                                                              "instituicao_id":  null,
+                                                              "created_at":  "2025-03-26 18:29:34",
+                                                              "updated_at":  "2025-03-26 18:29:34"
+                                                          },
+                                             "capitulos":  [
+                                                               {
+                                                                   "id":  82,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Acidentes e complicações relacionados à instalação das fixações zigomáticas: uma abordagem anátomo-cirúrgica",
+                                                                   "descricao_capitulo":  "A fixação zigomática, desenvolvida em 1989 pelo Prof. Brånemark, tem representado uma bem sucedida alternativa de ancoragem para a reabilitação de maxilas atróicas. A busca por áreas de ancoragem para implantes osseointe﻿grados, como alternativas cirúrgicas ao enxerto ósseo, depende de...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/Q0R84WSzWxcFMZLbkoUMKP5DzKhHobNvjRXFdDvE.pdf",
+                                                                   "ordem":  1,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  83,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Análise da morfologia dos canais radiculares de pré-molares inferiores por meio da tomografia computadorizada de feixe cônico",
+                                                                   "descricao_capitulo":  "Introdução: O sucesso do tratamento endodôntico depende da limpeza e da modelagem dos canais radiculares. Para tanto, deve-se ter um conhecimento profundo sobre a anatomia do sistema de canais radiculares. No entanto, essa anatomia é complexa, com variações mor-fológicas em diferentes...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/FABGSCrUtvygFQCkuuh0D5F3wFIxmvFt8FgbHO3c.pdf",
+                                                                   "ordem":  2,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  84,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Aspectos estéticos e biológicos atuais para o planejamento integrado de implantes unitários anteriores em função imediata",
+                                                                   "descricao_capitulo":  "O planejamento e a instalação de implantes osseointegráveis em maxila anterior devem ser conduzidos por rigorosa disciplina técnica. A anatomia óssea, o fenótipo gengival, assim como a avaliação dentofacial, necessitam de criteriosa análise para resultar em um diagnóstico preciso,...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/gmUD6P1IRvC7BQX7PQGKY3x2gSN5MZmsCKppX5XD.pdf",
+                                                                   "ordem":  3,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  85,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Avaliação da morfologia interna de terceiros molares usando quatro métodos diferentes",
+                                                                   "descricao_capitulo":  "Esse estudo avaliou a quantidade e configuração dos canais radiculares em terceiros molares superiores e inferiores, por meio de quatro métodos (radiográfico, macroscópico, microscópico e cortes seriados). Foram selecionados 100 terceiros molares, sendo adotados comocritérios de exclusão:...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/VIR5dfwodPIaKXIHS7fdju08YxqRFZDBEnShYWBK.pdf",
+                                                                   "ordem":  4,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  86,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Cirurgia de elevação da mucosa do seio maxilar: o uso de biomaterial é necessário?",
+                                                                   "descricao_capitulo":  "...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/J9c5ZwzINJp4LEOOr3yjIIy4C6Z1nStr5DyRuLo7.pdf",
+                                                                   "ordem":  5,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  87,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Estudo cefalométrico da correlação da anatomia da base craniana com o padrão facial e as bases apicais",
+                                                                   "descricao_capitulo":  "Objetivos: este estudo transversal foi realizado com o objetivo de avaliar cefalometricamentea correlação da anatomia da base craniana com o padrão facial e as bases apicais. Metodologia:foram utilizadas 88 telerradiografias de norma lateral de jovens leucodermas brasileiros commédia de idade...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/QuO6lgWRbw0tLC7lDDCJI3nQaAfnVz8YG9ziiZSQ.pdf",
+                                                                   "ordem":  6,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  88,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Estudo da anatomia de incisivos inferiores em uma população da região Sudeste brasileira, usando TCFC",
+                                                                   "descricao_capitulo":  "Objetivo: Avaliar, por meio de tomografia computadorizada de feixe cônico (TCFC), a morfologia dos canais radiculares de dentes incisivos inferiores, em uma população da região Sudeste brasileira, e sua relação com a idade e o sexo dos pacientes Métodos: Foram analisados 371 prontuários de...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/1zP6jIJWnIX5I1Y3yNuFmXZj0Xr1EfIR83nU5pNe.pdf",
+                                                                   "ordem":  7,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  89,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Estudo da morfologia de primeiros molares inferiores por meio de quatro métodos",
+                                                                   "descricao_capitulo":  "Introdução: o conhecimento da morfologia interna da câmara pulpar e dos canais radiculares, bem como de sua diversidade, é de suma importância para o sucesso do tratamento endodôntico. Os molares inferiores são um grupo de dentes que possuem uma anatomia interna complexa, sendo fundamental...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/ljnnEA1raP6DeBoWGVCWzwyNFrmApAV6CFVLDl4e.pdf",
+                                                                   "ordem":  8,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  90,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Estudo in vitro da morfologia dos canais radiculares do primeiro pré-molar inferior, utilizando tomografia computadorizada de feixe cônico",
+                                                                   "descricao_capitulo":  "Introdução: o tratamento endodôntico objetiva limpar e modelar o sistema de canais radiculares. O preparo químico-mecânico e a obturação tridimensional (3D) do sistema de canais radiculares são baseados no conhecimento da anatomia dentária interna. As radiografias convencionais e...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/L7RcTxrbHdrSuGUxM6wViG8H2UgG41xEc0oPnK3h.pdf",
+                                                                   "ordem":  9,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  91,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Mapeamento da crista infrazigomática com vistas à instalação de miniplacas ortodônticas: um estudo tomográfico",
+                                                                   "descricao_capitulo":  "Introdução: devido ao aumento do uso de miniplacas para ancoragem em Ortodontia, torna-se de fundamental importância compreender melhor a anatomia (espessura) da crista infrazigomática em pacientes adultos.Objetivos: avaliar a espessura da crista infrazigomática em pacientes adultos (sexos...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/m0z9LTJJBavIkQwBEDhq5Mx9CGuvFKb1zVHPbIUr.pdf",
+                                                                   "ordem":  10,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  92,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Morfologia Coronária Anômala e sua Influência na Mecânica Ortodôntica: Apresentação de um Caso Clínico",
+                                                                   "descricao_capitulo":  "ResumoAs anomalias coronárias de forma constituem um problema para a mecânica ortodôntica fixa, devido às dificuldades e até mesmo em alguns casos, à inviabilização do tratamentoortodôntico, que utiliza acessórios desenvolvidos para uma morfologia dentária conforme os padrões normais da...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/gpNMp4EtRfzVV8zvDSIqbXbNlpf680K16QqPmqc6.pdf",
+                                                                   "ordem":  11,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  93,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Novo implante P-I Brånemark PhilosophyTM e cirurgia guiada por computador: inovações tecnológicas inaugurando uma nova era na Implantologia",
+                                                                   "descricao_capitulo":  "ResumoA credibilidade alcançada pela osseointegração tem motivado pesquisadores e clínicos a extrapolarem sua aplicação, no intuito de otimizar as reabilitações protéticas implanto-suportadas. Desta forma, novos conceitos e tendências têm surgido, buscando oferecer aos pacientes maior...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/D0ZjqgWkhtJUJSPR4aD1kS9h7gossdalZUfxHdB0.pdf",
+                                                                   "ordem":  12,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  94,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "O desafio estético com próteses anteriores unitárias: o planejamento com integração clínico-laboratorial",
+                                                                   "descricao_capitulo":  "Trabalhar com próteses unitárias anteriores é um dos grandes desafios que o odontólogo encontra na clínica diária. O acerto da forma, cor e morfologia dos tecidos periodontaisé a maior dificuldade encontrada pelos profissionais. O objetivo deste artigo foi demonstrar a integração...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/no9ZPkDmgehs5ZvUjlLCwCFKKO2sMizwtDtOuYsM.pdf",
+                                                                   "ordem":  13,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  95,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Palato: o que saber previamente à instalação de mini-implantes?",
+                                                                   "descricao_capitulo":  "A região do palato é um dos locais mais favoráveis para a instalação de mini-implantes.Fatores como fácil acessibilidade, cobertura total de gengiva queratinizada e boa qualidadeóssea em sítios especíicos contribuem para a redução do risco de inlamação e aumento daestabilidade...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/TWSG1e57xnMwzKGpHiKs9v5iuw0BipvuUpeeyV7a.pdf",
+                                                                   "ordem":  14,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  96,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Pré-molar com três raízes tratado por meio de Endodontia convencional: relato de caso com acompanhamento de 24 meses",
+                                                                   "descricao_capitulo":  "Introdução: O completo conhecimento da anatomia dentária interna representa um dos fatores determinantes para o sucesso do tratamento endodôntico. A presença de três raízes em segundos pré-molares superiores refere-se a uma ocorrência rara durante os tratamentos endodônticos...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/ipzFRWexou1YOlbRfGOk05dR3MZbp9ZG5upEZT04.pdf",
+                                                                   "ordem":  15,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  97,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Primeiro pré-molar superior com três raízes: caso clínico",
+                                                                   "descricao_capitulo":  "Introdução: o primeiro pré-molar superior pode, raramente, apresentar-se com três raízes — uma palatina e duas vestibulares —, exigindo mais atenção do profissional durante a intervenção endodôntica. Objetivo: o presente trabalho relata o caso clínico de um pré-molarsuperior com...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/BSL7OMhRHFAAGSWcTex1RRUfrKEzDBRhGnsRJI0n.pdf",
+                                                                   "ordem":  16,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  98,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Reabilitação de maxila edêntula com prótese ixa implantossuportada: relato de caso",
+                                                                   "descricao_capitulo":  "Resumo / Introdução: os problemas funcionais, estéticos e psicológicos decorrentes do edentulismo têm levado a uma busca crescente por reabilitação bucal com próteses sobre implantes. Esse tipo de reabilitação necessita de um planejamento meticuloso, especialmente para os casos de maxila...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/2XBeF3ZTipyc8C6zlc5wCrVMBcggnvLHMw9tEAJ9.pdf",
+                                                                   "ordem":  17,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  99,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Reconstrução mandibular de fratura cominutiva por projétil de arma de fogo",
+                                                                   "descricao_capitulo":  "Introdução: Ferimentos por projétil de arma de fogo (PAF) envolvendo a face são grandes desafios para os cirurgiões no que concerne ao tratamento de tais pacientes, devido à sua complexidade, associada à energia dissipada pelo projétil, ao grau de cominuição óssea, às perdas teciduais,...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/yLWTxtWAfxD1nlOg9HGOcQoRa6sopxbMTEQe5ic4.pdf",
+                                                                   "ordem":  18,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  100,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Região posterior da maxila: atualizando conceitos anatômicos com o avanço da tecnologia de superfícies. Relato de caso clínico",
+                                                                   "descricao_capitulo":  "Objetivo: desde o início da especialidade Implantodontia, o tratamento reabilitador por meio de implantes na região posterior de maxila foi considerado um grande desafio para o profissional. As limitações das técnicas e materiais empregados geraram conceitos errôneos, principalmente quanto...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/hPnU43SAN3ygfvHbhMsHSyrwP777AyEI6B73cwa0.pdf",
+                                                                   "ordem":  19,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  101,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Restauração de borda incisal translúcida: um desafio para a Odontologia Estética. Relato de caso clínico",
+                                                                   "descricao_capitulo":  "Fraturas coronárias comprometema função e a estética dos pacientes.Um correto diagnóstico, um tratamento conservador e uma atençãoquanto aos riscos referentes ao trauma merecem destaque. Para a reabilitação dessas fraturas, a resina composta representa uma al-ternativa conservadora,...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/AwLenhwbi2MTwtErHXt0iPts4q793a2pr68jJcMv.pdf",
+                                                                   "ordem":  20,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  102,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Retração gengival: aspectos biológicos e protéticos",
+                                                                   "descricao_capitulo":  "Os procedimentos para a confecção de próteses ixas necessitam de uma reprodução iel da porção preparada e não preparada do dente, assim como do término do preparo, freqüentemente localizado no interior do sulco gengival.O comportamento biológico dos tecidos periodontais deve ser...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/A9XG4XPTyoVrAnFOcx9n1KEfAH4YGPP9jsUqVP29.pdf",
+                                                                   "ordem":  21,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  103,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Rizectomia em molar superior: relato de caso",
+                                                                   "descricao_capitulo":  "Introdução: as cirurgias parendodônticas são procedimentos usados na resolução de complicações resultantes do tratamento endodôntico convencional. A rizectomia éuma das modalidades da cirurgia parendodôntica, a qual consiste na remoção radicular parcial, sendo necessário o preparo e...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/05giSKhl84Eu7taD2eNuheWNAI9k61RWKcYPzQgZ.pdf",
+                                                                   "ordem":  22,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  104,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Segundo molar superior incomum, com dois canais radiculares na raiz palatina: relato de caso clínico",
+                                                                   "descricao_capitulo":  "Introdução: segundos molares superiores normalmente possuem três canais radiculares; no entanto, possuem anatomia interna complexa e, por vezes, variações em sua morfologia. Objetivo: o presente estudo visa relatar um caso clínico de variação na morfologia de um segundo molar superior com...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/JpAdp1pBHS9odEJF51cc8wWIuzWS9quSLgAMKA6n.pdf",
+                                                                   "ordem":  23,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  105,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Técnica de enceramento incremental: anteriores superiores",
+                                                                   "descricao_capitulo":  "...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/VSZs9BGCf2hbdD1nIyJQBPoN8GseP6WNIXyRiaLv.pdf",
+                                                                   "ordem":  24,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  106,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Técnica de osteótomo: revisão de literatura",
+                                                                   "descricao_capitulo":  "Esta revisão focal de literatura tem como objetivo identificar, de forma clara e sistemática, os vários fatores (indicações, influência de biomate-riais, taxas de sobrevivência dos implantes) que um clínico deve levar em consi-deração ao abordar o seio maxilar por meio da técnica...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/HYi2kRdvLD73KxN0PGn42evBZhxDT5q3ohwYy29c.pdf",
+                                                                   "ordem":  25,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  107,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Tratamento cirúrgico de sequela de fratura zigomático-orbitária com enxerto autógeno e material aloplástico",
+                                                                   "descricao_capitulo":  "As fraturas zigomático-orbitárias são lesões faciais comuns e seu tratamento tem sido um desafio para o cirurgião. Como resultado desse tipo de trauma, podem ocorrer complicações significativas, incluindo diplopia, enoftalmo, distopia, restrição da motilidade ocular, perda da projeção...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/wKJGC4By69cVWGpe06I5f2wNyHeWbgn1sIBBBpUC.pdf",
+                                                                   "ordem":  26,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  108,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Tratamento de fratura de ângulo mandibular com utilização de placa grade: relato de caso",
+                                                                   "descricao_capitulo":  "Introdução: As fraturas na região do ângulo mandibular apresentam um maior ín-dice de complicações, quando comparadas às outras fraturas mandibulares. Entre osmotivos para o alto índice de complicações estão a anatomia da região, localizaçãoe dificuldade de fixação desse tipo de...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/dRZgAgqQAyuMbnkc1SgLoBH3e3HLlzKGX0O28oJY.pdf",
+                                                                   "ordem":  27,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  109,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Tratamento endodôntico de canino superior birradicular: relato de caso",
+                                                                   "descricao_capitulo":  "O presente artigo descreve um caso incomum de canino superior direito com duas raízes. Esse é o quarto caso relatado na literatura. Paciente do sexo feminino, 66 anos de idade, foi encaminhada para tratamento endodôntico do dente #13. A avaliação clínica mostrouque o dente #13 não...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/VtgomTAkvYxFbEMo90zjSf8pxeOCgcCyFRQlLuQw.pdf",
+                                                                   "ordem":  28,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  110,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Tratamento endodôntico de um incisivo lateral maxilar: um caso raro de dens invaginatus tipo II duplo",
+                                                                   "descricao_capitulo":  "Introdução: o dens invaginatus é uma má formação de desenvolvimento resultante da invaginação da coroa do dente ou da raiz, antes da calcificação, durante a odontogênese. Constitui uma condição onde é fundamental o tratamento endodôntico, uma vez que, frequentemente, o dente...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/iB7v2aXDQwLMfEmVL6ahYkWZeGa5bLtWwPUrxxP3.pdf",
+                                                                   "ordem":  29,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               },
+                                                               {
+                                                                   "id":  111,
+                                                                   "apostila_id":  84,
+                                                                   "nome":  "Variação anatômica de primeiro molar inferior e a importância de uma descontaminação efetiva",
+                                                                   "descricao_capitulo":  "Introdução: a literatura tem relatado vários casos clínicos sobre variações anatômicas de molares mandibulares. Entretanto, poucos relatos mostraram tratamentos deprimeiros molares inferiores permanentes com vistas à Endodontia atual. Objetivo: este trabalho tem o objetivo de relatar o...",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/0AH9LLyaG33957ae7cjGFHaOUxznaIsYCxPJNGmK.pdf",
+                                                                   "ordem":  30,
+                                                                   "created_at":  "2025-03-26 18:29:34",
+                                                                   "updated_at":  "2025-03-26 18:29:34"
+                                                               }
+                                                           ]
+                                         },
+                                         {
+                                             "vinculo_apostila":  {
+                                                                      "id":  44,
+                                                                      "apostila_id":  88,
+                                                                      "ordem":  2,
+                                                                      "data_disponibilidade":  "2025-01-15",
+                                                                      "turma_id":  37,
+                                                                      "created_at":  "2025-10-09 14:41:52",
+                                                                      "updated_at":  "2025-10-09 14:55:41"
+                                                                  },
+                                             "apostila":  {
+                                                              "id":  88,
+                                                              "nome":  "Periodontia",
+                                                              "nome_ing":  null,
+                                                              "nome_pt":  null,
+                                                              "nome_es":  null,
+                                                              "descricao":  "Os conteúdos abordam desde a idade ideal para colocação de implantes osseointegráveis até os impactos do tabagismo em cirurgias plásticas periodontais. Também são tratados temas como integração entre dentística e periodontia, preparo adesivo vertical, lapidação de facetas cerâmicas, e o papel da saúde gengival no sucesso estético e funcional das reabilitações.",
+                                                              "capa":  "capa/Zemctk7HnvYG9q5JSQNCBE70FFFrlLag1HtCTxwV.png",
+                                                              "valor":  "500.00",
+                                                              "data_publicacao":  "2025-04-08",
+                                                              "idioma":  "pt",
+                                                              "instituicao_id":  null,
+                                                              "created_at":  "2025-04-08 16:32:53",
+                                                              "updated_at":  "2025-04-08 16:32:53"
+                                                          },
+                                             "capitulos":  [
+                                                               {
+                                                                   "id":  152,
+                                                                   "apostila_id":  88,
+                                                                   "nome":  "Qual a idade adequada para colocação de implante dentário osseointegrável?",
+                                                                   "descricao_capitulo":  "Discute o momento ideal para instalação de implantes em pacientes jovens, considerando fatores anatômicos, funcionais e de crescimento.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/TDlSm9Zep6rVunteWGAPdKo68T9S3neplDdEcuW4.pdf",
+                                                                   "ordem":  1,
+                                                                   "created_at":  "2025-04-08 16:32:53",
+                                                                   "updated_at":  "2025-04-08 16:32:53"
+                                                               },
+                                                               {
+                                                                   "id":  153,
+                                                                   "apostila_id":  88,
+                                                                   "nome":  "Odontologia estética: integração entre Dentística e Periodontia",
+                                                                   "descricao_capitulo":  "elato clínico que mostra como a abordagem multidisciplinar favorece resultados estéticos duradouros.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/G0zTUXABk3O3ODjxFYr6et0jcsj7EfWr3UP8NzII.pdf",
+                                                                   "ordem":  2,
+                                                                   "created_at":  "2025-04-08 16:32:53",
+                                                                   "updated_at":  "2025-04-08 16:32:53"
+                                                               },
+                                                               {
+                                                                   "id":  154,
+                                                                   "apostila_id":  88,
+                                                                   "nome":  "Técnica adesiva de preparo vertical em retratamentos",
+                                                                   "descricao_capitulo":  "Apresenta a técnica de preparo biologicamente orientado como estratégia para preservar tecidos periodontais em reabilitações.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/1yFCQ8fR0pcInUF5UlM9EXOd42dS93YX8nBjVQxE.pdf",
+                                                                   "ordem":  3,
+                                                                   "created_at":  "2025-04-08 16:32:54",
+                                                                   "updated_at":  "2025-04-08 16:32:54"
+                                                               },
+                                                               {
+                                                                   "id":  155,
+                                                                   "apostila_id":  88,
+                                                                   "nome":  "Como o cigarro interfere no resultado das cirurgias plásticas periodontais?",
+                                                                   "descricao_capitulo":  "Analisa os efeitos negativos do tabagismo sobre a cicatrização e os resultados estéticos em procedimentos periodontais.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/zfw2evrEvOQ6x0aMYRta0KrrWSJFkhsizxrYj3R9.pdf",
+                                                                   "ordem":  4,
+                                                                   "created_at":  "2025-04-08 16:32:54",
+                                                                   "updated_at":  "2025-04-08 16:32:54"
+                                                               },
+                                                               {
+                                                                   "id":  156,
+                                                                   "apostila_id":  88,
+                                                                   "nome":  "Inter-relação Periodontia e Dentística Restauradora na lapidação de facetas cerâmicas",
+                                                                   "descricao_capitulo":  "Explora a importância do controle gengival e do planejamento conjunto entre as especialidades em casos com facetas cerâmicas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/7YoV3nV9iQ33BRllM8tPLHt9g4wWag6CWY1TZExU.pdf",
+                                                                   "ordem":  5,
+                                                                   "created_at":  "2025-04-08 16:32:54",
+                                                                   "updated_at":  "2025-04-08 16:32:54"
+                                                               }
+                                                           ]
+                                         },
+                                         {
+                                             "vinculo_apostila":  {
+                                                                      "id":  45,
+                                                                      "apostila_id":  90,
+                                                                      "ordem":  3,
+                                                                      "data_disponibilidade":  "2025-01-20",
+                                                                      "turma_id":  37,
+                                                                      "created_at":  "2025-10-09 14:41:52",
+                                                                      "updated_at":  "2025-10-09 14:55:41"
+                                                                  },
+                                             "apostila":  {
+                                                              "id":  90,
+                                                              "nome":  "Clareamento",
+                                                              "nome_ing":  null,
+                                                              "nome_pt":  null,
+                                                              "nome_es":  null,
+                                                              "descricao":  "São discutidos temas como o impacto do clareamento na polpa dentária, análise de pH de géis clareadores, sensibilidade dental, uso de microabrasão, métodos com ou sem troca de gel, técnicas caseiras e em consultório, além da eficácia sob braquetes ortodônticos. A apostila também explora questões como desmineralização do esmalte e aplicação de dessensibilizantes, oferecendo uma visão ampla e baseada em evidências sobre os efeitos clínicos e laboratoriais do clareamento dental.",
+                                                              "capa":  "capa/gxNE2QfS6sGoddLIH1tlEZTvmj5aamhVi0CK16RI.png",
+                                                              "valor":  "500.00",
+                                                              "data_publicacao":  "2025-04-09",
+                                                              "idioma":  "pt",
+                                                              "instituicao_id":  null,
+                                                              "created_at":  "2025-04-09 18:02:13",
+                                                              "updated_at":  "2025-04-09 18:02:13"
+                                                          },
+                                             "capitulos":  [
+                                                               {
+                                                                   "id":  159,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "A clareação dentária pode induzir necrose pulpar? Não há fundamentos!",
+                                                                   "descricao_capitulo":  "Artigo que refuta a hipótese de que o clareamento dental cause necrose pulpar. Com base em evidências histológicas e fisiológicas, os autores explicam que, apesar da sensibilidade temporária ser comum, o clareamento, quando bem indicado e realizado, não compromete a vitalidade pulpar.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/MRpzqZqWlcMJsYcXnnmVIPZKgO4KOGWCBGU5B5D1.pdf",
+                                                                   "ordem":  1,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  160,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Análise do pH de bebidas ácidas e de géis clareadores dentários utilizados em consultório",
+                                                                   "descricao_capitulo":  "Compara o pH de bebidas ácidas com géis clareadores de alta concentração. O estudo alerta para o potencial erosivo desses produtos quando associados ao clareamento e reforça a necessidade de cuidado com o esmalte dental.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/uhFHyCsBhY3PSIohyx847WzZBC7LncXyl7hlewDR.pdf",
+                                                                   "ordem":  2,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  161,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Análise espectrofotométrica da diferença de cor, sensibilidade dentária e grau de satisfação de dentes humanos vitais clareados clinicamente",
+                                                                   "descricao_capitulo":  "Pesquisa clínica com 52 pacientes comparando clareamento com e sem LED. Avaliou-se a alteração de cor, sensibilidade pós-tratamento e satisfação dos pacientes. Os resultados mostraram eficácia clínica semelhante entre os métodos.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/Tgd3NXLPIQmjMaah2HKW1RiWzf9ocJS9cxeeexQ7.pdf",
+                                                                   "ordem":  3,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  162,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Associação da microabrasão do esmalte dentário com o clareamento dentinário para a recuperação estética dos dentes naturais",
+                                                                   "descricao_capitulo":  "Relato clínico de uma paciente com manchas brancas nos dentes. A técnica combinada de microabrasão e clareamento foi eficaz para uniformizar a cor e recuperar a estética natural, com excelente resultado clínico.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/YhesB2LMndjjMABuPHi8S6sVyAvKy61TDmHk2cp6.pdf",
+                                                                   "ordem":  4,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  163,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Associação de técnicas para diminuição da sensibilidade advinda do clareamento caseiro",
+                                                                   "descricao_capitulo":  "Estudo clínico que recomenda a associação de agentes dessensibilizantes com clareamento caseiro, visando reduzir os efeitos adversos como sensibilidade. A combinação de estratégias mostrou-se eficaz na prática.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/2ewCs1avRztlyg0ax634qUYQg7LjkLsR1ibs3WN7.pdf",
+                                                                   "ordem":  5,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  164,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação clínica da efetividade do clareamento de consultório sem troca do gel clareador",
+                                                                   "descricao_capitulo":  "Analisou a eficácia de agentes clareadores aplicados por 45 minutos contínuos. O protocolo sem troca do gel apresentou bons resultados de clareamento, com menor sensibilidade relatada pelos pacientes.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/SNN9DgMdzl4AWnF6bPY8DfiEKGSUreE8PryiuWvc.pdf",
+                                                                   "ordem":  6,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  165,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação clínica do clareamento dental pela técnica caseira",
+                                                                   "descricao_capitulo":  "Revisão e relato clínico demonstrando a eficácia, segurança e aceitação da técnica caseira de clareamento, com moldeiras e peróxido de carbamida, reforçando sua previsibilidade.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/yMbmjrrytvE7Vt50YGxk7ec1Kh18KhPrVq9aKAPP.pdf",
+                                                                   "ordem":  7,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  166,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação clínica do clareamento dental pela técnica no consultório",
+                                                                   "descricao_capitulo":  "Estudo com 40 pacientes avaliando alterações de cor, sensibilidade e irritação gengival com diferentes concentrações de peróxido de hidrogênio. Os resultados sugerem boa eficácia com variação de sensibilidade entre grupos",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/EVZkssciOWG3LUkIBxKXqq4ME9gs8uxOsAPZiK5N.pdf",
+                                                                   "ordem":  8,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  167,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação da efetividade de diferentes concentrações e composições de géis empregados no clareamento dentário caseiro: relato de caso",
+                                                                   "descricao_capitulo":  "Comparação entre dois géis clareadores caseiros em relação à alteração de cor e sensibilidade. O estudo concluiu que ambos os produtos são eficazes, com diferenças sutis em sensibilidade.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/IMI1mIvigtx9FaAO4XRINxxhnEYrYZ4WrnD7o1ZP.pdf",
+                                                                   "ordem":  9,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  168,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação da eficácia do clareamento exógeno sobre a dentina",
+                                                                   "descricao_capitulo":  "Verifica se o peróxido de carbamida a 16% penetra o esmalte e altera a cor da dentina. O estudo confirma a ação clareadora mesmo nas camadas mais profundas da estrutura dental.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/N8ykvUvEJQE2OvCOpyaS1qbcV8RKu3OSVQy8z06g.pdf",
+                                                                   "ordem":  10,
+                                                                   "created_at":  "2025-04-09 18:02:13",
+                                                                   "updated_at":  "2025-04-09 18:02:13"
+                                                               },
+                                                               {
+                                                                   "id":  169,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação de produtos clareadores e branqueadores, quanto à sua eficácia sob braquetes ortodônticos",
+                                                                   "descricao_capitulo":  "Estudo in vitro com incisivos bovinos analisando a eficácia de clareamento mesmo com presença de braquetes. Os resultados indicam que há clareamento, mas com intensidade reduzida nas áreas cobertas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/my24c5UN0nTrcAhYsyhSPKxYMga2Mlak6K3ns5um.pdf",
+                                                                   "ordem":  11,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  170,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação do potencial de desmineralização do gel de clareamento dental (peróxido de hidrogênio a 35%) sobre o esmalte bovino",
+                                                                   "descricao_capitulo":  "Compara a ação do peróxido de hidrogênio com ácido fosfórico no esmalte bovino. O gel clareador causou menor desmineralização, sugerindo maior segurança para o esmalte.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/1iTPyoeeQmKYCCtFmz5mgnj6SHIHptxfAS0Hjiug.pdf",
+                                                                   "ordem":  12,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  171,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Avaliação sensorial quantitativa da sensibilidade dentária com o uso de um dessensibilizante",
+                                                                   "descricao_capitulo":  "Pesquisa clínica que mede o nível de sensibilidade relatada após clareamento com dessensibilizante. Os resultados confirmam redução significativa da sensibilidade, com maior conforto relatado pelos pacientes.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/RyKIUqYgCItjb0A8uV7KcxaX4VyvC9SFKYcNBsyf.pdf",
+                                                                   "ordem":  13,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  172,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dental: relato de caso clínico avaliado pela análise espectrofotométrica",
+                                                                   "descricao_capitulo":  "O artigo apresenta um caso clínico de clareamento dental em consultório, destacando a eficiência do procedimento estético e seus resultados rápidos. A alteração de cor foi mensurada por espectrofotometria, demonstrando cientificamente a eficácia da técnica e sua previsibilidade nos atendimentos clínicos.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/JJ8MfJQIANkAWeIqmoplHrQxPMginKL6SyptGpm7.pdf",
+                                                                   "ordem":  14,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  173,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dentário associado à aplicação de fosfopeptídio de caseína-fosfato de cálcio amorfo (CPP-ACP): relato de caso",
+                                                                   "descricao_capitulo":  "Relato de caso clínico que mostra a associação entre clareamento dental e o uso de CPP-ACP como dessensibilizante. O artigo destaca os benefícios da aplicação do composto na redução da sensibilidade e na proteção do esmalte durante o tratamento clareador",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/HqKdcjBlq7L1Jw3OYu2oWYQK7UQujA57fzv8zznr.pdf",
+                                                                   "ordem":  15,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  174,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dentário de consultório associado ao clareamento caseiro",
+                                                                   "descricao_capitulo":  "O estudo apresenta um protocolo combinado de clareamento realizado em consultório e complementado com técnica caseira supervisionada. O objetivo é otimizar os resultados estéticos e controlar a sensibilidade, com sessões clínicas programadas e acompanhamento profissional.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/fsyQoufZQspBpGZxGTQMRiZm7RGZkKgfBq6r2BGH.pdf",
+                                                                   "ordem":  16,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  175,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dentário de consultório em paciente com restaurações estéticas",
+                                                                   "descricao_capitulo":  "Aborda as particularidades do clareamento em pacientes com restaurações anteriores visíveis. O artigo discute possíveis discrepâncias de cor entre o dente clareado e a resina composta, além de estratégias para garantir harmonia estética.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/A32wegH1KxYT5anGCafgfGvqtUASH2p5T3vv2mUs.pdf",
+                                                                   "ordem":  17,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  176,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dentário e sensibilidade: um olhar do ponto de vista biológico",
+                                                                   "descricao_capitulo":  "Analisa os mecanismos biológicos por trás da sensibilidade dentária provocada pelo clareamento. Explica como os agentes clareadores interagem com as estruturas dentais e propõe abordagens para minimizar o desconforto.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/Q38C0dnZTUkrUsf77iKdCQuyJHUMiPq7WBsMpEBK.pdf",
+                                                                   "ordem":  18,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  177,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dentário integrado: uma alternativa estética",
+                                                                   "descricao_capitulo":  "Apresenta uma abordagem integrada de clareamento, que combina diferentes técnicas para melhorar a previsibilidade estética. O protocolo visa alcançar resultados naturais, com foco em harmonia entre dentes e tecidos moles.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/dQmWsYg2edazfyFzz3AAcZBylg81Mzy1bc5q103c.pdf",
+                                                                   "ordem":  19,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               },
+                                                               {
+                                                                   "id":  178,
+                                                                   "apostila_id":  90,
+                                                                   "nome":  "Clareamento dentário: terapias modificadas para resolução de casos de manchamento severo",
+                                                                   "descricao_capitulo":  "Descreve adaptações em protocolos de clareamento voltadas para pacientes com manchas intensas. O artigo aborda estratégias clínicas que potencializam os resultados e minimizam riscos em casos complexos.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/TCsLTB3nwPId4c110GAqNzDq6f10uGLhmsTboXGG.pdf",
+                                                                   "ordem":  20,
+                                                                   "created_at":  "2025-04-09 18:02:14",
+                                                                   "updated_at":  "2025-04-09 18:02:14"
+                                                               }
+                                                           ]
+                                         },
+                                         {
+                                             "vinculo_apostila":  {
+                                                                      "id":  46,
+                                                                      "apostila_id":  86,
+                                                                      "ordem":  4,
+                                                                      "data_disponibilidade":  "2025-10-06",
+                                                                      "turma_id":  37,
+                                                                      "created_at":  "2025-10-09 15:00:02",
+                                                                      "updated_at":  "2025-10-09 15:00:18"
+                                                                  },
+                                             "apostila":  {
+                                                              "id":  86,
+                                                              "nome":  "Dentística",
+                                                              "nome_ing":  null,
+                                                              "nome_pt":  null,
+                                                              "nome_es":  null,
+                                                              "descricao":  "Os textos abordam desde conceitos fundamentais e transformadores da dentística até aplicações clínicas integradas com ortodontia, periodontia e prótese. Técnicas como restaurações com cerâmica, uso de onlays, tratamento de diastemas e erosão dentária são exploradas em profundidade. Além disso, discute-se o impacto da pandemia na prática clínica e no ensino, bem como a importância das metodologias ativas na formação acadêmica. A entrevista com o professor Hidehiko Sano enriquece o material com reflexões sobre adesão e biomateriais. É uma apostila completa para quem busca aprofundamento técnico e visão crítica na área estética da odontologia.",
+                                                              "capa":  "capa/isaoeaaI8FZXtw1RVpwLtyUkLOZ4jr7iQqtAqKKd.png",
+                                                              "valor":  "500.00",
+                                                              "data_publicacao":  "2025-04-04",
+                                                              "idioma":  "pt",
+                                                              "instituicao_id":  null,
+                                                              "created_at":  "2025-04-05 01:31:12",
+                                                              "updated_at":  "2025-04-05 01:31:12"
+                                                          },
+                                             "capitulos":  [
+                                                               {
+                                                                   "id":  129,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "A Odontologia que transforma",
+                                                                   "descricao_capitulo":  "Reflexão sobre o impacto da dentística estética na autoestima e qualidade de vida dos pacientes.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/DUTyuorZE5nQijv5A1FncCDFfOmUIq8D5VJkig3r.pdf",
+                                                                   "ordem":  1,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  130,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Buscando novos rumos para o ensino da Dentística Brasil",
+                                                                   "descricao_capitulo":  "Proposta de mudanças metodológicas e curriculares no ensino da dentística estética.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/b2ZHbnFrbMwOrgAti7JX1kCjJ5zWrf77LXXG7bea.pdf",
+                                                                   "ordem":  2,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  131,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Dentística durante e após a pandemia",
+                                                                   "descricao_capitulo":  "Análise dos impactos da pandemia nas práticas clínicas e no ensino da dentística.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/v5rSNUUGnLjEE9fdNG2lqP4ewdH7Pah4rzfIdJIt.pdf",
+                                                                   "ordem":  3,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  132,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Hidehiko Sano",
+                                                                   "descricao_capitulo":  "Entrevista com o renomado pesquisador japonês sobre adesão, biomateriais e futuro da dentística.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/uoQ36MIG9F0K7iOggnhehC7YKBEF8NVKDR4cFwvF.pdf",
+                                                                   "ordem":  4,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  133,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Estética em implantes: o “momento mágico” do dente restaurando a estética rosa",
+                                                                   "descricao_capitulo":  "Aborda a integração estética entre dentes e tecidos gengivais em implantodontia.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/7VTIG8FyrPmndatDIjxzZbq8xclSo7fHsisNjzTX.pdf",
+                                                                   "ordem":  5,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  134,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Integração entre a Ortodontia e a Dentística no restabelecimento da estética, oclusão e dimensão vertical em casos complexos de pacientes adultos",
+                                                                   "descricao_capitulo":  "Mostra como o trabalho interdisciplinar otimiza a reabilitação estética e funcional.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/pXXVrNAOKTUTZTTjN1nVb2kZXxlOnjIuCU0tMaOY.pdf",
+                                                                   "ordem":  6,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  135,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Integração Ortodontia Dentística no Tratamento da Agenesia Bilateral dos Incisivos Laterais Superiores : Relato de um Caso Clínico",
+                                                                   "descricao_capitulo":  "Relato clínico de abordagem estética e funcional em pacientes com ausência dental congênita.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/YnRsSWtptMiaUPO6znuyZn6yCZedYh83mD0ZBxMf.pdf",
+                                                                   "ordem":  7,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  136,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Integração Ortodontia-Dentística Res- tauradora no Restabelecimento da Har- monia Estética de Dentes Anteriores",
+                                                                   "descricao_capitulo":  "Técnicas de recontorno e reposicionamento em casos de alterações anatômicas anteriores.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/tV5kOMlL2oUD6Ejo4vPJhs59TB6jjOHitjg3wpfT.pdf",
+                                                                   "ordem":  8,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  137,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Interação entre Ortodontia e Dentística em um caso clínico com discrepância de Bolton",
+                                                                   "descricao_capitulo":  "Tratamento interdisciplinar em paciente com má oclusão e discrepância de tamanho dentário.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/Ukilh8R0fr18CHCEK7BSzsVztbDfvJD7Tjsr2s6f.pdf",
+                                                                   "ordem":  9,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  138,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Interação entre Periodontia, Ortodontia e Dentística em caso clínico de diastema anterior",
+                                                                   "descricao_capitulo":  "Fechamento estético de diastema interincisivo com abordagem multidisciplinar.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/gSFDAMgqd4ZxW2g92XjQcdUJbViVVevxkJh7laoY.pdf",
+                                                                   "ordem":  10,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  139,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Odontologia Biomimética vs. Odontologia Adesiva: onde vamos parar?",
+                                                                   "descricao_capitulo":  "Discussão conceitual sobre limites e evolução das técnicas adesivas e biomiméticas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/yokxyJ5Zbk2k9h9J9G8OUlyaJOzfpAlb2PW8c6nW.pdf",
+                                                                   "ordem":  11,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  140,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Odontologia branca",
+                                                                   "descricao_capitulo":  "Conceito estético centrado em dentes brancos e sua relevância na sociedade contemporânea.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/HC7CicDFYE2x73Pt0gcQo4MLIGlRmeQM9v4arar4.pdf",
+                                                                   "ordem":  12,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  141,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Reabilitação estética e funcional associada à erosão dentária: relato de caso clínico",
+                                                                   "descricao_capitulo":  "Caso clínico com restaurações minimamente invasivas em pacientes com erosão severa.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/JcyYgXTNmuGztPP6uJwB4ZNIhPkGjJIHQlW25xpf.pdf",
+                                                                   "ordem":  13,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  142,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Reabilitação estética funcional associando onlays em cerômero e resinas nanoparticuladas",
+                                                                   "descricao_capitulo":  "Restabelecimento da dimensão vertical com técnicas adesivas modernas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/PSV9QFn3EV15vuKJ5wuWUlyMhr5GByDQAC0KNoub.pdf",
+                                                                   "ordem":  14,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  143,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Resistência de união de uma cerâmica IPS® usando diferentes cimentos resinosos e aparelhos fotopolimerizadores",
+                                                                   "descricao_capitulo":  "Estudo comparativo sobre resistência de união de cerâmicas com diferentes protocolos clínicos.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/D23IOcD4CQ6YR84SgACTm3rGADTvYQpzilHtLq9Z.pdf",
+                                                                   "ordem":  15,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  144,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Restaurações estéticas cerâmicas e endocrowns na reabilitação de dentes posteriores",
+                                                                   "descricao_capitulo":  "Técnicas de reabilitação estética e funcional com foco em dentes posteriores.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/6GWTIsGScD0EeO15YaD8S5ehciuK3ltYgaLXmdQS.pdf",
+                                                                   "ordem":  16,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  145,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "USO DE METODOLOGIAS ATIVAS NO ENSINO DA DENTÍSTICA: MODISMO OU NECESSIDADE?",
+                                                                   "descricao_capitulo":  "Discussão sobre o uso de metodologias participativas no ensino da disciplina.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/aw2Kl16BOI6lR0YITjMVEs9jAT7r51ulrKvgNG3a.pdf",
+                                                                   "ordem":  17,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               },
+                                                               {
+                                                                   "id":  146,
+                                                                   "apostila_id":  86,
+                                                                   "nome":  "Uso de prótese dentogengival. Recuperação do sorriso",
+                                                                   "descricao_capitulo":  "écnicas e indicações das próteses gengivais em reabilitações estéticas complexas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/RqktXrMKQT8zmVlYOGUFetNvZlXyyCJ5IEdfA1UM.pdf",
+                                                                   "ordem":  18,
+                                                                   "created_at":  "2025-04-05 01:31:12",
+                                                                   "updated_at":  "2025-04-05 01:31:12"
+                                                               }
+                                                           ]
+                                         },
+                                         {
+                                             "vinculo_apostila":  {
+                                                                      "id":  47,
+                                                                      "apostila_id":  95,
+                                                                      "ordem":  5,
+                                                                      "data_disponibilidade":  "2025-06-01",
+                                                                      "turma_id":  37,
+                                                                      "created_at":  "2025-10-09 17:33:58",
+                                                                      "updated_at":  "2025-10-09 17:33:58"
+                                                                  },
+                                             "apostila":  {
+                                                              "id":  95,
+                                                              "nome":  "Moldagem",
+                                                              "nome_ing":  null,
+                                                              "nome_pt":  null,
+                                                              "nome_es":  null,
+                                                              "descricao":  "São apresentados casos clínicos, revisões de literatura e protocolos atualizados que abordam desde moldagens em pacientes com aparelhos ortodônticos até o uso de scanners intrabucais, técnicas de transferência em próteses sobre implantes e moldagens de precisão em reabilitações estéticas. O material contempla também avanços da odontologia digital, moldagem funcional e estratégias para garantir resultados previsíveis e fidelidade na reprodução dos tecidos bucais.",
+                                                              "capa":  "capa/t0ekJEmVc7d1aIpslFdWjlIrTWiH1d370JzMfMbJ.png",
+                                                              "valor":  "500.00",
+                                                              "data_publicacao":  "2025-04-09",
+                                                              "idioma":  "pt",
+                                                              "instituicao_id":  null,
+                                                              "created_at":  "2025-04-09 21:41:32",
+                                                              "updated_at":  "2025-04-09 21:41:32"
+                                                          },
+                                             "capitulos":  [
+                                                               {
+                                                                   "id":  183,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "A importância de uma boa moldagem do perfil de emergência na prótese sobre implante",
+                                                                   "descricao_capitulo":  "Destaca a moldagem correta do perfil de emergência como fator essencial para resultados estéticos e funcionais em próteses sobre implantes.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/25md9CNZ7eLBQLfrwaFQ39Hw7XajScKwO6tOeWg0.pdf",
+                                                                   "ordem":  1,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  184,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Caso Selecionado: Estética e resistência nas restaurações anteriores",
+                                                                   "descricao_capitulo":  "Relato clínico que equilibra estética e resistência em restaurações anteriores, com foco nos materiais utilizados.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/TuxXcTi5CJzJlsJ3O73ODnuaOt0BApFEYjtr2qUe.pdf",
+                                                                   "ordem":  2,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  185,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Moldagem de pacientes portadores de aparelhos ortodônticos fixos",
+                                                                   "descricao_capitulo":  "Apresenta uma técnica simplificada para moldagem precisa sem remoção dos aparelhos.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/VrKqpb8Khth6MrfUNik6cLCUbUUnmzaKInC8OXzQ.pdf",
+                                                                   "ordem":  3,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  186,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Caso Clínico: Moldagem de precisão em prótese fixa",
+                                                                   "descricao_capitulo":  "Revisão das técnicas e materiais elastoméricos utilizados para moldagens em próteses fixas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/xbbUloGaOFKSRIO1pzjf7N2nK5yIAoCbnuC8Xg9v.pdf",
+                                                                   "ordem":  4,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  187,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Moldagem de transferência: simplificação e otimização da técnica",
+                                                                   "descricao_capitulo":  "Métodos para tornar a moldagem de transferência mais eficiente e previsível.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/oMZJeMWUa3EciGpwUtmjGLZdUuNCp3Ib4ZKEJ2zx.pdf",
+                                                                   "ordem":  5,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  188,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Moldagem ortodôntica",
+                                                                   "descricao_capitulo":  "Enfatiza a importância da moldagem precisa para o diagnóstico e planejamento ortodôntico.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/u76JsFvEOKTIJvdQyDbD2czFEXSoFQtreFusCAOl.pdf",
+                                                                   "ordem":  6,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  189,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Odontologia digital: restauração anterior cerâmica sem moldagem em sessão única - Parte 1",
+                                                                   "descricao_capitulo":  "Apresenta um fluxo digital com escaneamento e CAD-CAM em uma sessão clínica.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/rwwEp5bkYQtatabn1clGtxFLNsICm2e1nJ1YB0mo.pdf",
+                                                                   "ordem":  7,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  190,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Previsibilidade com cerâmicas em dentes anteriores: IPS e.max Press e e.max Ceram",
+                                                                   "descricao_capitulo":  "Explora o uso das cerâmicas IPS e.max Press e e.max Ceram na estética anterior.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/Jj2IcvwBwi1qJIa5Ckk3wiZent93a0gbYDIPEnaj.pdf",
+                                                                   "ordem":  8,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  191,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Quais são as evidências dos SCANNERS INTRABUCAIS? Uma breve visão do digital",
+                                                                   "descricao_capitulo":  "Revisão da precisão e benefícios clínicos da digitalização com scanners intraorais.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/6P0KOACxLxCOg2ECCnbBorVk6uPqEVTP1EEPbBYo.pdf",
+                                                                   "ordem":  9,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  192,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Registro do perfil de emergência para mimetização dos dentes naturais na região estética",
+                                                                   "descricao_capitulo":  "Técnicas para mimetizar dentes naturais em áreas estéticas com implantes.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/lDhKV6DFAdp5lNa9jGghSmGlXrwRkCqsSXvz3Ujz.pdf",
+                                                                   "ordem":  10,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  193,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Restauração estética dos dentes anteriores: considerações clínicas e laboratoriais",
+                                                                   "descricao_capitulo":  "Descreve todo o processo, da moldagem ao preparo laboratorial e cimentação.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/B3MkC4maOkKBIp9gtRFUKrLlEoyKd5tlKkKqOys3.pdf",
+                                                                   "ordem":  11,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  194,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Caso Clínico: Restaurações cerâmicas em dentes anteriores",
+                                                                   "descricao_capitulo":  "Demonstra os resultados estéticos com cerâmicas em reabilitação anterior.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/qKAlTv0XFWuyNxKHGDAT5CJW2kfprgsTPc7fFDwL.pdf",
+                                                                   "ordem":  12,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  195,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Restaurações cerâmicas em dentes antiores: moldagem e comunicação",
+                                                                   "descricao_capitulo":  "Foca na importância da comunicação entre clínica e laboratório para moldagens precisas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/cW5yEONRBDtxDXue2diZLdBZTZcWm56FTIaoOLNd.pdf",
+                                                                   "ordem":  13,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  196,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Scanner intrabucal versus técnicas convencionais de moldagem. Satisfação e outros desfechos relatados pelo paciente: uma revisão sistemática",
+                                                                   "descricao_capitulo":  "Analisa satisfação do paciente e resultados clínicos com técnicas digitais e tradicionais.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/ZI1YDymZz0V99BowNFK46n9zu7vCjl8cqemZ28ld.pdf",
+                                                                   "ordem":  14,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  197,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Técnicas de transferência em prótese sobre implantes",
+                                                                   "descricao_capitulo":  "Revisão das técnicas que garantem adaptação precisa de supraestruturas.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/24WDllSoCoOB1VPp2vqpq0gtwDC0Yz0cu0Fe7FaM.pdf",
+                                                                   "ordem":  15,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  198,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Transferência anatômico-funcional de implantes",
+                                                                   "descricao_capitulo":  "Discute como reproduzir com fidelidade tecidos rígidos e moles em moldagens.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/Go1pXLexxL1un9WNzYwIrczGwQG0ZSddxssiOrrB.pdf",
+                                                                   "ordem":  16,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  199,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Caso Clínico: Tratamento restaurador estético com sistema cerâmico",
+                                                                   "descricao_capitulo":  "Caso de reabilitação estética com cerâmicas, ressaltando naturalidade e harmonia.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/nJZwxduiiWpOjYh7y46lznvNbQ6dUXnjfWohc977.pdf",
+                                                                   "ordem":  17,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               },
+                                                               {
+                                                                   "id":  200,
+                                                                   "apostila_id":  95,
+                                                                   "nome":  "Utilização do cloridrato de tetrizolina para afastamento gengival em moldagens com silicona de adição",
+                                                                   "descricao_capitulo":  "Apresenta o uso da tetrizolina como recurso químico para controle gengival em moldagens com silicona.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/MZi2nWXGHSgHMjkLAtmRO5KBaFOU8HzUG3WpqT0e.pdf",
+                                                                   "ordem":  18,
+                                                                   "created_at":  "2025-04-09 21:41:32",
+                                                                   "updated_at":  "2025-04-09 21:41:32"
+                                                               }
+                                                           ]
+                                         },
+                                         {
+                                             "vinculo_apostila":  {
+                                                                      "id":  48,
+                                                                      "apostila_id":  89,
+                                                                      "ordem":  6,
+                                                                      "data_disponibilidade":  "2025-07-02",
+                                                                      "turma_id":  37,
+                                                                      "created_at":  "2025-10-09 17:39:43",
+                                                                      "updated_at":  "2025-10-09 17:39:43"
+                                                                  },
+                                             "apostila":  {
+                                                              "id":  89,
+                                                              "nome":  "Radiologia",
+                                                              "nome_ing":  null,
+                                                              "nome_pt":  null,
+                                                              "nome_es":  null,
+                                                              "descricao":  "Os conteúdos abordam temas como a prevalência de nódulos pulpares detectados por tomografia computadorizada de feixe cônico, a validação jurídica do prontuário odontológico eletrônico com base na legislação brasileira, e outros tópicos que ligam tecnologia, diagnóstico e segurança clínica.",
+                                                              "capa":  "capa/wvT5DGbPygeoZaX1MA45eLSH8sR8o23h5kOGpQT4.png",
+                                                              "valor":  "500.00",
+                                                              "data_publicacao":  "2025-04-08",
+                                                              "idioma":  "pt",
+                                                              "instituicao_id":  null,
+                                                              "created_at":  "2025-04-08 16:42:04",
+                                                              "updated_at":  "2025-04-08 16:42:04"
+                                                          },
+                                             "capitulos":  [
+                                                               {
+                                                                   "id":  157,
+                                                                   "apostila_id":  89,
+                                                                   "nome":  "Prevalência de nódulos pulpares em tomografias de feixe cônico",
+                                                                   "descricao_capitulo":  "Estudo que analisa a presença de nódulos pulpares em câmaras pulpares por meio de tomografia computadorizada de feixe cônico (TCFC), destacando aspectos anatômicos e clínicos relevantes para o diagnóstico.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/lxJiGpE7BuSlLC50ajizqmJSc5oOj8BdQAtAITL0.pdf",
+                                                                   "ordem":  1,
+                                                                   "created_at":  "2025-04-08 16:42:04",
+                                                                   "updated_at":  "2025-04-08 16:42:04"
+                                                               },
+                                                               {
+                                                                   "id":  158,
+                                                                   "apostila_id":  89,
+                                                                   "nome":  "Validação jurídica do prontuário odontológico eletrônico: proposta fundamentada na legislação brasileira",
+                                                                   "descricao_capitulo":  "Artigo que propõe critérios técnicos e jurídicos para assegurar a validade legal do prontuário odontológico eletrônico, com base na legislação brasileira e nos princípios da Ciência do Direito.",
+                                                                   "idioma":  "pt",
+                                                                   "arquivo_pdf":  "capitulos/GOSEs2Ofb7uiKs2stVAF0r95bsg1TZyT88GSYBpN.pdf",
+                                                                   "ordem":  2,
+                                                                   "created_at":  "2025-04-08 16:42:04",
+                                                                   "updated_at":  "2025-04-08 16:42:04"
+                                                               }
+                                                           ]
+                                         }
+                                     ],
+                       "blog_posts":  [
+                                          {
+                                              "id":  1,
+                                              "id_instituicao":  4,
+                                              "id_categoria":  1,
+                                              "titulo":  "Projeto do piso salarial de dentistas avança no Senado",
+                                              "resumo":  "Um importante passo foi dado na tramitação do Projeto de Lei 1.365/2022, que propõe o reajuste do piso salarial de cirurgiões-dentistas e médicos no Brasil. De autoria da senadora Daniella Ribeiro (PSD-PB), a proposta recebeu parecer favorável do relator na Comissão de Assuntos Econômicos (CAE), senador Nelsinho Trad (PSD-MS), e agora aguarda apreciação do presidente da CAE, senador Renan Calheiros (MDB-AL).",
+                                              "capa":  "public/uploads/blog/capa/Tbv5QkG2uiroONFcqrHLPnirtP4qayazEyddxQCb.jpg",
+                                              "texto":  "\u003cp class=\"\" data-start=\"207\" data-end=\"618\"\u003eUm importante passo foi dado na tramita\u0026ccedil;\u0026atilde;o do Projeto de Lei 1.365/2022, que prop\u0026otilde;e o reajuste do piso salarial de cirurgi\u0026otilde;es-dentistas e m\u0026eacute;dicos no Brasil. De autoria da senadora Daniella Ribeiro (PSD-PB), a proposta recebeu parecer favor\u0026aacute;vel do relator na\u0026nbsp;\u003ca href=\"https://www12.senado.leg.br/hpsenado\"\u003eComiss\u0026atilde;o de Assuntos Econ\u0026ocirc;micos (CAE)\u003c/a\u003e, senador Nelsinho Trad (PSD-MS), e agora aguarda aprecia\u0026ccedil;\u0026atilde;o do presidente da CAE, senador Renan Calheiros (MDB-AL).\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli data-start=\"207\" data-end=\"618\"\u003e\u003ca href=\"https://dentalpress.com.br/portal/alberto-consolaro-bacterias-no-sangue-um-perigo-real/\"\u003eAlberto Consolaro: Bact\u0026eacute;rias no sangue: um perigo real\u003c/a\u003e\u003c/li\u003e\r\n\u003cli data-start=\"207\" data-end=\"618\"\u003e\u003ca href=\"https://dentalpress.com.br/portal/cursos/\"\u003eConhe\u0026ccedil;a os cursos de especializa\u0026ccedil;\u0026atilde;o dispon\u0026iacute;veis na Dental Press\u003c/a\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp class=\"\" data-start=\"620\" data-end=\"975\"\u003eNa manh\u0026atilde; desta quarta-feira (2), Trad se reuniu com representantes de entidades da \u0026aacute;rea da sa\u0026uacute;de, como o Conselho Federal de Odontologia (CFO), a Federa\u0026ccedil;\u0026atilde;o Nacional dos Odontologistas (FNO), a Federa\u0026ccedil;\u0026atilde;o Interestadual dos Odontologistas (FIO) e a Federa\u0026ccedil;\u0026atilde;o Nacional dos M\u0026eacute;dicos (Fenam), para discutir os pr\u0026oacute;ximos passos da tramita\u0026ccedil;\u0026atilde;o da proposta no Senado.\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"977\" data-end=\"1302\"\u003eParticiparam do encontro o presidente do CFO, Claudio Miyake; o vice-presidente do \u0026oacute;rg\u0026atilde;o, Nazareno \u0026Aacute;vila; o presidente da FNO, Ailton Coelho de Ata\u0026iacute;de Filho; o vice-presidente da FIO, Jos\u0026eacute; Carrijo Brom; a secret\u0026aacute;ria-geral da Fenam, Rita Virginia Ribeiro; e Carlos Fernando, representante da Federa\u0026ccedil;\u0026atilde;o M\u0026eacute;dica Brasileira (FMB).\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"1325\" data-end=\"1702\"\u003eDurante a reuni\u0026atilde;o, Nelsinho Trad explicou que, com o parecer favor\u0026aacute;vel j\u0026aacute; conclu\u0026iacute;do, o texto ser\u0026aacute; encaminhado para delibera\u0026ccedil;\u0026atilde;o na CAE. Caso seja aprovado, seguir\u0026aacute; em car\u0026aacute;ter terminativo para a Comiss\u0026atilde;o de Assuntos Sociais (CAS), o que significa que, se aprovado pela CAS, o projeto n\u0026atilde;o precisar\u0026aacute; passar pelo plen\u0026aacute;rio do Senado, sendo enviado diretamente \u0026agrave; C\u0026acirc;mara dos Deputados.\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"1734\" data-end=\"2159\"\u003ePara o presidente do CFO, Claudio Miyake, o avan\u0026ccedil;o da proposta representa um marco na luta por melhores condi\u0026ccedil;\u0026otilde;es de trabalho para os profissionais da Odontologia. \u0026ldquo;Agradecemos ao senador Nelsinho Trad pelo parecer favor\u0026aacute;vel. O reajuste no piso salarial dos cirurgi\u0026otilde;es-dentistas \u0026eacute; justo e necess\u0026aacute;rio, reconhecendo o valor do trabalho essencial que esses profissionais prestam \u0026agrave; sa\u0026uacute;de da popula\u0026ccedil;\u0026atilde;o brasileira\u0026rdquo;, afirmou Miyake.\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"2188\" data-end=\"2434\"\u003e\u003cstrong\u003eO relat\u0026oacute;rio\u003c/strong\u003e\u003cbr\u003eNo parecer apresentado, o senador Nelsinho Trad incorporou a Emenda n\u0026ordm; 1\u0026ndash;T, do senador Hiran Gon\u0026ccedil;alves (PP-RR), que atualiza o valor do piso salarial para R$ 11.800,00, com reajuste anual baseado no \u0026Iacute;ndice Nacional de Pre\u0026ccedil;os ao Consumidor (INPC).\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"2436\" data-end=\"2863\"\u003eContudo, a vers\u0026atilde;o final do relat\u0026oacute;rio prop\u0026otilde;e um valor ainda maior: R$ 13.662,00 para uma jornada de 20 horas semanais, tanto para m\u0026eacute;dicos quanto para cirurgi\u0026otilde;es-dentistas. A remunera\u0026ccedil;\u0026atilde;o dever\u0026aacute; ser reajustada anualmente pelo \u0026Iacute;ndice Nacional de Pre\u0026ccedil;os ao Consumidor Amplo (IPCA). Al\u0026eacute;m disso, o trabalho noturno ou realizado em regime de hora extra dever\u0026aacute; ser remunerado com acr\u0026eacute;scimo de 50% sobre o valor da hora ordin\u0026aacute;ria diurna.\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"2865\" data-end=\"3246\"\u003eSegundo Trad, a proposta representa um avan\u0026ccedil;o importante. \u0026ldquo;Este projeto \u0026eacute; um marco fundamental para a constru\u0026ccedil;\u0026atilde;o de um mercado de trabalho digno para os profissionais da sa\u0026uacute;de\u0026rdquo;, destacou. O senador tamb\u0026eacute;m lembrou que a legisla\u0026ccedil;\u0026atilde;o atual sobre o piso salarial da categoria est\u0026aacute; em vigor desde 1961. \u0026ldquo;A norma se encontra desatualizada e obsoleta ap\u0026oacute;s mais de seis d\u0026eacute;cadas\u0026rdquo;, completou.\u003c/p\u003e\r\n\u003cp class=\"\" data-start=\"3269\" data-end=\"3744\"\u003e\u003cstrong\u003eDebate\u003c/strong\u003e\u003cbr\u003eA necessidade de atualiza\u0026ccedil;\u0026atilde;o legal foi amplamente discutida durante a audi\u0026ecirc;ncia p\u0026uacute;blica realizada pela CAE no \u0026uacute;ltimo dia 12 de mar\u0026ccedil;o. O encontro contou com a participa\u0026ccedil;\u0026atilde;o de representantes do CFO e de outras entidades da Odontologia e da Medicina. De acordo com Trad, os depoimentos refor\u0026ccedil;aram a urg\u0026ecirc;ncia da aprova\u0026ccedil;\u0026atilde;o do novo piso. \u0026ldquo;Ficou evidente a necessidade de um marco legal moderno e compat\u0026iacute;vel com a realidade dos profissionais da sa\u0026uacute;de no Brasil\u0026rdquo;, concluiu o relator.\u003c/p\u003e",
+                                              "created_at":  "2025-04-08 20:45:23",
+                                              "updated_at":  "2025-04-08 20:45:23",
+                                              "categoria":  {
+                                                                "id":  1,
+                                                                "id_instituicao":  4,
+                                                                "nome":  "Clinica",
+                                                                "created_at":  "2025-04-08 20:40:19",
+                                                                "updated_at":  "2025-04-08 20:40:19"
+                                                            }
+                                          }
+                                      ]
+                   }
+               ]
+}

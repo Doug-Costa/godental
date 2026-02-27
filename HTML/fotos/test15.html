@@ -1,0 +1,80 @@
+<header id="topo-grande" class="fixed-top container-fluid background-topogrande">
+  <div class="container">
+      <div class="row">
+          <div class="col-4">
+              <button class="navbar-toggler tracinhos" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuCollapse" aria-controls="menuCollapse">
+                  <i class="fa-solid fa-bars menuicon-topogrande"></i>
+              </button>
+          </div>
+          <div class="col-4 text-center">
+              <a href="{{ route('home') }}" alt="Revista Clínica de Ortodontia Dental Press">
+                  <img src="{{ asset('imagens/siteRevista/logo.png') }}" class="img-fluid logo" alt="Revista Clínica de Ortodontia Dental Press">
+              </a>
+          </div>
+          <div class="col-4 text-end">
+              @if(null == session()->get('token'))
+                  <a class="menu-link" data-bs-toggle="modal" data-bs-target="#modalLogin" onclick="openModal"  >
+                      {{__("messages.TopoMenuAcess")}}
+                  </a>
+
+                  <a class="menu-register" type="button" onclick="openModal('register');" >
+                      {{__("messages.TopoMenuAssine")}}
+                  </a>
+              @endif
+
+              
+              @if(null !== session()->get('token'))
+              <?php
+                  $usuario = session()->get("usuario");
+              ?>
+          <ul class="nav-teste">    
+              <li class="nav-item dropdown">
+                  
+                  <a class="nav-link dropdown-toggle backgroundtopogrande-mobile" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                      <i class="fa-solid fa-user"></i> {{ $usuario->fullName }}
+                  </a>
+                  
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <?php
+                          if(in_array(session()->get('usuarioPermissao'), ['naotem','naotemVencido','naotemSemPlano'])){
+                          ?>
+                              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalGift"></a>{{__("messages.TopoMenuGift")}}</li>
+                          <?php
+                          }if(session()->get('usuario')->tipoUsuario == 'pessoal'){
+                          ?>
+                          <li><a class="dropdown-item" href="{{ route('minhaconta') }}">{{__("messages.TopoMenuMinhaConta")}}</a></li>
+                          <?php
+                          }
+                          ?>
+                          <li><a class="dropdown-item" href="{{ route('logout') }}">{{__("messages.TopoMenuSair")}}</a></li>
+                      </ul>
+
+                  @else 
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalLogin">{{__("messages.TopoMenuCadastrar")}}</a></li>
+                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalCadastro">{{__("messages.TopoMenuLogar")}}</a></li>
+                      </ul>
+                  
+              </li>
+              <li class="nav-item dropdown me-3 menu-idiomas ">
+              <a class="nav-link dropdown-toggle  " href="#" id="navbarDropdownLanguage" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-globe"></i> {{session()->has('lang_code')?(session()->get('lang_code')=='pt'?'PT-BR':''):''}} {{session()->has('lang_code')?(session()->get('lang_code')=='en'?'EN':''):''}} {{session()->has('lang_code')?(session()->get('lang_code')=='es'?'ES':''):''}}
+              </a>
+              <ul class="dropdown-menu menu-idiomas dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li>
+                      <a onclick="changeLanguage('pt')" class="dropdown-item idiomas {{session()->has('lang_code')?(session()->get('lang_code')=='pt'?'IdiomaSelecionado':''):''}}">PT-BR</a>
+                  </li>
+                  <li>
+                      <a onclick="changeLanguage('en')" class="dropdown-item idiomas {{session()->has('lang_code')?(session()->get('lang_code')=='en'?'IdiomaSelecionado':''):''}}">English</a>
+                  </li>
+                  <li>
+                      <a onclick="changeLanguage('es')" class="dropdown-item idiomas {{session()->has('lang_code')?(session()->get('lang_code')=='es'?'IdiomaSelecionado':''):''}}">Spanish</a>
+                  </li>
+              </ul>
+          </li>
+          </ul>    
+              @endif
+          </div>
+      </div>
+  </div>
+</header>

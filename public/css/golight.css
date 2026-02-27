@@ -1,0 +1,142 @@
+body {
+    background-color: #FFFFFF !important;
+}
+
+#LogoGotalks{
+    filter: grayscale(100%) brightness(0);
+}
+
+#SessionGotalks{
+    background-color: #FFFFFF !important;
+}
+
+#SessionGotalks, 
+#SessionGotalks * {
+  color: #000000 !important;
+}
+
+#SessionGotalks button{
+    border-color: #000000 !important;
+}
+
+
+#slider3DVideo .owl-nav .owl-next {
+    position: absolute;
+    top: calc(104% - 23px) !important;
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+    /* background-color: #000000 !important; */
+    right: 0;
+    margin: 0;
+    height: 308px;
+    padding: 55px !important;
+    margin: 0 !important;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(215 215 215) 100%) !important;
+}
+
+#slider3DVideo .owl-nav .owl-prev {
+    position: absolute;
+    top: calc(104% - 23px) !important;
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+    /* background-color: #000000 !important; */
+    right: 0;
+    margin: 0;
+    height: 308px;
+    padding: 55px !important;
+    margin: 0 !important;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(270deg, rgba(2, 0, 36, 0) 0%, rgba(215 215 215) 100%) !important;
+}
+
+@media (max-width: 767px) {
+#slider3DVideo > div > div.slider > div > div.owl-nav {
+    display:none;
+    }
+}
+.novidades2 {
+    background: #FFFFFF !important;
+}
+
+.carouselPatrocinadoresHome .slider-card img {
+    filter: grayscale(100%) brightness(0) !important;
+}
+
+.videosPalavra {
+    color: #000000;
+    margin-bottom: 25px !important;
+}
+
+#DentalGO-Videos-681 > div > div > div.owl-carousel.owl-theme.owl-carousel-cinco.owl-loaded.owl-drag > div.owl-nav > button.owl-prev{
+    background: transparent !important;
+}
+#DentalGO-Videos-681 > div > div > div.owl-carousel.owl-theme.owl-carousel-cinco.owl-loaded.owl-drag > div.owl-nav > button.owl-prev > span{
+    color: #000000;
+    font-size: 55px;
+}
+#DentalGO-Videos-681 > div > div > div.owl-carousel.owl-theme.owl-carousel-cinco.owl-loaded.owl-drag > div.owl-nav > button.owl-next{
+    background: transparent !important;
+}
+#DentalGO-Videos-681 > div > div > div.owl-carousel.owl-theme.owl-carousel-cinco.owl-loaded.owl-drag > div.owl-nav > button.owl-next > span{
+    color: #000000;
+    font-size: 55px;
+}
+
+#DentalGO-Videos-681 > h3{
+    color: #000000 !important;
+}
+
+body > div.container-fluid.novidades2{
+    box-shadow: inset 10px -1px 205px 106px rgb(255 255 255 / 95%) !important;
+}
+#slider > div > div > div.owl-nav > button.owl-prev{
+    background: transparent !important;
+}
+
+#slider > div > div > div.owl-nav > button.owl-prev > span{
+    color: #000000;
+    font-size: 55px;
+}
+
+#slider > div > div > div.owl-nav > button.owl-next{
+    background: transparent !important;
+}
+#slider > div > div > div.owl-nav > button.owl-next > span{
+    color: #000000;
+    font-size: 55px;
+}
+
+.BgBlackHome {
+    background-color: #ffffff;
+}
+
+.BgBlackHome, 
+.BgBlackHome * {
+  color: #000000 !important;
+}
+
+body > div.BgBlackHome > div.container-fluid.background-meio.d-inline-block.text-center *{
+    color: #FFFFFF !important;
+}
+
+.tituloDuvidas{
+    color: #000000 !important;
+}
+
+.base-indexadora {
+    color: #000000 !important;
+}
+
+#PgVideosGo {
+    background-color: #ffffff !important;
+}
+
+#PgVideosGo, 
+#PgVideosGo * {
+  color: #000000 !important;
+}

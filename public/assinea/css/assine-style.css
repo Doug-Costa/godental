@@ -1,0 +1,667 @@
+*{
+    font-family: "Raleway", serif;
+    font-weight: 600;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.section1, .section2, .section3, .section4, .section5, .section6 {
+    padding-inline: 0 !important;
+}
+
+.background-1 {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    min-height: 560px;
+}
+
+.section1-left {
+    padding-top: 175px;
+}
+
+.logo {
+    width: 264px;
+}
+
+.section1-left .frase p {
+    color: #ffffff;
+    border: 2px solid #6a6a6a;
+    width: 65%;
+    position: relative;
+    padding: 8px 24px;
+    margin-block: 48px;
+    border-radius: 16px;
+    font-weight: 800;
+}
+
+.section1-left h3 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 24px;
+    letter-spacing: 1.2px;
+}
+
+.section1-left .choice {
+    color: #e1e1e1;
+    font-size: 22px;
+}
+
+.section1-left h3, .card-valor .etiqueta span, .top .title span {
+    font-weight: 900;
+} 
+
+.card-valor {
+    display: inline-block;
+    width: 40%;
+    background-color: #e1e1e1;
+    padding-block: 40px;
+    border-radius: 24px;
+    margin: 80px auto 0;
+}
+
+.card-valor .etiqueta {
+    border: 2px solid #6a6a6a;
+    width: 75%;
+    margin-inline: auto;
+    padding: 8px;
+    border-radius: 22px;
+    letter-spacing: 0.8px;
+}
+
+.card-valor .line {
+    border: 1px solid #6a6a6a;
+    height: 0;
+    margin: 0 20% 29px;
+}
+
+.card-valor .btn-assinar, .section4 .btn-assinar, .section2 .btn-assinar {
+    display: block;
+    width: 60%;
+    color: #ffffff;
+    background-color: #852239;
+    margin-inline: auto;
+    line-height: 230%;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+
+.section2 .container {
+    margin-block: 40px 100px;
+
+}
+
+.section2 .container .title {
+    margin-bottom: 50px;
+}
+
+.section2 .icon {
+    margin-bottom: 70px;
+}
+
+.icon span {
+    font-weight: 900;
+}
+
+.icon p {
+    margin-left: 20px;
+    max-width: 200px;
+}
+
+.meio {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.direita {
+    justify-content: right;
+}
+
+
+.section3 .counter, .section4 .counter {
+    color: #ffffff;
+    padding-block: 20px;
+    justify-content: center;
+}
+
+.section3 .counter span, .section4 .counter span {
+    font-size: 400%;
+}
+
+.section3 .counter p, .section4 .counter p {
+    margin-top: -20px;
+    font-size: 200%;
+    font-weight: 200;
+    letter-spacing: 1.4px;
+}
+
+
+.section4 .title {
+    margin: 40px 50px;
+}
+
+.section4 img {
+    width: 100%;
+}
+
+.section4 .counter h3 {
+    line-height: 450%;
+    /* line-height: 250%;
+    font-size: 200%;
+    font-weight: 200;
+    letter-spacing: 1.4px; */
+
+}
+
+.section4 .faixa1 {
+    background-color: #000;
+    color: #ffffff;
+    padding-block: 40px;
+}
+
+.section4 .faixa2 {
+    background-color: #852a3f;
+    color: #ffffff;
+    padding-block: 40px;
+}
+
+.section4 .faixa1 span {
+    font-size: 200%;
+}
+
+.section4 .faixa2 span {
+    font-size: 200%;
+}
+
+.owl-carousel-revistas {
+    margin-block: 60px;
+}
+
+
+.section4 .btn-assinar {
+    display: block;
+    width: 60%;
+    color: #ffffff;
+    background-color: #852239;
+    margin-inline: auto;
+    line-height: 230%;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-block: 25px;
+} 
+
+
+.section5 .top, .section5 .bottom {
+    margin-block: 90px 50px;
+    font-size: 200%;
+}
+
+.section5 .top span {
+    font-weight: 900;
+}
+
+.section5 .posters {
+    margin-inline: 5%;
+}
+
+.posters .poster {
+    position: relative;
+}
+
+.section5 .poster-text {
+    position: absolute;
+    color: #e1e1e1;
+    top: 45%;
+}
+
+.section5 .poster-text span {
+    max-width: 100%;
+    font-weight: 900;
+    font-size: 130%;
+    border: 2px solid #e1e1e1;
+    border-radius: 14px;
+    padding: 6px 14px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.section5 .poster-text p {
+    margin-top: 10%;
+    max-width: 75%;
+    margin-inline: auto;
+}
+
+
+.section6 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.section6 .side {
+    position: absolute;
+    z-index: 2;
+    right: 5%;
+    top: 30%;
+    width: 25%;
+    font-size: 215%;
+}
+
+.section6 .side span {
+    display: block;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.section6 .side p {
+    color: #e1e1e1;
+    font-weight: 300;
+    text-shadow: #000 -1px 1px 10px;
+}
+
+.section6 .btn-final {
+    text-decoration: none;
+    border: 3px solid #e1e1e1;
+    border-radius: 14px;
+    padding-inline: 100px;
+}
+
+
+.mobile .section6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile .section6 .container {
+    overflow-y: hidden; 
+    display: block;
+
+}
+
+.mobile .section6 .background-2 {
+    max-width: 100%;
+}
+
+.mobile .background-color {
+    background-color: #080808;
+}
+
+.section6 .side {
+    position: absolute;
+    right: 5%;
+    width: 40%;
+    margin-inline: auto;
+}
+
+.owl-carousel-assine {
+    margin-block: 60px;
+}
+
+@media (max-width: 378px) {
+    html .desktop {
+        display: none;
+    }
+
+    .poster .poster-text {
+        top: 40%;
+    }
+
+    .section1-top .title {
+        font-weight: 900;
+    }
+
+
+    .section2 .icon img {
+        margin-bottom: 20px;
+    }
+
+    .section2 .icon p {
+        margin-inline: auto;
+    }
+
+    .imagem-col {
+        flex: 0 0 50% !important; /* Cada imagem ocupa metade da largura */
+        max-width: 50% !important;
+        margin-bottom: 24px; /* Adicione margem inferior para separar as imagens */
+        box-sizing: border-box; /* Certifique-se de que as margens e preenchimentos não aumentem a largura */
+    }
+
+    .artigoFavSombraRevistas {
+        -webkit-box-shadow: 0px 0px 20px -3px rgba(102,102,102,1);
+        -moz-box-shadow: 0px 0px 20px -3px rgba(102,102,102,1);
+        box-shadow: 0px 0px 20px -3px rgba(102,102,102,1);
+        border-radius: 20px;
+        }
+      
+    .imagemultimaRevistaCol{
+        width: 100%;
+        overflow: hidden;
+        /* max-height: 350px;
+        min-height: 350px; */
+    }
+    .imagemultimaRevistaCol img{
+        transition: all 1s ease-in-out;
+    }
+    
+    .imagemultimaRevistaCol img:hover{
+        transform: scale(1.1, 1.1);
+        cursor: pointer;
+    }
+
+    .section4 .btn-assinar {
+        display: block;
+        width: 60%;
+        color: #ffffff;
+        background-color: #852239;
+        margin-inline: auto;
+        line-height: 230%;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-block: 25px 40px;
+
+    }
+
+    .section4 .videos {
+        margin-top: 40px;
+    }
+
+
+    .section5 .posters .poster-text {
+        top: 32%;
+    }
+    
+    .section6 .btn-final {
+        padding-inline: 50px;
+    }
+
+    .section6 .side {
+        position: unset;
+        right: unset;
+        width: 60%;
+        margin-inline: auto;
+        margin-top: -200px;
+    }
+
+
+    .tablet {
+        display: none;
+    }
+}
+
+@media (min-width: 379px) and (max-width: 691px) {
+    html .desktop {
+        display: none;
+    }
+
+    .section1-top .title {
+        font-weight: 900;
+    }
+
+
+    .section2 .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .resvistas:nth-child(4) {
+        display: none;
+    } */
+
+    /* Para dispositivos móveis, coloque as imagens em 2 colunas */
+    .imagem-col {
+        flex: 0 0 50% !important; /* Cada imagem ocupa metade da largura */
+        max-width: 50% !important;
+        margin-bottom: 24px; /* Adicione margem inferior para separar as imagens */
+        box-sizing: border-box; /* Certifique-se de que as margens e preenchimentos não aumentem a largura */
+    }
+
+    .artigoFavSombraRevistas {
+        -webkit-box-shadow: 0px 0px 20px -3px rgba(102,102,102,1);
+        -moz-box-shadow: 0px 0px 20px -3px rgba(102,102,102,1);
+        box-shadow: 0px 0px 20px -3px rgba(102,102,102,1);
+        border-radius: 20px;
+        }
+      
+    .imagemultimaRevistaCol{
+        width: 100%;
+        overflow: hidden;
+        /* max-height: 350px;
+        min-height: 350px; */
+    }
+    .imagemultimaRevistaCol img{
+        transition: all 1s ease-in-out;
+    }
+    
+    .imagemultimaRevistaCol img:hover{
+        transform: scale(1.1, 1.1);
+        cursor: pointer;
+    }
+      
+    .section4 .btn-assinar {
+        display: block;
+        width: 60%;
+        color: #ffffff;
+        background-color: #852239;
+        margin-inline: auto;
+        line-height: 230%;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-block: 20px 45px;
+
+    } 
+
+    .section4 .videos {
+        margin-top: 40px;
+    }
+
+
+    .section6 .background-2 {
+        width: 100%;
+    }
+
+    .section6 .side {
+        position: unset;
+        right: unset;
+        width: 60%;
+        margin-inline: auto;
+        margin-top: -250px;
+    }
+
+
+    .tablet {
+        display: none !important;
+    }
+
+}
+
+
+@media (min-width: 692px) and (max-width: 1024px) {
+    html .desktop {
+        display: none;
+    }
+
+    .section1-top .logo {
+        margin-top: 30px;
+    }
+
+    .section1-top .frase p {
+        margin-inline: auto;
+    }
+
+    .section1-top {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+    
+    .section1 .logo {
+        width: 180px;
+        margin-block: 70px 116px;
+    }
+
+    .section1-top .frase p {
+        color: #ffffff;
+        border: 2px solid #6a6a6a;
+        width: 40%;
+        position: relative;
+        padding: 8px 24px;
+        margin-block: 48px;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 120%;
+        letter-spacing: 1.2px;
+    }
+    
+    .section1-top .title {
+        color: #ffffff;
+        font-size: 300%;
+        margin-bottom: 24px;
+        letter-spacing: 1.2px;
+    }
+    
+    .section1-top .choice {
+        color: #e1e1e1;
+        font-size: 200%;
+        letter-spacing: 1.4px;
+    }
+    
+    .section1-top .title .card-valor .etiqueta span, .top .title span {
+        font-weight: 900;
+    } 
+
+    .card-valor {
+        width: 85%;
+        background-color: #e1e1e1;
+        padding-block: 70px;
+        border-radius: 24px;
+        margin: 60px auto 0;
+        font-size: 150%;
+    }
+    
+    .card-valor .cost {
+        font-weight: 800;
+        font-size: 250%; 
+    }
+
+    .card-valor .etiqueta {
+        font-size: 140%;
+        border: 2px solid #6a6a6a;
+        width: 65%;
+        padding: 8px 24px;
+        left: 0;
+        margin-inline: auto;
+        border-radius: 10px;
+    }
+
+    .card-valor .line {
+        border: 1px solid #6a6a6a;
+        height: 0;
+        margin: 40px 30%;
+    }
+
+    .card-valor .btn-assinar {
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .section2 .container {
+        margin-block: 100px 60px;
+    }
+
+    .section2 .container .title {
+        font-size: 200%;
+        letter-spacing: 1.5px;
+    }
+    
+    .section2 .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .section4 .btn-assinar {
+        display: block;
+        width: 40%;
+        color: #ffffff;
+        background-color: #852239;
+        margin-inline: auto;
+        line-height: 230%;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-block: 40px 50px;
+    } 
+        
+    .btn-assinar {
+            display: block;
+        width: 40%;
+        color: #ffffff;
+        background-color: #852239;
+        margin-inline: auto;
+        line-height: 230%;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-block: 25px;
+    }
+    
+    .posters .poster {
+        margin-bottom: 24px;
+    }
+
+    .section5 .poster-text span {
+        font-size: 240%;
+        padding: 8px 24px;
+        border: 1px solid #e1e1e1;
+        border-radius: 10px;
+    }
+
+    .section5 .poster-text p {
+        margin-top: 30px;
+        width: 50%;
+        font-size: 116%;
+        font-weight: 500;
+    }
+
+    .section6 .side {
+        width: 60%;
+        margin-inline: auto;
+        right: unset;
+        top: 60%;
+        font-size: 170%;
+        text-align: center;
+        margin-top: -300px;
+    }
+
+    .section6 .background-2 {
+        width: 100%;
+    }
+    
+    .section6 .side {
+        position: unset;
+        right: unset;
+        width: 60%;
+        margin-inline: auto;
+        margin-top: -600px;
+    }
+
+
+    .celular {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    html .mobile {
+        display: none;
+    }
+}

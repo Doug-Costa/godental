@@ -1,0 +1,420 @@
+[04-Jan-2023 20:34:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Jan-2023 16:25:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[31-Jan-2023 15:41:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[13-Feb-2023 15:13:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[24-Feb-2023 14:16:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[05-Mar-2023 00:59:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Mar-2023 08:07:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[11-Apr-2023 10:07:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[19-Apr-2023 15:46:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[20-Apr-2023 19:14:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[26-Apr-2023 03:21:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[10-May-2023 23:36:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-May-2023 08:51:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[21-May-2023 00:40:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[25-May-2023 00:53:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[31-May-2023 17:33:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[03-Jul-2023 19:40:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Jul-2023 14:55:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[25-Jul-2023 08:39:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[12-Aug-2023 13:07:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[18-Oct-2023 03:56:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[21-Oct-2023 16:16:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[23-Oct-2023 04:28:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[23-Oct-2023 04:43:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[24-Oct-2023 01:03:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[24-Oct-2023 18:04:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[27-Oct-2023 04:34:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[31-Oct-2023 02:17:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[03-Nov-2023 08:45:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Nov-2023 18:40:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Nov-2023 01:52:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Nov-2023 03:05:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[02-Dec-2023 15:18:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Dec-2023 03:03:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[27-Dec-2023 00:06:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[02-Jan-2024 07:55:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Jan-2024 06:31:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[11-Jan-2024 00:31:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-Jan-2024 12:11:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[19-Jan-2024 14:23:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[24-Jan-2024 00:31:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Feb-2024 21:26:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Feb-2024 21:26:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Feb-2024 13:36:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[14-Feb-2024 20:41:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-Feb-2024 13:48:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[19-Feb-2024 10:39:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[25-Feb-2024 22:50:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[04-Mar-2024 06:38:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[17-Mar-2024 22:42:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Apr-2024 10:26:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[13-Apr-2024 04:17:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[18-Apr-2024 16:52:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[19-Apr-2024 23:31:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[22-Apr-2024 01:13:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Apr-2024 00:15:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-May-2024 19:19:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[13-May-2024 11:14:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[19-May-2024 23:46:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[20-May-2024 01:15:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[06-Jun-2024 05:18:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Jun-2024 01:30:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[29-Jun-2024 17:06:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[18-Jul-2024 01:10:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[22-Jul-2024 07:37:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[31-Jul-2024 22:28:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[09-Aug-2024 03:35:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[14-Aug-2024 15:35:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[14-Aug-2024 16:19:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[14-Aug-2024 16:30:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[14-Aug-2024 20:51:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-Aug-2024 09:00:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[18-Aug-2024 14:00:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[23-Aug-2024 04:52:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[23-Aug-2024 15:59:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[11-Sep-2024 17:20:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Sep-2024 10:39:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Sep-2024 12:05:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Sep-2024 12:05:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Sep-2024 12:05:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Sep-2024 12:05:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Sep-2024 12:06:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[16-Nov-2024 19:00:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[21-Nov-2024 13:23:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[04-Dec-2024 04:08:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[04-Dec-2024 21:59:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[25-Dec-2024 06:45:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[25-Dec-2024 17:51:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[19-Jan-2025 14:13:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Jan-2025 05:43:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[01-Feb-2025 17:05:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Feb-2025 02:59:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[12-Feb-2025 23:45:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[24-Feb-2025 02:15:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[27-Feb-2025 11:36:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Feb-2025 11:46:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[28-Feb-2025 11:46:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[07-Mar-2025 20:43:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[08-Mar-2025 05:30:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[08-Mar-2025 10:29:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[08-Mar-2025 15:51:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[13-Mar-2025 20:08:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-Mar-2025 00:35:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-Mar-2025 00:59:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8
+[15-Mar-2025 01:29:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/dentalgo/public_html/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Console/Kernel.php on line 8

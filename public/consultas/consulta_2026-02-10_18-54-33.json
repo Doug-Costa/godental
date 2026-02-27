@@ -1,0 +1,13 @@
+{
+    "patient_id": "1",
+    "patient_name": "Ana maria da silva",
+    "patient_identifier": "4499999999",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito.",
+    "duration": "00:09",
+    "timestamp": "2026-02-10 18:54:33",
+    "status": "transcribed",
+    "db_id": 5,
+    "audio_path": "consultas\/consulta_2026-02-10_18-54-33.webm"
+}

@@ -1,0 +1,15 @@
+{
+    "patient_id": 21,
+    "patient_name": "jucelia ribeiro",
+    "patient_identifier": "4499999999",
+    "consultation_type": "Manutenção",
+    "observations": "limpeza",
+    "transcription": "Nenhuma voz detectada.",
+    "duration": "00:03",
+    "service_price_id": "1",
+    "valor": "200.00",
+    "timestamp": "2026-02-20 11:48:07",
+    "status": "transcribed",
+    "db_id": 19,
+    "audio_path": "consultas\/consulta_2026-02-20_11-48-07.webm"
+}

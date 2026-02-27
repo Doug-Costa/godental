@@ -1,0 +1,13 @@
+{
+    "patient_id": 5,
+    "patient_name": "Manoel Soares da Costa",
+    "patient_identifier": "4499897777",
+    "consultation_type": "Retorno",
+    "observations": "retorno de um implante",
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito. Paciente relata desconforto térmico ao contato com líquidos gelados. Presença de restauração infiltrada na face oclusal do dente 16. Indicação de radiografia panorâmica para planejamento cirúrgico. Higiene bucal classificada como boa, porém requer profilaxia de rotina. Paciente concorda com o plano de tratamento proposto.",
+    "duration": "00:29",
+    "timestamp": "2026-02-10 18:34:12",
+    "status": "transcribed",
+    "db_id": 3,
+    "audio_path": "consultas\/consulta_2026-02-10_18-34-12.webm"
+}

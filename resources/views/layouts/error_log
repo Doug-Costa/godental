@@ -1,0 +1,1004 @@
+[09-Jan-2023 16:38:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:552
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 552
+[09-Jan-2023 16:38:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:62
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 62
+[31-Jan-2023 17:56:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:671
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 671
+[31-Jan-2023 17:56:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:62
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 62
+[27-Mar-2023 22:45:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:764
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 764
+[27-Mar-2023 23:40:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:62
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 62
+[18-Apr-2023 11:45:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:764
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 764
+[18-Apr-2023 12:52:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[01-May-2023 07:07:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[01-May-2023 07:23:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[10-May-2023 10:49:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[10-May-2023 10:53:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[15-May-2023 09:09:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[15-May-2023 09:10:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[23-May-2023 04:59:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[23-May-2023 08:57:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[25-May-2023 01:03:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[25-May-2023 01:04:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[02-Jun-2023 03:04:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[02-Jun-2023 05:21:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[14-Jun-2023 13:31:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[14-Jun-2023 20:19:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[26-Jun-2023 03:57:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[26-Jun-2023 20:23:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[03-Jul-2023 20:10:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[03-Jul-2023 20:10:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[08-Jul-2023 04:15:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[08-Jul-2023 08:23:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[19-Jul-2023 16:59:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[20-Jul-2023 19:11:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[03-Aug-2023 03:38:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[03-Aug-2023 10:12:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[13-Aug-2023 03:54:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[14-Aug-2023 04:12:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[28-Aug-2023 04:22:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[28-Aug-2023 18:34:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[06-Sep-2023 06:52:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[07-Sep-2023 18:19:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 29
+[20-Sep-2023 18:13:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:775
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 775
+[06-Oct-2023 20:54:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:778
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 778
+[06-Oct-2023 23:20:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:136
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 136
+[07-Oct-2023 16:48:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:136
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 136
+[09-Oct-2023 01:34:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 67
+[21-Oct-2023 16:27:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[21-Oct-2023 16:28:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[21-Oct-2023 16:28:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[23-Oct-2023 02:04:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[23-Oct-2023 02:04:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[23-Oct-2023 02:05:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[23-Oct-2023 08:09:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[23-Oct-2023 08:09:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[23-Oct-2023 08:09:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[24-Oct-2023 01:09:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[24-Oct-2023 01:09:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[24-Oct-2023 01:09:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[24-Oct-2023 05:16:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[29-Oct-2023 12:09:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[29-Oct-2023 16:27:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[29-Oct-2023 23:03:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Nov-2023 00:37:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[03-Nov-2023 09:22:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:777
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 777
+[03-Nov-2023 09:22:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[03-Nov-2023 09:23:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[09-Nov-2023 07:56:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[09-Nov-2023 07:56:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[09-Nov-2023 07:56:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[09-Nov-2023 11:22:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[09-Nov-2023 11:23:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[09-Nov-2023 11:23:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[15-Nov-2023 09:05:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[20-Nov-2023 05:04:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[22-Nov-2023 10:03:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[22-Nov-2023 12:03:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[28-Nov-2023 18:34:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[02-Dec-2023 12:15:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[02-Dec-2023 17:22:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[03-Dec-2023 12:34:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[25-Dec-2023 17:48:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[27-Dec-2023 12:48:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[27-Dec-2023 12:48:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[27-Dec-2023 12:48:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[28-Dec-2023 20:21:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[31-Dec-2023 21:23:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Jan-2024 07:56:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[02-Jan-2024 07:56:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Jan-2024 07:56:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[02-Jan-2024 15:58:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:798
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 798
+[02-Jan-2024 21:28:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[03-Jan-2024 12:47:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[09-Jan-2024 04:01:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[10-Jan-2024 17:07:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:818
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 818
+[11-Jan-2024 02:59:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[15-Jan-2024 12:25:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:823
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 823
+[15-Jan-2024 12:25:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[15-Jan-2024 12:25:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[19-Jan-2024 12:14:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:823
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 823
+[23-Jan-2024 00:56:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[26-Jan-2024 00:08:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[31-Jan-2024 10:18:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[01-Feb-2024 16:04:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Feb-2024 23:38:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Feb-2024 23:39:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[02-Feb-2024 23:39:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[02-Feb-2024 23:41:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Feb-2024 23:41:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[02-Feb-2024 23:42:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[03-Feb-2024 07:33:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[13-Feb-2024 05:16:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[14-Feb-2024 22:15:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[15-Feb-2024 06:23:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[15-Feb-2024 14:23:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[15-Feb-2024 14:23:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[15-Feb-2024 14:24:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[16-Feb-2024 20:18:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 70
+[18-Feb-2024 13:19:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[02-Mar-2024 02:16:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[09-Mar-2024 13:27:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[10-Mar-2024 04:14:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[11-Mar-2024 11:52:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[16-Mar-2024 03:23:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[16-Mar-2024 03:23:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[16-Mar-2024 03:23:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[17-Mar-2024 08:39:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[17-Mar-2024 20:37:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[18-Mar-2024 01:13:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[21-Mar-2024 13:03:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[21-Mar-2024 21:00:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[03-Apr-2024 22:33:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[06-Apr-2024 19:54:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[06-Apr-2024 21:14:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[06-Apr-2024 21:14:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[06-Apr-2024 21:15:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[09-Apr-2024 19:47:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[17-Apr-2024 03:27:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[18-Apr-2024 07:34:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[18-Apr-2024 19:22:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[19-Apr-2024 23:48:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:834
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 834
+[19-Apr-2024 23:48:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[19-Apr-2024 23:48:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[25-Apr-2024 16:11:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[30-Apr-2024 01:05:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[04-May-2024 09:40:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[13-May-2024 11:32:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[13-May-2024 11:32:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[13-May-2024 11:32:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[14-May-2024 02:32:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[20-May-2024 04:00:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[20-May-2024 12:26:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[22-May-2024 12:57:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[22-May-2024 22:29:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[25-May-2024 11:37:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[27-May-2024 12:44:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[03-Jun-2024 13:38:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[04-Jun-2024 12:26:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[04-Jun-2024 12:26:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[04-Jun-2024 12:26:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[11-Jun-2024 22:05:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[22-Jun-2024 07:12:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[29-Jun-2024 06:21:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[29-Jun-2024 13:11:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[29-Jun-2024 15:29:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[01-Jul-2024 09:53:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[01-Jul-2024 12:17:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Jul-2024 05:57:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[05-Jul-2024 00:48:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[11-Jul-2024 22:23:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[18-Jul-2024 01:24:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[18-Jul-2024 01:24:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[18-Jul-2024 01:24:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[24-Jul-2024 03:18:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[29-Jul-2024 21:37:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[31-Jul-2024 10:45:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[31-Jul-2024 21:49:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[02-Aug-2024 16:43:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[02-Aug-2024 18:14:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[02-Aug-2024 18:21:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[02-Aug-2024 18:52:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[03-Aug-2024 03:54:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[06-Aug-2024 09:16:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[07-Aug-2024 09:45:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[12-Aug-2024 01:05:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[14-Aug-2024 03:27:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[14-Aug-2024 11:57:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[15-Aug-2024 21:09:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[20-Aug-2024 02:45:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[22-Aug-2024 04:47:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[23-Aug-2024 03:01:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[23-Aug-2024 10:56:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[23-Aug-2024 10:56:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[23-Aug-2024 10:56:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[27-Aug-2024 05:12:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[29-Aug-2024 14:51:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[02-Sep-2024 01:59:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[20-Sep-2024 00:50:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[20-Sep-2024 01:00:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[28-Sep-2024 10:40:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[28-Sep-2024 10:40:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[28-Sep-2024 10:40:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[10-Nov-2024 00:48:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[13-Nov-2024 19:14:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[13-Nov-2024 19:16:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[16-Nov-2024 19:17:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[16-Nov-2024 19:17:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[16-Nov-2024 19:17:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 78
+[30-Nov-2024 00:55:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[30-Nov-2024 01:10:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[04-Dec-2024 21:35:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[28-Dec-2024 00:57:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[28-Dec-2024 04:20:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[28-Dec-2024 22:17:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[07-Jan-2025 17:11:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[07-Jan-2025 18:51:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[07-Jan-2025 23:06:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[09-Jan-2025 16:53:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[15-Jan-2025 15:58:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[15-Jan-2025 16:08:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[15-Jan-2025 16:55:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[18-Jan-2025 15:12:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[18-Jan-2025 15:13:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:835
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 835
+[18-Jan-2025 15:13:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[28-Jan-2025 11:38:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[01-Feb-2025 20:42:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:837
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 837
+[01-Feb-2025 21:07:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[01-Feb-2025 21:08:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[07-Feb-2025 11:31:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:837
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 837
+[07-Feb-2025 12:02:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[07-Feb-2025 12:14:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[13-Feb-2025 09:10:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:837
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 837
+[13-Feb-2025 10:17:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[13-Feb-2025 10:20:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[16-Feb-2025 07:47:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:837
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 837
+[18-Feb-2025 22:33:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[24-Feb-2025 19:42:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[24-Feb-2025 20:48:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[24-Feb-2025 20:50:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[26-Feb-2025 10:15:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[26-Feb-2025 10:15:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[26-Feb-2025 10:16:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[26-Feb-2025 10:16:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[26-Feb-2025 10:16:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[26-Feb-2025 10:17:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[08-Mar-2025 10:36:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[08-Mar-2025 10:36:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[08-Mar-2025 10:36:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:81
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 81
+[13-Mar-2025 07:26:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[14-Mar-2025 20:34:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[14-Mar-2025 22:14:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[15-Mar-2025 01:49:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:86
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 86
+[15-Mar-2025 01:59:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function request() in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/scripts.blade.php on line 76
+[15-Mar-2025 02:43:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Request() in /home/dentalgo/public_html/resources/views/layouts/master.blade.php:856
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/master.blade.php on line 856
+[18-Mar-2025 17:24:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session() in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php:86
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/resources/views/layouts/topo.blade.php on line 86

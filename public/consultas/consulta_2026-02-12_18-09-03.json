@@ -1,0 +1,15 @@
+{
+    "patient_id": "6",
+    "patient_name": "yussuke",
+    "patient_identifier": "44998874455",
+    "consultation_type": "Retorno",
+    "observations": null,
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito.",
+    "duration": "00:07",
+    "service_price_id": "1",
+    "valor": "200.00",
+    "timestamp": "2026-02-12 18:09:03",
+    "status": "transcribed",
+    "db_id": 15,
+    "audio_path": "consultas\/consulta_2026-02-12_18-09-03.webm"
+}

@@ -1,0 +1,15 @@
+{
+    "patient_id": "3",
+    "patient_name": "Elma maria",
+    "patient_identifier": "44988496458",
+    "consultation_type": "Avaliação",
+    "observations": "braquetes para fazer ...",
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito.",
+    "duration": "00:10",
+    "service_price_id": "2",
+    "valor": "300.00",
+    "timestamp": "2026-02-12 18:10:00",
+    "status": "transcribed",
+    "db_id": 16,
+    "audio_path": "consultas\/consulta_2026-02-12_18-10-00.webm"
+}

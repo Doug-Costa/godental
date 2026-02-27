@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+*/
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+/*
+|--------------------------------------------------------------------------
+| Authentication API Routes
+|--------------------------------------------------------------------------
+*/
+
+// Rota de autenticação para admins
+Route::post('/autenticar', [AuthController::class, 'autenticar']);
+
+// Rota de status da API
+Route::get('/status', [AuthController::class, 'status']);
+
+// GoTalks Consultations
+Route::post('/consultas', [App\Http\Controllers\Api\ConsultationController::class, 'store']);
+Route::post('/consultas/{id}/audio', [App\Http\Controllers\Api\ConsultationController::class, 'uploadAudio']);
+
+// Mockup routes
+Route::post('/mock-save', [App\Http\Controllers\PagesController::class, 'mockSave']);

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Box Shadow</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+        }
+
+        /* Estilo para o contêiner do elemento sombreado */
+        .box-container {
+            width: 200px;
+            height: 200px;
+            background-color: #7e4f4f;
+            border: 1px solid #db8f8f;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Estilo para os controles de cor e sombra */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        input[type="color"] {
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para o campo de entrada de sombra */
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contêiner do elemento sombreado -->
+    <div class="box-container">
+        <p>Elemento Sombreado</p>
+    </div>
+
+    <!-- Controles de cor e sombra -->
+    <div class="controls">
+        <!-- Escolher a cor da sombra -->
+        <input type="color" id="shadowColor" value="#000000">
+        
+        <!-- Definir o box-shadow -->
+        <input type="text" id="shadowInput" placeholder="5px 5px 10px rgba(0, 0, 0, 0.5)">
+        
+        <!-- Definir o fundo do elemento -->
+        <input type="color" id="backgroundColor" value="#ffffff">
+    </div>
+
+    <script>
+        const boxContainer = document.querySelector('.box-container');
+        const shadowColorInput = document.getElementById('shadowColor');
+        const shadowInput = document.getElementById('shadowInput');
+        const backgroundColorInput = document.getElementById('backgroundColor');
+        
+        function updateBoxShadow() {
+            const shadowColor = shadowColorInput.value;
+            const boxShadowValue = shadowInput.value;
+            const backgroundColor = backgroundColorInput.value;
+            
+            boxContainer.style.backgroundColor = backgroundColor;
+            boxContainer.style.boxShadow = boxShadowValue + ' ' + shadowColor;
+        }
+        
+        shadowColorInput.addEventListener('input', updateBoxShadow);
+        shadowInput.addEventListener('input', updateBoxShadow);
+        backgroundColorInput.addEventListener('input', updateBoxShadow);
+        
+        // Chama a função de atualização para inicializar o elemento com valores padrão
+        updateBoxShadow();
+    </script>
+</body>
+</html>

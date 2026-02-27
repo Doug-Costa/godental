@@ -1,0 +1,2252 @@
+[09-Jan-2023 16:28:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[09-Jan-2023 16:28:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[09-Jan-2023 16:28:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[09-Jan-2023 16:28:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[09-Jan-2023 16:28:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[09-Jan-2023 16:28:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[09-Jan-2023 16:28:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[09-Jan-2023 16:28:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[26-Jan-2023 01:13:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[26-Jan-2023 01:15:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[26-Jan-2023 01:35:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[26-Jan-2023 02:10:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[26-Jan-2023 02:23:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[26-Jan-2023 02:31:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[26-Jan-2023 06:37:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[26-Jan-2023 06:38:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[31-Jan-2023 15:44:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[31-Jan-2023 15:44:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[31-Jan-2023 15:44:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[31-Jan-2023 15:44:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[31-Jan-2023 15:44:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[31-Jan-2023 15:45:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[31-Jan-2023 15:45:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[31-Jan-2023 15:45:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[24-Mar-2023 03:57:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[24-Mar-2023 03:58:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[24-Mar-2023 04:00:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[24-Mar-2023 04:02:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[24-Mar-2023 04:02:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[24-Mar-2023 04:03:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[24-Mar-2023 04:03:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[24-Mar-2023 04:04:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-May-2023 08:58:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[15-May-2023 08:58:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-May-2023 08:58:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-May-2023 08:59:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-May-2023 08:59:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-May-2023 08:59:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-May-2023 08:59:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-May-2023 08:59:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[25-May-2023 00:56:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[25-May-2023 00:56:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[25-May-2023 00:56:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[25-May-2023 00:56:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[25-May-2023 00:56:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[25-May-2023 00:56:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[25-May-2023 00:56:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[25-May-2023 00:56:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[31-May-2023 17:35:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[31-May-2023 17:35:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[31-May-2023 17:35:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[31-May-2023 17:35:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[31-May-2023 17:35:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[31-May-2023 17:35:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[31-May-2023 17:35:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[31-May-2023 17:35:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[03-Jul-2023 20:08:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[03-Jul-2023 20:08:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[03-Jul-2023 20:09:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[03-Jul-2023 20:09:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[03-Jul-2023 20:09:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[03-Jul-2023 20:09:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[03-Jul-2023 20:09:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[21-Oct-2023 16:19:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[21-Oct-2023 16:19:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[21-Oct-2023 16:19:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[21-Oct-2023 16:19:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[21-Oct-2023 16:19:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[21-Oct-2023 16:19:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[21-Oct-2023 16:19:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[21-Oct-2023 16:19:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[23-Oct-2023 04:59:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[23-Oct-2023 04:59:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[23-Oct-2023 04:59:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[23-Oct-2023 04:59:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[23-Oct-2023 04:59:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[23-Oct-2023 04:59:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[23-Oct-2023 04:59:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[23-Oct-2023 05:00:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[23-Oct-2023 06:50:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[23-Oct-2023 06:50:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[23-Oct-2023 06:50:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[23-Oct-2023 06:50:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[23-Oct-2023 06:50:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[23-Oct-2023 06:50:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[23-Oct-2023 06:50:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[23-Oct-2023 06:50:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[24-Oct-2023 01:07:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[24-Oct-2023 01:07:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[24-Oct-2023 01:07:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[24-Oct-2023 01:07:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[24-Oct-2023 01:07:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[24-Oct-2023 01:07:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[24-Oct-2023 01:07:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[24-Oct-2023 01:07:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[27-Oct-2023 04:37:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[27-Oct-2023 04:37:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[27-Oct-2023 04:37:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[27-Oct-2023 04:37:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[27-Oct-2023 04:37:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[27-Oct-2023 04:37:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[27-Oct-2023 04:37:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[27-Oct-2023 04:37:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[29-Oct-2023 06:58:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[29-Oct-2023 08:08:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[29-Oct-2023 08:32:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[29-Oct-2023 15:51:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[29-Oct-2023 15:53:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[29-Oct-2023 20:44:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[29-Oct-2023 23:36:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[30-Oct-2023 02:30:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[03-Nov-2023 08:54:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[03-Nov-2023 08:54:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[03-Nov-2023 08:55:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[03-Nov-2023 08:55:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[03-Nov-2023 08:56:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[03-Nov-2023 08:56:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[03-Nov-2023 08:56:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[03-Nov-2023 08:56:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[07-Nov-2023 18:42:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[07-Nov-2023 18:42:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[07-Nov-2023 18:42:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[07-Nov-2023 18:42:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[07-Nov-2023 18:42:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[07-Nov-2023 18:42:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[07-Nov-2023 18:42:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[07-Nov-2023 18:43:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[09-Nov-2023 08:04:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[09-Nov-2023 08:04:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[09-Nov-2023 08:04:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[09-Nov-2023 08:04:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[09-Nov-2023 08:04:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[09-Nov-2023 08:04:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[09-Nov-2023 08:04:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[09-Nov-2023 08:04:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[09-Nov-2023 11:13:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[09-Nov-2023 11:13:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[09-Nov-2023 11:13:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[09-Nov-2023 11:14:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[09-Nov-2023 11:14:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[09-Nov-2023 11:14:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[09-Nov-2023 11:14:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[09-Nov-2023 11:14:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[02-Dec-2023 12:29:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[02-Dec-2023 15:43:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[02-Dec-2023 18:07:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[02-Dec-2023 21:49:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[02-Dec-2023 22:37:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[02-Dec-2023 23:36:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[02-Dec-2023 23:58:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[03-Dec-2023 03:28:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[27-Dec-2023 12:43:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[27-Dec-2023 12:43:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[27-Dec-2023 12:44:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[27-Dec-2023 12:44:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[27-Dec-2023 12:44:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[27-Dec-2023 12:44:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[27-Dec-2023 12:44:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[27-Dec-2023 12:44:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[02-Jan-2024 07:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[10-Jan-2024 11:02:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[11-Jan-2024 00:31:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[11-Jan-2024 02:08:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[11-Jan-2024 04:23:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[11-Jan-2024 05:26:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[11-Jan-2024 06:10:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[11-Jan-2024 07:44:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[11-Jan-2024 08:01:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Jan-2024 12:14:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[15-Jan-2024 12:14:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Jan-2024 12:15:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Jan-2024 12:15:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Jan-2024 12:15:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Jan-2024 12:15:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-Jan-2024 12:15:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Jan-2024 12:15:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[24-Jan-2024 00:39:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[24-Jan-2024 00:39:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[24-Jan-2024 00:39:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[24-Jan-2024 00:40:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[24-Jan-2024 00:40:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[24-Jan-2024 00:40:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[24-Jan-2024 00:40:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[24-Jan-2024 00:40:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[04-Feb-2024 03:43:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[04-Feb-2024 03:43:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[04-Feb-2024 03:43:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[04-Feb-2024 03:43:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[04-Feb-2024 03:43:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[04-Feb-2024 03:44:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[04-Feb-2024 03:44:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[04-Feb-2024 03:44:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[08-Feb-2024 01:40:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[08-Feb-2024 01:40:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[08-Feb-2024 01:40:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[08-Feb-2024 01:40:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Feb-2024 01:40:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[08-Feb-2024 01:40:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[08-Feb-2024 01:40:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[08-Feb-2024 01:41:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[08-Feb-2024 01:44:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[08-Feb-2024 01:44:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[08-Feb-2024 01:44:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Feb-2024 01:44:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[08-Feb-2024 01:44:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[08-Feb-2024 01:44:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[08-Feb-2024 01:45:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[08-Feb-2024 01:45:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[14-Feb-2024 21:08:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[14-Feb-2024 23:24:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-Feb-2024 03:57:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Feb-2024 04:15:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Feb-2024 05:39:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Feb-2024 10:27:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Feb-2024 13:56:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[15-Feb-2024 13:57:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Feb-2024 13:57:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Feb-2024 13:57:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Feb-2024 13:57:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Feb-2024 13:57:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-Feb-2024 13:58:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Feb-2024 13:58:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-Feb-2024 14:00:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-Feb-2024 16:36:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[25-Feb-2024 22:56:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[25-Feb-2024 22:56:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[25-Feb-2024 22:56:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[25-Feb-2024 22:56:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[25-Feb-2024 22:57:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[25-Feb-2024 22:57:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[25-Feb-2024 22:57:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[25-Feb-2024 22:57:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[04-Mar-2024 06:42:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[04-Mar-2024 06:42:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[04-Mar-2024 06:42:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[04-Mar-2024 06:42:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[04-Mar-2024 06:42:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[04-Mar-2024 06:42:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[04-Mar-2024 06:42:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[04-Mar-2024 06:42:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[17-Mar-2024 14:13:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[17-Mar-2024 21:52:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[18-Mar-2024 02:21:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[18-Mar-2024 03:09:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[18-Mar-2024 04:36:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[18-Mar-2024 05:43:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[18-Mar-2024 07:37:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[18-Mar-2024 08:44:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[29-Mar-2024 08:29:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[29-Mar-2024 10:08:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[29-Mar-2024 10:12:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[29-Mar-2024 10:20:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[29-Mar-2024 10:28:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[29-Mar-2024 11:02:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[29-Mar-2024 11:07:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[29-Mar-2024 13:38:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Apr-2024 00:56:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[08-Apr-2024 00:56:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[08-Apr-2024 00:56:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[08-Apr-2024 00:56:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Apr-2024 00:56:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[08-Apr-2024 00:56:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[08-Apr-2024 00:56:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[08-Apr-2024 00:56:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[18-Apr-2024 05:37:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[18-Apr-2024 06:43:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[18-Apr-2024 08:59:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[18-Apr-2024 13:08:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[18-Apr-2024 20:26:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[18-Apr-2024 22:31:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[18-Apr-2024 22:31:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[18-Apr-2024 23:16:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[19-Apr-2024 23:35:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[19-Apr-2024 23:35:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[19-Apr-2024 23:35:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[19-Apr-2024 23:35:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[19-Apr-2024 23:35:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[19-Apr-2024 23:35:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[19-Apr-2024 23:36:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[19-Apr-2024 23:36:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[28-Apr-2024 00:20:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[28-Apr-2024 00:20:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[28-Apr-2024 00:20:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[28-Apr-2024 00:20:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[28-Apr-2024 00:20:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[28-Apr-2024 00:20:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[28-Apr-2024 00:20:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[28-Apr-2024 00:21:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[10-May-2024 01:31:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[13-May-2024 11:19:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[13-May-2024 11:19:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[13-May-2024 11:20:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[13-May-2024 11:20:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[13-May-2024 11:20:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[13-May-2024 11:20:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[13-May-2024 11:20:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[13-May-2024 11:20:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[14-May-2024 21:46:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[18-May-2024 23:34:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[19-May-2024 02:39:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[19-May-2024 23:50:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[19-May-2024 23:51:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[19-May-2024 23:51:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[19-May-2024 23:51:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[19-May-2024 23:51:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[19-May-2024 23:51:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[19-May-2024 23:51:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[19-May-2024 23:51:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[20-May-2024 04:07:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[20-May-2024 05:12:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[20-May-2024 07:07:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[20-May-2024 08:31:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[20-May-2024 11:47:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[20-May-2024 11:57:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[20-May-2024 12:56:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[20-May-2024 15:37:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[25-May-2024 15:56:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[26-May-2024 12:52:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[26-May-2024 21:00:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[30-May-2024 20:55:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[30-May-2024 20:55:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[30-May-2024 20:55:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[30-May-2024 20:55:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[30-May-2024 20:55:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[30-May-2024 20:56:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[30-May-2024 20:56:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[30-May-2024 20:56:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-Jun-2024 08:39:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[23-Jun-2024 10:24:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[23-Jun-2024 10:33:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[23-Jun-2024 16:25:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[23-Jun-2024 16:36:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[04-Jul-2024 19:42:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[05-Jul-2024 00:35:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[05-Jul-2024 01:55:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[05-Jul-2024 02:13:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[10-Jul-2024 18:30:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[10-Jul-2024 18:31:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[10-Jul-2024 18:32:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[10-Jul-2024 18:32:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[10-Jul-2024 18:33:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[10-Jul-2024 18:36:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[10-Jul-2024 18:38:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[10-Jul-2024 18:39:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[18-Jul-2024 01:24:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[18-Jul-2024 01:24:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[18-Jul-2024 01:24:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[18-Jul-2024 01:24:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[18-Jul-2024 01:24:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[18-Jul-2024 01:24:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[18-Jul-2024 01:24:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[18-Jul-2024 01:24:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[26-Jul-2024 02:11:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[26-Jul-2024 02:28:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[26-Jul-2024 05:06:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[26-Jul-2024 13:06:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[05-Aug-2024 17:53:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[05-Aug-2024 19:49:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[06-Aug-2024 03:02:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[06-Aug-2024 05:06:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[14-Aug-2024 15:54:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[14-Aug-2024 19:59:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[14-Aug-2024 20:33:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[14-Aug-2024 22:26:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[14-Aug-2024 23:32:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Aug-2024 08:24:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Aug-2024 08:28:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Aug-2024 09:07:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Aug-2024 10:59:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Aug-2024 11:54:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Aug-2024 19:01:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Aug-2024 19:51:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[19-Aug-2024 01:59:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[19-Aug-2024 14:58:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[20-Aug-2024 06:23:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[20-Aug-2024 13:00:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[20-Aug-2024 20:09:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[20-Aug-2024 21:54:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[22-Aug-2024 03:28:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[22-Aug-2024 19:51:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[23-Aug-2024 00:22:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[23-Aug-2024 04:26:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[23-Aug-2024 16:01:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[23-Aug-2024 16:01:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[23-Aug-2024 16:01:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[23-Aug-2024 16:01:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[23-Aug-2024 16:01:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[23-Aug-2024 16:01:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[23-Aug-2024 16:01:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[23-Aug-2024 16:01:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[23-Aug-2024 20:28:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[25-Aug-2024 02:03:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[25-Aug-2024 04:05:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[25-Aug-2024 06:01:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[26-Aug-2024 02:09:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[26-Aug-2024 18:39:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[26-Aug-2024 20:09:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[26-Aug-2024 22:29:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[26-Aug-2024 22:32:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[26-Aug-2024 22:57:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[27-Aug-2024 05:29:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[27-Aug-2024 06:53:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[27-Aug-2024 16:52:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[30-Aug-2024 04:57:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[30-Aug-2024 22:00:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[01-Sep-2024 17:16:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[05-Sep-2024 10:42:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[05-Sep-2024 16:33:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[06-Sep-2024 09:56:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[06-Sep-2024 16:21:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[07-Sep-2024 15:04:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[09-Sep-2024 09:29:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[28-Sep-2024 10:39:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[28-Sep-2024 10:39:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[28-Sep-2024 10:39:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[28-Sep-2024 10:39:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[28-Sep-2024 10:39:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[28-Sep-2024 10:39:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[28-Sep-2024 10:39:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[28-Sep-2024 10:39:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[22-Oct-2024 08:37:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[22-Oct-2024 11:41:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[16-Nov-2024 19:00:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[16-Nov-2024 19:00:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[16-Nov-2024 19:00:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[16-Nov-2024 19:00:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[16-Nov-2024 19:00:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[16-Nov-2024 19:00:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[16-Nov-2024 19:00:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[16-Nov-2024 19:00:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[10-Dec-2024 09:52:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[25-Dec-2024 17:51:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[25-Dec-2024 17:51:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[25-Dec-2024 17:51:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[25-Dec-2024 17:51:47 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[25-Dec-2024 17:51:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[25-Dec-2024 17:51:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[25-Dec-2024 17:51:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[25-Dec-2024 17:51:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[28-Dec-2024 09:48:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[28-Dec-2024 15:59:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[28-Dec-2024 19:11:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[28-Dec-2024 20:12:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[28-Dec-2024 20:12:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[28-Dec-2024 20:12:53 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[28-Dec-2024 20:13:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[28-Dec-2024 20:13:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[28-Dec-2024 20:13:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[28-Dec-2024 20:45:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[29-Dec-2024 12:49:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[29-Dec-2024 14:20:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[30-Dec-2024 16:23:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[30-Dec-2024 20:33:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[19-Jan-2025 17:18:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[19-Jan-2025 17:18:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[19-Jan-2025 17:18:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[19-Jan-2025 17:18:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[19-Jan-2025 17:18:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[19-Jan-2025 17:18:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[19-Jan-2025 17:18:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[19-Jan-2025 17:18:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[01-Feb-2025 17:13:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[01-Feb-2025 17:16:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[01-Feb-2025 17:17:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[01-Feb-2025 17:22:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[01-Feb-2025 17:26:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[01-Feb-2025 17:26:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[01-Feb-2025 17:26:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[01-Feb-2025 17:27:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[07-Feb-2025 03:35:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[07-Feb-2025 03:35:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[07-Feb-2025 03:37:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[07-Feb-2025 03:38:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[07-Feb-2025 03:51:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[07-Feb-2025 03:52:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[07-Feb-2025 03:54:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[07-Feb-2025 03:55:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[13-Feb-2025 00:16:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[13-Feb-2025 00:18:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[13-Feb-2025 00:19:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[13-Feb-2025 00:39:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[13-Feb-2025 00:52:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[13-Feb-2025 00:53:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[13-Feb-2025 00:54:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[13-Feb-2025 00:56:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[24-Feb-2025 02:43:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[24-Feb-2025 02:48:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[24-Feb-2025 02:48:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[24-Feb-2025 03:08:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[24-Feb-2025 03:20:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[24-Feb-2025 03:21:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[24-Feb-2025 03:22:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[24-Feb-2025 03:24:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[01-Mar-2025 22:27:09 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[01-Mar-2025 22:27:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[01-Mar-2025 22:27:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[01-Mar-2025 22:27:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[01-Mar-2025 22:27:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[01-Mar-2025 22:27:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[01-Mar-2025 22:27:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[01-Mar-2025 22:35:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[01-Mar-2025 22:35:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[01-Mar-2025 22:35:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[01-Mar-2025 22:35:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[01-Mar-2025 22:35:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[01-Mar-2025 22:35:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[01-Mar-2025 22:35:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[01-Mar-2025 22:35:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[08-Mar-2025 10:30:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[08-Mar-2025 10:30:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Mar-2025 10:30:58 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[08-Mar-2025 10:31:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[08-Mar-2025 10:31:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[08-Mar-2025 10:31:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[08-Mar-2025 10:31:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[08-Mar-2025 10:31:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[08-Mar-2025 15:53:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[08-Mar-2025 15:53:45 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Mar-2025 15:53:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[08-Mar-2025 15:53:50 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[08-Mar-2025 15:53:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[08-Mar-2025 15:53:54 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[08-Mar-2025 15:53:56 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[08-Mar-2025 15:53:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[08-Mar-2025 22:45:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[08-Mar-2025 22:45:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[08-Mar-2025 22:45:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[08-Mar-2025 22:45:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[08-Mar-2025 22:45:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[08-Mar-2025 22:45:37 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[08-Mar-2025 22:45:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[08-Mar-2025 22:45:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[13-Mar-2025 07:46:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/Authenticate.php on line 7
+[13-Mar-2025 07:55:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Mar-2025 03:53:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Mar-2025 04:09:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-Mar-2025 04:10:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-Mar-2025 04:11:20 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Mar-2025 04:26:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Mar-2025 04:31:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Mar-2025 04:48:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-Mar-2025 05:06:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Mar-2025 05:12:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Mar-2025 05:15:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Mar-2025 05:56:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-Mar-2025 05:57:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustProxies" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustProxies.php on line 8
+[15-Mar-2025 06:11:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[15-Mar-2025 06:17:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\VerifyCsrfToken" not found in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[15-Mar-2025 06:25:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Mar-2025 06:35:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Http\Middleware\TrustHosts" not found in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrustHosts.php on line 7
+[15-Mar-2025 06:52:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Mar-2025 06:58:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Mar-2025 07:27:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7
+[15-Mar-2025 08:17:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Routing\Middleware\ValidateSignature" not found in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/ValidateSignature.php on line 7
+[15-Mar-2025 09:26:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance" not found in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/PreventRequestsDuringMaintenance.php on line 7
+[18-Mar-2025 18:42:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/dentalgo/public_html/app/Http/Middleware/TrimStrings.php on line 7

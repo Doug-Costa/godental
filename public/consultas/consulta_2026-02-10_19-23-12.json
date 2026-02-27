@@ -1,0 +1,13 @@
+{
+    "patient_id": "2",
+    "patient_name": "Laurindo Furquim",
+    "patient_identifier": "44999185160",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito. Paciente relata desconforto térmico ao contato com líquidos gelados. Presença de restauração infiltrada na face oclusal do dente 16.",
+    "duration": "00:16",
+    "timestamp": "2026-02-10 19:23:12",
+    "status": "transcribed",
+    "db_id": 10,
+    "audio_path": "consultas\/consulta_2026-02-10_19-23-12.webm"
+}

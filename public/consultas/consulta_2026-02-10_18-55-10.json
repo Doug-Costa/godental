@@ -1,0 +1,13 @@
+{
+    "patient_id": "2",
+    "patient_name": "Laurindo Furquim",
+    "patient_identifier": "44999185160",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito.",
+    "duration": "00:09",
+    "timestamp": "2026-02-10 18:55:10",
+    "status": "transcribed",
+    "db_id": 7,
+    "audio_path": "consultas\/consulta_2026-02-10_18-55-10.webm"
+}

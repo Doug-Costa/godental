@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7b58704e69.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fotos/lib/ownCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="fotos/lib/ownCarousel/dist/assets/owl.theme.default.min.css">  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <link rel="stylesheet" href="facelift.css">
+    <title>teste</title>
+</head>
+<body>
+
+    <header class="fixed-top container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4;">
+                <div class="container">
+                    <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                        <img src="fotos-facelift/LOGO TOPO.png" alt="" class="logoDentalGo img-fluid">
+                      </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:#ffffff; background-color: #ffffff;">
+                        <span class="navbar-toggler-icon" ></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" >
+                            <li><a href="#" class="nav-link topo-opçoes">Revistas</a></li>
+                            <li><a href="#" class="nav-link topo-opçoes">Vídeos</a></li>
+                            <li><a href="#" class="nav-link topo-opçoes">Livros</a></li>
+                            <li><a href="#" class="nav-link topo-opçoes">Tecnologias</a></li>
+                          </ul>
+                          <div class="search-container ">
+                            <input type="text" id="search-bar" class="search-bar" placeholder="Pesquisar...">
+                            <button id="search-button" class="search-button">
+                              <i class="fa-solid fa-magnifying-glass" style="color: #ffffff; z-index:9; position: relative;"></i>
+                            </button>
+                          </div>
+                          <div class="notification-button" id="notificationButton" onclick="toggleNotificationTab()">
+                            <i class="fas fa-bell" style="color: #ffffff;"></i>
+                          </div>
+                          
+                          <div class="notification-tab" id="notificationTab">
+                              <h2 class="notification-title">Suas notificações</h2>
+                              <p>Nenhuma notificação no momento.</p>
+                          </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script src="fotos/lib/jquery/jquery-.min.js"></script>
+<script src="fotos/lib/ownCarousel/dist/owl.carousel.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('.owl-carousel-um').owlCarousel({
+loop:true,
+items:1,
+margin:10,
+nav:true,
+center:true,
+autoplay:true,
+dots:false,
+navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+
+responsive : {
+0 : {
+items:1
+
+},
+480 : {
+items:1
+  
+},
+768 : {
+items:1
+  
+}
+}
+})
+
+
+$('.owl-carousel-nove').owlCarousel({
+loop:true,
+items:1,
+margin:10,
+nav:false,
+center:true,
+autoplay:true,
+autoplayTimeout: 5000,
+autoplayHoverPause: true,
+dots:false,
+navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+
+responsive : {
+0 : {
+items:1
+
+},
+480 : {
+items:1
+  
+},
+768 : {
+items:1
+  
+}
+}
+})
+
+
+
+
+
+$(".owl-carousel-quatro").owlCarousel({
+    loop: true,
+    margin:10,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 1800,
+    autoplayHoverPause: true,
+    center: true,
+    responsiveClass: true,
+    navText: [
+        "<i class='fa fa-angle-left'></i>",
+        "<i class='fa fa-angle-right'></i>"
+    ],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        900: {
+            items: 2
+        },
+        1000: {
+            items: 4
+        }
+    },
+});
+
+
+$(".owl-carousel-tres").owlCarousel({
+  	loop:true,
+    margin:10,
+    nav:true,
+	  autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    center: true,
+    responsiveClass:true,
+    navText: [
+	    "<i class='fa fa-angle-left'></i>",
+	    "<i class='fa fa-angle-right'></i>"
+	],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        900:{
+            items:3
+        },
+        1000:{
+          items:5
+        },
+        1100:{
+            items:7
+        },
+        1600:{
+            items:8
+        },
+        1900:{
+            items:9
+        },
+        2000:{
+            items:14
+        },
+        3000:{
+            items:15
+        }
+    }
+    
+  });
+
+  $(".owl-carousel-tres").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    center: true,
+    responsiveClass: true,
+    navText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ],
+    responsive: {
+      0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        900:{
+            items:2
+        },
+        1000:{
+          items:5
+        },
+      1000: {
+        items: 4
+      }
+    },
+    onChanged: handleSlideChange
+  });
+});
+
+function handleSlideChange(event) {
+  var currentItemIndex = event.item.index;
+  var $slideInfos = $(".slide-info");
+
+  // Mostra o slide-info correspondente ao item atual
+  $slideInfos.removeClass("active");
+  $slideInfos.eq(currentItemIndex).addClass("active");
+}
+
+
+
+$(document).ready(function(){
+
+  $(".owl-carousel-seis").owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: false, 
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  center: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items: 2
+      },
+      600:{
+          items: 3
+      },
+      900:{
+          items: 2
+      },
+      1000:{
+          items: 4
+      }
+  }
+});
+
+
+
+
+
+$(".owl-carousel-cinco").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false, 
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  center: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items: 2
+      },
+      600:{
+          items: 3
+      },
+      900:{
+          items: 2
+      },
+      1000:{
+          items: 6
+      }
+  }
+});
+
+
+
+
+
+
+var owl = $('.owl-carousel-cinco');
+owl.owlCarousel();
+$('.carousel-custom-prev').click(function() {
+  owl.trigger('prev.owl.carousel');
+});
+$('.carousel-custom-next').click(function() {
+  owl.trigger('next.owl.carousel');
+});
+});
+
+$(".owl-carousel-oito").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false, 
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  center: true,
+  responsiveClass: true,
+    navText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ],
+  responsive:{
+      0:{
+          items: 2
+      },
+      600:{
+          items: 3
+      },
+      900:{
+          items: 2
+      },
+      1000:{
+          items: 6
+      },
+      2000:{
+          items: 8
+      }
+  }
+});
+  
+var el = $('.owl-carousel1'); 
+
+var carousel;
+var carouselOptions = {
+  margin: 20,
+  nav: true,
+  dots: false,
+  loop: true,
+  autoplay:true,
+  autoplayTimeout:10000,
+  autoplayHoverPause:true,
+  center: true,
+  responsiveClass:true,
+  slideBy: 'page',
+  responsive: {
+    0: {
+      items: 1,
+      rows: 4 //custom option not used by Owl Carousel, but used by the algorithm below
+    },
+    768: {
+      items: 2,
+      rows: 2 //custom option not used by Owl Carousel, but used by the algorithm below
+    },
+    991: {
+      items: 3,
+      rows: 3 //custom option not used by Owl Carousel, but used by the algorithm below
+    }
+  }
+};
+
+
+
+
+
+// Mapeie os IDs dos vídeos para suas descrições
+const videoData = [
+    {
+        videoId: 'WYzckagYVAE',
+    },
+    {
+        videoId: '0qMqu_EIkPM',
+    },
+    {
+        videoId: 'gnHZ2-w2p5I',
+    },
+    // Adicione mais vídeos e descrições conforme necessário
+];
+
+
+
+$(document).ready(function() {
+    // Variável para o player de vídeo do YouTube
+    let player;
+
+
+    // Configuração do carousel
+    const carousel = $(".owl-carousel-sete").owlCarousel({
+        center: true,
+        loop: true,
+        autoplay:true,
+        autoplayTimeout:8000,
+        autoplayHoverPause:true,
+        margin: 0,
+        responsiveClass:true,
+        slideBy: 'page',
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            900: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+
+    
+
+    function updateVideoTitle(currentSlideIndex) {
+        const currentSlide = carousel.find('.owl-item').eq(currentSlideIndex);
+        const videoTitle = currentSlide.find('.slider-card').attr('data-title');
+        $('.video-title').text(videoTitle);
+    }
+
+    // Atualize o título no início
+    updateVideoTitle(0);
+
+    carousel.on('changed.owl.carousel', function(event) {
+        const currentSlideIndex = event.item.index;
+        updateVideoTitle(currentSlideIndex);
+    });
+
+    // Adicione o seguinte trecho de código dentro do evento 'translated.owl.carousel':
+    carousel.on('translated.owl.carousel', function(event) {
+        const currentSlideIndex = event.page.index;
+        const currentVideoId = videoData[currentSlideIndex].videoId;
+        player.loadVideoById(currentVideoId);
+
+        // Remova a classe "expanded-slide" de todos os slides
+        carousel.find('.owl-item').removeClass('expanded-slide');
+
+        // Adicione a classe "expanded-slide" ao slide atual
+        const currentSlide = carousel.find('.owl-item').eq(currentSlideIndex);
+        currentSlide.addClass('expanded-slide');
+
+        // Remova a classe "highlighted-slide" de todos os slides
+        carousel.find('.owl-item').removeClass('highlighted-slide');
+
+        // Adicione a classe "highlighted-slide" ao slide atual para destacá-lo
+        currentSlide.addClass('highlighted-slide');
+
+        // Atualize o título do vídeo com base no índice do slide
+        const currentTitle = currentSlide.attr('data-title');
+        $('.video-title').text(currentTitle);
+    });
+
+    
+
+
+
+
+
+
+    // Função para criar o player de vídeo do YouTube
+    function createYouTubePlayer(videoId) {
+        // Configuração do player
+        const playerConfig = {
+            videoId: videoId,
+            playerVars: {
+                controls: 0,        // Desativar os controles do vídeo
+                autoplay: 1,        // Iniciar a reprodução automaticamente
+                mute: 1,            // Áudio mutado
+                showinfo: 0,        // Ocultar o título e informações do vídeo
+                modestbranding: 1,  // Remover a marca d'água do YouTube
+                disablekb: 1,       // Desativar o teclado
+                rel: 0,             // Evitar vídeos relacionados no final
+                iv_load_policy: 3  // Ocultar anotações
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        };
+
+        // Crie um player de vídeo do YouTube
+        player = new YT.Player('player', playerConfig);
+
+        // Função chamada quando o player estiver pronto
+        function onPlayerReady(event) {
+            // Inicie a reprodução automaticamente
+            event.target.playVideo();
+        }
+
+        // Função chamada quando o estado do player mudar (término do vídeo)
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                // Se o vídeo atual terminou, avance para o próximo vídeo na lista
+                const currentVideoIndex = (carousel.find('.owl-item.center').index() + videoData.length) % videoData.length;
+                const nextVideoIndex = (currentVideoIndex + 1) % videoData.length; // Próximo vídeo na lista
+                const nextVideoId = videoData[nextVideoIndex].videoId;
+                player.loadVideoById(nextVideoId);
+                updateVideoDescription(nextVideoIndex);
+                highlightCurrentSlide(nextVideoIndex);
+            }
+        }
+
+
+
+        // Destaque o slide atual com o vídeo em reprodução
+        function highlightCurrentSlide(index) {
+            carousel.find('.owl-item').removeClass('current-slide');
+            const currentSlide = carousel.find('.owl-item').eq(index);
+            currentSlide.addClass('current-slide');
+        }
+    }
+
+    // Carregue a função createYouTubePlayer após a API do YouTube ser carregada
+    window.onYouTubeIframeAPIReady = function() {
+        // Inicialize o player com o primeiro vídeo
+        const initialVideoId = videoData[0].videoId;
+        createYouTubePlayer(initialVideoId);
+    };
+
+    carousel.on('translated.owl.carousel', function(event) {
+        const currentSlideIndex = event.page.index;
+        const currentVideoId = videoData[currentSlideIndex].videoId;
+        player.loadVideoById(currentVideoId);
+        updateVideoDescription(currentSlideIndex);
+
+        // Remova a classe "expanded-slide" de todos os slides
+        carousel.find('.owl-item').removeClass('expanded-slide');
+
+        // Adicione a classe "expanded-slide" ao slide atual
+        const currentSlide = carousel.find('.owl-item').eq(currentSlideIndex);
+        currentSlide.addClass('expanded-slide');
+
+        // Remova a classe "highlighted-slide" de todos os slides
+        carousel.find('.owl-item').removeClass('highlighted-slide');
+
+        // Adicione a classe "highlighted-slide" ao slide atual para destacá-lo
+        currentSlide.addClass('highlighted-slide');
+    });
+
+
+    // Impedir que o link dentro do slide seja seguido
+    carousel.on('click', '.slide-info a', function(event) {
+        event.preventDefault();
+    });
+});
+
+
+
+
+
+
+
+
+
+const searchButton = document.getElementById("search-button");
+const searchBar = document.getElementById("search-bar");
+const searchContainer = document.querySelector(".search-container");
+let isSearchActive = false;
+
+searchButton.addEventListener("click", function () {
+  if (!isSearchActive) {
+    searchBar.classList.add("active");
+    searchBar.focus();
+    searchButton.classList.add("active");
+    searchContainer.classList.add("active"); // Adicione a classe aqui
+    isSearchActive = true;
+  } else {
+    searchBar.classList.remove("active");
+    searchButton.classList.remove("active");
+    searchContainer.classList.remove("active"); // Remova a classe aqui
+    isSearchActive = false;
+  }
+});
+
+document.addEventListener("click", function (event) {
+  if (!searchBar.contains(event.target) && !searchButton.contains(event.target)) {
+    searchBar.classList.remove("active");
+    searchButton.classList.remove("active");
+    searchContainer.classList.remove("active"); // Remova a classe aqui
+    isSearchActive = false;
+  }
+});
+
+
+
+
+
+
+function toggleNotificationTab() {
+  var notificationTab = document.getElementById("notificationTab");
+  notificationTab.classList.toggle("show-tab");
+  
+  var notificationButton = document.getElementById("notificationButton");
+  notificationButton.classList.toggle("expanded"); // Adiciona ou remove a classe "expanded"
+}
+
+// Adiciona o evento de clique no documento para fechar a notificação ao clicar fora
+document.addEventListener("click", function(event) {
+  var notificationTab = document.getElementById("notificationTab");
+  var notificationButton = document.getElementById("notificationButton");
+  
+  // Verifica se o clique não foi no botão de notificação e se o botão está expandido
+  if (!notificationButton.contains(event.target) && notificationButton.classList.contains("expanded")) {
+    notificationTab.classList.remove("show-tab");
+    notificationButton.classList.remove("expanded");
+  }
+});
+
+
+const imagemToBackgroundMap = {
+    imagem1: "url('Camada\ 4.png')",
+    imagem2: "url('fotos-facelift/BannerDPJO2023.fw.png')",
+    imagem3: "url('fotos-facelift/estetic.fw.png')",
+    imagem4: "url('fotos-facelift/endodontics-banner.fw.png')",
+    imagem5: "url('fotos-facelift/banner-teste.fw.png')",
+    imagem6: "url('fotos-facelift/Banner-Perio.fw.png')",
+    imagem7: "url('fotos-facelift/HOFbackground.fw.png')",
+    imagem8: "url('fotos-facelift/Banner-CONSOLARO.fw.png')",
+    imagem9: "url('fotos-facelift/kleber-meireles-background.fw.png')",
+    imagem10: "url('fotos-facelift/dentalgoacademy.fw.png')",
+    // Adicione outras imagens aqui, se necessário
+};
+
+const logoMap = {
+    imagem1: "logo clinica.png",
+    imagem2: "fotos-facelift/LOGO-DPJO-BRANCO.fw.png",
+    imagem3: "fotos-facelift/Logoesteticabranco.fw.png",
+    imagem4: "fotos-facelift/logoendo-branco1.fw.png",
+    imagem5: "fotos-facelift/JBCOMS-logobranco.fw.png",
+    imagem6: "fotos-facelift/logo-periobranco.fw.png",
+    imagem7: "fotos-facelift/OHLogoBranco.fw.png",
+    imagem8: "fotos-facelift/consolaro1.png",
+    imagem9: "fotos-facelift/kleber-meireles-branco.png",
+    imagem10: "fotos-facelift/academy.fw.png",
+    // Adicione outras imagens aqui, se necessário
+};
+
+
+const textMap = {
+    imagem1: "Venha ler a nova edição da revista clínica mais completa do Brasil.",
+    imagem2: "Venha ler a nova edição da revista Dental Press Journal of Orthodontics mais completa do Brasil.",
+    imagem3: "Venha ler a nova edição da revista Clinical Dentistry mais completa do Brasil.",
+    imagem4: "Venha ler a nova edição da revista Dental Press Endodontics mais completa do Brasil.",
+    imagem5: "Venha ler a nova edição da revista College of Oral and Maxillofacial Surgery mais completa do Brasil.",
+    imagem6: "Venha ler a nova edição da revista Brazilian Journal of Periodontology mais completa do Brasil.",
+    imagem7: "Venha ler a nova edição da revista Orofacial Harmony mais completa do Brasil.",
+    imagem8: "Prof Alberto Consolaro",
+    imagem9: "A ortodontia pelos olhos de quem entende. Kleber Meireles em 10 aulas de tirar o fôlego de qualquer apaixonado pela profissão.",
+    imagem10: "Um congresso especial do DentalGo para você que gosta de se manter atualizado pelos grandes nomes da ortodontia",
+    // Adicione outras imagens aqui, se necessário
+};
+
+const buttonMap = {
+    imagem1: "Veja mais",
+    imagem2: "Veja mais",
+    imagem3: "Veja mais",
+    imagem4: "Veja mais",
+    imagem5: "Veja mais",
+    imagem6: "Veja mais",
+    imagem7: "Veja mais",
+    imagem8: "Leia mais",
+    imagem9: '<i class="fas fa-play"></i> Assista agora',
+    imagem10: '<i class="fas fa-play"></i> Assista agora',
+    // Adicione outras imagens aqui, se necessário
+};
+
+const button2Map = {
+    imagem1: "Minha Lista",
+    imagem2: "Minha Lista",
+    imagem3: "Minha Lista",
+    imagem4: "Minha Lista",
+    imagem5: "Minha Lista",
+    imagem6: "Minha Lista",
+    imagem7: "Minha Lista",
+    imagem8: "Minha Lista",
+    imagem9: '<i class="fa-solid fa-circle-info"></i> Mais Informações',
+    imagem10: '<i class="fa-solid fa-circle-info"></i> Mais Informações',
+    // Adicione outras imagens aqui, se necessário
+};
+
+const slider = $(".owl-carousel-tres");
+const fundoClinical = document.querySelector(".fundo-clinical");
+const textoClinical = document.querySelector(".text-clinical");
+const logoClinical = document.querySelectorAll(".clinical-logo"); // Use as classes corretas aqui
+const buttonClinical = document.querySelector(".botao-banner");
+const button2Clinical = document.querySelector(".botao-banner2");
+
+
+slider.on("changed.owl.carousel", function(event) {
+    const activeSlideIndex = event.item.index;
+    const activeSlide = slider.find(".owl-item").eq(activeSlideIndex).find(".imagemRevistaCol");
+
+    const imagemClass = activeSlide.attr("data-image-class");
+    const textoClass = activeSlide.attr("data-image-class");
+    const logoClass = activeSlide.attr("data-image-class");
+    const buttonClass = activeSlide.attr("data-image-class");
+    const button2Class = activeSlide.attr("data-image-class");
+
+
+    fundoClinical.style.transition = "background-image 3s ease-in-out";
+    fundoClinical.style.backgroundImage = imagemToBackgroundMap[imagemClass];
+
+
+    const animationDuration = 1500; // Duração da animação
+
+    logoClinical.forEach(logo => {
+        logo.style.transition = `opacity ${animationDuration}ms ease-in-out, transform ${animationDuration}ms ease-in-out`;
+        logo.style.opacity = 0;
+        logo.style.transform = "translateX(50px)";
+    });
+
+    textoClinical.style.transition = `opacity ${animationDuration}ms ease-in-out, transform ${animationDuration}ms ease-in-out`;
+    textoClinical.style.opacity = 0;
+    textoClinical.style.transform = "translateX(50px)"; // Inicia a animação deslocando para a direita
+
+
+    buttonClinical.style.transition = `opacity ${animationDuration}ms ease-in-out, transform ${animationDuration}ms ease-in-out`;
+    buttonClinical.style.opacity = 0;
+    buttonClinical.style.transform = "translateX(50px)"; // Inicia a animação deslocando para a direita
+
+
+    button2Clinical.style.transition = `opacity ${animationDuration}ms ease-in-out, transform ${animationDuration}ms ease-in-out`;
+    button2Clinical.style.opacity = 0;
+    button2Clinical.style.transform = "translateX(50px)"; // Inicia a animação deslocando para a direita
+
+    setTimeout(() => {
+        logoClinical.forEach(logo => {
+            logo.src = logoMap[logoClass];
+            logo.style.opacity = 1;
+            logo.style.transform = "translateX(0)";
+        });
+
+        textoClinical.innerHTML = textMap[textoClass];
+        textoClinical.style.opacity = 1;
+        textoClinical.style.transform = "translateX(0)"; // Conclui a animação deslocando para a esquerda (posição original)
+
+        buttonClinical.innerHTML = buttonMap[buttonClass];
+        buttonClinical.style.opacity = 1;
+        buttonClinical.style.transform = "translateX(0)"; // Conclui a animação deslocando para a esquerda (posição original)
+
+        button2Clinical.innerHTML = button2Map[button2Class];
+        button2Clinical.style.opacity = 1;
+        button2Clinical.style.transform = "translateX(0)"; // Conclui a animação deslocando para a esquerda (posição original)
+    }, animationDuration);
+});
+
+//HEADER
+
+
+// Função para animar os números gradualmente
+function animateNumbers() {
+    const numbersContainers = document.querySelectorAll('.juntar-letrasNumeros');
+
+    numbersContainers.forEach((container) => {
+        const numberElement = container.querySelector('.contagem');
+        const targetValue = parseInt(numberElement.textContent, 10); // Valor final
+        let currentValue = 0;
+
+        new Waypoint({
+            element: container,
+            handler: function (direction) {
+                if (direction === 'down' && currentValue < targetValue) {
+                    const animationInterval = setInterval(() => {
+                        // Aumenta o valor atual gradualmente
+                        if (currentValue < targetValue) {
+                            currentValue += 10; // Ajuste o incremento (exemplo: +10 a cada iteração)
+                            numberElement.textContent = currentValue;
+                        } else {
+                            clearInterval(animationInterval); // Pare a animação quando atingir o valor final
+                        }
+                    }, 10); // Intervalo de tempo entre as atualizações (ajuste conforme necessário)
+                }
+                this.destroy(); // Uma vez que a animação começou, destrua o waypoint para evitar repetição
+            },
+            offset: '80%', // Inicie a animação quando 80% do elemento estiver visível
+        });
+    });
+}
+
+// Chame a função para iniciar a animação quando a página for carregada
+window.addEventListener('load', animateNumbers);
+
+$(document).ready(function() {
+  $(".accordion-item").click(function() {
+    $(this).toggleClass("active");
+  });
+});
+
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

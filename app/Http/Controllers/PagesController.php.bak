@@ -1,0 +1,365 @@
+<?php
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller; 
+use App;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Session;
+
+
+if(session()->has('token')){
+
+}else{
+    if (Cache::has('tokenGlobal')) {
+        session()->put('usuario', 'API');
+    }else{
+        $email = 'api@dentalpress.com.br';
+        $password = 'MaquinaDeConverterC4fe3mC0digo@godental';
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,"https://api.dentalgo.com.br/sessions/sign-in");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,
+                    "email=$email&password=$password");
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $server_output = curl_exec ($ch);
+        curl_close ($ch);
+        $token = json_decode($server_output);
+        $token = $token->token;
+        Cache::put('tokenGlobal', $token, 500);
+        $usuarioPlano = session()->put('usuarioPlano', 'semplano');
+        $usuarioPermissao = session()->put('usuarioPermissao', 'naotem');
+    }
+}
+
+class PagesController extends Controller
+{
+
+    function changeLang($langcode){
+      App::setLocale($langcode);
+      session()->put("lang_code",$langcode);
+      return redirect()->back();
+    }  
+
+    public function index() 
+    {
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        $tipo = 'magazine';
+        $ultimasRevistas = app('App\Http\Controllers\ProdutofiltroController')->produto($tipo);
+        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas->rows[0]->id);
+        $videos = app('App\Http\Controllers\VideosController')->videos();
+        $livros = app('App\Http\Controllers\LivroController')->livros();
+        return view("home", ["colecoes"=>$colecoes, "ultimasRevistas"=>$ultimasRevistas, "ultimaRevista"=>$ultimaRevista, "videos"=>$videos, "livros"=>$livros]);
+    }
+
+    public function indexMobile() 
+    {
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        $tipo = 'magazine';
+        $ultimasRevistas = app('App\Http\Controllers\ProdutofiltroController')->produto($tipo);
+        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas->rows[0]->id);
+        $videos = app('App\Http\Controllers\VideosController')->videos();
+        $livros = app('App\Http\Controllers\LivroController')->livros();
+        return view("mobile/home", ["colecoes"=>$colecoes, "ultimasRevistas"=>$ultimasRevistas, "ultimaRevista"=>$ultimaRevista, "videos"=>$videos, "livros"=>$livros]);
+    }
+
+    public function logar() 
+    {
+        return view('logar');
+    }
+
+    public function recuperarsenha() 
+    {
+        return view('recuperarsenha');
+    }
+
+    public function logarbooks() 
+    {
+        return view('logarbooks');
+    }
+
+    public function cadastrar() 
+    {
+        return view('cadastrar');
+    } 
+
+    public function hub() 
+    {
+        if(session()->has('token')){
+            $idproduto = Request()->input('id_produto');
+            $idartigos = Request()->input('id_artigos');
+            if($idproduto != null){
+                $url = '{"productId":"'.$idproduto.'"}';
+                $url = base64_encode($url);
+                if(session()->get("lang_code") != null){
+                    $lingua = session()->get("lang_code");
+                }else{
+                    $lingua = 'pt';
+                }
+                $url = 'https://acervo.dentalgo.com.br/'.$lingua.'/store/purchase/'.$url.'?_t='.session()->get('token');
+                return redirect()->away($url);
+            }elseif($idartigos != null){
+                $url = '{"productItemsIds":['.$idartigos.']}';
+                $url = base64_encode($url);
+                if(session()->get("lang_code") != null){
+                    $lingua = session()->get("lang_code");
+                }else{
+                    $lingua = 'pt';
+                }
+                $url = 'https://acervo.dentalgo.com.br/'.$lingua.'/store/purchase/'.$url.'?_t='.session()->get('token');
+                return redirect()->away($url);
+            }else{
+               return view('404');
+            }
+        }else{
+            return view('hub');
+        }
+    } 
+
+    public function minhaconta() 
+    {
+        $meusprodutos = app('App\Http\Controllers\minhacontaController')->meusprodutos();
+        if($meusprodutos == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("minhaconta", ["minhaconta"=>$meusprodutos]);
+        }
+    }
+
+    public function minhacontabooks() 
+    {
+        $meusprodutos = app('App\Http\Controllers\minhacontaController')->meusprodutos();
+        if($meusprodutos == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("minhacontabooks", ["minhaconta"=>$meusprodutos]);
+        }
+    }
+
+    public function produtocomprado() 
+    {
+        $id = Request()->segment(2);
+        $idColecao = Request()->segment(4);
+        $revista = app('App\Http\Controllers\RevistaController')->produtocomprado($id);
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        if($revista == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view('produtocomprado', ["revista"=>$revista, "colecoes"=>$colecoes, "idColecao"=>$idColecao]);
+        }
+    }
+
+    public function produtocompradobooks() 
+    {
+        $id = Request()->segment(2);
+        $idColecao = Request()->segment(4);
+        $revista = app('App\Http\Controllers\RevistaController')->produtocomprado($id);
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        if($revista == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view('produtocompradobooks', ["revista"=>$revista, "colecoes"=>$colecoes, "idColecao"=>$idColecao]);
+        }
+    }
+
+    public function teste() 
+    {
+        return view('teste');
+    }
+
+    public function colecoes() 
+    {
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        $tipo = 'magazine';
+        $ultimasRevistas = app('App\Http\Controllers\ProdutofiltroController')->produto($tipo);
+        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas->rows[0]->id);
+        if($colecoes == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("colecoes", ["colecoes"=>$colecoes, "ultimasRevistas"=>$ultimasRevistas, "ultimaRevista"=>$ultimaRevista]);
+        }
+    }
+
+    public function colecoesMobile() 
+    {
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        $tipo = 'magazine';
+        $ultimasRevistas = app('App\Http\Controllers\ProdutofiltroController')->produto($tipo);
+        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas->rows[0]->id);
+        if($colecoes == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("mobile/colecoes", ["colecoes"=>$colecoes, "ultimasRevistas"=>$ultimasRevistas, "ultimaRevista"=>$ultimaRevista]);
+        }
+    }
+
+    public function colecao() 
+    {
+        $id = Request()->segment(2);
+        $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        if($colecao == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view('colecao', ["colecao"=>$colecao, "colecoes"=>$colecoes]);
+        }
+    }
+
+    public function colecaoMobile() 
+    {
+        $id = Request()->segment(2);
+        $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        if($colecao == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view('mobile/colecao', ["colecao"=>$colecao, "colecoes"=>$colecoes]);
+        }
+    }
+
+    public function revista() 
+    {
+        $id = Request()->segment(2);
+        $idColecao = Request()->segment(4);
+        $revista = app('App\Http\Controllers\RevistaController')->revista($id);
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        if($revista == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view('revista', ["revista"=>$revista, "colecoes"=>$colecoes, "idColecao"=>$idColecao]);
+        }
+    }
+
+    public function videos() 
+    {
+        $videos = app('App\Http\Controllers\VideosController')->videos();
+        if($videos == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("videos", ["videos"=>$videos]);
+        }
+    }
+
+    public function video() 
+    {
+        $id = Request()->segment(2);
+        $videos = app('App\Http\Controllers\VideosController')->videos();
+        $video = app('App\Http\Controllers\VideosController')->video($id);
+        if($video == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("video", ["videos"=>$videos, "video"=>$video]);
+        }
+    }
+
+    public function videoplay() 
+    {
+        return view('videoplay');
+    }
+
+
+    public function livros() 
+    {
+        if(Request()->segment(2)){
+            $barear = Request()->segment(2);
+            app('App\Http\Controllers\LoginController')->loginAuto($barear);
+        }   
+        $livros = app('App\Http\Controllers\LivroController')->livros();
+        if(null !== session()->get('token')){
+            $livrosComprados = app('App\Http\Controllers\LivroController')->livrosComprados();
+        }else{
+            $livrosComprados = null;
+        }
+        if($livros == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("livros", ["livros"=>$livros, "livrosComprados"=>$livrosComprados]);
+        }
+    }
+
+    public function livro() 
+    {
+        $id = Request()->segment(2);
+        $idColecao = Request()->segment(4);
+        $revista = app('App\Http\Controllers\RevistaController')->revista($id);
+        $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
+        if($revista == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view('livro', ["revista"=>$revista, "colecoes"=>$colecoes, "idColecao"=>$idColecao]);
+        }
+    }
+
+
+    public function comercialAutores() 
+    {
+        $id = Request()->segment(2);
+        $autores = app('App\Http\Controllers\ComercialController')->autores();
+        if($autores == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("comercial/autores", ["comercial"=>$autores]);
+        }
+    }
+
+    public function comercialAutor() 
+    {
+        $id = Request()->segment(3);
+        $autor = app('App\Http\Controllers\ComercialController')->autor($id);
+        if($autor == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("comercial/autor", ["comercial"=>$autor]);
+        }
+    }
+
+    public function autoresAutores() 
+    {
+        $id = Request()->segment(2);
+        $autores = app('App\Http\Controllers\AutoresController')->autores();
+        if($autores == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("autores", ["autores"=>$autores]);
+        }
+    }
+
+    public function autoresAutor() 
+    {
+        $id = Request()->segment(2);
+        $autor = app('App\Http\Controllers\AutoresController')->autor($id);
+        if($autor == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("autor", ["autor"=>$autor]);
+        }
+    }
+
+    public function busca() 
+    {
+        $busca = app('App\Http\Controllers\BuscaController')->busca();
+        if($busca == 'deslogou'){
+            return redirect('/');
+        }else{
+            return view("busca", ["busca"=>$busca]);
+        }
+    }
+
+    public function loadingvideo() 
+    {
+        return view('loadingvideo'); 
+    }
+
+    public function assinatura() 
+    {
+        $assinatura = app('App\Http\Controllers\AssinaturaController')->assinar();
+        if($assinatura == 'deslogou'){
+            $assinatura = app('App\Http\Controllers\LoginController')->logout();
+            return redirect('/');
+        }else{
+            return view("assinatura", ["assinatura"=>$assinatura]);
+        }
+    }
+
+}

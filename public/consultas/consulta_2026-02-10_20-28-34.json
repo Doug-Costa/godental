@@ -1,0 +1,13 @@
+{
+    "patient_id": 6,
+    "patient_name": "yussuke",
+    "patient_identifier": "44998874455",
+    "consultation_type": "Manutenção",
+    "observations": "manutenção de rotina aparelho ortodontico",
+    "transcription": "Iniciando avaliação clínica do paciente. Observada sensibilidade retro-molar no quadrante superior direito. Paciente relata desconforto térmico ao contato com líquidos gelados.",
+    "duration": "00:12",
+    "timestamp": "2026-02-10 20:28:34",
+    "status": "transcribed",
+    "db_id": 11,
+    "audio_path": "consultas\/consulta_2026-02-10_20-28-34.webm"
+}
