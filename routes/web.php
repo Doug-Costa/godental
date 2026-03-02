@@ -10,6 +10,7 @@ use App\Http\Controllers\BuscaElasticController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\GoIntelligenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -520,4 +521,7 @@ Route::group(['middleware' => 'Language'], function () {
 
     // MARKETING
     Route::view('/marketing', 'marketing.index')->name('marketing.index');
+
+    // GO INTELLIGENCE (DENTINO AI)
+    Route::get('/gointelligence', [GoIntelligenceController::class, 'index'])->name('gointelligence.index');
 });

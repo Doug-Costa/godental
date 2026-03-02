@@ -142,9 +142,14 @@
                                         
                                     </li>
                                     @endif
-
-
-                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link menu-fontes" href="https://www.dentalgo.com.br/clube-de-vantagens">{{__("messages.MenuClube")}}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link menu-fontes" href="{{ route('gointelligence.index') }}" style="color: #10b981; font-weight: bold;">
+                                            <i class="fa-solid fa-robot"></i> Dentino AI
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

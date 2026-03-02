@@ -5,11 +5,10 @@
 
   <header>
     <div class="d-flex align-items-center gap-2 brandmark">
-      <!-- <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
-          <circle cx="14" cy="14" r="14" fill="var(--go-accent)"></circle>
-          <path d="M6 16c3 4 13 4 16 0" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        </svg>
-        <strong>Dental<span class="text-accent">Go</span></strong> -->
+      <a href="{{ route('facehome') }}" style="display: flex; align-items: center;">
+        <img src="{{ asset('facelift2/img/logo_main.png') }}" alt="DentalGo Logo"
+          style="display: block; width: 150px !important; height: 50px !important; max-width: none !important; object-fit: contain; margin-top: -5px; margin-bottom: -5px;">
+      </a>
     </div>
     <button class="btn btn-sm btn-light" id="btnCloseSidebar" aria-label="Fechar menu lateral"><i
         class="bi bi-x-lg"></i></button>
@@ -28,6 +27,11 @@
         class="btn btn-light text-start border-0 fw-semibold {{ request()->routeIs('facehome') ? 'bg-white shadow-sm' : '' }}"
         style="{{ request()->routeIs('facehome') ? 'color: #d21d5b;' : '' }}">
         <i class="bi bi-house me-2"></i> Home
+      </a>
+      <a href="{{ route('gointelligence.index') }}"
+        class="btn btn-light text-start border-0 fw-semibold {{ request()->routeIs('gointelligence.*') ? 'bg-white shadow-sm' : '' }}"
+        style="{{ request()->routeIs('gointelligence.*') ? 'color: #d21d5b;' : '' }}">
+        <i class="fa-solid fa-robot me-2" style="font-size: 0.9em;"></i> Go Intelligence
       </a>
       <a href="{{ route('facecolecoes') }}"
         class="btn btn-light text-start border-0 fw-semibold {{ request()->routeIs('facecolecoes', 'facecolecao') ? 'bg-white shadow-sm' : '' }}"
@@ -163,17 +167,12 @@
         aria-controls="sidebar" aria-selected="true">
         <span class="bar"></span>
       </button>
-      <a class="d-flex align-items-center gap-2 text-decoration-none brandmark" href="#" aria-label="DentalGo - Início">
-        <!-- <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
-            <circle cx="14" cy="14" r="14" fill="var(--go-accent)"></circle>
-            <path d="M6 16c3 4 13 4 16 0" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-          </svg>
-          <span class="fw-bold">Dental<span class="text-accent">Go</span></span> -->
-        <a href="{{ route('facehome') }}">
-          <img class="logodentalgotopo" src="{{ asset('facelift2/img/logonovabranco.png') }}" width="140px">
+      <div class="d-flex align-items-center gap-2 brandmark">
+        <a href="{{ route('facehome') }}" style="display: flex; align-items: center;" aria-label="DentalGo - Início">
+          <img class="logodentalgotopo" src="{{ asset('facelift2/img/logo_main.png') }}"
+            style="display: block; width: 190px !important; height: 65px !important; max-width: none !important; object-fit: contain; margin-top: -12px; margin-bottom: -12px; margin-left: 10px;">
         </a>
-
-      </a>
+      </div>
 
       <!-- Busca Desktop (>= 992px) -->
       <form class="d-none d-lg-flex search-top divpesquisarform" role="search" method="GET"
@@ -364,17 +363,7 @@
     @endforeach
 
     <!-- script para sumir com a mensagem após 4 segundos -->
-    <script>
-      setTimeout(function () {
-        var fadeAlerts = document.querySelectorAll('.alert-fade');
-        fadeAlerts.forEach(function (alert) {
-          alert.style.transition = "opacity 0.5s";
-          alert.style.opacity = 0;
-          setTimeout(function () {
-            alert.style.display = "none";
-          }, 500);
-        });
-      }, 4000); // 4 segundos
+    <script>     setTimeout(function () { var fadeAlerts = document.querySelectorAll('.alert-fade'); fadeAlerts.forEach(function (alert) { alert.style.transition = "opacity 0.5s"; alert.style.opacity = 0; setTimeout(function () { alert.style.display = "none"; }, 500); }); }, 4000); // 4 segundos
     </script>
 
     @if(session()->get('plano') == 277 && request()->input('plano') == 277)

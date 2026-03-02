@@ -117,10 +117,11 @@ class PagesController extends Controller
         foreach ($idsColecoes as $id) {
             $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
 
-            $ultimaRevista = end($colecao[0]->products);
-
-            if ($ultimaRevista) {
-                $ultimasRevistas[] = $ultimaRevista;
+            if (isset($colecao[0]) && isset($colecao[0]->products) && is_array($colecao[0]->products)) {
+                $ultimaRevista = end($colecao[0]->products);
+                if ($ultimaRevista) {
+                    $ultimasRevistas[] = $ultimaRevista;
+                }
             }
         }
 

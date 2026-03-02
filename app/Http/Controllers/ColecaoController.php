@@ -11,34 +11,34 @@ class ColecaoController extends Controller
 {
     public function colecao($id)
     {
-        if(session()->get('lang_code')){
-            if(session()->get('lang_code')=='pt'){
+        if (session()->get('lang_code')) {
+            if (session()->get('lang_code') == 'pt') {
                 $locale = 'pt';
-            }elseif(session()->get('lang_code')=='en'){
+            } elseif (session()->get('lang_code') == 'en') {
                 $locale = 'en';
-            }elseif(session()->get('lang_code')=='es'){
+            } elseif (session()->get('lang_code') == 'es') {
                 $locale = 'es';
             }
-        }else{
+        } else {
             $locale = '';
         }
-        
-        $colecao = 'colecao'.$id.''.$locale;
+
+        $colecao = 'colecao' . $id . '' . $locale;
         $token = Cache::get('tokenGlobal');
 
-        
-        if (Cache::has($colecao.'c')) {
-            return array(Cache::get($colecao.'c'), Cache::get($colecao.'r'));
-        }else{
-            $ch = curl_init('https://api.dentalgo.com.br/subscription/collections/'.$id);
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+
+        if (Cache::has($colecao . 'c')) {
+            return array(Cache::get($colecao . 'c'), Cache::get($colecao . 'r'));
+        } else {
+            $ch = curl_init('https://api.dentalgo.com.br/subscription/collections/' . $id);
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             curl_setopt($ch, CURLOPT_TIMEOUT, 10); // Timeout de 10 segundos
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5); // Timeout de conexão de 5 segundos
-            $resultadoColecao = curl_exec($ch); 
-            
+            $resultadoColecao = curl_exec($ch);
+
             // Verificar se houve erro na requisição
             if ($resultadoColecao === false) {
                 $error = curl_error($ch);
@@ -46,10 +46,10 @@ class ColecaoController extends Controller
                 \Log::error('Erro na API DentalGo Collections: ' . $error);
                 return response()->json(['error' => 'Erro ao buscar coleção'], 500);
             }
-            
-            curl_close($ch); 
+
+            curl_close($ch);
             $conteudoColecao = json_decode($resultadoColecao);
-            
+
             // Verificar se a resposta é válida
             if (!$conteudoColecao || !isset($conteudoColecao->products)) {
                 \Log::error('Resposta inválida da API DentalGo Collections: ' . $resultadoColecao);
@@ -62,14 +62,14 @@ class ColecaoController extends Controller
 
             foreach ($conteudoColecao->products as $key => $value) {
 
-                if(!empty($value->cover)){
+                if (!empty($value->cover)) {
                     $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                     $thumbor->resize(Resize::ORIG, 450);
                     $thumbor->fit(Fit::FIT_IN);
                     $thumbor->imageUrl($value->cover);
                     $thumb = $thumbor->get();
                     $conteudoColecao->products[$key]->cover = $thumb;
-                }else{
+                } else {
                     unset($thumb);
                 }
 
@@ -77,47 +77,51 @@ class ColecaoController extends Controller
 
 
 
-            $ch = curl_init('https://api.dentalgo.com.br/subscription/collections/'.$id.'/products?page=1&locale=');
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            $ch = curl_init('https://api.dentalgo.com.br/subscription/collections/' . $id . '/products?page=1&locale=');
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            curl_setopt($ch, CURLOPT_TIMEOUT, 5); // Timeout reduzido para evitar crash 
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
-            $conteudo = json_decode($resultado);
+            $conteudo = $resultado ? json_decode($resultado) : [];
+            if (!is_array($conteudo) && !is_object($conteudo))
+                $conteudo = [];
             sleep(1);
 
             foreach ($conteudo as $key2 => $value2) {
 
                 foreach ($value2 as $key => $value) {
 
-                    if(!empty($conteudo->$key2[$key]->cover)){
+                    if (!empty($conteudo->$key2[$key]->cover)) {
                         $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                         $thumbor->resize(Resize::ORIG, 450);
                         $thumbor->fit(Fit::FIT_IN);
                         $thumbor->imageUrl($conteudo->$key2[$key]->cover);
                         $thumb = $thumbor->get();
                         $conteudo->$key2[$key]->cover = $thumb;
-                    }else{
+                    } else {
                         unset($thumb);
                     }
                 }
 
             }
-            
-            if(isset($conteudo->code)){
-                if($conteudo->code == 'unauthorized'){
+
+            if (isset($conteudo->code)) {
+                if ($conteudo->code == 'unauthorized') {
                     session()->flush();
                     return 'deslogou';
-                }else{
+                } else {
                     session()->flush();
                     return 'deslogou';
                 }
-            }else{
+            } else {
 
-                Cache::put($colecao.'c', $conteudoColecao, 864000);
-                Cache::put($colecao.'r', $conteudo, 864000);
+                Cache::put($colecao . 'c', $conteudoColecao, 864000);
+                Cache::put($colecao . 'r', $conteudo, 864000);
 
 
 

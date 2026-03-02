@@ -30,10 +30,6 @@ class AppServiceProvider extends ServiceProvider
 
         if ($isStaging) {
             \URL::forceScheme('http');
-            // Força a URL base para garantir que asset() não use HTTPS
-            if (env('APP_URL')) {
-                \URL::forceRootUrl(env('APP_URL'));
-            }
         } elseif (env('APP_ENV') !== 'local') {
             \URL::forceScheme('https');
         }
