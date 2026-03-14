@@ -616,16 +616,21 @@ class PagesController extends Controller
                 $aiData = $goResponse->json();
                 $answer = $aiData['answer'] ?? '';
                 
-                Log::info("GoClinic: Raw AI Answer for ID " . $consultation->id, ['answer_excerpt' => substr($answer, 0, 200)]);
+                Log::info("GoClinic: FULL AI Answer for ID " . $consultation->id, ['answer' => $answer]);
 
                 $jsonData = [];
                 if (preg_match('/```json\s*(.*?)\s*```/s', $answer, $matches)) {
-                    $jsonData = json_decode($matches[1], true) ?? [];
+                    $jsonContent = trim($matches[1]);
+                    $jsonData = json_decode($jsonContent, true) ?? [];
                 } elseif (str_starts_with(trim($answer), '{')) {
                     $jsonData = json_decode($answer, true) ?? [];
                 }
 
-                Log::info("GoClinic: Parsed AI JSON for ID " . $consultation->id, ['json_keys' => array_keys($jsonData)]);
+                if (empty($jsonData)) {
+                    Log::warning("GoClinic: Failed to parse JSON from AI answer for ID " . $consultation->id);
+                } else {
+                    Log::info("GoClinic: Parsed AI JSON Keys", ['keys' => array_keys($jsonData)]);
+                }
 
                 // --- Resumo (AI Summary) ---
                 $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
