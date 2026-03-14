@@ -187,20 +187,21 @@
 
                             if (section) section.classList.remove('d-none');
 
-                            // Se o paciente não tiver anamnese (novo ou antigo sem registro)
-                            if (!data.has_anamnesis) {
+                            // LOGIC: Only show alert AND auto-check if it's a NEW patient
+                            // If they are existing but have no anamnesis, we DO NOT show the warning alert per user request,
+                            // but the section remains available for optional activation.
+                            if (data.is_new && !data.has_anamnesis) {
                                 if (anamnesisAlert) anamnesisAlert.classList.remove('d-none');
-                                if (alertMsg) {
-                                    alertMsg.innerText = data.is_new ? "Paciente novo: Anamnese recomendada." : "Paciente sem anamnese registrada.";
-                                }
+                                if (alertMsg) alertMsg.innerText = "Paciente novo: Anamnese recomendada.";
                                 if (anamnesisToggle) {
                                     anamnesisToggle.checked = true;
                                     anamnesisToggle.dispatchEvent(new Event('change'));
                                 }
                             } else {
-                                // Já tem anamnese: esconde alerta e deixa toggle desmarcado por padrão (mas disponível)
+                                // Existing patient or already has anamnesis: hide alert, don't auto-check
                                 if (anamnesisAlert) anamnesisAlert.classList.add('d-none');
-                                if (anamnesisToggle) {
+                                // Keep toggle unchecked by default for existing patients
+                                if (anamnesisToggle && !data.has_anamnesis) {
                                     anamnesisToggle.checked = false;
                                     anamnesisToggle.dispatchEvent(new Event('change'));
                                 }
