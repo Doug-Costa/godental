@@ -309,7 +309,7 @@ class ClinicalCaseController extends Controller
      */
     public function storeConsultation(Request $request, RemunerationService $remunerationService)
     {
-        $validated = $request->validate([
+        $validator = \Validator::make($request->all(), [
             'patient_id' => 'required|exists:patients,id',
             'patient_name' => 'nullable|string|max:255',
             'patient_identifier' => 'nullable|string|max:255',
@@ -322,9 +322,23 @@ class ClinicalCaseController extends Controller
             'status' => 'nullable|string',
             'valor' => 'required|numeric|min:0',
             'service_price_id' => 'nullable|exists:service_prices,id',
-            'requires_anamnesis' => 'nullable|boolean',
+            'requires_anamnesis' => 'nullable',
             'anamnesis_template_id' => 'nullable|exists:anamnesis_templates,id',
         ]);
+
+        if ($validator->fails()) {
+            \Log::warning("Falha na validação storeConsultation: ", [
+                'errors' => $validator->errors()->toArray(),
+                'input' => $request->all()
+            ]);
+            return response()->json([
+                'success' => false,
+                'message' => 'Erro de validação: ' . implode(', ', $validator->errors()->all()),
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
+        $validated = $validator->validated();
 
         try {
             $status = ($request->requires_anamnesis) ? 'awaiting_anamnesis' : ($validated['status'] ?? 'pending');
