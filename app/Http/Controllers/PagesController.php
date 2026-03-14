@@ -631,13 +631,16 @@ class PagesController extends Controller
                 $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
                            data_get($jsonData, 'anamnese.historia_atual') ?? 
                            data_get($jsonData, 'anamnese.historia_doenca_atual') ??
-                           "Processado.";
+                           (!empty($answer) ? "Análise concluída, mas sem resumo estruturado." : "Não foi possível gerar o resumo automático.");
 
                 // --- Diagnóstico ---
                 $diagnosis = data_get($jsonData, 'diagnostico.hipotese_principal') ?? '';
                 if (is_array(data_get($jsonData, 'diagnostico.hipoteses_secundarias'))) {
                     $sec = implode("\n", data_get($jsonData, 'diagnostico.hipoteses_secundarias'));
                     if ($sec) $diagnosis .= "\n\nHipóteses Secundárias:\n" . $sec;
+                }
+                if (empty($diagnosis) && !empty($answer)) {
+                    $diagnosis = "Consulte a transcrição para detalhes.";
                 }
 
                 // --- Prognóstico ---
