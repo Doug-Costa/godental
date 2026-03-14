@@ -386,7 +386,7 @@ class ClinicalCaseController extends Controller
                 if ($template) {
                     $instance = AnamnesisInstance::create([
                         'consultation_id' => $consultation->id,
-                        'patient_id' => $validated['patient_id'],
+                        'patient_id' => $patientId,
                         'template_id' => $template->id,
                         'token' => Str::random(64),
                         'status' => 'pending',
