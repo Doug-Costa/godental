@@ -95,6 +95,7 @@
                             </select>
                         </div>
                     </div>
+                    </div>
 
                     <!-- UI de Sucesso / QR Code -->
                     <div id="anamnesis_success_ui" class="text-center d-none py-4">
