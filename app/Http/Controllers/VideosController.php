@@ -12,56 +12,60 @@ class VideosController extends Controller
     public function videos()
     {
 
-        if(session()->get('lang_code')){
-            if(session()->get('lang_code')=='pt'){
+        if (session()->get('lang_code')) {
+            if (session()->get('lang_code') == 'pt') {
                 $locale = 'pt';
-            }elseif(session()->get('lang_code')=='en'){
+            } elseif (session()->get('lang_code') == 'en') {
                 $locale = 'en';
-            }elseif(session()->get('lang_code')=='es'){
+            } elseif (session()->get('lang_code') == 'es') {
                 $locale = 'es';
             }
-        }else{
+        } else {
             $locale = '';
         }
-        $canais = 'canais'.$locale;
+        $canais = 'canais' . $locale;
         $token = Cache::get('tokenGlobal');
 
         if (Cache::has($canais)) {
             return Cache::get($canais);
-        }else{
+        } else {
             $ch = curl_init('https://api.dentalgo.com.br/subscription/videos');
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
             $conteudo = json_decode($resultado);
+            if (!$conteudo || isset($conteudo->code)) {
+                \Illuminate\Support\Facades\Log::error('Erro ou resposta inválida da API DentalGo Videos');
+                return [];
+            }
             sleep(1);
             foreach ($conteudo as $key2 => $value2) {
 
 
-                if(!empty($conteudo[$key2]->cover)){
+                if (!empty($conteudo[$key2]->cover)) {
                     $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                     $thumbor->resize(Resize::ORIG);
                     $thumbor->imageUrl($conteudo[$key2]->cover);
                     $thumb = $thumbor->get();
                     $conteudo[$key2]->cover = $thumb;
-                }else{
+                } else {
                     unset($thumb);
                 }
 
                 foreach ($value2->productItems as $key => $value) {
 
-                    if(!empty($conteudo[$key2]->productItems[$key]->cover)){
+                    if (!empty($conteudo[$key2]->productItems[$key]->cover)) {
                         $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                         $thumbor->resize(Resize::ORIG);
                         $thumbor->imageUrl($conteudo[$key2]->productItems[$key]->cover);
                         $thumb = $thumbor->get();
                         $conteudo[$key2]->productItems[$key]->cover = $thumb;
-                    }else{
+                    } else {
                         unset($thumb);
                     }
 
@@ -70,15 +74,15 @@ class VideosController extends Controller
             }
 
             Cache::put($canais, $conteudo, 86400);
-            if(isset($conteudo->code)){
-                if($conteudo->code == 'unauthorized'){
+            if (isset($conteudo->code)) {
+                if ($conteudo->code == 'unauthorized') {
                     session()->flush();
                     return 'deslogou';
-                }else{
+                } else {
                     session()->flush();
                     return 'deslogou';
                 }
-            }else{
+            } else {
                 return $conteudo;
             }
         }
@@ -86,76 +90,81 @@ class VideosController extends Controller
 
     public function video($id)
     {
-        if(session()->get('lang_code')){
-            if(session()->get('lang_code')=='pt'){
+        if (session()->get('lang_code')) {
+            if (session()->get('lang_code') == 'pt') {
                 $locale = 'pt';
-            }elseif(session()->get('lang_code')=='pt'){
+            } elseif (session()->get('lang_code') == 'pt') {
                 $locale = 'en';
-            }elseif(session()->get('lang_code')=='en'){
+            } elseif (session()->get('lang_code') == 'en') {
                 $locale = 'es';
-            }elseif(session()->get('lang_code')=='es'){
+            } elseif (session()->get('lang_code') == 'es') {
                 $locale = ' ';
             }
-        }else{
+        } else {
             $locale = '';
         }
-        $canal = 'canal'.$id.''.$locale;
+        $canal = 'canal' . $id . '' . $locale;
         $token = Cache::get('tokenGlobal');
-        
+
         if (Cache::has($canal)) {
             return Cache::get($canal);
-        }else{
-            $ch = curl_init('https://api.dentalgo.com.br/subscription/products/'.$id);
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+        } else {
+            $ch = curl_init('https://api.dentalgo.com.br/subscription/products/' . $id);
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
             $conteudo = json_decode($resultado);
 
+            if (!$conteudo || isset($conteudo->code) || !isset($conteudo->productItems)) {
+                \Illuminate\Support\Facades\Log::error('Erro ou resposta inválida da API DentalGo Video interno: ' . $id);
+                return null;
+            }
+
             sleep(1);
-            foreach ($conteudo->productItems as $key => $value){
+            foreach ($conteudo->productItems as $key => $value) {
                 $ord[] = strtotime($value->createdAt);
             }
             array_multisort($ord, SORT_DESC, $conteudo->productItems);
 
 
 
-            if(!empty($conteudo->cover)){
+            if (!empty($conteudo->cover)) {
                 $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                 $thumbor->resize(Resize::ORIG);
                 $thumbor->imageUrl($conteudo->cover);
                 $thumb = $thumbor->get();
                 $conteudo->cover = $thumb;
-            }else{
+            } else {
                 unset($thumb);
             }
 
             foreach ($conteudo->productItems as $key => $value) {
-                if(!empty($conteudo->productItems[$key]->cover)){
+                if (!empty($conteudo->productItems[$key]->cover)) {
                     $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                     $thumbor->resize(Resize::ORIG);
                     $thumbor->imageUrl($conteudo->productItems[$key]->cover);
                     $thumb = $thumbor->get();
                     $conteudo->productItems[$key]->cover = $thumb;
-                }else{
+                } else {
                     unset($thumb);
                 }
             }
 
             Cache::put($canal, $conteudo, 86400);
-            if(isset($conteudo->code)){
-                if($conteudo->code == 'unauthorized'){
+            if (isset($conteudo->code)) {
+                if ($conteudo->code == 'unauthorized') {
                     session()->flush();
                     return 'deslogou';
-                }else{
+                } else {
                     session()->flush();
                     return 'deslogou';
                 }
-            }else{
+            } else {
                 return $conteudo;
             }
         }

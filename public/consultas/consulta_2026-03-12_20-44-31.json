@@ -1,0 +1,19 @@
+{
+    "patient_id": 17,
+    "patient_name": "mais um teste denovo",
+    "patient_identifier": "22324545677",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando a consulta do Sr. João. Sr. João, seja bem-vindo, bom dia. Dando uma avaliada aqui, ele tá sentindo uma dor, né, no canino direito, inferior direito. Após uma breve avaliação aqui, verifiquei que ele tá lascado, né, o mesmo indicou que comeu um alimento duro aí durante o final de semana, os demais dentes não tem problema, ele apresenta sensibilidade referente à temperatura. Nós vamos fazer um raio-x, né, e também talvez até uma tomografia, A fotografia de fecho cônico vai dar uma avaliada aí no estado da estrutura do dente, que ele reclama de várias dores, né? Dor ao toque e dor em temperatura, né? Avaliando a boca, os sinais normais, só é mesmo essa ocorrência aí.",
+    "duration": "00:44",
+    "service_price_id": null,
+    "valor": "0",
+    "timestamp": "2026-03-12 20:44:31",
+    "status": "completed",
+    "db_id": 22,
+    "audio_path": "consultas\/consulta_2026-03-12_20-44-31.webm",
+    "ai_summary": "{\n  \"paciente\": {\n    \"nome\": null,\n    \"data_nascimento\": null,\n    \"sexo\": null,\n    \"contato\": null\n  },\n  \"consulta\": {\n    \"data\": null,\n    \"motivo\": \"Dor e sensibilidade no canino inferior direito.\",\n    \"historico_medico\": null,\n    \"medicacoes_atuais\": null,\n    \"alergias\": null\n  },\n  \"exame_clinico\": {\n    \"extraoral\": \"[dado ausente]\",\n    \"intraoral\": {\n      \"tecidos_moles\": \"[dado ausente]\",\n      \"dentes\": {\n        \"canino_inferior_direito\": \"Apresenta fratura dental. Paciente relata ocorrência após ingestão de alimento duro. Sensibilidade à temperatura e dor à percussão (torque).\",\n        \"demais_dentes\": \"Sem problemas relatados.\"\n      },\n      \"oclusao\": \"[dado ausente]\",\n      \"outros\": \"[dado ausente]\"\n    },\n    \"sinais_vitais\": \"[dado ausente]\"\n  },\n  \"exames_complementares\": {\n    \"solicitados\": \"Radiografia periapical e possivelmente Tomografia de Feixe Cônico (TCFC) para avaliar a extensão da fratura e o estado da estrutura dental.\",\n    \"realizados\": null,\n    \"achados\": null\n  },\n  \"diagnostico\": {\n    \"hipoteses\": [\n      \"Fratura coronária no elemento 43 (canino inferior direito) com envolvimento provável de dentina, causando sensibilidade térmica e à percussão.\"\n    ],\n    \"definitivo\": null\n  },\n  \"plano_tratamento\": {\n    \"procedimentos_imediatos\": \"Realização de exames de imagem (radiografia e\/ou TCFC) para diagnóstico preciso da extensão da lesão.\",\n    \"procedimentos_futuros\": \"Dependerá do resultado dos exames. Possibilidades incluem: restauração direta, tratamento endodôntico (se houver envolvimento pulpar) ou procedimento protético.\",\n    \"orientacoes\": \"[dado ausente]\"\n  },\n  \"observacoes\": \"Paciente relata episódio de trauma oclusal (alimento duro) no final de semana anterior à consulta.\"\n}",
+    "diagnosis": null,
+    "prognosis": null,
+    "suggested_plan": null
+}

@@ -1,0 +1,228 @@
+    public function mockSave(Request $request)
+    {
+        set_time_limit(0); 
+        $id_file = $request->id ?: "consulta_" . time();
+        $db_id = $request->db_id;
+        $consultation = null;
+
+        Log::info("GoClinic: mockSave call. DB_ID: " . ($db_id ?? 'NEW') . " | Has Audio: " . ($request->hasFile('audio') ? 'YES' : 'NO'));
+
+        $doctorId = session()->has('usuario') ? (is_array(session()->get('usuario')) ? session()->get('usuario')['id'] : (isset(session()->get('usuario')->id) ? session()->get('usuario')->id : null)) : null;
+
+        if ($db_id) {
+            $consultation = \App\Models\Consultation::find($db_id);
+            if (!$consultation) {
+                Log::error("GoClinic: Consultation ID {$db_id} not found.");
+            }
+        }
+
+        if (!$consultation) {
+            // STEP 1: Metadata creation (if not updating)
+            $patientId = $request->patient_id;
+
+            // QUICK REGISTER: Create patient if not exists
+            if (empty($patientId) && $request->patient_name) {
+                $newPatient = \App\Models\Patient::create([
+                    'full_name' => $request->patient_name,
+                    'phone' => $request->patient_identifier,
+                    'user_id' => $doctorId,
+                    'registration_date' => now()->toDateString(),
+                ]);
+                $patientId = $newPatient->id;
+            }
+
+            $consultation = \App\Models\Consultation::create([
+                'patient_id' => $patientId,
+                'clinical_case_id' => $request->clinical_case_id,
+                'clinical_step' => $request->clinical_step ?? 'ENTRADA',
+                'patient_name' => $request->patient_name,
+                'patient_identifier' => $request->patient_identifier,
+                'consultation_type' => $request->consultation_type,
+                'observations' => $request->observations,
+                'transcription' => 'Áudio em processamento... por favor recarregue a página em alguns minutos para visualizar.',
+                'status' => 'pending',
+                'user_id' => $doctorId,
+                'service_price_id' => $request->service_price_id,
+                'valor' => $request->valor ?? 0,
+                'requires_anamnesis' => $request->requires_anamnesis ? true : false,
+            ]);
+
+            Log::info("GoClinic: Created new consultation ID: " . $consultation->id);
+
+            // Create Anamnesis Instance if required
+            if ($request->requires_anamnesis) {
+                $templateId = $request->anamnesis_template_id;
+                $template = $templateId ? \App\Models\AnamnesisTemplate::find($templateId) : \App\Models\AnamnesisTemplate::where('is_default', true)->first();
+                
+                if ($template) {
+                    $instance = \App\Models\AnamnesisInstance::create([
+                        'consultation_id' => $consultation->id,
+                        'patient_id' => $patientId,
+                        'template_id' => $template->id,
+                        'token' => \Illuminate\Support\Str::random(64),
+                        'status' => 'pending',
+                        'expires_at' => now()->addHours(24),
+                    ]);
+                    // Store the URL in the response for the frontend
+                    $request->merge(['anamnesis_url' => route('anamnesis.show', $instance->token)]);
+                }
+            }
+        } else {
+            // Updating existing record (e.g., adding audio/observations)
+            if ($request->has('observations')) {
+                $consultation->update(['observations' => $request->observations]);
+            }
+        }
+
+        $responseData = [
+            'success' => true,
+            'id' => $id_file,
+            'db_id' => $consultation->id,
+            'message' => $request->hasFile('audio') ? 'Áudio recebido, iniciando processamento...' : 'Metadados salvos.'
+        ];
+        
+        if (isset($instance)) {
+            $responseData['anamnesis_url'] = route('anamnesis.show', $instance->token);
+        }
+
+        // 3. Audio handling (Now optional/decoupled)
+        if ($request->hasFile('audio')) {
+            Log::info("GoClinic: Saving audio file for ID " . $consultation->id);
+            $request->file('audio')->move(public_path('consultas'), "{$id_file}.webm");
+            $audioPath = "consultas/{$id_file}.webm";
+
+            $consultation->update([
+                'audio_path' => $audioPath,
+                'status' => 'recorded'
+            ]);
+        } else {
+            // Return early if no audio to process
+            Log::info("GoClinic: No audio file in this request, finishing.");
+            return response()->json($responseData);
+        }
+
+        // 4. Background Processing
+        if (function_exists('fastcgi_finish_request')) {
+            Log::info("GoClinic: Background mode enabled (FastCGI)");
+            ignore_user_abort(true);
+            set_time_limit(0);
+
+            if (ob_get_level() > 0) ob_end_clean();
+
+            $response = response()->json($responseData);
+            $response->send();
+            
+            fastcgi_finish_request();
+            $backgroundMode = true;
+        } else {
+            $backgroundMode = false;
+        }
+
+        // 5. Transcription Process
+        try {
+            $whisperUrl = env('WHISPER_API_URL', 'http://187.77.48.78:9001/transcribe');
+            $audioFile = public_path($consultation->audio_path);
+
+            if (file_exists($audioFile)) {
+                Log::info("GoClinic: Sending to Whisper... URL: {$whisperUrl} | File: {$audioFile}");
+                
+                $whisperResponse = Http::timeout(900)->attach(
+                    'file',
+                    file_get_contents($audioFile),
+                    basename($audioFile)
+                )->post($whisperUrl);
+
+                if ($whisperResponse->successful()) {
+                    $transcriptionResult = $whisperResponse->json();
+                    $realText = $transcriptionResult['text'] ?? '';
+                    
+                    Log::info("GoClinic: Whisper Success for ID " . $consultation->id . ". Text length: " . strlen($realText));
+
+                    $consultation->update([
+                        'transcription' => !empty($realText) ? $realText : 'Nenhum texto detectado.',
+                        'status' => 'transcribed'
+                    ]);
+
+                    // Forward to Go Intelligence
+                    $this->forwardToGoIntelligence($consultation, $realText);
+                } else {
+                    Log::error("GoClinic: Whisper Failed for ID " . $consultation->id . ". Status: " . $whisperResponse->status());
+                }
+            }
+        } catch (\Exception $e) {
+            Log::error("GoClinic: Background Error for ID " . $consultation->id . ": " . $e->getMessage());
+        }
+
+        if (!$backgroundMode) {
+            return response()->json($responseData);
+        }
+    }
+
+    private function forwardToGoIntelligence($consultation, $transcription)
+    {
+        try {
+            Log::info("GoClinic: Sending to Go Intelligence for ID " . $consultation->id);
+            $goIntelligenceUrl = env('GOINTELLIGENCE_API_URL', 'http://187.77.48.78:8002');
+            $goEndpoint = rtrim($goIntelligenceUrl, '/') . '/clinic/transcription';
+            $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
+            
+            $goResponse = Http::timeout(260)
+                ->withHeaders(['X-API-Key' => $apiKey])
+                ->post($goEndpoint, [
+                    'transcription' => $transcription,
+                    'consultation_id' => $consultation->id
+                ]);
+
+            if ($goResponse->successful()) {
+                Log::info("GoClinic: Go Intelligence Success for ID " . $consultation->id);
+                $aiData = $goResponse->json();
+                $answer = $aiData['answer'] ?? '';
+                
+                $jsonData = [];
+                if (preg_match('/```json\s*(.*?)\s*```/s', $answer, $matches)) {
+                    $jsonData = json_decode($matches[1], true) ?? [];
+                } elseif (str_starts_with(trim($answer), '{')) {
+                    $jsonData = json_decode($answer, true) ?? [];
+                }
+
+                // --- Resumo (AI Summary) ---
+                $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
+                           data_get($jsonData, 'anamnese.historia_atual') ?? 
+                           data_get($jsonData, 'anamnese.historia_doenca_atual') ??
+                           "Processado.";
+
+                // --- Diagnóstico ---
+                $diagnosis = data_get($jsonData, 'diagnostico.hipotese_principal') ?? '';
+                if (is_array(data_get($jsonData, 'diagnostico.hipoteses_secundarias'))) {
+                    $sec = implode("\n", data_get($jsonData, 'diagnostico.hipoteses_secundarias'));
+                    if ($sec) $diagnosis .= "\n\nHipóteses Secundárias:\n" . $sec;
+                }
+
+                // --- Prognóstico ---
+                $prognosis = data_get($jsonData, 'prognostico.classificacao');
+                $justification = data_get($jsonData, 'prognostico.justificativa');
+                if ($justification) $prognosis .= "\n" . $justification;
+
+                // --- Plano de Tratamento ---
+                $immediate = (array) data_get($jsonData, 'plano.tratamento_imediato', []);
+                $elective = (array) data_get($jsonData, 'plano.tratamento_eletivo', []);
+                $plan = implode("\n", array_merge($immediate, $elective));
+
+                // --- Próximos Passos (Next Steps) ---
+                $nextSteps = data_get($jsonData, 'insights.proximos_passos');
+
+                $consultation->update([
+                    'ai_summary' => $summary,
+                    'diagnosis' => $diagnosis,
+                    'prognosis' => $prognosis,
+                    'suggested_plan' => $plan,
+                    'next_steps' => $nextSteps,
+                    'status' => 'completed'
+                ]);
+            } else {
+                Log::error("GoClinic: Go Intelligence Failed for ID " . $consultation->id . ". Status: " . $goResponse->status());
+            }
+        } catch (\Exception $e) {
+            Log::error("GoClinic: Intelligence Error for ID " . $consultation->id . ": " . $e->getMessage());
+        }
+    }

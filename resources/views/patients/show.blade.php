@@ -29,10 +29,20 @@
                         {{ $patient->birth_date ? \Carbon\Carbon::parse($patient->birth_date)->format('d/m/Y') : 'Não informado' }}
                     </div>
                     @if($patient->phone)
-                        <div class="badge bg-light text-secondary border px-3 py-2" style="border-radius: 8px;">
-                            <i class="bi bi-whatsapp me-2"></i>{{ $patient->phone }}
-                        </div>
+                    <div class="badge bg-light text-secondary border px-3 py-2" style="border-radius: 8px;">
+                        <i class="bi bi-whatsapp me-2"></i>{{ $patient->phone }}
+                    </div>
                     @endif
+                    <div class="badge bg-light text-secondary border px-3 py-2" style="border-radius: 8px;">
+                        @php 
+                            $hasAnamnesis = $patient->anamnesisInstances()->where('status', 'completed')->exists();
+                        @endphp
+                        @if($hasAnamnesis)
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>Anamnese OK
+                        @else
+                            <i class="bi bi-exclamation-circle-fill text-warning me-2"></i>Anamnese Pendente
+                        @endif
+                    </div>
                 </div>
             </div>
             <div class="col-md-5 d-flex justify-content-md-end gap-2 align-items-center">
@@ -434,7 +444,53 @@
                                 style="border-radius: 10px; background-color: #F8F9FA; border-color: #eee;"></textarea>
                         </div>
 
-                        <button type="submit" class="btn text-white px-5 py-3 fw-bold w-100"
+                        <!-- Seção de Anamnese -->
+                        <div id="anamnesis_section" class="mt-3 p-3 border rounded-3 bg-light">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0">Fluxo de Anamnese</h6>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="requires_anamnesis" id="requires_anamnesis_toggle" value="1">
+                                    <label class="form-check-label ms-2 fw-semibold" for="requires_anamnesis_toggle">Ativar?</label>
+                                </div>
+                            </div>
+                            <div id="anamnesis_alert" class="alert alert-warning py-2 px-3 small d-none">
+                                <i class="bi bi-info-circle-fill me-1"></i> Paciente novo: Anamnese recomendada.
+                            </div>
+                            <div id="template_selection" class="mt-2 d-none">
+                                <label class="form-label small fw-semibold">Modelo de Ficha</label>
+                                <select class="form-select form-select-sm" name="anamnesis_template_id" style="border-radius: 8px;">
+                                    @php $templates = \App\Models\AnamnesisTemplate::where('is_active', true)->get(); @endphp
+                                    @foreach($templates as $t)
+                                        <option value="{{ $t->id }}" {{ $t->is_default ? 'selected' : '' }}>{{ $t->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- UI de Sucesso / QR Code -->
+                        <div id="anamnesis_success_ui" class="text-center d-none py-4">
+                            <div class="mb-4">
+                                <div class="mx-auto bg-success text-white rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-check-lg fs-2"></i>
+                                </div>
+                                <h5 class="fw-bold">Pronto para Anamnese!</h5>
+                                <p class="text-muted small">QR Code para o paciente:</p>
+                            </div>
+                            <div id="qrcode_container" class="mb-4 p-3 bg-white border d-inline-block rounded-4 shadow-sm">
+                                <img id="anamnesis_qrcode_img" src="" alt="QR Code" style="width: 180px; height: 180px;">
+                            </div>
+                            <div class="input-group mb-4 px-3">
+                                <input type="text" id="anamnesis_link_input" class="form-control form-control-sm border-end-0" readonly style="border-radius: 10px 0 0 10px;">
+                                <button class="btn btn-outline-secondary border-start-0" type="button" onclick="copyAnamnesisLink()" style="border-radius: 0 10px 10px 0;">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="px-3 mb-2">
+                                <button type="button" class="btn btn-primary w-100 fw-bold" data-bs-dismiss="modal" style="border-radius: 12px; background-color: #CA1D53; border: none;">Entendido, fechar</button>
+                            </div>
+                        </div>
+
+                        <button id="btnIniciarConsultaSubmit" type="submit" class="btn text-white px-5 py-3 fw-bold w-100"
                             style="background-color: #CA1D53; border-radius: 12px;">
                             <i class="bi bi-mic me-2"></i>Iniciar Consulta
                         </button>
@@ -508,10 +564,50 @@
             const formData = new FormData(form);
             const data = Object.fromEntries(formData);
 
+            // Check for anamnesis toggle
+            const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+            const isAnamnesis = anamnesisToggle && anamnesisToggle.checked;
+
             // Determine case handling
             const activeOption = document.querySelector('.case-option.active')?.dataset.option;
 
             const createConsultation = (clinicalCaseId) => {
+                if (isAnamnesis) {
+                    const payload = new FormData(form);
+                    if (clinicalCaseId) payload.set('clinical_case_id', clinicalCaseId);
+                    
+                    const btn = document.getElementById('btnIniciarConsultaSubmit');
+                    btn.disabled = true;
+                    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span> Gerando...';
+
+                    fetch("{{ route('consultations.ajax-store') }}", {
+                        method: 'POST',
+                        body: payload,
+                        headers: {
+                            'X-CSRF-TOKEN': data._token
+                        }
+                    })
+                    .then(r => r.json())
+                    .then(result => {
+                        if (result.db_id) {
+                            form.classList.add('d-none');
+                            document.getElementById('anamnesis_success_ui').classList.remove('d-none');
+                            document.getElementById('anamnesis_link_input').value = result.anamnesis_url;
+                            document.getElementById('anamnesis_qrcode_img').src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(result.anamnesis_url)}`;
+                        } else {
+                            alert("Erro ao gerar anamnese.");
+                            btn.disabled = false;
+                            btn.innerHTML = '<i class="bi bi-qr-code me-1"></i> Gerar Ficha de Anamnese';
+                        }
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        alert("Erro de rede.");
+                        btn.disabled = false;
+                    });
+                    return;
+                }
+
                 const payload = {
                     patient_id: data.patient_id,
                     patient_name: data.patient_name,
@@ -519,6 +615,7 @@
                     consultation_type: data.consultation_type,
                     clinical_step: data.clinical_step,
                     clinical_case_id: clinicalCaseId,
+                    doctor_id: data.doctor_id,
                     observations: data.observations,
                     transcription: '',
                     status: 'pending',
@@ -547,7 +644,7 @@
             };
 
             if (activeOption === 'new' && data.case_title) {
-                // Create case first, then consultation
+                // ... same case logic ...
                 fetch('/clinical-cases', {
                     method: 'POST',
                     headers: {
@@ -568,6 +665,46 @@
                 createConsultation(null);
             }
         });
+
+        // Anamnesis toggles and initial check
+        function checkPatientHistory(patientId) {
+            fetch(`/patients/check-history/${patientId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const anamnesisAlert = document.getElementById('anamnesis_alert');
+                    const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+                    if (data.is_new || !data.has_anamnesis) {
+                        anamnesisAlert.classList.remove('d-none');
+                        anamnesisToggle.checked = true;
+                        anamnesisToggle.dispatchEvent(new Event('change'));
+                    }
+                });
+        }
+
+        const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+        const templateSelection = document.getElementById('template_selection');
+        const btnSubmit = document.getElementById('btnIniciarConsultaSubmit');
+        
+        if (anamnesisToggle) {
+            anamnesisToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    templateSelection.classList.remove('d-none');
+                    btnSubmit.innerHTML = '<i class="bi bi-qr-code me-1"></i> Gerar Ficha de Anamnese';
+                } else {
+                    templateSelection.classList.add('d-none');
+                    btnSubmit.innerHTML = '<i class="bi bi-mic-fill me-1"></i> Iniciar Consulta';
+                }
+            });
+            // Initial run
+            checkPatientHistory("{{ $patient->id }}");
+        }
+
+        function copyAnamnesisLink() {
+            const input = document.getElementById('anamnesis_link_input');
+            input.select();
+            document.execCommand('copy');
+            alert('Link copiado!');
+        }
     </script>
 
     <!-- ═══════ MODAL: AGENDAR RETORNO ═══════ -->

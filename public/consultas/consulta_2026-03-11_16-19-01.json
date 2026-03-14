@@ -1,0 +1,15 @@
+{
+    "patient_id": 8,
+    "patient_name": "Silverio Hachi Roku",
+    "patient_identifier": "499999999",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Então, fazendo aqui mais um teste, vamos falar palavras mais complexas, né, pra ver como é que o GoClinic, ele tá reagindo. Então, pra falar de anamnese, necrose pulpar, sobre facetas, sobre DVO, sobre o que mais que a gente pode falar aí, sobre brackets, né, que é uma palavra que às vezes as inteligências artificiais erram, e outras coisas sobre transcrição, né, face mesial, o que nós podemos falar mais em odontologia, vamos mandar perguntas, vamos mandar coisas difíceis aí para serem faladas e para transcrever. Eu vou parar esse áudio agora só para ver.",
+    "duration": "00:45",
+    "service_price_id": null,
+    "valor": "245",
+    "timestamp": "2026-03-11 16:19:01",
+    "status": "transcribed",
+    "db_id": 10,
+    "audio_path": "consultas\/consulta_2026-03-11_16-19-01.webm"
+}

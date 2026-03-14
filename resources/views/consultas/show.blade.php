@@ -64,11 +64,29 @@
                             @elseif($consulta->status == 'recorded')
                                 <span class="badge bg-primary text-white px-3 py-2" style="border-radius: 8px;">Áudio
                                     Gravado</span>
+                            @elseif($consulta->status == 'awaiting_anamnesis')
+                                <span class="badge bg-info text-white px-3 py-2" style="border-radius: 8px;">Aguardando Anamnese</span>
+                            @elseif($consulta->status == 'completed')
+                                <span class="badge bg-success text-white px-3 py-2" style="border-radius: 8px;">Concluída (IA)</span>
                             @else
                                 <span class="badge bg-warning text-dark px-3 py-2" style="border-radius: 8px;">Pendente</span>
                             @endif
                         </div>
                     </div>
+
+                    @if($consulta->status == 'awaiting_anamnesis' && $consulta->anamnesisInstance)
+                        <div class="mt-4 p-3 border rounded-3 bg-light text-center">
+                            <h6 class="fw-bold small mb-3">Anamnese Pendente</h6>
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data={{ urlencode(route('anamnesis.show', $consulta->anamnesisInstance->token)) }}" 
+                                 alt="QR Code" class="mb-3 border bg-white p-2">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control" value="{{ route('anamnesis.show', $consulta->anamnesisInstance->token) }}" readonly id="anamnesisLink">
+                                <button class="btn btn-outline-secondary" type="button" onclick="navigator.clipboard.writeText(document.getElementById('anamnesisLink').value); alert('Copiado!')">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                        </div>
+                    @endif
 
                     @if($consulta->audio_path)
                         <div class="mt-4">
@@ -193,6 +211,40 @@
                                             </button>
                                         @endif
                                     </div>
+
+                                    @php 
+                                        $anamnesis = null;
+                                        if (isset($consulta->anamnesisInstance)) {
+                                            $anamnesis = $consulta->anamnesisInstance;
+                                        } elseif ($consulta instanceof \Illuminate\Database\Eloquent\Model && method_exists($consulta, 'anamnesisInstance')) {
+                                            $anamnesis = $consulta->anamnesisInstance;
+                                        }
+
+                                        if (!$anamnesis && isset($consulta->patient)) {
+                                            $anamnesis = is_object($consulta->patient) && method_exists($consulta->patient, 'anamnesisInstances') 
+                                                ? $consulta->patient->anamnesisInstances()->where('status', 'completed')->latest()->first() 
+                                                : null;
+                                        }
+                                    @endphp
+
+                                    @if($anamnesis && $anamnesis->status === 'completed')
+                                        <div class="anamnesis-responses-display mb-4 p-3 bg-light rounded-3 border-start border-primary border-4">
+                                            <h6 class="fw-bold mb-3 small text-primary text-uppercase">Respostas do Paciente ({{ $anamnesis->completed_at ? $anamnesis->completed_at->format('d/m/Y') : '' }})</h6>
+                                            <div class="row g-3">
+                                                @foreach($anamnesis->responses as $resp)
+                                                    <div class="col-md-6">
+                                                        <div class="mb-2">
+                                                            <p class="fw-bold mb-0 small text-secondary" style="font-size: 0.75rem;">{{ $resp->question_text }}</p>
+                                                            <p class="mb-0 small text-dark">{{ $resp->answer_text ?: '—' }}</p>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                        <hr class="my-4 opacity-10">
+                                        <label class="form-label small fw-bold text-muted text-uppercase mb-2">Notas Complementares do Profissional</label>
+                                    @endif
+
                                     <textarea id="field-observations" class="form-control border-0 bg-light"
                                         style="border-radius: 12px; min-height: 250px; line-height: 1.8; font-size: 1rem; resize: vertical;"
                                         placeholder="Registrar anamnese do paciente: queixa principal, histórico médico, medicamentos, alergias..."
@@ -282,23 +334,26 @@
                                 <div class="p-3 rounded-4 border bg-white h-100">
                                     <h6 class="fw-bold text-dark mb-2 small text-uppercase">Pontos Chave</h6>
                                     @if($consulta->ai_summary)
-                                        <p class="small text-secondary mb-0">{{ $consulta->ai_summary }}</p>
+                                        <p class="small text-secondary mb-0">{!! nl2br(e($consulta->ai_summary)) !!}</p>
                                     @else
-                                        <ul class="mb-0 small text-secondary">
-                                            <li>Paciente relatou dor aguda no dente 16.</li>
-                                            <li>Sensibilidade térmica confirmada.</li>
-                                            <li>Histórico de bruxismo mencionado.</li>
-                                        </ul>
+                                        <p class="small text-muted italic mb-0">Aguardando análise inteligente...</p>
                                     @endif
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="p-3 rounded-4 border bg-white h-100">
-                                    <h6 class="fw-bold text-dark mb-2 small text-uppercase">Próximos Passos</h6>
-                                    <p class="small text-secondary mb-0">
-                                        Solicitar raio-X periapical do quadrante 1. Avaliar possível necessidade de
-                                        tratamento endodôntico.
-                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="fw-bold text-dark mb-0 small text-uppercase">Próximos Passos</h6>
+                                        @if($consulta->is_db ?? false)
+                                            <button class="btn btn-sm text-primary p-0" onclick="saveClinicalField('next_steps')">
+                                                <i class="bi bi-check2"></i>
+                                            </button>
+                                        @endif
+                                    </div>
+                                    <textarea id="field-next_steps" class="form-control border-0 bg-light p-2 small"
+                                        style="border-radius: 12px; min-height: 100px; font-size: 0.85rem; resize: vertical;"
+                                        placeholder="Orientações para o próximo atendimento..."
+                                        {{ ($consulta->is_db ?? false) ? '' : 'disabled' }}>{{ $consulta->next_steps ?? '' }}</textarea>
                                 </div>
                             </div>
                         </div>

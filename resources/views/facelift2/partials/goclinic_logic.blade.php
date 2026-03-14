@@ -114,6 +114,65 @@
                                 <textarea class="form-control" name="observations" rows="2"
                                     placeholder="Notas curtas..." style="border-radius: 10px;"></textarea>
                             </div>
+
+                            <!-- Seção de Anamnese -->
+                            <div id="anamnesis_section" class="mt-3 p-3 border rounded-3 bg-light d-none">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <h6 class="fw-bold mb-0">Fluxo de Anamnese</h6>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" name="requires_anamnesis"
+                                            id="requires_anamnesis_toggle" value="1">
+                                        <label class="form-check-label ms-2 fw-semibold"
+                                            for="requires_anamnesis_toggle">Ativar?</label>
+                                    </div>
+                                </div>
+                                <div id="anamnesis_alert" class="alert alert-warning py-1 px-2 small d-none"
+                                    style="font-size: 0.75rem;">
+                                    <i class="bi bi-info-circle-fill me-1"></i> Paciente novo: Anamnese recomendada.
+                                </div>
+                                <div id="template_selection" class="mt-2 d-none">
+                                    <label class="form-label small fw-semibold">Modelo de Ficha</label>
+                                    <select class="form-select form-select-sm" name="anamnesis_template_id"
+                                        style="border-radius: 8px;">
+                                        @php $templates = \App\Models\AnamnesisTemplate::where('is_active', true)->get(); @endphp
+                                        @foreach($templates as $t)
+                                            <option value="{{ $t->id }}" {{ $t->is_default ? 'selected' : '' }}>
+                                                {{ $t->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- UI de Sucesso / QR Code -->
+                            <div id="anamnesis_success_ui" class="text-center d-none py-3">
+                                <div class="mb-3">
+                                    <div class="mx-auto bg-success text-white rounded-circle d-flex align-items-center justify-content-center mb-2"
+                                        style="width: 50px; height: 50px;">
+                                        <i class="bi bi-check-lg fs-3"></i>
+                                    </div>
+                                    <h6 class="fw-bold mb-1">Pronto para Anamnese!</h6>
+                                    <p class="text-muted small mb-0" style="font-size: 0.7rem;">Peça ao paciente para
+                                        ler o QR Code:</p>
+                                </div>
+                                <div id="qrcode_container"
+                                    class="mb-3 p-2 bg-white border d-inline-block rounded-3 shadow-sm">
+                                    <img id="anamnesis_qrcode_img" src="" alt="QR Code"
+                                        style="width: 140px; height: 140px;">
+                                </div>
+                                <div class="input-group mb-3 px-2">
+                                    <input type="text" id="anamnesis_link_input"
+                                        class="form-control form-control-sm border-end-0" readonly
+                                        style="border-radius: 8px 0 0 8px;">
+                                    <button class="btn btn-outline-secondary border-start-0" type="button"
+                                        onclick="copyAnamnesisLink()" style="border-radius: 0 8px 8px 0;">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm w-100 fw-bold"
+                                    data-bs-dismiss="modal"
+                                    style="border-radius: 10px; background-color: #CA1D53; border: none;">Entendido,
+                                    fechar</button>
+                            </div>
                         </form>
                         <div class="d-flex justify-content-end gap-2 mt-3 mb-2">
                             <button type="button" class="btn btn-light px-4 fw-semibold" data-bs-dismiss="modal"

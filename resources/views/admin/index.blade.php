@@ -38,6 +38,12 @@
                     <i class="bi bi-box-seam me-1"></i> Estoque
                 </button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link px-4 py-2 fw-semibold" id="anamnesis-tab" data-bs-toggle="pill"
+                    data-bs-target="#anamnesis-panel" type="button" role="tab">
+                    <i class="bi bi-journal-check me-1"></i> Anamnese
+                </button>
+            </li>
         </ul>
 
         <style>
@@ -383,7 +389,13 @@
                             </table>
                         </div>
                     </div>
-                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════════
+                 TAB: ANAMNESE
+                 ══════════════════════════════════════════════════════════════ -->
+            <div class="tab-pane fade" id="anamnesis-panel" role="tabpanel">
+                @include('admin.partials.anamnesis_tab')
             </div>
 
         </div>
@@ -696,6 +708,63 @@
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-admin-sm px-4" onclick="saveDoctor()">Salvar Profissional</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Anamnesis Template -->
+    <div class="modal fade" id="modalAnamnesisTemplate" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="modalAnamnesisTitle">Novo Modelo de Anamnese</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="anamnesisId">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Nome do Modelo *</label>
+                        <input type="text" id="anamnesisName" class="form-control" placeholder="Ex: Anamnese Geral Adulto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Descrição</label>
+                        <textarea id="anamnesisDescription" class="form-control" rows="2" placeholder="Breve descrição do uso deste modelo"></textarea>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input" type="checkbox" id="anamnesisDefault">
+                                <label class="form-check-label fw-semibold">Definir como Padrão</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input" type="checkbox" id="anamnesisActive" checked>
+                                <label class="form-check-label fw-semibold">Ativo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-bold mb-0"><i class="bi bi-question-circle-fill me-2"></i>Perguntas</h6>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="addAnamnesisQuestion()">
+                            <i class="bi bi-plus-lg me-1"></i> Adicionar Pergunta
+                        </button>
+                    </div>
+
+                    <div id="anamnesisQuestionsList" class="anamnesis-questions-container">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div id="noQuestionsMsg" class="text-center py-4 text-muted border rounded-3 bg-light d-none">
+                        <i class="bi bi-info-circle me-1"></i> Nenhuma pergunta adicionada. Clique em "Adicionar Pergunta" acima.
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-admin-sm px-4" onclick="saveAnamnesisTemplate()">Salvar Modelo</button>
                 </div>
             </div>
         </div>

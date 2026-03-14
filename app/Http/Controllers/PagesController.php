@@ -1,19 +1,28 @@
 <?php
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\GoIntelligenceController;
+use App\Models\AnamnesisTemplate;
+use App\Models\AnamnesisInstance;
+use Illuminate\Support\Str;
 use App;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 use Session;
 use App\Models\FinancialCategory;
 use App\Models\FinancialTransaction;
 
 
 if (session()->has('token')) {
-
+    // Session token exists
 } else {
     if (Cache::has('tokenGlobal')) {
-        session()->put('usuario', 'API');
+        // Use cached global token
+        if (session()->isStarted() && !session()->has('usuario')) {
+            session()->put('usuario', 'API');
+        }
     } else {
         $email = 'yuzofuzii2@gmail.com';
         $password = 'emchuvadepikatuusaabundadeguardachuva';
@@ -26,19 +35,27 @@ if (session()->has('token')) {
             'Content-Type: application/x-www-form-urlencoded'
         ));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5); // 5 seconds timeout
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3); // 3 seconds connect timeout
 
         $server_output = curl_exec($ch);
 
         if ($server_output === false) {
-            echo 'Erro do cURL: ' . curl_error($ch); // Mostra a descrição do erro
-            echo 'Código de erro: ' . curl_errno($ch); // Mostra o código numérico
+            Log::error('Erro do cURL DentalGO global: ' . curl_error($ch));
         }
         curl_close($ch);
-        $token = json_decode($server_output);
-        $token = $token->token;
+
+        $token = 'OFFLINE_MODE';
+        if ($server_output) {
+            $tokenObj = json_decode($server_output);
+            $token = isset($tokenObj->token) ? $tokenObj->token : 'OFFLINE_MODE';
+        }
+
         Cache::put('tokenGlobal', $token, 500);
-        $usuarioPlano = session()->put('usuarioPlano', 'semplano');
-        $usuarioPermissao = session()->put('usuarioPermissao', 'naotem');
+        if (session()->isStarted()) {
+            session()->put('usuarioPlano', 'semplano');
+            session()->put('usuarioPermissao', 'naotem');
+        }
     }
 }
 
@@ -64,7 +81,11 @@ class PagesController extends Controller
         foreach ($idsColecoes as $id) {
             $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
 
-            $ultimaRevista = end($colecao[0]->products);
+            if (isset($colecao[0]) && isset($colecao[0]->products) && !empty($colecao[0]->products)) {
+                $ultimaRevista = end($colecao[0]->products);
+            } else {
+                $ultimaRevista = null;
+            }
 
             if ($ultimaRevista) {
                 $ultimasRevistas[] = $ultimaRevista;
@@ -74,7 +95,10 @@ class PagesController extends Controller
         $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
         $tipo = 'magazine';
 
-        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        $ultimaRevista = null;
+        if (!empty($ultimasRevistas) && isset($ultimasRevistas[0]->id)) {
+            $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        }
         $videos = app('App\Http\Controllers\VideosController')->videos();
         $livros = app('App\Http\Controllers\LivroController')->livros();
         //DESCONTO PROFESSOR
@@ -118,7 +142,11 @@ class PagesController extends Controller
             $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
 
             if (isset($colecao[0]) && isset($colecao[0]->products) && is_array($colecao[0]->products)) {
-                $ultimaRevista = end($colecao[0]->products);
+                if (isset($colecao[0]) && isset($colecao[0]->products) && !empty($colecao[0]->products)) {
+                    $ultimaRevista = end($colecao[0]->products);
+                } else {
+                    $ultimaRevista = null;
+                }
                 if ($ultimaRevista) {
                     $ultimasRevistas[] = $ultimaRevista;
                 }
@@ -128,7 +156,10 @@ class PagesController extends Controller
         $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
         $tipo = 'magazine';
 
-        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        $ultimaRevista = null;
+        if (!empty($ultimasRevistas) && isset($ultimasRevistas[0]->id)) {
+            $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        }
         $videos = app('App\Http\Controllers\VideosController')->videos();
         $livros = app('App\Http\Controllers\LivroController')->livros();
         //DESCONTO PROFESSOR
@@ -198,6 +229,11 @@ class PagesController extends Controller
         $files = glob(public_path('consultas/*.json'));
         foreach ($files as $file) {
             $data = json_decode(file_get_contents($file));
+            // Skip if it belongs to a database record (to avoid duplication)
+            if ($data && isset($data->db_id)) {
+                continue;
+            }
+
             if ($data) {
                 $consultas->push((object) [
                     'id' => basename($file, '.json'),
@@ -267,6 +303,7 @@ class PagesController extends Controller
                     'diagnosis' => $c->diagnosis ?? '',
                     'prognosis' => $c->prognosis ?? '',
                     'suggested_plan' => $c->suggested_plan ?? '',
+                    'next_steps' => $c->next_steps ?? '',
                     'is_db' => true,
                 ];
                 return view("consultas.show", ["consulta" => $consulta]);
@@ -293,6 +330,7 @@ class PagesController extends Controller
                 'diagnosis' => '',
                 'prognosis' => '',
                 'suggested_plan' => '',
+                'next_steps' => '',
                 'is_db' => false,
             ];
             return view("consultas.show", ["consulta" => $consulta]);
@@ -320,6 +358,7 @@ class PagesController extends Controller
                 'diagnosis' => '',
                 'prognosis' => '',
                 'suggested_plan' => '',
+                'next_steps' => '',
                 'is_db' => false,
             ];
             return view("consultas.show", ["consulta" => $consulta]);
@@ -372,104 +411,248 @@ class PagesController extends Controller
 
     public function mockSave(Request $request)
     {
-        $timestamp = now()->format('Y-m-d_H-i-s');
-        $id_file = "consulta_" . $timestamp;
+        set_time_limit(0); 
+        $id_file = $request->id ?: "consulta_" . time();
+        $db_id = $request->db_id;
+        $consultation = null;
 
-        $patientId = $request->patient_id;
+        Log::info("GoClinic: mockSave call. DB_ID: " . ($db_id ?? 'NEW') . " | Has Audio: " . ($request->hasFile('audio') ? 'YES' : 'NO'));
+
         $doctorId = session()->has('usuario') ? (is_array(session()->get('usuario')) ? session()->get('usuario')['id'] : (isset(session()->get('usuario')->id) ? session()->get('usuario')->id : null)) : null;
 
-        // QUICK REGISTER: Create patient if not exists
-        if (empty($patientId) && $request->patient_name) {
-            $newPatient = \App\Models\Patient::create([
-                'full_name' => $request->patient_name,
-                'phone' => $request->patient_identifier,
-                'user_id' => $doctorId,
-                'registration_date' => now()->toDateString(),
-            ]);
-            $patientId = $newPatient->id;
+        if ($db_id) {
+            $consultation = \App\Models\Consultation::find($db_id);
+            if (!$consultation) {
+                Log::error("GoClinic: Consultation ID {$db_id} not found.");
+            }
         }
 
-        $data = $request->except('audio');
-        $data['patient_id'] = $patientId;
-        $data['timestamp'] = now()->toDateTimeString();
-        $data['status'] = 'transcribed';
+        if (!$consultation) {
+            // STEP 1: Metadata creation (if not updating)
+            $patientId = $request->patient_id;
 
-        // Save to database
-        $consultation = \App\Models\Consultation::create([
-            'patient_id' => $patientId,
-            'clinical_case_id' => $request->clinical_case_id,
-            'clinical_step' => $request->clinical_step ?? 'ENTRADA',
-            'patient_name' => $request->patient_name,
-            'patient_identifier' => $request->patient_identifier,
-            'consultation_type' => $request->consultation_type,
-            'observations' => $request->observations,
-            'transcription' => $request->transcription,
-            'status' => 'transcribed',
-            'user_id' => $doctorId,
-            'service_price_id' => $request->service_price_id,
-            'valor' => $request->valor ?? 0,
-        ]);
+            // QUICK REGISTER: Create patient if not exists
+            if (empty($patientId) && $request->patient_name) {
+                $newPatient = \App\Models\Patient::create([
+                    'full_name' => $request->patient_name,
+                    'phone' => $request->patient_identifier,
+                    'user_id' => $doctorId,
+                    'registration_date' => now()->toDateString(),
+                ]);
+                $patientId = $newPatient->id;
+            }
 
-        // AUTO-SCHEDULE: Plotar na agenda (Real-time)
-        try {
-            \App\Models\Schedule::create([
+            $allowedSteps = ['ENTRADA', 'ANAMNESE', 'DIAGNOSTICO', 'PROGNOSTICO', 'PLANO'];
+            $clinicalStep = strtoupper($request->clinical_step ?? 'ENTRADA');
+            if (!in_array($clinicalStep, $allowedSteps)) {
+                $clinicalStep = 'ENTRADA';
+            }
+
+            $consultation = \App\Models\Consultation::create([
                 'patient_id' => $patientId,
-                'doctor_id' => $doctorId,
                 'clinical_case_id' => $request->clinical_case_id,
-                'consultation_type' => $request->consultation_type ?? 'Consulta',
-                'start_time' => $data['timestamp'],
-                'end_time' => \Carbon\Carbon::parse($data['timestamp'])->addMinutes(30), // Default duration
-                'status' => 'CONCLUIDO',
+                'clinical_step' => $clinicalStep,
+                'patient_name' => $request->patient_name,
+                'patient_identifier' => $request->patient_identifier,
+                'consultation_type' => $request->consultation_type,
+                'observations' => $request->observations,
+                'transcription' => 'Áudio em processamento... por favor recarregue a página em alguns minutos para visualizar.',
+                'status' => 'pending',
+                'user_id' => $doctorId,
+                'service_price_id' => $request->service_price_id,
                 'valor' => $request->valor ?? 0,
-                'notes' => 'Gerado automaticamente via GoClinic (Gravação)',
+                'requires_anamnesis' => $request->requires_anamnesis ? true : false,
             ]);
-        } catch (\Exception $e) {
-            \Log::error('Erro ao criar agendamento automático: ' . $e->getMessage());
+
+            Log::info("GoClinic: Created new consultation ID: " . $consultation->id);
+
+            // Create Anamnesis Instance if required
+            if ($request->requires_anamnesis) {
+                $templateId = $request->anamnesis_template_id;
+                $template = $templateId ? \App\Models\AnamnesisTemplate::find($templateId) : \App\Models\AnamnesisTemplate::where('is_default', true)->first();
+                
+                if ($template) {
+                    $instance = \App\Models\AnamnesisInstance::create([
+                        'consultation_id' => $consultation->id,
+                        'patient_id' => $patientId,
+                        'template_id' => $template->id,
+                        'token' => \Illuminate\Support\Str::random(64),
+                        'status' => 'pending',
+                        'expires_at' => now()->addHours(24),
+                    ]);
+                    $anamnesisUrl = route('anamnesis.show', $instance->token);
+                    Log::info("GoClinic: Anamnesis Instance created. URL: " . $anamnesisUrl);
+                    $responseData['anamnesis_url'] = $anamnesisUrl;
+                }
+            }
+        } else {
+            // Updating existing record (e.g., adding audio/observations)
+            if ($request->has('observations')) {
+                $consultation->update(['observations' => $request->observations]);
+            }
         }
 
-        // GENERATE FINANCIAL TRANSACTION
-        if (($request->valor ?? 0) > 0) {
-            $category = FinancialCategory::firstOrCreate(
-                ['name' => 'Consultas'],
-                ['type' => 'income', 'color' => '#5a9e7c']
-            );
-
-            FinancialTransaction::create([
-                'description' => "Consulta (GoClinic): " . ($request->consultation_type ?? 'Geral') . " - " . ($request->patient_name ?? 'Paciente'),
-                'amount' => $request->valor,
-                'type' => 'income',
-                'date' => now(),
-                'due_date' => now(),
-                'status' => 'pending', // Starts as pending, reception can confirm payment
-                'category_id' => $category->id,
-                'patient_id' => $patientId,
-                'related_type' => \App\Models\Consultation::class,
-                'related_id' => $consultation->id,
-            ]);
-        }
-
-        $data['db_id'] = $consultation->id;
-
-        // Salva o JSON com os metadados
-        file_put_contents(public_path("consultas/{$id_file}.json"), json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-
-        // Salva o arquivo de áudio se enviado
-        if ($request->hasFile('audio')) {
-            $request->file('audio')->move(public_path('consultas'), "{$id_file}.webm");
-            $data['audio_path'] = "consultas/{$id_file}.webm";
-
-            // Atualiza o registro no banco com o caminho do áudio
-            $consultation->update(['audio_path' => $data['audio_path']]);
-
-            // Atualiza o JSON com o caminho do áudio
-            file_put_contents(public_path("consultas/{$id_file}.json"), json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-        }
-
-        return response()->json([
+        $responseData = [
             'success' => true,
             'id' => $id_file,
-            'patient_id' => $patientId
-        ]);
+            'db_id' => $consultation->id,
+            'message' => $request->hasFile('audio') ? 'Áudio recebido, iniciando processamento...' : 'Metadados salvos.'
+        ];
+
+        // 3. Audio handling (Now optional/decoupled)
+        if ($request->hasFile('audio')) {
+            Log::info("GoClinic: Saving audio file for ID " . $consultation->id);
+            $request->file('audio')->move(public_path('consultas'), "{$id_file}.webm");
+            $audioPath = "consultas/{$id_file}.webm";
+
+            $consultation->update([
+                'audio_path' => $audioPath,
+                'status' => 'recorded'
+            ]);
+        } else {
+            // Return early if no audio to process
+            Log::info("GoClinic: No audio file in this request, finishing.");
+            return response()->json($responseData);
+        }
+
+        // 4. Background Processing
+        if (function_exists('fastcgi_finish_request')) {
+            Log::info("GoClinic: Background mode enabled (FastCGI)");
+            ignore_user_abort(true);
+            set_time_limit(0);
+
+            if (ob_get_level() > 0) ob_end_clean();
+
+            $response = response()->json($responseData);
+            $response->send();
+            
+            fastcgi_finish_request();
+            $backgroundMode = true;
+        } else {
+            $backgroundMode = false;
+        }
+
+        // 5. Transcription Process
+        try {
+            $whisperUrl = env('WHISPER_API_URL', 'http://host.docker.internal:9001/transcribe');
+            $audioFile = public_path($consultation->audio_path);
+
+            if (file_exists($audioFile)) {
+                Log::info("GoClinic: Sending to Whisper... URL: {$whisperUrl} | File: {$audioFile}");
+                
+                $whisperResponse = Http::timeout(900)->attach(
+                    'file',
+                    file_get_contents($audioFile),
+                    basename($audioFile)
+                )->post($whisperUrl);
+
+                if ($whisperResponse->successful()) {
+                    $transcriptionResult = $whisperResponse->json();
+                    $realText = $transcriptionResult['text'] ?? '';
+                    
+                    Log::info("GoClinic: Whisper Success for ID " . $consultation->id . ". Text length: " . strlen($realText));
+
+                    $consultation->update([
+                        'transcription' => !empty($realText) ? $realText : 'Nenhum texto detectado.',
+                        'status' => 'transcribed'
+                    ]);
+
+                    // Forward to Go Intelligence
+                    $this->forwardToGoIntelligence($consultation, $realText);
+                } else {
+                    Log::error("GoClinic: Whisper Failed for ID " . $consultation->id . ". Status: " . $whisperResponse->status());
+                }
+            }
+        } catch (\Exception $e) {
+            Log::error("GoClinic: Background Error for ID " . $consultation->id . ": " . $e->getMessage());
+        }
+
+        if (!$backgroundMode) {
+            return response()->json($responseData);
+        }
+    }
+
+    private function forwardToGoIntelligence($consultation, $transcription)
+    {
+        try {
+            Log::info("GoClinic: Sending to Go Intelligence for ID " . $consultation->id);
+            $goIntelligenceUrl = env('GOINTELLIGENCE_API_URL', 'http://host.docker.internal:8001');
+            $goEndpoint = rtrim($goIntelligenceUrl, '/') . '/clinic/transcription';
+            $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
+            
+            $goResponse = Http::timeout(260)
+                ->withHeaders(['X-API-Key' => $apiKey])
+                ->post($goEndpoint, [
+                    'transcription' => $transcription,
+                    'consultation_id' => $consultation->id
+                ]);
+
+            if ($goResponse->successful()) {
+                Log::info("GoClinic: Go Intelligence Success for ID " . $consultation->id);
+                // Parsing logic is already handled by the endpoint according to previous context, 
+                // or we need to parse here. Assuming the endpoint returns the data to be saved.
+                $aiData = $goResponse->json();
+                $answer = $aiData['answer'] ?? '';
+                
+                $jsonData = [];
+                if (preg_match('/```json\s*(.*?)\s*```/s', $answer, $matches)) {
+                    $jsonData = json_decode($matches[1], true) ?? [];
+                } elseif (str_starts_with(trim($answer), '{')) {
+                    $jsonData = json_decode($answer, true) ?? [];
+                }
+
+                // --- Resumo (AI Summary) ---
+                $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
+                           data_get($jsonData, 'anamnese.historia_atual') ?? 
+                           data_get($jsonData, 'anamnese.historia_doenca_atual') ??
+                           "Processado.";
+
+                // --- Diagnóstico ---
+                $diagnosis = data_get($jsonData, 'diagnostico.hipotese_principal') ?? '';
+                if (is_array(data_get($jsonData, 'diagnostico.hipoteses_secundarias'))) {
+                    $sec = implode("\n", data_get($jsonData, 'diagnostico.hipoteses_secundarias'));
+                    if ($sec) $diagnosis .= "\n\nHipóteses Secundárias:\n" . $sec;
+                }
+
+                // --- Prognóstico ---
+                $prognosis = data_get($jsonData, 'prognostico.classificacao');
+                $justification = data_get($jsonData, 'prognostico.justificativa');
+                if ($justification) $prognosis .= "\n" . $justification;
+
+                // --- Plano de Tratamento ---
+                $immediate = (array) data_get($jsonData, 'plano.tratamento_imediato', []);
+                $elective = (array) data_get($jsonData, 'plano.tratamento_eletivo', []);
+                $plan = implode("\n", array_merge($immediate, $elective));
+
+                // --- Próximos Passos (Next Steps) ---
+                $nextSteps = data_get($jsonData, 'insights.proximos_passos');
+
+                $consultation->update([
+                    'ai_summary' => $summary,
+                    'diagnosis' => $diagnosis,
+                    'prognosis' => $prognosis,
+                    'suggested_plan' => $plan,
+                    'next_steps' => $nextSteps,
+                    'status' => 'completed'
+                ]);
+            } else {
+                Log::error("GoClinic: Go Intelligence Failed for ID " . $consultation->id . ". Status: " . $goResponse->status());
+            }
+        } catch (\Exception $e) {
+            Log::error("GoClinic: Intelligence Error for ID " . $consultation->id . ": " . $e->getMessage());
+        }
+    }
+
+    public function show($id)
+    {
+        $usuarioId = session()->has('usuario') ? (is_array(session()->get('usuario')) ? session()->get('usuario')['id'] : session()->get('usuario')->id) : null;
+        $consulta = \App\Models\Consultation::where('id', $id)->first();
+
+        if (!$consulta) {
+            return redirect()->route('consultas.index')->with('error', 'Consulta não encontrada.');
+        }
+
+        return view('facelift2/detalhe_consulta', compact('consulta'));
     }
 
     public function facevideos()
@@ -670,7 +853,11 @@ class PagesController extends Controller
         foreach ($idsColecoes as $id) {
             $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
 
-            $ultimaRevista = end($colecao[0]->products);
+            if (isset($colecao[0]) && isset($colecao[0]->products) && !empty($colecao[0]->products)) {
+                $ultimaRevista = end($colecao[0]->products);
+            } else {
+                $ultimaRevista = null;
+            }
 
             if ($ultimaRevista) {
                 $ultimasRevistas[] = $ultimaRevista;
@@ -680,7 +867,10 @@ class PagesController extends Controller
         $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
         $tipo = 'magazine';
 
-        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        $ultimaRevista = null;
+        if (!empty($ultimasRevistas) && isset($ultimasRevistas[0]->id)) {
+            $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        }
         $videos = app('App\Http\Controllers\VideosController')->videos();
         $livros = app('App\Http\Controllers\LivroController')->livros();
         //DESCONTO PROFESSOR
@@ -722,7 +912,11 @@ class PagesController extends Controller
         foreach ($idsColecoes as $id) {
             $colecao = app('App\Http\Controllers\ColecaoController')->colecao($id);
 
-            $ultimaRevista = end($colecao[0]->products);
+            if (isset($colecao[0]) && isset($colecao[0]->products) && !empty($colecao[0]->products)) {
+                $ultimaRevista = end($colecao[0]->products);
+            } else {
+                $ultimaRevista = null;
+            }
 
             if ($ultimaRevista) {
                 $ultimasRevistas[] = $ultimaRevista;
@@ -731,7 +925,10 @@ class PagesController extends Controller
         $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
         $tipo = 'magazine';
 
-        $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        $ultimaRevista = null;
+        if (!empty($ultimasRevistas) && isset($ultimasRevistas[0]->id)) {
+            $ultimaRevista = app('App\Http\Controllers\RevistaController')->revista($ultimasRevistas[0]->id);
+        }
         $videos = app('App\Http\Controllers\VideosController')->videos();
         $livros = app('App\Http\Controllers\LivroController')->livros();
         //SCHOOLAR
@@ -953,7 +1150,11 @@ class PagesController extends Controller
                     $colecoes = app('App\Http\Controllers\ColecoesController')->colecoes();
                 }
 
-                $ultimaRevista = end($colecao[0]->products);
+                if (isset($colecao[0]) && isset($colecao[0]->products) && !empty($colecao[0]->products)) {
+                    $ultimaRevista = end($colecao[0]->products);
+                } else {
+                    $ultimaRevista = null;
+                }
 
                 if ($ultimaRevista) {
                     $ultimasRevistas[] = $ultimaRevista;

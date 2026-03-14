@@ -1,0 +1,13 @@
+{
+    "patient_id": 23,
+    "patient_name": "agenesia",
+    "patient_identifier": null,
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "duration": "01:02",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-13 00:18:43",
+    "status": "transcribed",
+    "db_id": 28
+}

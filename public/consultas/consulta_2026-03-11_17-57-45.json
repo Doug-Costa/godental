@@ -1,0 +1,14 @@
+{
+    "patient_id": "1",
+    "patient_name": "Ana Maria",
+    "patient_identifier": "44987458969",
+    "consultation_type": "Manutenção",
+    "observations": null,
+    "transcription": "Nenhuma voz detectada.",
+    "duration": "00:56",
+    "service_price_id": null,
+    "valor": "222",
+    "timestamp": "2026-03-11 17:57:45",
+    "status": "transcribed",
+    "db_id": 12
+}

@@ -34,6 +34,3 @@ Route::get('/status', [AuthController::class, 'status']);
 // GoTalks Consultations
 Route::post('/consultas', [App\Http\Controllers\Api\ConsultationController::class, 'store']);
 Route::post('/consultas/{id}/audio', [App\Http\Controllers\Api\ConsultationController::class, 'uploadAudio']);
-
-// Mockup routes
-Route::post('/mock-save', [App\Http\Controllers\PagesController::class, 'mockSave']);

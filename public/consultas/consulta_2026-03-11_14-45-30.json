@@ -1,0 +1,15 @@
+{
+    "patient_id": 5,
+    "patient_name": "teste novo 222",
+    "patient_identifier": "1198989776",
+    "consultation_type": "Avaliação",
+    "observations": "testes",
+    "transcription": "Eu quero que o Firefox use meu microfone, eu quero que o Firefox use o Fernandão, eu quero que o Firefox faça tudo, eu quero que o Firefox, sei lá, ele faça tudo.",
+    "duration": "00:16",
+    "service_price_id": null,
+    "valor": "0",
+    "timestamp": "2026-03-11 14:45:30",
+    "status": "transcribed",
+    "db_id": 7,
+    "audio_path": "consultas\/consulta_2026-03-11_14-45-30.webm"
+}

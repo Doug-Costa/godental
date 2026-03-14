@@ -128,13 +128,15 @@
     <div class="my-slider">
 
       @php
-        // Filtra as revistas que não possuem id == 80 E id != 79
-        $magazinesFiltradas = array_values(array_filter($colecoes[0]->collections->magazines, function ($magazine) {
-          return $magazine->id != 80 && $magazine->id != 79;
-        }));
+        $magazinesFiltradas = [];
+        if (isset($colecoes[0]) && isset($colecoes[0]->collections) && isset($colecoes[0]->collections->magazines)) {
+          $magazinesFiltradas = array_values(array_filter($colecoes[0]->collections->magazines, function ($magazine) {
+            return $magazine->id != 80 && $magazine->id != 79;
+          }));
+        }
 
         // Define o número máximo de itens a exibir com base nos arrays filtrados
-        $maxItems = min(count($ultimasRevistas), count($magazinesFiltradas));
+        $maxItems = min(is_array($ultimasRevistas) || is_object($ultimasRevistas) ? count($ultimasRevistas) : 0, count($magazinesFiltradas));
       @endphp
 
       @for ($i = 0; $i < $maxItems; $i++)
@@ -257,32 +259,32 @@
                 style="color:#4f4f4f; font-size: 23px; text-transform: none !important;">{{__("messages.GOTALKSBotao")}}</span>
             </button>
             <!--<button type="button" class="btn btn-primary openModalBtn botaobandeiras" 
-                                                                data-audio-url="https://artigos.dentalgo.com.br/revistas/Clinical/2023/v22n1/audios/Pt-Entrevista_com_Ravindra_Nanda.mp3" 
-                                                                data-bs-toggle="modal" 
-                                                                data-bs-target="#gotalk" 
-                                                                style="background-color: transparent; border: 1px solid #4f4f4f; padding: 10px 30px; border-radius: 18px; display: flex; align-items: center;">
-                                                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="BR">
-                                                                <i class="fa-solid fa-play letra" style="color:#4f4f4f; font-size: 23px;"></i>
-                                                                <span style="color:#4f4f4f; font-size: 15px; text-transform: none;">Clique e Ouça</span>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary openModalBtn botaobandeiras" 
-                                                                data-audio-url="https://artigos.dentalgo.com.br/revistas/Clinical/2023/v22n1/audios/En-Interview_with_Ravindra_Nanda.mp3" 
-                                                                data-bs-toggle="modal" 
-                                                                data-bs-target="#gotalk" 
-                                                                style="background-color: transparent; border: 1px solid #4f4f4f; padding: 10px 30px; border-radius: 18px; display: flex; align-items: center;">
-                                                                <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="EN">
-                                                                <i class="fa-solid fa-play letra" style="color:#4f4f4f; font-size: 23px;"></i>
-                                                                <span style="color:#4f4f4f; font-size: 15px; text-transform: none;">Click and Listen</span>
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary openModalBtn botaobandeiras" 
-                                                                data-audio-url="https://artigos.dentalgo.com.br/revistas/Clinical/2023/v22n1/audios/Es-Entrevista_con_Ravindra_Nanda.mp3" 
-                                                                data-bs-toggle="modal" 
-                                                                data-bs-target="#gotalk" 
-                                                                style="background-color: transparent; border: 1px solid #4f4f4f; padding: 10px 30px; border-radius: 18px; display: flex; align-items: center;">
-                                                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="ES">
-                                                                <i class="fa-solid fa-play letra" style="color:#4f4f4f; font-size: 23px;"></i>
-                                                                <span style="color:#4f4f4f; font-size: 15px; text-transform: none;">Haz clic y Escucha</span>
-                                                                </button>-->
+                                                                  data-audio-url="https://artigos.dentalgo.com.br/revistas/Clinical/2023/v22n1/audios/Pt-Entrevista_com_Ravindra_Nanda.mp3" 
+                                                                  data-bs-toggle="modal" 
+                                                                  data-bs-target="#gotalk" 
+                                                                  style="background-color: transparent; border: 1px solid #4f4f4f; padding: 10px 30px; border-radius: 18px; display: flex; align-items: center;">
+                                                                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="BR">
+                                                                  <i class="fa-solid fa-play letra" style="color:#4f4f4f; font-size: 23px;"></i>
+                                                                  <span style="color:#4f4f4f; font-size: 15px; text-transform: none;">Clique e Ouça</span>
+                                                                  </button>
+                                                                  <button type="button" class="btn btn-primary openModalBtn botaobandeiras" 
+                                                                  data-audio-url="https://artigos.dentalgo.com.br/revistas/Clinical/2023/v22n1/audios/En-Interview_with_Ravindra_Nanda.mp3" 
+                                                                  data-bs-toggle="modal" 
+                                                                  data-bs-target="#gotalk" 
+                                                                  style="background-color: transparent; border: 1px solid #4f4f4f; padding: 10px 30px; border-radius: 18px; display: flex; align-items: center;">
+                                                                  <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="EN">
+                                                                  <i class="fa-solid fa-play letra" style="color:#4f4f4f; font-size: 23px;"></i>
+                                                                  <span style="color:#4f4f4f; font-size: 15px; text-transform: none;">Click and Listen</span>
+                                                                  </button>
+                                                                  <button type="button" class="btn btn-primary openModalBtn botaobandeiras" 
+                                                                  data-audio-url="https://artigos.dentalgo.com.br/revistas/Clinical/2023/v22n1/audios/Es-Entrevista_con_Ravindra_Nanda.mp3" 
+                                                                  data-bs-toggle="modal" 
+                                                                  data-bs-target="#gotalk" 
+                                                                  style="background-color: transparent; border: 1px solid #4f4f4f; padding: 10px 30px; border-radius: 18px; display: flex; align-items: center;">
+                                                                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="ES">
+                                                                  <i class="fa-solid fa-play letra" style="color:#4f4f4f; font-size: 23px;"></i>
+                                                                  <span style="color:#4f4f4f; font-size: 15px; text-transform: none;">Haz clic y Escucha</span>
+                                                                  </button>-->
           </div>
         </div>
         <div class="col-md-6 revistaImagemArtigo d-none d-md-block"
@@ -294,21 +296,21 @@
     </div>
   </div>
   <!-- <div class="container">
-                                              <div class="d-flex align-items-center justify-content-between">
-                                                <a href="#" style="text-decoration: none;">
-                                                  <h2 class="h4 mb-4 titulogeral">Go Talks<span
-                                                      style="font-size: 14px; font-family: poppins; margin-left: 10px;">Veja mais</span></h2>
-                                                </a>
-                                              </div>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                  <a href="#" style="text-decoration: none;">
+                                                    <h2 class="h4 mb-4 titulogeral">Go Talks<span
+                                                        style="font-size: 14px; font-family: poppins; margin-left: 10px;">Veja mais</span></h2>
+                                                  </a>
+                                                </div>
 
-                                              <div class="my-slider3">
-                                                <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(72deg);"></a>
-                                                <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(144deg);"></a>
-                                                <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(216deg);"></a>
-                                                <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(288deg);"></a>
-                                                <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(360deg);"></a>
-                                              </div>
-                                            </div> -->
+                                                <div class="my-slider3">
+                                                  <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(72deg);"></a>
+                                                  <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(144deg);"></a>
+                                                  <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(216deg);"></a>
+                                                  <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(288deg);"></a>
+                                                  <a><img src="{{ asset('facelift2/img/Screenshot_142.png') }}" style="filter: hue-rotate(360deg);"></a>
+                                                </div>
+                                              </div> -->
 
 
   <!-- GoBooks - Livros -->
@@ -383,88 +385,88 @@
         const style = document.createElement("style");
         style.id = "gotalks-player-style";
         style.innerHTML = `
-                                                  #intro-audio-overlay{
-                                              position:fixed; inset:0; z-index:99999;
-                                              display:flex; align-items:center; justify-content:center;
-                                              background: rgba(0,0,0,.55);
-                                              backdrop-filter: blur(4px);
-                                              -webkit-backdrop-filter: blur(4px);
-                                              opacity:0;
-                                              visibility: hidden;
-                                              pointer-events: none;
-                                              transition: opacity .25s ease, visibility .25s ease;
-                                            }
-                                            #intro-audio-overlay.is-open{
-                                              opacity:1;
-                                              visibility: visible;
-                                              pointer-events: auto;
-                                            }
+                                                    #intro-audio-overlay{
+                                                position:fixed; inset:0; z-index:99999;
+                                                display:flex; align-items:center; justify-content:center;
+                                                background: rgba(0,0,0,.55);
+                                                backdrop-filter: blur(4px);
+                                                -webkit-backdrop-filter: blur(4px);
+                                                opacity:0;
+                                                visibility: hidden;
+                                                pointer-events: none;
+                                                transition: opacity .25s ease, visibility .25s ease;
+                                              }
+                                              #intro-audio-overlay.is-open{
+                                                opacity:1;
+                                                visibility: visible;
+                                                pointer-events: auto;
+                                              }
 
-                                                  #intro-audio-card{
-                                                    position:relative;
-                                                    width:480px; max-width:92vw;
-                                                    background: rgba(15,15,15,.90);
-                                                    backdrop-filter: blur(25px);
-                                                    -webkit-backdrop-filter: blur(25px);
-                                                    border: 1px solid rgba(255,255,255,.10);
-                                                    box-shadow: 0 30px 80px rgba(0,0,0,.8);
-                                                    border-radius: 34px;
-                                                    padding: 26px 18px 22px;
-                                                    color:#fff;
-                                                  }
-                                                  .vz-container{
-                                                    position:relative;
-                                                    width:420px; height:420px; max-width:78vw; max-height:78vw;
-                                                    margin: 4px auto 14px;
-                                                    display:flex; align-items:center; justify-content:center;
-                                                  }
-                                                  .title-main{ font: 700 24px/1.1 sans-serif; margin:0; color:#e0f7fa; text-shadow:0 0 16px #CA1D53;}
-                                                  .title-sub{ font: 12px/1.2 sans-serif; margin:2px 0 0; color:#b2ebf2; opacity:.75;}
-                                                  .timer-main{ font: 700 18px/1 monospace; margin-top:10px; }
-                                                  #close-intro-btn{
-                                                    position:absolute; top:14px; right:16px;
-                                                    background:transparent; border:none; color:rgba(255,255,255,.6);
-                                                    font-size:30px; cursor:pointer; line-height:1;
-                                                  }
-                                                  .time-row{
-                                                    display:flex; justify-content:space-between;
-                                                    font: 12px/1 monospace; color:#aaa; margin-bottom:8px;
-                                                  }
-                                                  #seek-bar{
-                                                    width:100%; cursor:pointer; height:6px; accent-color:#CA1D53;
-                                                    margin-bottom:16px;
-                                                  }
-                                                  .controls{
-                                                    display:flex; align-items:center; justify-content:space-between;
-                                                    gap:10px;
-                                                  }
-                                                  #speed-select{
-                                                    background: rgba(255,255,255,.10);
-                                                    color:#ccc; border:none; border-radius:10px;
-                                                    padding:8px 10px; font-size:13px; outline:none; cursor:pointer;
-                                                  }
-                                                  #play-btn{
-                                                    width:64px; height:64px; border-radius:50%;
-                                                    border:none;
-                                                    background: linear-gradient(135deg, #CA1D53, #a71946);
-                                                    color:#fff; cursor:pointer;
-                                                    display:flex; align-items:center; justify-content:center;
-                                                    box-shadow: 0 4px 25px #CA1D53;
-                                                    font-size: 22px;
-                                                  }
-                                                  #msg-helper{
-                                                    font-size:12px; color:rgba(255,255,255,.5);
-                                                    text-align:center; margin:14px 0 0;
-                                                  }
+                                                    #intro-audio-card{
+                                                      position:relative;
+                                                      width:480px; max-width:92vw;
+                                                      background: rgba(15,15,15,.90);
+                                                      backdrop-filter: blur(25px);
+                                                      -webkit-backdrop-filter: blur(25px);
+                                                      border: 1px solid rgba(255,255,255,.10);
+                                                      box-shadow: 0 30px 80px rgba(0,0,0,.8);
+                                                      border-radius: 34px;
+                                                      padding: 26px 18px 22px;
+                                                      color:#fff;
+                                                    }
+                                                    .vz-container{
+                                                      position:relative;
+                                                      width:420px; height:420px; max-width:78vw; max-height:78vw;
+                                                      margin: 4px auto 14px;
+                                                      display:flex; align-items:center; justify-content:center;
+                                                    }
+                                                    .title-main{ font: 700 24px/1.1 sans-serif; margin:0; color:#e0f7fa; text-shadow:0 0 16px #CA1D53;}
+                                                    .title-sub{ font: 12px/1.2 sans-serif; margin:2px 0 0; color:#b2ebf2; opacity:.75;}
+                                                    .timer-main{ font: 700 18px/1 monospace; margin-top:10px; }
+                                                    #close-intro-btn{
+                                                      position:absolute; top:14px; right:16px;
+                                                      background:transparent; border:none; color:rgba(255,255,255,.6);
+                                                      font-size:30px; cursor:pointer; line-height:1;
+                                                    }
+                                                    .time-row{
+                                                      display:flex; justify-content:space-between;
+                                                      font: 12px/1 monospace; color:#aaa; margin-bottom:8px;
+                                                    }
+                                                    #seek-bar{
+                                                      width:100%; cursor:pointer; height:6px; accent-color:#CA1D53;
+                                                      margin-bottom:16px;
+                                                    }
+                                                    .controls{
+                                                      display:flex; align-items:center; justify-content:space-between;
+                                                      gap:10px;
+                                                    }
+                                                    #speed-select{
+                                                      background: rgba(255,255,255,.10);
+                                                      color:#ccc; border:none; border-radius:10px;
+                                                      padding:8px 10px; font-size:13px; outline:none; cursor:pointer;
+                                                    }
+                                                    #play-btn{
+                                                      width:64px; height:64px; border-radius:50%;
+                                                      border:none;
+                                                      background: linear-gradient(135deg, #CA1D53, #a71946);
+                                                      color:#fff; cursor:pointer;
+                                                      display:flex; align-items:center; justify-content:center;
+                                                      box-shadow: 0 4px 25px #CA1D53;
+                                                      font-size: 22px;
+                                                    }
+                                                    #msg-helper{
+                                                      font-size:12px; color:rgba(255,255,255,.5);
+                                                      text-align:center; margin:14px 0 0;
+                                                    }
 
-                                                  @media (max-width: 600px){
-                                                    #intro-audio-card{ border-radius:26px; padding:22px 14px 18px; }
-                                                    .vz-container{ width:280px; height:280px; }
-                                                    .title-main{ font-size:20px; }
-                                                    .timer-main{ font-size:16px; }
-                                                    #play-btn{ width:58px; height:58px; font-size:20px; }
-                                                  }
-                                                `;
+                                                    @media (max-width: 600px){
+                                                      #intro-audio-card{ border-radius:26px; padding:22px 14px 18px; }
+                                                      .vz-container{ width:280px; height:280px; }
+                                                      .title-main{ font-size:20px; }
+                                                      .timer-main{ font-size:16px; }
+                                                      #play-btn{ width:58px; height:58px; font-size:20px; }
+                                                    }
+                                                  `;
         document.head.appendChild(style);
       }
 
@@ -474,46 +476,46 @@
         overlay = document.createElement("div");
         overlay.id = "intro-audio-overlay";
         overlay.innerHTML = `
-                                                  <div id="intro-audio-card" role="dialog" aria-modal="true">
-                                                    <button id="close-intro-btn" aria-label="Fechar">&times;</button>
+                                                    <div id="intro-audio-card" role="dialog" aria-modal="true">
+                                                      <button id="close-intro-btn" aria-label="Fechar">&times;</button>
 
-                                                    <audio id="myAudio" crossorigin="anonymous"></audio>
+                                                      <audio id="myAudio" crossorigin="anonymous"></audio>
 
-                                                    <div class="vz-container">
-                                                      <canvas id="myCanvas" width="840" height="840" style="width:100%;height:100%;position:absolute;inset:0;z-index:1;"></canvas>
+                                                      <div class="vz-container">
+                                                        <canvas id="myCanvas" width="840" height="840" style="width:100%;height:100%;position:absolute;inset:0;z-index:1;"></canvas>
 
-                                                      <div style="z-index:2;text-align:center;pointer-events:none;">
-                                                        <h3 class="title-main" id="gotalkTitle">GoTalks</h3>
-                                                        <p class="title-sub">by DentalGo</p>
-                                                        <div id="center-timer" class="timer-main">00:00</div>
+                                                        <div style="z-index:2;text-align:center;pointer-events:none;">
+                                                          <h3 class="title-main" id="gotalkTitle">GoTalks</h3>
+                                                          <p class="title-sub">by DentalGo</p>
+                                                          <div id="center-timer" class="timer-main">00:00</div>
+                                                        </div>
+                                                      </div>
+
+                                                      <div style="width:100%; padding:0 10px; z-index:10;">
+                                                        <div class="time-row">
+                                                          <span id="curr-time-display">0:00</span>
+                                                          <span id="dur-time-display">--:--</span>
+                                                        </div>
+
+                                                        <input type="range" id="seek-bar" value="0" max="100">
+
+                                                        <div class="controls">
+                                                          <select id="speed-select" aria-label="Velocidade">
+                                                            <option value="1">1.0x</option>
+                                                            <option value="1.25">1.25x</option>
+                                                            <option value="1.5">1.5x</option>
+                                                            <option value="2">2.0x</option>
+                                                          </select>
+
+                                                          <button id="play-btn" aria-label="Play/Pause">▶</button>
+
+                                                          <div style="width:44px;"></div>
+                                                        </div>
+
+                                                        <p id="msg-helper">Carregando…</p>
                                                       </div>
                                                     </div>
-
-                                                    <div style="width:100%; padding:0 10px; z-index:10;">
-                                                      <div class="time-row">
-                                                        <span id="curr-time-display">0:00</span>
-                                                        <span id="dur-time-display">--:--</span>
-                                                      </div>
-
-                                                      <input type="range" id="seek-bar" value="0" max="100">
-
-                                                      <div class="controls">
-                                                        <select id="speed-select" aria-label="Velocidade">
-                                                          <option value="1">1.0x</option>
-                                                          <option value="1.25">1.25x</option>
-                                                          <option value="1.5">1.5x</option>
-                                                          <option value="2">2.0x</option>
-                                                        </select>
-
-                                                        <button id="play-btn" aria-label="Play/Pause">▶</button>
-
-                                                        <div style="width:44px;"></div>
-                                                      </div>
-
-                                                      <p id="msg-helper">Carregando…</p>
-                                                    </div>
-                                                  </div>
-                                                `;
+                                                  `;
 
         document.body.appendChild(overlay);
 

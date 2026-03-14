@@ -44,7 +44,7 @@ class ColecaoController extends Controller
                 $error = curl_error($ch);
                 curl_close($ch);
                 \Log::error('Erro na API DentalGo Collections: ' . $error);
-                return response()->json(['error' => 'Erro ao buscar coleção'], 500);
+                return [null, []];
             }
 
             curl_close($ch);
@@ -53,7 +53,7 @@ class ColecaoController extends Controller
             // Verificar se a resposta é válida
             if (!$conteudoColecao || !isset($conteudoColecao->products)) {
                 \Log::error('Resposta inválida da API DentalGo Collections: ' . $resultadoColecao);
-                return response()->json(['error' => 'Resposta inválida da API'], 500);
+                return [null, []];
             }
 
 

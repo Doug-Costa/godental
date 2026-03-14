@@ -1,0 +1,15 @@
+{
+    "patient_id": 15,
+    "patient_name": "teste de tranascrição nova",
+    "patient_identifier": "11999999",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Tudo bom, Sr. José? Bom dia, como é que tá? Deixa eu dar uma olhada nessa boca aí. Bom, tá aqui que você tá, o senhor já não tinha, né, o incisivo lateral direito, dá pra gente fazer implante, viu, Sr. José? Ah, hoje evoluiu bastante aí, né, mas você tá com a dorzinha aqui, né, nos laterais, lateral direito? Vamos dar uma olhada, vamos dar uma olhada aqui. Bom, é que é o canino, né, o canino direito, incisivo já, já se foi, né, faz um tempo. Está certo Você está com uma carezinha aqui Deixa eu dar mais uma investigada Não, é só nele Eu vou fazer o seguinte Vamos fazer uma higienização aqui agora Vamos tirar um eventual tartar Vamos fazer um raio-x Para ver se a gente não tem Se ela não está mais para dentro Você vai voltar aqui E a gente vai fazer um procedimento",
+    "duration": "00:53",
+    "service_price_id": null,
+    "valor": "92",
+    "timestamp": "2026-03-12 18:26:11",
+    "status": "transcribed",
+    "db_id": 19,
+    "audio_path": "consultas\/consulta_2026-03-12_18-26-11.webm"
+}

@@ -11,6 +11,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\GoIntelligenceController;
+use App\Http\Controllers\AnamnesisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -194,6 +195,7 @@ Route::group(['middleware' => 'Language'], function () {
     // CRM Go Clinic
     Route::resource('patients', \App\Http\Controllers\PatientController::class);
     Route::get('/api/patients-search', [\App\Http\Controllers\PatientController::class, 'search'])->name('patients.search');
+    Route::get('/patients/check-history/{id}', [\App\Http\Controllers\PatientController::class, 'checkHistory'])->name('patients.check-history');
 
     // Casos Clínicos
     Route::post('/clinical-cases', [\App\Http\Controllers\ClinicalCaseController::class, 'store'])->name('clinical-cases.store');
@@ -240,6 +242,11 @@ Route::group(['middleware' => 'Language'], function () {
     Route::post('/api/admin/doctor-schedules', [\App\Http\Controllers\AdminController::class, 'storeDoctorSchedule'])->name('admin.doctor-schedules.store');
     Route::put('/api/admin/doctor-schedules/{id}', [\App\Http\Controllers\AdminController::class, 'updateDoctorSchedule'])->name('admin.doctor-schedules.update');
     Route::delete('/api/admin/doctor-schedules/{id}', [\App\Http\Controllers\AdminController::class, 'deleteDoctorSchedule'])->name('admin.doctor-schedules.delete');
+
+    // ─── ANAMNESIS TEMPLATES CRUD ───
+    Route::post('/api/admin/anamnesis-templates', [\App\Http\Controllers\AdminController::class, 'storeAnamnesisTemplate'])->name('admin.anamnesis-templates.store');
+    Route::put('/api/admin/anamnesis-templates/{id}', [\App\Http\Controllers\AdminController::class, 'updateAnamnesisTemplate'])->name('admin.anamnesis-templates.update');
+    Route::delete('/api/admin/anamnesis-templates/{id}', [\App\Http\Controllers\AdminController::class, 'deleteAnamnesisTemplate'])->name('admin.anamnesis-templates.delete');
 
     // Financeiro
     Route::get('/financial', [\App\Http\Controllers\FinancialController::class, 'index'])->name('financial.index');
@@ -524,4 +531,12 @@ Route::group(['middleware' => 'Language'], function () {
 
     // GO INTELLIGENCE (DENTINO AI)
     Route::get('/gointelligence', [GoIntelligenceController::class, 'index'])->name('gointelligence.index');
+
+    // ANAMNESE OBRIGATÓRIA
+    Route::get('/anamnese/{token}', [AnamnesisController::class, 'show'])->name('anamnesis.show');
+    Route::post('/anamnese/{token}', [AnamnesisController::class, 'store'])->name('anamnesis.store');
+    Route::get('/api/anamnese/{id}/status', [AnamnesisController::class, 'checkStatus'])->name('anamnesis.status');
+
+    // MOCK SAVE GoTalks
+    Route::post('/mock-save', [\App\Http\Controllers\PagesController::class, 'mockSave'])->name('mock-save');
 });

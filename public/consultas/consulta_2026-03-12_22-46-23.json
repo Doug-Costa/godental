@@ -1,0 +1,19 @@
+{
+    "patient_id": 21,
+    "patient_name": "jucelino kubicheck",
+    "patient_identifier": "44988766745",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Estou aqui com o Juscelino, o Juscelino já sabe que eu gravo o áudio, né, já tenho o consentimento do senhor, já vamos deitar aqui na cadeira, para eu estar observando, você está com uma faceta lascada, né, a gente vai analisar aqui o teu perfil da faceta, né, ver a anatomização certinho, para daí a gente fazer a retirada, a limpeza e poder, então, fazer a substituição. O que é recomendável, nesse caso, talvez seja a gente fazer a substituição das mais velhas e colocar um padrão mais leitoso, mais próximo do natural, para a gente ter uma faceta mais bonita.",
+    "duration": "00:43",
+    "service_price_id": null,
+    "valor": "1000",
+    "timestamp": "2026-03-12 22:46:23",
+    "status": "completed",
+    "db_id": 26,
+    "audio_path": "consultas\/consulta_2026-03-12_22-46-23.webm",
+    "ai_summary": "Queixa Principal: Faceta lascada\n\n```json\n{\n  \"data_da_consulta\": null,\n  \"paciente\": \"Juscelino\",\n  \"anamnese\": {\n    \"queixa_principal\": \"Faceta lascada\",\n    \"historia_da_doenca_atual\": \"Paciente apresenta faceta dental lascada, necessitando avaliação para substituição.\",\n    \"historia_medica_pregressa\": null,\n    \"medicacoes_em_uso\": null,\n    \"alergias\": null,\n    \"habitos\": null\n  },\n  \"exame_clinico\": {\n    \"extraoral\": null,\n    \"intraoral_geral\": null,\n    \"exame_especifico\": \"Faceta dental lascada. Necessidade de analisar o perfil e a anatomia da faceta existente para planejamento da substituição.\"\n  },\n  \"exames_complementares\": {\n    \"radiografias\": null,\n    \"fotografias\": null,\n    \"modelos\": null,\n    \"outros\": null\n  },\n  \"diagnostico\": \"Fratura\/deiscência de faceta dental.\",\n  \"plano_de_tratamento\": \"Substituição da faceta lascada. Consideração de utilizar material de cor mais leitosa e com aspecto mais natural para melhorar a estética.\",\n  \"procedimentos_realizados\": \"Consulta de avaliação e planejamento.\",\n  \"receitas_prescritas\": null,\n  \"evolucao_notas_clínicas\": \"Paciente ciente da necessidade de substituição da faceta. Foi discutida a opção de utilizar material mais estético (cor leitosa, aspecto natural). Aguardando confecção da nova faceta.\"\n}\n```",
+    "diagnosis": null,
+    "prognosis": "",
+    "suggested_plan": ""
+}

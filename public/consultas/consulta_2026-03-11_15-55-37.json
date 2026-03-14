@@ -1,0 +1,15 @@
+{
+    "patient_id": 7,
+    "patient_name": "Altair Lopes",
+    "patient_identifier": "44998887766",
+    "consultation_type": "Retorno",
+    "observations": null,
+    "transcription": "Estou aqui com o Altair, o Altair já passou pela gente, e ele está retornando para consulta por causa de uma trinca no dente da frente, a gente fez a análise já, estou verificando aqui, né, direto, né, Altair, já tenho consentimento, sabe que eu faço nessas entrevistas via áudio, para poder facilitar a vida sua e a minha, né, para não ter que ficar aqui escrevendo, e, E pelos exames, nós vemos aqui que o teu dente sofreu uma trinca normal, nós vamos fazer uma reconstrução, um polimento, dá para a gente colocar uma faceta também, a gente aproveita e já faz uma reconstrução do teu sorriso, e é isso, é só para testar mesmo.",
+    "duration": "00:48",
+    "service_price_id": null,
+    "valor": "100",
+    "timestamp": "2026-03-11 15:55:38",
+    "status": "transcribed",
+    "db_id": 9,
+    "audio_path": "consultas\/consulta_2026-03-11_15-55-37.webm"
+}

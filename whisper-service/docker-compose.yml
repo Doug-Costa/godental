@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  whisper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: whisper-service
+    ports:
+      - "9001:9001"
+    environment:
+      - ENVIRONMENT=development
+      - WHISPER_MODEL=small
+      - MAX_FILE_SIZE_MB=100
+      - API_KEY=${API_KEY:-}
+    volumes:
+      - whisper_model_cache:/root/.cache/whisper
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 6G
+        reservations:
+          cpus: '1.0'
+          memory: 4G
+    restart: unless-stopped
+
+volumes:
+  whisper_model_cache:

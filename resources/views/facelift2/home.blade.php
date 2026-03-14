@@ -124,10 +124,12 @@
     <div class="my-slider">
 
       @php
-        // Filtra as revistas que não possuem id == 80 E id != 79
-        $magazinesFiltradas = array_values(array_filter($colecoes[0]->collections->magazines, function ($magazine) {
-          return $magazine->id != 80 && $magazine->id != 79;
-        }));
+        $magazinesFiltradas = [];
+        if (isset($colecoes[0]) && isset($colecoes[0]->collections) && isset($colecoes[0]->collections->magazines)) {
+            $magazinesFiltradas = array_values(array_filter($colecoes[0]->collections->magazines, function ($magazine) {
+              return $magazine->id != 80 && $magazine->id != 79;
+            }));
+        }
 
         // Define o número máximo de itens a exibir com base nos arrays filtrados
         $maxItems = min(count($ultimasRevistas), count($magazinesFiltradas));

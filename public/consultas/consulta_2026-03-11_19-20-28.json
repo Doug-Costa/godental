@@ -1,0 +1,15 @@
+{
+    "patient_id": 12,
+    "patient_name": "teste ficha anamnese",
+    "patient_identifier": "1111111111111",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando nova transcrição de áudio onde eu estou falando várias palavras para que a gente possa verificar se a voz da pessoa está sendo captada ou não, bem como se está aparecendo aí na mensagem de erro, porque a mensagem vai ficar pendente um tempo, né, para a gente poder dar uma olhadinha. Foram já 20 segundos de áudio, tem que colocar mais um pouquinho de áudio e vamos ver se está funcionando as coisas.",
+    "duration": "00:28",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-11 19:20:29",
+    "status": "transcribed",
+    "db_id": 15,
+    "audio_path": "consultas\/consulta_2026-03-11_19-20-28.webm"
+}

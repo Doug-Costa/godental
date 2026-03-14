@@ -13,38 +13,41 @@ class LivroController extends Controller
     public function livros()
     {
 
-        if(session()->get('lang_code')){
-            if(session()->get('lang_code')=='pt'){
+        if (session()->get('lang_code')) {
+            if (session()->get('lang_code') == 'pt') {
                 $locale = 'pt';
-            }elseif(session()->get('lang_code')=='en'){
+            } elseif (session()->get('lang_code') == 'en') {
                 $locale = 'en';
-            }elseif(session()->get('lang_code')=='es'){
+            } elseif (session()->get('lang_code') == 'es') {
                 $locale = 'es';
             }
-        }else{
+        } else {
             $locale = '';
         }
-        $livros = 'livros'.$locale;
+        $livros = 'livros' . $locale;
         $token = Cache::get('tokenGlobal');
 
         if (Cache::has($livros)) {
             return Cache::get($livros);
-        }else{
+        } else {
 
             $ch = curl_init('https://api.dentalgo.com.br/catalog/books/courtesies');
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
             $conteudoG = json_decode($resultado);
-
+            if (!$conteudoG || isset($conteudoG->code) || !isset($conteudoG->rows)) {
+                $conteudoG = (object) ['rows' => []];
+                \Illuminate\Support\Facades\Log::error('Erro ou resposta inválida da API DentalGo Livros (courtesies)');
+            }
             sleep(1);
 
             foreach ($conteudoG->rows as $key => $produto) {
-                if(!empty($produto->cover)){
+                if (!empty($produto->cover)) {
                     $thumb = '';
                     $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                     $thumbor->resize(Resize::ORIG, 450);
@@ -57,24 +60,26 @@ class LivroController extends Controller
 
 
             $ch = curl_init('https://api.dentalgo.com.br/catalog/home?language=');
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
             $conteudo = json_decode($resultado);
-            
-
+            if (!$conteudo || isset($conteudo->code) || !is_object($conteudo) && !is_array($conteudo)) {
+                $conteudo = [];
+                \Illuminate\Support\Facades\Log::error('Erro ou resposta inválida da API DentalGo Livros (home)');
+            }
             sleep(1);
 
-            
+
             foreach ($conteudo as $key => $colecoes) {
 
-                if($key != 'banners'){
+                if ($key != 'banners') {
                     foreach ($colecoes->rows as $key => $produto) {
-                        if(!empty($produto->cover)){
+                        if (!empty($produto->cover)) {
                             $thumb = '';
                             $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                             $thumbor->resize(Resize::ORIG, 450);
@@ -85,7 +90,7 @@ class LivroController extends Controller
                         }
 
                         foreach ($produto->authors as $key => $autor) {
-                            if(!empty($autor->photoURL)){
+                            if (!empty($autor->photoURL)) {
                                 $thumb = '';
                                 $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                                 $thumbor->resize(Resize::ORIG, 450);
@@ -107,11 +112,11 @@ class LivroController extends Controller
 
             Cache::put($livros, $retorno, 864000);
             return $retorno;
-            if(isset($conteudo->code)){
-                if($conteudo->code == 'unauthorized'){
+            if (isset($conteudo->code)) {
+                if ($conteudo->code == 'unauthorized') {
                     session()->flush();
                     return 'deslogou';
-                }else{
+                } else {
                     session()->flush();
                     return 'deslogou';
                 }
@@ -123,43 +128,46 @@ class LivroController extends Controller
     public function livrosComprados()
     {
 
-        if(session()->get('lang_code')){
-            if(session()->get('lang_code')=='pt'){
+        if (session()->get('lang_code')) {
+            if (session()->get('lang_code') == 'pt') {
                 $locale = 'pt';
-            }elseif(session()->get('lang_code')=='en'){
+            } elseif (session()->get('lang_code') == 'en') {
                 $locale = 'en';
-            }elseif(session()->get('lang_code')=='es'){
+            } elseif (session()->get('lang_code') == 'es') {
                 $locale = 'es';
             }
-        }else{
+        } else {
             $locale = '';
         }
-        $livros = 'livrosComprado'.$locale;
+        $livros = 'livrosComprado' . $locale;
         $token = session()->get('token');
 
 
         if (Cache::has($livros)) {
             return Cache::get($livros);
-        }else{
+        } else {
 
             $ch = curl_init('https://api.dentalgo.com.br/subscription/collections?page=1&q%5BproductType%5D=book');
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
             $conteudoPlano = json_decode($resultado);
-            
+            if (!$conteudoPlano || isset($conteudoPlano->code) || !isset($conteudoPlano->rows)) {
+                $conteudoPlano = (object) ['rows' => []];
+                \Illuminate\Support\Facades\Log::error('Erro ou resposta inválida da API DentalGo Livros (collections)');
+            }
 
             $produtoComprados = array();
-            if(isset($conteudoPlano->code)){
+            if (isset($conteudoPlano->code)) {
 
-            }else{
-            
+            } else {
+
                 foreach ($conteudoPlano->rows as $key => $produto) {
-                    if(!empty($produto->cover)){
+                    if (!empty($produto->cover)) {
                         $thumb = '';
                         $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                         $thumbor->resize(Resize::ORIG, 450);
@@ -170,12 +178,12 @@ class LivroController extends Controller
                     }
                 }
 
-                
+
 
                 foreach ($conteudoPlano->rows as $keyC => $colecao) {
 
                     foreach ($colecao->products as $key => $produto) {
-                        $loop = $keyC+$key;
+                        $loop = $keyC + $key;
                         $exists = false;
                         foreach ($produtoComprados as $p) {
                             if ($p['id'] == $produto->id) {
@@ -213,21 +221,24 @@ class LivroController extends Controller
 
             // CONSULTA OS PRODUTOS COMPRADOS
             $ch = curl_init('https://api.dentalgo.com.br/catalog/libraries?page=1');
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+            $authorization = "Authorization: Bearer " . $token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            $resultado = curl_exec($ch); 
-            curl_close($ch); 
+            $resultado = curl_exec($ch);
+            curl_close($ch);
 
             $conteudo = json_decode($resultado);
+            if (!$conteudo || isset($conteudo->code) || !isset($conteudo->rows)) {
+                $conteudo = (object) ['rows' => []];
+                \Illuminate\Support\Facades\Log::error('Erro ou resposta inválida da API DentalGo Livros (libraries)');
+            }
 
-            
             if (!empty($conteudo->rows)) {
 
-                if(isset($conteudo->rows)){
+                if (isset($conteudo->rows)) {
                     foreach ($conteudo->rows as $key => $produto) {
-                        if(!empty($produto->cover)){
+                        if (!empty($produto->cover)) {
                             $thumb = '';
                             $thumbor = new Thumbor('https://thumbor.dentalgo.com.br/', '8e965d636dc76246b');
                             $thumbor->resize(Resize::ORIG, 450);
@@ -240,9 +251,9 @@ class LivroController extends Controller
                 }
 
                 foreach ($conteudo->rows as $keyPC => $produto) {
-                    if(isset($loop)){
-                        $loop2 = $keyPC+$loop;
-                    }else{
+                    if (isset($loop)) {
+                        $loop2 = $keyPC + $loop;
+                    } else {
                         $loop2 = $keyPC;
                     }
                     $exists = false;
@@ -282,11 +293,11 @@ class LivroController extends Controller
 
 
             return $produtoComprados;
-            if(isset($conteudo->code)){
-                if($conteudo->code == 'unauthorized'){
+            if (isset($conteudo->code)) {
+                if ($conteudo->code == 'unauthorized') {
                     session()->flush();
                     return 'deslogou';
-                }else{
+                } else {
                     session()->flush();
                     return 'deslogou';
                 }

@@ -25,12 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Forçar HTTP no IP de teste para evitar erro de Mixed Content e falha de SSL
-        $isStaging = str_contains(request()->fullUrl(), '187.77.48.78') || str_contains(env('APP_URL', ''), '187.77.48.78');
-
-        if ($isStaging) {
-            \URL::forceScheme('http');
-        } elseif (env('APP_ENV') !== 'local') {
+        if (env('APP_ENV') !== 'local') {
             \URL::forceScheme('https');
         }
 

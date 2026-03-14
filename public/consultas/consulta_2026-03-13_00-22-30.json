@@ -1,0 +1,13 @@
+{
+    "patient_id": 24,
+    "patient_name": "estetica",
+    "patient_identifier": null,
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "duration": "02:48",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-13 00:22:30",
+    "status": "transcribed",
+    "db_id": 29
+}

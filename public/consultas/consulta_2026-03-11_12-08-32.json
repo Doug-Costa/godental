@@ -1,0 +1,15 @@
+{
+    "patient_id": 3,
+    "patient_name": "joao da silva sauro",
+    "patient_identifier": "44989897864",
+    "consultation_type": "Avaliação",
+    "observations": "paciente com dor terceiro molar",
+    "transcription": "Nenhuma voz detectada.",
+    "duration": "00:54",
+    "service_price_id": null,
+    "valor": "0",
+    "timestamp": "2026-03-11 12:08:32",
+    "status": "transcribed",
+    "db_id": 5,
+    "audio_path": "consultas\/consulta_2026-03-11_12-08-32.webm"
+}

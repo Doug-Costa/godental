@@ -1,0 +1,15 @@
+{
+    "patient_id": 4,
+    "patient_name": "teste 48",
+    "patient_identifier": "44988766769",
+    "consultation_type": "Avaliação",
+    "observations": "observaçao 1",
+    "transcription": "Entendi. Eu vou falar agora tecnicamente, embora que não tem sentido, né, porque essa consulta aqui, ela não vai ser só para testar se está funcionando o método de gravação, então não tem muito BO nisso, porque daí depois eu vou ter que usar palavras clínicas para ver se a IA pega, né, só que agora eu estou com o microfone certo, então espero que dê certo.",
+    "duration": "00:24",
+    "service_price_id": null,
+    "valor": "0",
+    "timestamp": "2026-03-11 14:35:42",
+    "status": "transcribed",
+    "db_id": 6,
+    "audio_path": "consultas\/consulta_2026-03-11_14-35-42.webm"
+}

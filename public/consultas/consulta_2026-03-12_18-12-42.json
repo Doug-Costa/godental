@@ -1,0 +1,14 @@
+{
+    "patient_id": 14,
+    "patient_name": "transcriçao rapida",
+    "patient_identifier": "11111111111",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Nenhuma voz detectada.",
+    "duration": "00:37",
+    "service_price_id": null,
+    "valor": "1111",
+    "timestamp": "2026-03-12 18:12:42",
+    "status": "transcribed",
+    "db_id": 18
+}

@@ -190,4 +190,24 @@ class PatientController extends Controller
 
         return response()->json($patients);
     }
+
+    /**
+     * Check patient history for anamnesis requirements.
+     */
+    public function checkHistory($id)
+    {
+        $patient = Patient::findOrFail($id);
+        
+        $consultationCount = $patient->consultations()->count();
+        
+        // Verifica se tem anamnese completada (nova estrutura) ou qualquer registro na antiga
+        $hasAnamnesis = $patient->anamnesisInstances()->where('status', 'completed')->exists() 
+                     || $patient->anamneses()->exists();
+
+        return response()->json([
+            'is_new'            => ($consultationCount === 0),
+            'has_anamnesis'     => $hasAnamnesis,
+            'consultation_count'=> $consultationCount
+        ]);
+    }
 }

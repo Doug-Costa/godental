@@ -1,0 +1,15 @@
+{
+    "patient_id": 2,
+    "patient_name": "teste de audio",
+    "patient_identifier": "44988766767",
+    "consultation_type": "Retorno",
+    "observations": null,
+    "transcription": "Não, Douglas, é o seguinte, eu estou com a dor aqui no dente, e essa dor está me incomodando aqui. Certo, Douglas, onde que está a dor? Está aqui do lado, no dente, na parte de cima. Dá um retiro, dá um retiro. Não vou acertar a minha cara. Isso, olha aí. Tá bom. Abre a boca bem, bem, bem. Bastante. Ah, isso. A carne é muito dura. A equipe fez estalagem. Mas que a gente conhece. Não é? Como é que é ter higiene para o carro? Os copos têm que ser ativos. É só de moeda. Não tem tempo. Alimentação, os comidos doces. Como é que é a sua alimentação? Como é que é a sua carne? E a gente está trabalhando uma situação de hábitos. Não precisa parar de comer doce. Não precisa parar de fazer nada. Mas aí a gente vai tentar. a minha carne vai ter essa dor, provavelmente o que deve ter acontecido aí, essa carne ela já está mais profunda, ela pode, dado as características que você estava descrevendo na tua dor, ela pode já ter sentido o tratamento mais na raiz do dente e tal. Então eu vou pedir alguns exames para que a gente consiga ver se é uma carência pulpar, vai ser só uma carencia de célula superficial, mas provavelmente quando tem o diagnóstico você está tendo dor, está tendo complicação a investigar, então a gente vai precisar fazer um procedimento, por exemplo, a tortinha aí, mas antes você tem que fazer alguns exames, de quente, de frio, quando como com gelado também dói, quente também dói, então você está apresentando sensibilidade. Então, a partir disso, a gente tem os exames que a gente faz, os coragens também, para ver até quando essa infecção vai se expor no pimento do dente, para eu conseguir já te dar um diagnóstico certinho e a gente fazer a avaliação. Não é complicado, né? É a primeira vez que isso acontece, mas a gente vai também tratar alguns hábitos teus, para a gente conseguir dar um diagnóstico certinho. Eu acho que vai dar tudo certo, viu, professor?",
+    "duration": "02:46",
+    "service_price_id": null,
+    "valor": "200",
+    "timestamp": "2026-03-10 19:31:02",
+    "status": "transcribed",
+    "db_id": 4,
+    "audio_path": "consultas\/consulta_2026-03-10_19-31-02.webm"
+}

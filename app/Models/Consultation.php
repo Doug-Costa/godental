@@ -26,12 +26,15 @@ class Consultation extends Model
         'diagnosis',
         'prognosis',
         'suggested_plan',
+        'next_steps',
         'status',
-        'user_id'
+        'user_id',
+        'requires_anamnesis',
     ];
 
     protected $casts = [
         'valor' => 'decimal:2',
+        'requires_anamnesis' => 'boolean',
     ];
 
     public function doctor()

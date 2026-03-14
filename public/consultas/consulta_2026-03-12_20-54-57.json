@@ -1,0 +1,19 @@
+{
+    "patient_id": 18,
+    "patient_name": "teste estetica",
+    "patient_identifier": "44988766767",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Oi, tô aqui com a Sandra. Bom dia, Sandra. Sandra, antes da gente começar, esse procedimento é gravado, tá? Porque daí fica mais tranquilo da gente recolher as informações depois. Você tá a favor do procedimento, né? Tudo ok? Tem o seu consentimento? Tranquilo. Bom, avaliando aqui a dinâmica do teu sorriso, você tem dentes punidos, mas eles têm um probleminha que a sua gengiva, ela tá muito próxima, né? Ela está escondendo os teus dentes. Então a gente recomenda, nesses casos, a gente de voplastia. E aí a gente acaba percebendo alguns defeitos estéticos, de desgaste. Eu vou passar para um colega profissional que é especialista na parte de bruxismo, mas aqui, como o nosso foco é estética hoje, o que eu vou verificar? Verificar o DVO, se você não tem nenhum problema na questão da desenvoltura do rosto. E também vou recomendar Que a gente coloque da pós agência de vouplastinha Um laminado cerâmico",
+    "duration": "01:02",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-12 20:54:57",
+    "status": "completed",
+    "db_id": 23,
+    "audio_path": "consultas\/consulta_2026-03-12_20-54-57.webm",
+    "ai_summary": "Paciente busca tratamento estético. Avaliação clínica identificou apinhamento dentário, sorriso gengival e desgaste dentário. O dentista planeja encaminhar o paciente para especialista em bruxismo e, para o foco estético atual, verificará a Dimensão Vertical de Oclusão (DVO) e recomendará laminados cerâmicos.",
+    "diagnosis": "Desgaste dentário (K03.1) e possível bruxismo (F45.8).",
+    "prognosis": "Reservado\nA presença de desgaste e possível bruxismo requer controle da etiologia para o sucesso de qualquer reabilitação estética.",
+    "suggested_plan": "Imediato:\n\n\nEletivo:\nEncaminhamento para especialista em bruxismo\nAvaliação da Dimensão Vertical de Oclusão (DVO)\nReabilitação estética com laminados cerâmicos"
+}

@@ -1,0 +1,15 @@
+{
+    "patient_id": 11,
+    "patient_name": "laurindo",
+    "patient_identifier": "44987876677",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Iniciando uma escuta simples para não dar problema, não dar shabu, vamos ver como é que um áudio de 10 segundos é processado, valendo.",
+    "duration": "00:10",
+    "service_price_id": null,
+    "valor": "122",
+    "timestamp": "2026-03-11 19:02:50",
+    "status": "transcribed",
+    "db_id": 14,
+    "audio_path": "consultas\/consulta_2026-03-11_19-02-50.webm"
+}

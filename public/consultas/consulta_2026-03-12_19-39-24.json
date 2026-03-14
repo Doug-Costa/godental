@@ -1,0 +1,15 @@
+{
+    "patient_id": "5",
+    "patient_name": "teste novo 222",
+    "patient_identifier": "1198989776",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Então, nesse ano, a consulta com o João da Silva, 36 anos, está apresentando dor no segundo molar, na parte esquerda, está com uma pequena fissura aparente, né, provavelmente nós vamos ter que fazer a reconstrução, verificar como é que está a situação endodontica, eu vou recomendar aqui um raio-x, para que a gente possa ver se está atingindo. Ele apresenta sensibilidade térmica e sensibilidade ao toque Os demais dentes estão normais Posso verificar um pequeno desgaste das coroas Então verificar se tem algum hábito Alguma situação relativa a bruxismo Mas no geral é só esse dente",
+    "duration": "00:46",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-12 19:39:24",
+    "status": "transcribed",
+    "db_id": 21,
+    "audio_path": "consultas\/consulta_2026-03-12_19-39-24.webm"
+}

@@ -1,0 +1,15 @@
+{
+    "patient_id": "4",
+    "patient_name": "teste 48",
+    "patient_identifier": "44988766769",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Eu tô via Emily, a Emily é meu ponto. É que eu falei, porque assim, eu não tô direto no home, né, então... Só que eu expliquei pro Bruno, né, que lá na dental é complicado, é uma cacofonia, que nem eu falei. Não tem como desenvolver. É que toda hora tem um, cara. Ah, você acompanhou, mano, você viu como é que tava minha vida lá. Aqui eu desenvolvo, eu faço, eu fiquei o dia inteiro atrás disso. Cara, eu passei, mano, eu saí quatro, cinco Quarto hoje Eu mal fui no banheiro Há cinco vezes foi tipo minutos Tá ligado? Se foi, cinco foi muito Entendeu? Eu tô o dia inteiro Enfurnado aqui, são dezoito, são sete Horas da noite, eu tô enfurnado aqui Entendeu? Então",
+    "duration": "00:48",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-11 21:56:02",
+    "status": "transcribed",
+    "db_id": 16,
+    "audio_path": "consultas\/consulta_2026-03-11_21-56-02.webm"
+}

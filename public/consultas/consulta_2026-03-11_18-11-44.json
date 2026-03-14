@@ -1,0 +1,14 @@
+{
+    "patient_id": 10,
+    "patient_name": "fernando modos",
+    "patient_identifier": "44924242424",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Nenhuma voz detectada.",
+    "duration": "00:18",
+    "service_price_id": null,
+    "valor": "234",
+    "timestamp": "2026-03-11 18:11:45",
+    "status": "transcribed",
+    "db_id": 13
+}

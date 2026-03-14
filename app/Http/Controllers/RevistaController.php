@@ -42,6 +42,11 @@ class RevistaController extends Controller
 
             $conteudo = json_decode($resultado);
 
+            if (!$conteudo || isset($conteudo->code)) {
+                \Log::error('Erro ou resposta inválida da API DentalGo Products: ' . $resultado);
+                return [null, null, null];
+            }
+
             sleep(1);
 
             if (!empty($conteudo->cover)) {

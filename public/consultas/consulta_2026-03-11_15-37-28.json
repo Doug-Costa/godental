@@ -1,0 +1,15 @@
+{
+    "patient_id": 6,
+    "patient_name": "teste novo mais um",
+    "patient_identifier": "119923332322",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Ok, vamos testar a voz agora, pra ver se faz a transcrição. O fluxo tá legal, tá funcionando novamente a parte da anamnese, só não tá gerando QR Code bonitinho, mas isso aí nós vamos testar. E agora, né, vamos simular aí o GoClinic em tempo real. Eu espero muito que dê certo, tomara que dê certo.",
+    "duration": "00:24",
+    "service_price_id": null,
+    "valor": "123",
+    "timestamp": "2026-03-11 15:37:28",
+    "status": "transcribed",
+    "db_id": 8,
+    "audio_path": "consultas\/consulta_2026-03-11_15-37-28.webm"
+}

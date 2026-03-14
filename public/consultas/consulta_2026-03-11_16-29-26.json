@@ -1,0 +1,15 @@
+{
+    "patient_id": 9,
+    "patient_name": "paciente zero",
+    "patient_identifier": "999999997",
+    "consultation_type": "Retorno",
+    "observations": null,
+    "transcription": "É, agora mais um teste aí com o nosso Patient Zero, falando em inglês um pouco, só para gerar uma confusão com o sistema GoTalks e o sistema GoClinic. Eu não falo em português, eu não consigo entender os resultados, mas eu sei lá, eu estava falando inglês aqui, só para confundir mesmo o sistema, vai que fala em multilingüe, né? Não creio que tenha esse suporte de multilingue Mas vou testar mais termos Do ramo odontológico Para a gente depois Poder fazer um benchmark A respeito disso aí",
+    "duration": "00:39",
+    "service_price_id": null,
+    "valor": "345",
+    "timestamp": "2026-03-11 16:29:26",
+    "status": "transcribed",
+    "db_id": 11,
+    "audio_path": "consultas\/consulta_2026-03-11_16-29-26.webm"
+}

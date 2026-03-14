@@ -8,6 +8,7 @@ use App\Models\DoctorSchedule;
 use App\Models\BankAccount;
 use App\Models\Supplier;
 use App\Models\FinancialCategory;
+use App\Models\AnamnesisTemplate;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -26,6 +27,7 @@ class AdminController extends Controller
         $bankAccounts = BankAccount::all();
         $suppliers = Supplier::all();
         $financialCategories = FinancialCategory::all();
+        $anamnesisTemplates = AnamnesisTemplate::all();
 
         return view('admin.index', compact(
             'doctors',
@@ -34,7 +36,8 @@ class AdminController extends Controller
             'inventoryItems',
             'bankAccounts',
             'suppliers',
-            'financialCategories'
+            'financialCategories',
+            'anamnesisTemplates'
         ));
     }
 
@@ -201,6 +204,56 @@ class AdminController extends Controller
     {
         $schedule = DoctorSchedule::findOrFail($id);
         $schedule->delete();
+
+        return response()->json(['success' => true]);
+    }
+
+    // ─── ANAMNESIS TEMPLATES CRUD ───
+
+    public function storeAnamnesisTemplate(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'questions' => 'required|array',
+            'is_active' => 'sometimes|boolean',
+            'is_default' => 'sometimes|boolean',
+        ]);
+
+        if (!empty($validated['is_default'])) {
+            AnamnesisTemplate::where('is_default', true)->update(['is_default' => false]);
+        }
+
+        $template = AnamnesisTemplate::create($validated);
+
+        return response()->json(['success' => true, 'template' => $template]);
+    }
+
+    public function updateAnamnesisTemplate(Request $request, $id)
+    {
+        $template = AnamnesisTemplate::findOrFail($id);
+
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'questions' => 'required|array',
+            'is_active' => 'sometimes|boolean',
+            'is_default' => 'sometimes|boolean',
+        ]);
+
+        if (!empty($validated['is_default'])) {
+            AnamnesisTemplate::where('id', '!=', $id)->where('is_default', true)->update(['is_default' => false]);
+        }
+
+        $template->update($validated);
+
+        return response()->json(['success' => true, 'template' => $template]);
+    }
+
+    public function deleteAnamnesisTemplate($id)
+    {
+        $template = AnamnesisTemplate::findOrFail($id);
+        $template->delete();
 
         return response()->json(['success' => true]);
     }

@@ -1,0 +1,15 @@
+{
+    "patient_id": 13,
+    "patient_name": "teste audio 12",
+    "patient_identifier": "12121212121212",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Esse é mais um teste de áudio para que a gente consiga estar identificando. Então, ah, vamos falar aí em termos dos dentistas, né? Faceta mesial, bracket, necrose pulpar, incidência de radiolucidez no raio-x, panorâmica, região periapical, vamos falar também, sei lá, maxilar, maxila superior, inferior, ortodontia, disfunção temporomandibular, vou falar esses termos aí, vamos ver se vira.",
+    "duration": "00:43",
+    "service_price_id": null,
+    "valor": "0",
+    "timestamp": "2026-03-12 12:16:30",
+    "status": "transcribed",
+    "db_id": 17,
+    "audio_path": "consultas\/consulta_2026-03-12_12-16-30.webm"
+}

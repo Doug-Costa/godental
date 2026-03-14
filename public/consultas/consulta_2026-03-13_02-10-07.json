@@ -1,0 +1,13 @@
+{
+    "patient_id": 25,
+    "patient_name": "jose teste",
+    "patient_identifier": null,
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "duration": "02:02",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-13 02:10:07",
+    "status": "transcribed",
+    "db_id": 30
+}

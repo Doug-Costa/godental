@@ -11,7 +11,7 @@
                 <form action="{{ route('patients.index') }}" method="GET" class="d-flex gap-2 flex-grow-1 flex-md-grow-0"
                     style="height: 44px;">
                     <div class="input-group shadow-sm border-0 flex-nowrap"
-                        style="border-radius: 12px; overflow: hidden; background: white; width: 280px;">
+                        style="border-radius: 12px; overflow: hidden; background: white; max-width: 280px; width: 100%;">
                         <input type="text" name="search" class="form-control border-0 px-3"
                             placeholder="Buscar pacientes..." value="{{ request('search') }}"
                             style="font-size: 0.95rem; height: 44px;">

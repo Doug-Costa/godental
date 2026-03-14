@@ -7,6 +7,7 @@ use App\Models\Consultation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 
 class ConsultationController extends Controller
 {
@@ -52,6 +53,7 @@ class ConsultationController extends Controller
      */
     public function uploadAudio(Request $request, $id)
     {
+        set_time_limit(300);
         try {
             $consultation = Consultation::findOrFail($id);
 
@@ -71,14 +73,27 @@ class ConsultationController extends Controller
                 'status' => 'recorded'
             ]);
 
-            // For now, we simulate transcription directly or via a simple job
-            $this->mockTranscription($consultation);
-
-            return response()->json([
+            $responseData = [
                 'success' => true,
-                'message' => 'Áudio enviado com sucesso e processamento iniciado.',
+                'message' => 'Áudio enviado com sucesso. Processamento iniciado em segundo plano.',
                 'path' => $path
-            ]);
+            ];
+
+            if (function_exists('fastcgi_finish_request')) {
+                echo json_encode($responseData);
+                header('Content-Type: application/json');
+                header('Content-Length: ' . strlen(json_encode($responseData)));
+                header('Connection: close');
+                fastcgi_finish_request();
+
+                // Process transcription via Whisper service in background
+                $this->processTranscription($consultation);
+                return;
+            }
+
+            // Sync fallback
+            $this->processTranscription($consultation);
+            return response()->json($responseData);
         } catch (\Exception $e) {
             Log::error('Error uploading audio: ' . $e->getMessage());
             return response()->json([
@@ -89,16 +104,136 @@ class ConsultationController extends Controller
     }
 
     /**
-     * Mock transcription logic.
+     * Process transcription via Whisper service.
      */
-    private function mockTranscription($consultation)
+    private function processTranscription($consultation)
     {
-        // Simulate background processing delay and mock text
-        $mockText = "Transcrição automática da consulta de " . $consultation->patient_name . ".\n\nObservações clínicas do GoTalks: O paciente apresenta quadro estável, com orientações passadas durante a sessão. Recomendado acompanhamento em 30 dias.";
+        set_time_limit(0); // Prevents PHP from killing this process due to max_execution_time
+        try {
+            $apiUrl = env('WHISPER_API_URL', 'http://host.docker.internal:9001/transcribe');
+            $audioPath = storage_path('app/public/' . $consultation->audio_path);
 
-        $consultation->update([
-            'transcription' => $mockText,
-            'status' => 'transcribed'
-        ]);
+            if (!file_exists($audioPath)) {
+                Log::error("Audio file not found for transcription: {$audioPath}");
+                return;
+            }
+
+            Log::info("Starting Whisper transcription for consultation {$consultation->id}");
+
+            $response = Http::timeout(300) // Whisper can take a while
+                ->attach('file', file_get_contents($audioPath), basename($audioPath))
+                ->post($apiUrl);
+
+            if ($response->successful()) {
+                $data = $response->json();
+                $transcription = $data['text'] ?? '';
+
+                $consultation->update([
+                    'transcription' => $transcription,
+                    'status' => 'transcribed'
+                ]);
+
+                Log::info("Transcription completed for consultation {$consultation->id}. Forwarding to Go Intelligence...");
+
+                // Call Go Intelligence for clinical processing
+                $this->forwardToGoIntelligence($consultation, $transcription);
+
+            } else {
+                Log::error("Whisper API error: " . $response->body());
+                $consultation->update(['status' => 'failed']);
+            }
+        } catch (\Exception $e) {
+            Log::error('Error processing transcription: ' . $e->getMessage());
+            $consultation->update(['status' => 'failed']);
+        }
+    }
+
+    /**
+     * Forward transcription to Go Intelligence for clinical analysis.
+     */
+    private function forwardToGoIntelligence($consultation, $transcription)
+    {
+        try {
+            $goIntelligenceUrl = env('GOINTELLIGENCE_API_URL', 'http://host.docker.internal:8001');
+            $endpoint = rtrim($goIntelligenceUrl, '/') . '/clinic/transcription';
+            $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
+
+            $response = Http::timeout(260)
+                ->withHeaders(['X-API-Key' => $apiKey])
+                ->post($endpoint, [
+                    'transcription' => $transcription,
+                    'consultation_id' => $consultation->id
+                ]);
+
+            if ($response->successful()) {
+                $aiData = $response->json();
+                $answer = $aiData['answer'] ?? '';
+                
+                // Tentar extrair JSON de blocos markdown
+                $jsonData = [];
+                if (preg_match('/```json\s*(.*?)\s*```/s', $answer, $matches)) {
+                    $jsonData = json_decode($matches[1], true) ?? [];
+                } elseif (str_starts_with(trim($answer), '{')) {
+                    $jsonData = json_decode($answer, true) ?? [];
+                }
+
+                // Mapping using data_get() for resilience
+                
+                // --- 1. Resumo (ai_summary) ---
+                $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
+                           data_get($jsonData, 'anamnese.historia_atual') ?? 
+                           data_get($jsonData, 'anamnese.historia_doenca_atual') ??
+                           data_get($aiData, 'summary') ?? 
+                           "Processado.";
+
+                // --- 2. Diagnóstico ---
+                $diagnosis = data_get($jsonData, 'diagnostico.hipotese_principal');
+                $secondary = (array) data_get($jsonData, 'diagnostico.hipoteses_secundarias', []);
+                if (!empty($secondary)) {
+                    $diagnosis .= "\nHipóteses Secundárias:\n" . implode("\n", $secondary);
+                }
+                $diagnosis = $diagnosis ?? data_get($aiData, 'diagnosis');
+
+                // --- 3. Prognóstico ---
+                $prognosis = data_get($jsonData, 'prognostico.classificacao');
+                $justification = data_get($jsonData, 'prognostico.justificativa');
+                if ($justification) {
+                    $prognosis = $prognosis ? $prognosis . "\n" . $justification : $justification;
+                }
+                $prognosis = $prognosis ?? data_get($aiData, 'prognosis');
+
+                // --- 4. Plano de Tratamento ---
+                $immediate = (array) data_get($jsonData, 'plano.tratamento_imediato', []);
+                $elective = (array) data_get($jsonData, 'plano.tratamento_eletivo', []);
+                $plan = implode("\n", array_merge($immediate, $elective));
+                if (empty($plan)) {
+                    $plan = data_get($aiData, 'suggested_plan') ?? data_get($aiData, 'plan');
+                }
+
+                // --- 5. Próximos Passos ---
+                $nextSteps = data_get($jsonData, 'insights.proximos_passos');
+
+                $consultation->update([
+                    'ai_summary' => $summary,
+                    'diagnosis' => $diagnosis,
+                    'prognosis' => $prognosis,
+                    'suggested_plan' => $plan,
+                    'next_steps' => $nextSteps,
+                    'status' => 'completed'
+                ]);
+
+                Log::info("Go Intelligence processing completed for consultation {$consultation->id}");
+                Log::debug("Parsed AI Data for #{$consultation->id}:", [
+                    'ai_summary' => substr($summary, 0, 100) . '...',
+                    'diagnosis' => $diagnosis,
+                    'prognosis' => $prognosis,
+                    'plan' => substr($plan, 0, 100) . '...'
+                ]);
+            } else {
+                Log::error("Go Intelligence API error: " . $response->body());
+            }
+        } catch (\Exception $e) {
+            Log::error('Error forwarding to Go Intelligence: ' . $e->getMessage());
+        }
     }
 }

@@ -20,7 +20,7 @@
 
         <!-- Metrics -->
         <div class="row g-3 mb-4">
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <div class="card border-0 shadow" style="border-radius: 12px; background: #ffffff;">
                     <div class="card-body">
                         <small class="text-success fw-bold">RECEITAS</small>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <div class="card border-0 shadow" style="border-radius: 12px; background: #ffffff;">
                     <div class="card-body">
                         <small class="text-danger fw-bold">DESPESAS</small>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <div class="card border-0 shadow" style="border-radius: 12px; background: #ffffff;">
                     <div class="card-body">
                         <small class="text-warning fw-bold">SALDO</small>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <div class="card border-0 shadow" style="border-radius: 12px; background: #ffffff;">
                     <div class="card-body">
                         <small class="text-muted fw-bold">A RECEBER (PENDENTE)</small>
@@ -63,7 +63,7 @@
         <!-- Filters -->
         <div class="card border-0 shadow-sm mb-4" style="border-radius: 12px;">
             <div class="card-body p-3">
-                <form action="{{ route('financial.index') }}" method="GET" class="row g-2 align-items-end">
+                <form action="{{ route('financial.index') }}" method="GET" class="row g-2 align-items-end flex-wrap">
                     <div class="col-md-2">
                         <label class="small text-muted">Início</label>
                         <input type="date" name="start_date" class="form-control form-control-sm" value="{{ $startDate }}">

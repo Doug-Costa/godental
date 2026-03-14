@@ -409,4 +409,140 @@
             })
             .catch(err => alert('Erro: ' + err));
     }
+
+    // ─── ANAMNESIS TEMPLATE FUNCTIONS ───
+
+    function openAnamnesisModal() {
+        document.getElementById('anamnesisId').value = '';
+        document.getElementById('modalAnamnesisTitle').innerText = 'Novo Modelo de Anamnese';
+        document.getElementById('anamnesisName').value = '';
+        document.getElementById('anamnesisDescription').value = '';
+        document.getElementById('anamnesisDefault').checked = false;
+        document.getElementById('anamnesisActive').checked = true;
+        document.getElementById('anamnesisQuestionsList').innerHTML = '';
+        document.getElementById('noQuestionsMsg').classList.remove('d-none');
+        new bootstrap.Modal(document.getElementById('modalAnamnesisTemplate')).show();
+    }
+
+    function editAnamnesisTemplate(template) {
+        document.getElementById('anamnesisId').value = template.id;
+        document.getElementById('modalAnamnesisTitle').innerText = 'Editar Modelo: ' + template.name;
+        document.getElementById('anamnesisName').value = template.name;
+        document.getElementById('anamnesisDescription').value = template.description || '';
+        document.getElementById('anamnesisDefault').checked = template.is_default;
+        document.getElementById('anamnesisActive').checked = template.is_active;
+        
+        const list = document.getElementById('anamnesisQuestionsList');
+        list.innerHTML = '';
+        
+        let questions = template.questions;
+        if (typeof questions === 'string') {
+            try { questions = JSON.parse(questions); } catch(e) { questions = []; }
+        }
+
+        if (questions && questions.length > 0) {
+            document.getElementById('noQuestionsMsg').classList.add('d-none');
+            questions.forEach(q => addAnamnesisQuestion(q.text, q.type, q.required));
+        } else {
+            document.getElementById('noQuestionsMsg').classList.remove('d-none');
+        }
+
+        new bootstrap.Modal(document.getElementById('modalAnamnesisTemplate')).show();
+    }
+
+    function addAnamnesisQuestion(text = '', type = 'text', required = false) {
+        const noQuestionsMsg = document.getElementById('noQuestionsMsg');
+        if (noQuestionsMsg) noQuestionsMsg.classList.add('d-none');
+        
+        const container = document.getElementById('anamnesisQuestionsList');
+        const index = container.children.length;
+        
+        const div = document.createElement('div');
+        div.className = 'card mb-3 border shadow-sm anamnesis-question-item';
+        div.innerHTML = `
+            <div class="card-body p-3">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-7">
+                        <label class="small fw-bold text-muted">Texto da Pergunta</label>
+                        <input type="text" class="form-control form-control-sm q-text" value="${text}" placeholder="Ex: Possui alergia a medicamentos?">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-muted">Tipo</label>
+                        <select class="form-select form-select-sm q-type">
+                            <option value="text" ${type === 'text' ? 'selected' : ''}>Texto Curto</option>
+                            <option value="longtext" ${type === 'longtext' ? 'selected' : ''}>Texto Longo</option>
+                            <option value="boolean" ${type === 'boolean' ? 'selected' : ''}>Sim/Não</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-flex gap-2 align-items-center justify-content-end">
+                        <div class="form-check pt-4">
+                            <input class="form-check-input q-required" type="checkbox" id="req_${index}" ${required ? 'checked' : ''}>
+                            <label class="form-check-label small" for="req_${index}">Obri.</label>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger btn-sm mt-3" onclick="this.closest('.anamnesis-question-item').remove()">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.appendChild(div);
+    }
+
+    function saveAnamnesisTemplate() {
+        const id = document.getElementById('anamnesisId').value;
+        const url = id ? `/api/admin/anamnesis-templates/${id}` : '/api/admin/anamnesis-templates';
+        const method = id ? 'PUT' : 'POST';
+
+        const questions = [];
+        document.querySelectorAll('.anamnesis-question-item').forEach(item => {
+            questions.push({
+                text: item.querySelector('.q-text').value,
+                type: item.querySelector('.q-type').value,
+                required: item.querySelector('.q-required').checked
+            });
+        });
+
+        if (!document.getElementById('anamnesisName').value) {
+            alert("O nome do modelo é obrigatório.");
+            return;
+        }
+
+        const data = {
+            name: document.getElementById('anamnesisName').value,
+            description: document.getElementById('anamnesisDescription').value,
+            is_default: document.getElementById('anamnesisDefault').checked ? 1 : 0,
+            is_active: document.getElementById('anamnesisActive').checked ? 1 : 0,
+            questions: questions
+        };
+
+        fetch(url, {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) location.reload();
+                else alert('Erro ao salvar modelo: ' + (data.message || JSON.stringify(data.errors)));
+            })
+            .catch(err => alert('Erro: ' + err));
+    }
+
+    function deleteAnamnesisTemplate(id) {
+        if (!confirm('Excluir este modelo de anamnese?')) return;
+        fetch(`/api/admin/anamnesis-templates/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            }
+        }).then(res => res.json()).then(data => {
+            if (data.success) location.reload();
+            else alert('Erro ao excluir');
+        });
+    }
 </script>

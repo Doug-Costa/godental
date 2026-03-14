@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  whisper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: whisper
+    # No ports exposed externally in production
+    environment:
+      - ENVIRONMENT=production
+      - WHISPER_MODEL=turbo
+      - MAX_FILE_SIZE_MB=50
+      - API_KEY=${WHISPER_INTERNAL_KEY}
+    volumes:
+      - whisper_model_cache:/root/.cache/whisper
+    networks:
+      - dentalpress_laravel
+    deploy:
+      resources:
+        limits:
+          memory: 7G
+    restart: unless-stopped
+
+networks:
+  dentalpress_laravel:
+    external: true
+
+volumes:
+  whisper_model_cache:

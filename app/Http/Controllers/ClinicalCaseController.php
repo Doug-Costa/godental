@@ -12,6 +12,9 @@ use App\Models\FinancialTransaction;
 use App\Models\FinancialCategory;
 use App\Models\Doctor;
 use App\Services\RemunerationService;
+use App\Models\AnamnesisTemplate;
+use App\Models\AnamnesisInstance;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ClinicalCaseController extends Controller
@@ -140,6 +143,7 @@ class ClinicalCaseController extends Controller
             'diagnosis' => 'nullable|string',
             'prognosis' => 'nullable|string',
             'suggested_plan' => 'nullable|string',
+            'next_steps' => 'nullable|string',
             'ai_summary' => 'nullable|string',
             'observations' => 'nullable|string',
         ]);
@@ -318,7 +322,11 @@ class ClinicalCaseController extends Controller
             'status' => 'nullable|string',
             'valor' => 'required|numeric|min:0',
             'service_price_id' => 'nullable|exists:service_prices,id',
+            'requires_anamnesis' => 'nullable|boolean',
+            'anamnesis_template_id' => 'nullable|exists:anamnesis_templates,id',
         ]);
+
+        $status = ($request->requires_anamnesis) ? 'awaiting_anamnesis' : ($validated['status'] ?? 'pending');
 
         $consultation = Consultation::create([
             'patient_id' => $validated['patient_id'],
@@ -330,11 +338,36 @@ class ClinicalCaseController extends Controller
             'doctor_id' => $validated['doctor_id'] ?? null,
             'observations' => $validated['observations'] ?? '',
             'transcription' => $validated['transcription'] ?? '',
-            'status' => $validated['status'] ?? 'pending',
+            'status' => $status,
             'valor' => $validated['valor'],
             'service_price_id' => $validated['service_price_id'] ?? null,
             'user_id' => null,
+            'requires_anamnesis' => $request->requires_anamnesis ? true : false,
         ]);
+
+        $anamnesisUrl = null;
+        if ($request->requires_anamnesis) {
+            $templateId = $request->anamnesis_template_id;
+            $template = null;
+            if ($templateId) {
+                $template = AnamnesisTemplate::find($templateId);
+            }
+            if (!$template) {
+                $template = AnamnesisTemplate::where('is_default', true)->first();
+            }
+
+            if ($template) {
+                $instance = AnamnesisInstance::create([
+                    'consultation_id' => $consultation->id,
+                    'patient_id' => $validated['patient_id'],
+                    'template_id' => $template->id,
+                    'token' => Str::random(64),
+                    'status' => 'pending',
+                    'expires_at' => now()->addHours(24),
+                ]);
+                $anamnesisUrl = route('anamnesis.show', $instance->token);
+            }
+        }
 
         // Propagar etapa ao caso clínico
         if ($consultation->clinical_case_id && $consultation->clinical_step) {
@@ -395,6 +428,8 @@ class ClinicalCaseController extends Controller
         return response()->json([
             'success' => true,
             'id' => $consultation->id,
+            'db_id' => $consultation->id,
+            'anamnesis_url' => $anamnesisUrl,
         ]);
     }
 }

@@ -155,6 +155,7 @@
                                     item.onclick = () => {
                                         patientSearchInput.value = patient.full_name;
                                         patientIdHidden.value = patient.id;
+                                        patientIdHidden.dispatchEvent(new Event('change')); // Trigger event for anamnesis check
                                         patientIdentifierInput.value = patient.phone || "";
                                         patientSearchResults.classList.add('d-none');
                                     };
@@ -172,6 +173,62 @@
                         patientSearchResults.classList.add('d-none');
                     }
                 });
+
+                // Anamnesis Flow Logic
+                function checkPatientHistory(patientId) {
+                    if (!patientId) return;
+                    fetch(`/patients/check-history/${patientId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const anamnesisAlert = document.getElementById('anamnesis_alert');
+                            const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+                            const section = document.getElementById('anamnesis_section');
+                            const alertMsg = document.getElementById('anamnesis_alert_msg');
+
+                            if (section) section.classList.remove('d-none');
+
+                            // Se o paciente não tiver anamnese (novo ou antigo sem registro)
+                            if (!data.has_anamnesis) {
+                                if (anamnesisAlert) anamnesisAlert.classList.remove('d-none');
+                                if (alertMsg) {
+                                    alertMsg.innerText = data.is_new ? "Paciente novo: Anamnese recomendada." : "Paciente sem anamnese registrada.";
+                                }
+                                if (anamnesisToggle) {
+                                    anamnesisToggle.checked = true;
+                                    anamnesisToggle.dispatchEvent(new Event('change'));
+                                }
+                            } else {
+                                // Já tem anamnese: esconde alerta e deixa toggle desmarcado por padrão (mas disponível)
+                                if (anamnesisAlert) anamnesisAlert.classList.add('d-none');
+                                if (anamnesisToggle) {
+                                    anamnesisToggle.checked = false;
+                                    anamnesisToggle.dispatchEvent(new Event('change'));
+                                }
+                            }
+                        });
+                }
+
+                if (patientIdHidden) {
+                    patientIdHidden.addEventListener('change', function () {
+                        checkPatientHistory(this.value);
+                    });
+                }
+
+                const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+                const templateSelection = document.getElementById('template_selection');
+                const btnSubmit = document.getElementById('btnIniciarEscuta');
+
+                if (anamnesisToggle) {
+                    anamnesisToggle.addEventListener('change', function () {
+                        if (this.checked) {
+                            if (templateSelection) templateSelection.classList.remove('d-none');
+                            if (btnSubmit) btnSubmit.innerHTML = '<i class="bi bi-qr-code me-1"></i> Gerar Ficha de Anamnese';
+                        } else {
+                            if (templateSelection) templateSelection.classList.add('d-none');
+                            if (btnSubmit) btnSubmit.innerHTML = '<i class="bi bi-mic-fill me-1"></i> Iniciar Consulta';
+                        }
+                    });
+                }
             }
 
             // Bootstrap Instances
@@ -209,9 +266,7 @@
                 };
 
                 recognition.onerror = (event) => {
-                    if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
-                        startSimulation();
-                    }
+                    console.error("Speech recognition error:", event.error);
                 };
 
                 recognition.onend = () => {
@@ -221,20 +276,7 @@
                 };
             }
 
-            function startSimulation() {
-                if (isSimulating) return;
-                isSimulating = true;
-                let phraseIndex = 0;
-                simulationTimer = setInterval(() => {
-                    if (mediaRecorder && mediaRecorder.state === 'recording' && !isPaused) {
-                        if (phraseIndex < medicalPhrases.length) {
-                            fullTranscript += medicalPhrases[phraseIndex] + " ";
-                            if (liveTranscript) liveTranscript.innerHTML = `<strong>${fullTranscript}</strong> <span class="text-secondary">(Simul.)</span>`;
-                            phraseIndex++;
-                        }
-                    }
-                }, 4000);
-            }
+
 
             if (btnIniciarEscuta) {
                 btnIniciarEscuta.addEventListener('click', async function (e) {
@@ -249,11 +291,51 @@
                         return;
                     }
 
+                    // Check for anamnesis flow
+                    const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+                    if (anamnesisToggle && anamnesisToggle.checked) {
+                        try {
+                            btnIniciarEscuta.disabled = true;
+                            btnIniciarEscuta.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span> Gerando...';
+
+                            const response = await fetch("{{ route('consultations.ajax-store') }}", {
+                                method: 'POST',
+                                body: new FormData(document.getElementById('formNovaConsulta')),
+                                headers: {
+                                    'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                                }
+                            });
+                            const data = await response.json();
+
+                            if (data.db_id) {
+                                document.getElementById('formNovaConsulta').classList.add('d-none');
+                                btnIniciarEscuta.parentElement.classList.add('d-none');
+                                const successUI = document.getElementById('anamnesis_success_ui');
+                                successUI.classList.remove('d-none');
+                                document.getElementById('anamnesis_link_input').value = data.anamnesis_url;
+                                document.getElementById('anamnesis_qrcode_img').src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(data.anamnesis_url)}`;
+                            }
+                        } catch (error) {
+                            console.error("Erro anamnese:", error);
+                            alert("Falha ao gerar ficha de anamnese.");
+                        } finally {
+                            btnIniciarEscuta.disabled = false;
+                            btnIniciarEscuta.innerHTML = '<i class="bi bi-qr-code me-1"></i> Gerar Ficha de Anamnese';
+                        }
+                        return;
+                    }
+
                     try {
                         btnIniciarEscuta.disabled = true;
                         btnIniciarEscuta.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Iniciando...';
 
-                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        const stream = await navigator.mediaDevices.getUserMedia({
+                            audio: {
+                                echoCancellation: true,
+                                noiseSuppression: true,
+                                autoGainControl: true
+                            }
+                        });
 
                         // Hide whichever modal started this
                         if (modalHub) modalHub.hide();
@@ -276,7 +358,10 @@
             }
 
             function startRecording(stream) {
-                mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+                mediaRecorder = new MediaRecorder(stream, {
+                    mimeType: 'audio/webm',
+                    audioBitsPerSecond: 128000
+                });
                 audioChunks = [];
                 fullTranscript = "";
                 isSimulating = false;
@@ -291,8 +376,8 @@
 
                 mediaRecorder.start();
                 if (recognition) {
-                    try { recognition.start(); } catch (e) { startSimulation(); }
-                } else { startSimulation(); }
+                    try { recognition.start(); } catch (e) { }
+                }
 
                 setupVisualizer(stream);
                 startTimer();
@@ -309,7 +394,7 @@
                         if (timerInterval) clearInterval(timerInterval);
                     } else {
                         mediaRecorder.resume();
-                        if (recognition && !isSimulating) try { recognition.start(); } catch (e) { }
+                        if (recognition) try { recognition.start(); } catch (e) { }
                         isPaused = false;
                         btnRecordingPause.innerHTML = '<i class="bi bi-pause-fill fs-3"></i>';
                         startTimer();
@@ -375,31 +460,71 @@
             }
 
             async function saveMockData(audioBlob) {
-                const formData = new FormData();
-                formData.append('patient_id', consultationData.patient_id || "");
-                formData.append('patient_name', consultationData.patient_name || "");
-                formData.append('patient_identifier', consultationData.patient_identifier || "");
-                formData.append('consultation_type', consultationData.consultation_type || "");
-                formData.append('observations', consultationData.observations || "");
-                formData.append('transcription', fullTranscript || "Nenhuma voz detectada.");
-                formData.append('duration', recordingTimer ? recordingTimer.textContent : "00:00");
-                formData.append('service_price_id', consultationData.service_price_id || "");
-                formData.append('valor', consultationData.valor || 0);
-                if (audioBlob) formData.append('audio', audioBlob, 'gravacao.webm');
+                // UI: Show uploading status
+                const originalBtnText = btnRecordingStop ? btnRecordingStop.innerHTML : "";
+                if (btnRecordingStop) {
+                    btnRecordingStop.disabled = true;
+                    btnRecordingStop.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
+                }
+
+                const metadataFormData = new FormData();
+                metadataFormData.append('patient_id', consultationData.patient_id || "");
+                metadataFormData.append('patient_name', consultationData.patient_name || "");
+                metadataFormData.append('patient_identifier', consultationData.patient_identifier || "");
+                metadataFormData.append('consultation_type', consultationData.consultation_type || "");
+                metadataFormData.append('observations', consultationData.observations || "");
+                metadataFormData.append('duration', recordingTimer ? recordingTimer.textContent : "00:00");
+                metadataFormData.append('service_price_id', consultationData.service_price_id || "");
+                metadataFormData.append('valor', consultationData.valor || 0);
 
                 try {
-                    const response = await fetch('/api/mock-save', {
+                    console.log("GoClinic: Step 1 - Saving Metadata...");
+                    // STEP 1: Save metadata first to ensure record existence
+                    const metaResponse = await fetch('/mock-save', {
                         method: 'POST',
-                        body: formData,
+                        body: metadataFormData,
                         headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' }
                     });
-                    const result = await response.json();
-                    if (result.success) {
-                        alert('Consulta processada com Inteligência DentalGO!');
-                        window.location.href = "{{ route('consultas.index') }}";
+
+                    if (!metaResponse.ok) throw new Error(`Metadata save failed: ${metaResponse.status}`);
+
+                    const metaResult = await metaResponse.json();
+                    if (!metaResult.success) throw new Error("Server rejected metadata");
+
+                    const db_id = metaResult.db_id;
+                    console.log("GoClinic: Metadata saved. DB ID:", db_id);
+
+                    // STEP 2: Upload Audio
+                    if (audioBlob) {
+                        console.log("GoClinic: Step 2 - Uploading Audio file...");
+                        const audioFormData = new FormData();
+                        audioFormData.append('db_id', db_id);
+                        audioFormData.append('audio', audioBlob, 'gravacao.webm');
+                        audioFormData.append('id', metaResult.id); // original file id
+
+                        // Note: We don't await this if we want to redirect immediately, 
+                        // but it's safer to await to ensure Nginx/PHP received it.
+                        const audioResponse = await fetch('/mock-save', {
+                            method: 'POST',
+                            body: audioFormData,
+                            headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' }
+                        });
+
+                        if (!audioResponse.ok) console.warn("Audio upload might have background issues, but metadata is safe.");
                     }
+
+                    // Success: Redirect to the consultation page
+                    alert('Consulta criada com sucesso! O áudio está sendo processado em segundo plano e aparecerá no prontuário em instantes.');
+                    window.location.href = `/painel-consultas/${db_id}`;
+
                 } catch (error) {
-                    alert('Erro ao salvar os arquivos locais do mockup.');
+                    console.error("GoClinic Save Error:", error);
+                    alert('Erro ao salvar: ' + error.message);
+                } finally {
+                    if (btnRecordingStop) {
+                        btnRecordingStop.disabled = false;
+                        btnRecordingStop.innerHTML = originalBtnText;
+                    }
                 }
             }
         }

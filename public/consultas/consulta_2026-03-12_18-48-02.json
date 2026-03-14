@@ -1,0 +1,15 @@
+{
+    "patient_id": 16,
+    "patient_name": "yussuke mandic",
+    "patient_identifier": "4490242424",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Bom dia, Seu Suki, como é que você tá? Tudo bom? Seu Suki, você falou que tá com uma dor no canino, né? Você tá com uma sensibilidade aí maior, gelado, quente e tal. Você tá ali na cadeira fazendo favor? Vamos dar uma olhadinha? Abre bem a boca. Bom, teus dentes estão, cara, normais. Vejo que tem uma pequena, mas assim, bem pequena desgaste, assim, na ponta do canino, né? Que você mordeu alguma coisa mais dura e tal. Entendi, pegou no osso da carne no final de semana. Entendi. Os outros dentes parecem estar normais. Só um tartarzinho, vamos fazer uma limpeza aqui já depois. Mas esse do canino me preocupa um pouquinho mais, tá? Vamos tirar um raio-x pra ver o que aconteceu se a gente não tá com a fissura. Aí na sequência a gente vai iniciar um tratamento.",
+    "duration": "00:57",
+    "service_price_id": null,
+    "valor": "24.24",
+    "timestamp": "2026-03-12 18:48:03",
+    "status": "transcribed",
+    "db_id": 20,
+    "audio_path": "consultas\/consulta_2026-03-12_18-48-02.webm"
+}

@@ -1,0 +1,19 @@
+{
+    "patient_id": 22,
+    "patient_name": "luiz inacio",
+    "patient_identifier": "1313131313",
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Olá, Sr. Luiz Inácio, o Sr. está aqui porque aparentemente o Sr. estava no final de semana e ia comer uma picanha e não era uma picanha, né? Bom, deixa eu dar uma olhada aqui na tua boca para a gente poder fazer aqui um diagnóstico. Olhando aqui os incisivos laterais e também até os superiores, a gente vê que tomou um dano, né? Tá meio danificado, tá meio com problema, né? Posso verificar que houve uma lascadura, né? Você mordeu com muita força? Mordeu com muita força e não era picanha, né? Era uma carne mais dura ali, tinha um osso, né? Tá ok. Percebendo aqui também, eu percebo que, no caso, vamos precisar tirar um raio-x pra poder verificar o que é. Tem sensibilidade, então pode ser que esteja um problema mais grave.",
+    "duration": "00:54",
+    "service_price_id": null,
+    "valor": "13",
+    "timestamp": "2026-03-12 23:11:17",
+    "status": "completed",
+    "db_id": 27,
+    "audio_path": "consultas\/consulta_2026-03-12_23-11-17.webm",
+    "ai_summary": "Paciente\/pais relatam evento durante tentativa de alimentação. Ao exame, observada fratura em incisivos laterais superiores com sensibilidade associada.",
+    "diagnosis": null,
+    "prognosis": "",
+    "suggested_plan": "Imediato:\n\n\nFuturo\/Eletivo:"
+}

@@ -1,0 +1,15 @@
+{
+    "patient_id": 19,
+    "patient_name": "teste curto",
+    "patient_identifier": null,
+    "consultation_type": "Avaliação",
+    "observations": null,
+    "transcription": "Tudo bem, bom dia, já vai sentando na cadeira, cara, certinho, porque eu vou cortar aquela ponta que a gente falou da outra vez, né, você tá voltando aqui, é, cortando aqui a pontinha do arco, beleza, que a gente tirou o dente da frente aqui, girou, ó, e aquele canino que a gente abriu espaço, o que que aconteceu, né, ele já voltou certinho pra posição dele, tava meio encavalado, né, agora eu vou passar um arco um pouquinho mais grosso na parte superior e trocar um brato de Ali do fundo que saiu E aí terminando isso Daqui a 30 dias você volta",
+    "duration": "00:36",
+    "service_price_id": null,
+    "valor": "0.00",
+    "timestamp": "2026-03-12 21:15:54",
+    "status": "transcribed",
+    "db_id": 24,
+    "audio_path": "consultas\/consulta_2026-03-12_21-15-54.webm"
+}
