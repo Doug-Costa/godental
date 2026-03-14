@@ -8,8 +8,11 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('consultations', function (Blueprint $table) {
-            $table->string('clinical_step')->change();
+            // PHP version of change() needs doctrine/dbal in Laravel 9
+            // Using raw SQL instead
         });
+        
+        \DB::statement('ALTER TABLE consultations MODIFY COLUMN clinical_step VARCHAR(255) DEFAULT "ENTRADA"');
     }
 
     public function down()
