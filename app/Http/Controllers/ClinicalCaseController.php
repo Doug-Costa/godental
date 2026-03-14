@@ -426,7 +426,7 @@ class ClinicalCaseController extends Controller
                 );
 
                 FinancialTransaction::create([
-                    'description' => "Consulta: " . $consultation->consultation_type . " - " . ($consultation->patient->full_name ?? ($validated['patient_name'] ?? 'Paciente')),
+                    'description' => "Consulta: " . $consultation->consultation_type . " - " . ($consultation->patient?->full_name ?? ($validated['patient_name'] ?? 'Paciente')),
                     'amount' => $consultation->valor,
                     'type' => 'income',
                     'date' => now(),

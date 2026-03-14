@@ -425,7 +425,15 @@ class PagesController extends Controller
         $db_id = $request->db_id;
         $consultation = null;
 
-        $doctorId = session()->has('usuario') ? (is_array(session()->get('usuario')) ? session()->get('usuario')['id'] : (isset(session()->get('usuario')->id) ? session()->get('usuario')->id : null)) : null;
+        $usuario = session()->get('usuario');
+        $doctorId = null;
+        if ($usuario && $usuario !== 'API') {
+            if (is_array($usuario)) {
+                $doctorId = $usuario['id'] ?? null;
+            } elseif (is_object($usuario)) {
+                $doctorId = $usuario->id ?? null;
+            }
+        }
 
         if ($db_id) {
             $consultation = \App\Models\Consultation::find($db_id);
