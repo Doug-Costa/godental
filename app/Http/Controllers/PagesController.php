@@ -594,7 +594,7 @@ class PagesController extends Controller
         }
     }
 
-    private function forwardToGoIntelligence($consultation, $transcription)
+    public function forwardToGoIntelligence($consultation, $transcription)
     {
         try {
             Log::info("GoClinic: Sending to Go Intelligence for ID " . $consultation->id);
