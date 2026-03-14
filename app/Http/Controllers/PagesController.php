@@ -616,12 +616,16 @@ class PagesController extends Controller
                 $aiData = $goResponse->json();
                 $answer = $aiData['answer'] ?? '';
                 
+                Log::info("GoClinic: Raw AI Answer for ID " . $consultation->id, ['answer_excerpt' => substr($answer, 0, 200)]);
+
                 $jsonData = [];
                 if (preg_match('/```json\s*(.*?)\s*```/s', $answer, $matches)) {
                     $jsonData = json_decode($matches[1], true) ?? [];
                 } elseif (str_starts_with(trim($answer), '{')) {
                     $jsonData = json_decode($answer, true) ?? [];
                 }
+
+                Log::info("GoClinic: Parsed AI JSON for ID " . $consultation->id, ['json_keys' => array_keys($jsonData)]);
 
                 // --- Resumo (AI Summary) ---
                 $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
