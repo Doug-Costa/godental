@@ -411,12 +411,19 @@ class PagesController extends Controller
 
     public function mockSave(Request $request)
     {
+        Log::info("GoClinic: mockSave call started", [
+            'db_id' => $request->db_id,
+            'patient_id' => $request->patient_id,
+            'patient_name' => $request->patient_name,
+            'has_audio' => $request->hasFile('audio')
+        ]);
+
         set_time_limit(0); 
+        $responseData = []; // Initialize early
+
         $id_file = $request->id ?: "consulta_" . time();
         $db_id = $request->db_id;
         $consultation = null;
-
-        Log::info("GoClinic: mockSave call. DB_ID: " . ($db_id ?? 'NEW') . " | Has Audio: " . ($request->hasFile('audio') ? 'YES' : 'NO'));
 
         $doctorId = session()->has('usuario') ? (is_array(session()->get('usuario')) ? session()->get('usuario')['id'] : (isset(session()->get('usuario')->id) ? session()->get('usuario')->id : null)) : null;
 
@@ -492,12 +499,12 @@ class PagesController extends Controller
             }
         }
 
-        $responseData = [
+        $responseData = array_merge($responseData, [
             'success' => true,
             'id' => $id_file,
-            'db_id' => $consultation->id,
+            'db_id' => $consultation ? $consultation->id : null,
             'message' => $request->hasFile('audio') ? 'Áudio recebido, iniciando processamento...' : 'Metadados salvos.'
-        ];
+        ]);
 
         // 3. Audio handling (Now optional/decoupled)
         if ($request->hasFile('audio')) {
