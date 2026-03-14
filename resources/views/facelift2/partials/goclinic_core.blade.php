@@ -174,6 +174,30 @@
                     }
                 });
 
+                // Handle Quick Registration (no ID selected)
+                if (patientSearchInput) {
+                    patientSearchInput.addEventListener('blur', function() {
+                        setTimeout(() => {
+                            if (!patientIdHidden.value && this.value.trim() !== "") {
+                                // Potential new patient
+                                const anamnesisAlert = document.getElementById('anamnesis_alert');
+                                const anamnesisToggle = document.getElementById('requires_anamnesis_toggle');
+                                const section = document.getElementById('anamnesis_section');
+                                
+                                if (section) section.classList.remove('d-none');
+                                if (anamnesisAlert) {
+                                    anamnesisAlert.classList.remove('d-none');
+                                    document.getElementById('anamnesis_alert_msg').innerText = "Cadastro Rápido: Novo paciente detectado.";
+                                }
+                                if (anamnesisToggle && !anamnesisToggle.checked) {
+                                    anamnesisToggle.checked = true;
+                                    anamnesisToggle.dispatchEvent(new Event('change'));
+                                }
+                            }
+                        }, 200);
+                    });
+                }
+
                 // Anamnesis Flow Logic
                 function checkPatientHistory(patientId) {
                     if (!patientId) return;
@@ -187,9 +211,6 @@
 
                             if (section) section.classList.remove('d-none');
 
-                            // LOGIC: Only show alert AND auto-check if it's a NEW patient
-                            // If they are existing but have no anamnesis, we DO NOT show the warning alert per user request,
-                            // but the section remains available for optional activation.
                             if (data.is_new && !data.has_anamnesis) {
                                 if (anamnesisAlert) anamnesisAlert.classList.remove('d-none');
                                 if (alertMsg) alertMsg.innerText = "Paciente novo: Anamnese recomendada.";
@@ -198,13 +219,10 @@
                                     anamnesisToggle.dispatchEvent(new Event('change'));
                                 }
                             } else {
-                                // Existing patient or already has anamnesis: hide alert, don't auto-check
+                                // Existing patient or already has anamnesis: hide alert
                                 if (anamnesisAlert) anamnesisAlert.classList.add('d-none');
-                                // Keep toggle unchecked by default for existing patients
-                                if (anamnesisToggle && !data.has_anamnesis) {
-                                    anamnesisToggle.checked = false;
-                                    anamnesisToggle.dispatchEvent(new Event('change'));
-                                }
+                                // DO NOT uncheck if user already manually checked it
+                                // But if it was auto-checked by a previous patient search, we might want to reset
                             }
                         });
                 }

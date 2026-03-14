@@ -310,8 +310,8 @@ class ClinicalCaseController extends Controller
     public function storeConsultation(Request $request, RemunerationService $remunerationService)
     {
         $validator = \Validator::make($request->all(), [
-            'patient_id' => 'required|exists:patients,id',
-            'patient_name' => 'nullable|string|max:255',
+            'patient_id' => 'nullable|exists:patients,id',
+            'patient_name' => 'required_without:patient_id|string|max:255',
             'patient_identifier' => 'nullable|string|max:255',
             'consultation_type' => 'required|string|max:255',
             'clinical_step' => 'nullable|string',
@@ -341,10 +341,22 @@ class ClinicalCaseController extends Controller
         $validated = $validator->validated();
 
         try {
+            // Se não houver patient_id, criamos o paciente "on-the-fly"
+            $patientId = $validated['patient_id'] ?? null;
+            if (!$patientId && !empty($validated['patient_name'])) {
+                $patient = Patient::create([
+                    'full_name' => $validated['patient_name'],
+                    'phone' => $validated['patient_identifier'] ?? null,
+                    'registration_date' => now(),
+                ]);
+                $patientId = $patient->id;
+                \Log::info("Paciente criado automaticamente durante consulta: ID {$patientId}");
+            }
+
             $status = ($request->requires_anamnesis) ? 'awaiting_anamnesis' : ($validated['status'] ?? 'pending');
 
             $consultation = Consultation::create([
-                'patient_id' => $validated['patient_id'],
+                'patient_id' => $patientId,
                 'patient_name' => $validated['patient_name'] ?? '',
                 'patient_identifier' => $validated['patient_identifier'] ?? '',
                 'consultation_type' => $validated['consultation_type'],
