@@ -12,6 +12,7 @@
             </div>
             <div class="modal-body px-4 pt-3 pb-4">
                 <form id="formNovaConsulta">
+                    <div id="form_inputs_container">
                     <div class="mb-3 position-relative">
                         <label class="form-label fw-semibold">Nome do Paciente</label>
                         <input type="text" class="form-control form-control-lg" name="patient_name"

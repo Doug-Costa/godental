@@ -339,7 +339,8 @@
                             const data = await response.json();
 
                             if (data.db_id) {
-                                document.getElementById('formNovaConsulta').classList.add('d-none');
+                                const inputsContainer = document.getElementById('form_inputs_container');
+                                if (inputsContainer) inputsContainer.classList.add('d-none');
                                 btnIniciarEscuta.parentElement.classList.add('d-none');
                                 const successUI = document.getElementById('anamnesis_success_ui');
                                 successUI.classList.remove('d-none');
