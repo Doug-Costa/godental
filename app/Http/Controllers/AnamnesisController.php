@@ -31,12 +31,19 @@ class AnamnesisController extends Controller
 
         foreach ($instance->template->questions as $question) {
             $qId = $question['id'];
+            $answer = $answers[$qId] ?? null;
+
+            // Handle multiple choice (array) answers
+            if (is_array($answer)) {
+                $answer = implode(', ', $answer);
+            }
+
             AnamnesisResponse::create([
                 'instance_id' => $instance->id,
                 'question_id' => $qId,
                 'question_text' => $question['text'],
                 'answer_type' => $question['type'],
-                'answer_value' => $answers[$qId] ?? null,
+                'answer_value' => $answer,
             ]);
         }
 
