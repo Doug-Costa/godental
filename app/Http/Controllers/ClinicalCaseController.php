@@ -326,110 +326,118 @@ class ClinicalCaseController extends Controller
             'anamnesis_template_id' => 'nullable|exists:anamnesis_templates,id',
         ]);
 
-        $status = ($request->requires_anamnesis) ? 'awaiting_anamnesis' : ($validated['status'] ?? 'pending');
+        try {
+            $status = ($request->requires_anamnesis) ? 'awaiting_anamnesis' : ($validated['status'] ?? 'pending');
 
-        $consultation = Consultation::create([
-            'patient_id' => $validated['patient_id'],
-            'patient_name' => $validated['patient_name'] ?? '',
-            'patient_identifier' => $validated['patient_identifier'] ?? '',
-            'consultation_type' => $validated['consultation_type'],
-            'clinical_step' => $validated['clinical_step'] ?? ClinicalCase::ETAPA_CONSULTA_INICIAL,
-            'clinical_case_id' => $validated['clinical_case_id'] ?? null,
-            'doctor_id' => $validated['doctor_id'] ?? null,
-            'observations' => $validated['observations'] ?? '',
-            'transcription' => $validated['transcription'] ?? '',
-            'status' => $status,
-            'valor' => $validated['valor'],
-            'service_price_id' => $validated['service_price_id'] ?? null,
-            'user_id' => null,
-            'requires_anamnesis' => $request->requires_anamnesis ? true : false,
-        ]);
-
-        $anamnesisUrl = null;
-        if ($request->requires_anamnesis) {
-            $templateId = $request->anamnesis_template_id;
-            $template = null;
-            if ($templateId) {
-                $template = AnamnesisTemplate::find($templateId);
-            }
-            if (!$template) {
-                $template = AnamnesisTemplate::where('is_default', true)->first();
-            }
-
-            if ($template) {
-                $instance = AnamnesisInstance::create([
-                    'consultation_id' => $consultation->id,
-                    'patient_id' => $validated['patient_id'],
-                    'template_id' => $template->id,
-                    'token' => Str::random(64),
-                    'status' => 'pending',
-                    'expires_at' => now()->addHours(24),
-                ]);
-                $anamnesisUrl = route('anamnesis.show', $instance->token);
-            }
-        }
-
-        // Propagar etapa ao caso clínico
-        if ($consultation->clinical_case_id && $consultation->clinical_step) {
-            $case = ClinicalCase::find($consultation->clinical_case_id);
-            if ($case && in_array($consultation->clinical_step, ClinicalCase::ETAPAS)) {
-                $case->update(['etapa_atual' => $consultation->clinical_step]);
-            }
-
-            if ($case) {
-                TimelineEvent::registrar(
-                    TimelineEvent::CONSULTA_CRIADA,
-                    $consultation->patient_id,
-                    $case->id,
-                    "Consulta criada: {$consultation->consultation_type}",
-                    [
-                        'valor' => $consultation->valor,
-                        'etapa' => $consultation->clinical_step,
-                        'consultation_id' => $consultation->id,
-                    ]
-                );
-            }
-        }
-
-        // Gerar Conta a Receber (Pendente)
-        if ($consultation->valor > 0) {
-            $category = FinancialCategory::firstOrCreate(
-                ['name' => 'Consultas'],
-                ['type' => 'income', 'color' => '#5a9e7c']
-            );
-
-            FinancialTransaction::create([
-                'description' => "Consulta: " . $consultation->consultation_type . " - " . ($consultation->patient->full_name ?? ($validated['patient_name'] ?? 'Paciente')),
-                'amount' => $consultation->valor,
-                'type' => 'income',
-                'date' => now(),
-                'due_date' => now(),
-                'status' => 'pending',
-                'category_id' => $category->id,
-                'patient_id' => $consultation->patient_id,
-                'related_type' => Consultation::class,
-                'related_id' => $consultation->id,
+            $consultation = Consultation::create([
+                'patient_id' => $validated['patient_id'],
+                'patient_name' => $validated['patient_name'] ?? '',
+                'patient_identifier' => $validated['patient_identifier'] ?? '',
+                'consultation_type' => $validated['consultation_type'],
+                'clinical_step' => $validated['clinical_step'] ?? ClinicalCase::ETAPA_CONSULTA_INICIAL,
+                'clinical_case_id' => $validated['clinical_case_id'] ?? null,
+                'doctor_id' => $validated['doctor_id'] ?? null,
+                'observations' => $validated['observations'] ?? '',
+                'transcription' => $validated['transcription'] ?? '',
+                'status' => $status,
+                'valor' => $validated['valor'],
+                'service_price_id' => $validated['service_price_id'] ?? null,
+                'user_id' => null,
+                'requires_anamnesis' => $request->requires_anamnesis ? true : false,
             ]);
-        }
 
-        // Calculate Commission if Doctor is assigned
-        if (!empty($validated['doctor_id'])) {
-            $doctor = Doctor::find($validated['doctor_id']);
-            if ($doctor) {
-                $remunerationService->calculateCommission(
-                    $doctor,
-                    (float) $consultation->valor,
-                    "Comissão Consulta #{$consultation->id}",
-                    $consultation
-                );
+            $anamnesisUrl = null;
+            if ($request->requires_anamnesis) {
+                $templateId = $request->anamnesis_template_id;
+                $template = null;
+                if ($templateId) {
+                    $template = AnamnesisTemplate::find($templateId);
+                }
+                if (!$template) {
+                    $template = AnamnesisTemplate::where('is_default', true)->first();
+                }
+
+                if ($template) {
+                    $instance = AnamnesisInstance::create([
+                        'consultation_id' => $consultation->id,
+                        'patient_id' => $validated['patient_id'],
+                        'template_id' => $template->id,
+                        'token' => Str::random(64),
+                        'status' => 'pending',
+                        'expires_at' => now()->addHours(24),
+                    ]);
+                    $anamnesisUrl = route('anamnesis.show', $instance->token);
+                }
             }
-        }
 
-        return response()->json([
-            'success' => true,
-            'id' => $consultation->id,
-            'db_id' => $consultation->id,
-            'anamnesis_url' => $anamnesisUrl,
-        ]);
+            // Propagar etapa ao caso clínico
+            if ($consultation->clinical_case_id && $consultation->clinical_step) {
+                $case = ClinicalCase::find($consultation->clinical_case_id);
+                if ($case && in_array($consultation->clinical_step, ClinicalCase::ETAPAS)) {
+                    $case->update(['etapa_atual' => $consultation->clinical_step]);
+                }
+
+                if ($case) {
+                    TimelineEvent::registrar(
+                        TimelineEvent::CONSULTA_CRIADA,
+                        $consultation->patient_id,
+                        $case->id,
+                        "Consulta criada: {$consultation->consultation_type}",
+                        [
+                            'valor' => $consultation->valor,
+                            'etapa' => $consultation->clinical_step,
+                            'consultation_id' => $consultation->id,
+                        ]
+                    );
+                }
+            }
+
+            // Gerar Conta a Receber (Pendente)
+            if ($consultation->valor > 0) {
+                $category = FinancialCategory::firstOrCreate(
+                    ['name' => 'Consultas'],
+                    ['type' => 'income', 'color' => '#5a9e7c']
+                );
+
+                FinancialTransaction::create([
+                    'description' => "Consulta: " . $consultation->consultation_type . " - " . ($consultation->patient->full_name ?? ($validated['patient_name'] ?? 'Paciente')),
+                    'amount' => $consultation->valor,
+                    'type' => 'income',
+                    'date' => now(),
+                    'due_date' => now(),
+                    'status' => 'pending',
+                    'category_id' => $category->id,
+                    'patient_id' => $consultation->patient_id,
+                    'related_type' => Consultation::class,
+                    'related_id' => $consultation->id,
+                ]);
+            }
+
+            // Calculate Commission if Doctor is assigned
+            if (!empty($validated['doctor_id'])) {
+                $doctor = Doctor::find($validated['doctor_id']);
+                if ($doctor) {
+                    $remunerationService->calculateCommission(
+                        $doctor,
+                        (float) $consultation->valor,
+                        "Comissão Consulta #{$consultation->id}",
+                        $consultation
+                    );
+                }
+            }
+
+            return response()->json([
+                'success' => true,
+                'id' => $consultation->id,
+                'db_id' => $consultation->id,
+                'anamnesis_url' => $anamnesisUrl,
+            ]);
+        } catch (\Exception $e) {
+            \Log::error("Erro storeConsultation: " . $e->getMessage());
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ], 500);
+        }
     }
 }

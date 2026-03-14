@@ -305,6 +305,11 @@
                                     'X-CSRF-TOKEN': "{{ csrf_token() }}"
                                 }
                             });
+                            if (!response.ok) {
+                                const errData = await response.json();
+                                throw new Error(errData.message || "Erro no servidor (" + response.status + ")");
+                            }
+
                             const data = await response.json();
 
                             if (data.db_id) {
@@ -317,7 +322,7 @@
                             }
                         } catch (error) {
                             console.error("Erro anamnese:", error);
-                            alert("Falha ao gerar ficha de anamnese.");
+                            alert("Falha ao gerar ficha de anamnese: " + error.message);
                         } finally {
                             btnIniciarEscuta.disabled = false;
                             btnIniciarEscuta.innerHTML = '<i class="bi bi-qr-code me-1"></i> Gerar Ficha de Anamnese';
