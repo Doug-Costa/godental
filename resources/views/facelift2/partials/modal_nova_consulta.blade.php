@@ -120,7 +120,7 @@
                             </button>
                         </div>
                         <div class="px-3 mb-2">
-                            <button type="button" class="btn btn-primary w-100 fw-bold" data-bs-dismiss="modal"
+                            <button type="button" id="btnConfirmarAnamnese" class="btn btn-primary w-100 fw-bold"
                                 style="border-radius: 12px; background-color: #CA1D53; border: none;">Entendido,
                                 fechar</button>
                         </div>

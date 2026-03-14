@@ -248,6 +248,49 @@
                         }
                     });
                 }
+
+                // Modal Reset Logic
+                if (modalSimpleEl) {
+                    modalSimpleEl.addEventListener('hidden.bs.modal', function () {
+                        resetModal();
+                    });
+                }
+
+                function resetModal() {
+                    if (formNovaConsulta) formNovaConsulta.reset();
+                    if (patientIdHidden) patientIdHidden.value = "";
+                    
+                    const inputsContainer = document.getElementById('form_inputs_container');
+                    const successUI = document.getElementById('anamnesis_success_ui');
+                    const btnContainer = btnIniciarEscuta ? btnIniciarEscuta.parentElement : null;
+                    const anamnesisAlert = document.getElementById('anamnesis_alert');
+                    const templateSelection = document.getElementById('template_selection');
+
+                    if (inputsContainer) inputsContainer.classList.remove('d-none');
+                    if (successUI) successUI.classList.add('d-none');
+                    if (btnContainer) btnContainer.classList.remove('d-none');
+                    if (anamnesisAlert) anamnesisAlert.classList.add('d-none');
+                    if (templateSelection) templateSelection.classList.add('d-none');
+                    
+                    if (btnIniciarEscuta) {
+                        btnIniciarEscuta.disabled = false;
+                        btnIniciarEscuta.innerHTML = '<i class="bi bi-mic-fill me-1"></i> Iniciar Escuta (GoTalks)';
+                    }
+                    
+                    consultationData = {};
+                }
+
+                // Confirm Anamnesis & Start recording
+                const btnConfirmarAnamnese = document.getElementById('btnConfirmarAnamnese');
+                if (btnConfirmarAnamnese) {
+                    btnConfirmarAnamnese.addEventListener('click', function() {
+                        if (modalSimple) modalSimple.hide();
+                        // Small delay to ensure modal is hidden before starting mic request
+                        setTimeout(() => {
+                            triggerRecordingFlow();
+                        }, 500);
+                    });
+                }
             }
 
             // Bootstrap Instances
@@ -339,6 +382,7 @@
                             const data = await response.json();
 
                             if (data.db_id) {
+                                consultationData.db_id = data.db_id; // Capture for the recording phase
                                 const inputsContainer = document.getElementById('form_inputs_container');
                                 if (inputsContainer) inputsContainer.classList.add('d-none');
                                 btnIniciarEscuta.parentElement.classList.add('d-none');
@@ -357,36 +401,44 @@
                         return;
                     }
 
-                    try {
+                    triggerRecordingFlow();
+                });
+            }
+
+            async function triggerRecordingFlow() {
+                try {
+                    if (btnIniciarEscuta) {
                         btnIniciarEscuta.disabled = true;
                         btnIniciarEscuta.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Iniciando...';
+                    }
 
-                        const stream = await navigator.mediaDevices.getUserMedia({
-                            audio: {
-                                echoCancellation: true,
-                                noiseSuppression: true,
-                                autoGainControl: true
-                            }
-                        });
+                    const stream = await navigator.mediaDevices.getUserMedia({
+                        audio: {
+                            echoCancellation: true,
+                            noiseSuppression: true,
+                            autoGainControl: true
+                        }
+                    });
 
-                        // Hide whichever modal started this
-                        if (modalHub) modalHub.hide();
-                        if (modalSimple) modalSimple.hide();
+                    // Hide whichever modal started this
+                    if (modalHub) modalHub.hide();
+                    if (modalSimple) modalSimple.hide();
 
-                        setTimeout(() => {
-                            if (modalRec) {
-                                modalRec.show();
-                                startRecording(stream);
-                            }
-                        }, 400);
+                    setTimeout(() => {
+                        if (modalRec) {
+                            modalRec.show();
+                            startRecording(stream);
+                        }
+                    }, 400);
 
-                    } catch (error) {
-                        alert("Erro microfone: " + error.message);
-                    } finally {
+                } catch (error) {
+                    alert("Erro microfone: " + error.message);
+                } finally {
+                    if (btnIniciarEscuta) {
                         btnIniciarEscuta.disabled = false;
                         btnIniciarEscuta.innerHTML = '<i class="bi bi-mic-fill me-1"></i> Iniciar Escuta (GoTalks)';
                     }
-                });
+                }
             }
 
             function startRecording(stream) {
