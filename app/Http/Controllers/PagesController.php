@@ -636,7 +636,9 @@ class PagesController extends Controller
                 $summary = data_get($jsonData, 'transcricao.resumo_clinico') ?? 
                            data_get($jsonData, 'anamnese.historia_atual') ?? 
                            data_get($jsonData, 'anamnese.historia_doenca_atual') ??
-                           (!empty($answer) ? "Análise concluída, mas sem resumo estruturado." : "Não foi possível gerar o resumo automático.");
+                           data_get($jsonData, 'resumo_clinico') ??
+                           data_get($jsonData, 'resumo') ??
+                           (!empty($answer) ? "Análise concluída sob demanda." : "Não foi possível gerar o resumo automático.");
 
                 // --- Diagnóstico ---
                 $diagnosis = data_get($jsonData, 'diagnostico.hipotese_principal') ?? '';

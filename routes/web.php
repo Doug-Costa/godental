@@ -519,22 +519,6 @@ Route::group(['middleware' => 'Language'], function () {
     // Remuneration
     Route::post('/remuneration/payroll', [\App\Http\Controllers\RemunerationController::class, 'generatePayroll'])->name('remuneration.payroll');
 
-    // Temporary debug route to trigger AI analysis manually
-    Route::get('/debug-ai/{id}', function($id) {
-    try {
-        $c = \App\Models\Consultation::find($id);
-        if (!$c) return "Consulta $id não encontrada.";
-        
-        Log::info("DEBUG: Manual AI trigger for ID " . $id);
-        $controller = new \App\Http\Controllers\PagesController();
-        $controller->forwardToGoIntelligence($c, $c->transcription);
-        
-        return "Disparo concluído para a consulta $id. Verifique os logs.";
-    } catch (\Exception $e) {
-        return "Erro no disparo: " . $e->getMessage();
-    }
-});
-
     // ESTOQUE
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
     Route::post('/inventory', [InventoryController::class, 'store'])->name('inventory.store');
