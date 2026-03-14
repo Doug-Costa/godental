@@ -464,8 +464,8 @@ class PagesController extends Controller
             }
 
             $consultation = \App\Models\Consultation::create([
-                'patient_id' => $patientId,
-                'clinical_case_id' => $request->clinical_case_id,
+                'patient_id' => $patientId ?: null,
+                'clinical_case_id' => $request->clinical_case_id ?: null,
                 'clinical_step' => $clinicalStep,
                 'patient_name' => $request->patient_name,
                 'patient_identifier' => $request->patient_identifier,
@@ -474,7 +474,7 @@ class PagesController extends Controller
                 'transcription' => 'Áudio em processamento... por favor recarregue a página em alguns minutos para visualizar.',
                 'status' => 'pending',
                 'user_id' => $doctorId,
-                'service_price_id' => $request->service_price_id,
+                'service_price_id' => $request->service_price_id ?: null,
                 'valor' => $request->valor ?? 0,
                 'requires_anamnesis' => $request->requires_anamnesis ? true : false,
             ]);
