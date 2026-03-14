@@ -303,12 +303,19 @@
                                 method: 'POST',
                                 body: new FormData(document.getElementById('formNovaConsulta')),
                                 headers: {
-                                    'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                                    'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                                    'Accept': 'application/json'
                                 }
                             });
                             if (!response.ok) {
-                                const errData = await response.json();
-                                throw new Error(errData.message || "Erro no servidor (" + response.status + ")");
+                                let errMsg = "Erro no servidor (" + response.status + ")";
+                                try {
+                                    const errData = await response.json();
+                                    errMsg = errData.message || errMsg;
+                                } catch (e) {
+                                    // Not a JSON response
+                                }
+                                throw new Error(errMsg);
                             }
 
                             const data = await response.json();

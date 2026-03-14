@@ -432,11 +432,14 @@ class ClinicalCaseController extends Controller
                 'db_id' => $consultation->id,
                 'anamnesis_url' => $anamnesisUrl,
             ]);
-        } catch (\Exception $e) {
-            \Log::error("Erro storeConsultation: " . $e->getMessage());
+        } catch (\Throwable $e) {
+            \Log::error("Erro storeConsultation: " . $e->getMessage(), [
+                'input' => $request->all(),
+                'trace' => $e->getTraceAsString()
+            ]);
             return response()->json([
                 'success' => false,
-                'message' => $e->getMessage()
+                'message' => 'Erro interno: ' . $e->getMessage()
             ], 500);
         }
     }
