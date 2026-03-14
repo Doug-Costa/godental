@@ -563,7 +563,9 @@ class PagesController extends Controller
 
                 if ($whisperResponse->successful()) {
                     $transcriptionResult = $whisperResponse->json();
-                    $realText = $transcriptionResult['text'] ?? '';
+                    Log::info("GoClinic: Whisper Response Structure", ['keys' => array_keys($transcriptionResult)]);
+                    
+                    $realText = $transcriptionResult['text'] ?? ($transcriptionResult['transcription'] ?? '');
                     
                     Log::info("GoClinic: Whisper Success for ID " . $consultation->id . ". Text length: " . strlen($realText));
 
@@ -572,10 +574,15 @@ class PagesController extends Controller
                         'status' => 'transcribed'
                     ]);
 
-                    // Forward to Go Intelligence
-                    $this->forwardToGoIntelligence($consultation, $realText);
+                    // Forward to Go Intelligence ONLY if we have text
+                    if (!empty($realText) && $realText !== 'Nenhum texto detectado.') {
+                        $this->forwardToGoIntelligence($consultation, $realText);
+                    } else {
+                        Log::warning("GoClinic: Skipping Go Intelligence for ID " . $consultation->id . " because transcription is empty.");
+                        $consultation->update(['status' => 'completed', 'ai_summary' => 'Nenhum conteúdo para analisar.']);
+                    }
                 } else {
-                    Log::error("GoClinic: Whisper Failed for ID " . $consultation->id . ". Status: " . $whisperResponse->status());
+                    Log::error("GoClinic: Whisper Failed for ID " . $consultation->id . ". Status: " . $whisperResponse->status() . " | Error: " . $whisperResponse->body());
                 }
             }
         } catch (\Exception $e) {
