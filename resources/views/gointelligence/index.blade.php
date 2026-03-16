@@ -489,8 +489,7 @@
     </div>
 
     <script>
-        const API_URL = '{{ $apiUrl }}';
-        const API_KEY = '{{ $apiKey }}';
+        const API_URL = '{{ route('gointelligence.proxy') }}';
         const goHomeState = document.getElementById('goHomeState');
         const chatArea = document.getElementById('chatArea');
         const chatInputContainer = document.getElementById('chatInputContainer');
@@ -657,10 +656,10 @@
                 const formData = new FormData();
                 formData.append('message', message);
 
-                const response = await fetch(`${API_URL}/chat/message`, {
+                const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: {
-                        'X-API-Key': API_KEY
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     },
                     body: formData
                 });

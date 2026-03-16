@@ -530,6 +530,7 @@ Route::group(['middleware' => 'Language'], function () {
     Route::view('/marketing', 'marketing.index')->name('marketing.index');
 
     // GO INTELLIGENCE (DENTINO AI)
+    Route::post('/gointelligence/proxy', [GoIntelligenceController::class, 'proxy'])->name('gointelligence.proxy');
     Route::get('/gointelligence', [GoIntelligenceController::class, 'index'])->name('gointelligence.index');
 
     // ANAMNESE OBRIGATÓRIA
