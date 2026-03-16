@@ -690,27 +690,40 @@
 
                     for (const line of lines) {
                         if (line.startsWith("data: ")) {
+                            const data = line.substring(6).trim();
+                            if (!data || data === "[DONE]") continue;
+
                             try {
-                                const jsonStr = line.substring(6).trim();
-                                if (!jsonStr) continue;
-                                const payload = JSON.parse(jsonStr);
+                                const payload = JSON.parse(data);
 
                                 if (payload.type === 'sources') {
-                                    allSources = payload.data.sources || [];
+                                    allSources = payload.data?.sources || payload.sources || [];
                                     renderSources(botSourcesArea, allSources, msgHash);
-                                } else if (payload.type === 'content' || typeof payload.data === 'string') {
-                                    const content = payload.data?.content || payload.data || "";
-                                    fullText += content;
-                                    typingIndicator.style.display = 'none';
+                                } else {
+                                    // Tenta extrair texto de vários formatos possíveis
+                                    const content = payload.data?.content || payload.data || payload.content || (typeof payload === 'string' ? payload : "");
                                     
-                                    // Update Text with citations
+                                    if (content && typeof content === 'string') {
+                                        fullText += content;
+                                        typingIndicator.style.display = 'none';
+                                        
+                                        // Update Text with citations
+                                        let formatted = fullText.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+                                        formatted = applyCitations(formatted, msgHash);
+                                        botResponseArea.innerHTML = formatted;
+                                        scrollToBottom();
+                                    }
+                                }
+                            } catch (e) {
+                                // Se não for JSON válido, tenta tratar como texto puro (fallback)
+                                if (data && typeof data === 'string') {
+                                    fullText += data;
+                                    typingIndicator.style.display = 'none';
                                     let formatted = fullText.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
                                     formatted = applyCitations(formatted, msgHash);
                                     botResponseArea.innerHTML = formatted;
                                     scrollToBottom();
                                 }
-                            } catch (e) {
-                                console.warn("Erro ao fazer parse de chunk:", e, line);
                             }
                         }
                     }
