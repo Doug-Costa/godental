@@ -40,23 +40,6 @@ class GoIntelligenceController extends Controller
 
         // endpoint de streaming sugerido pelo usuário
         $url = rtrim($apiUrl, '/') . '/query/stream';
-
-        return new \Symfony\Component\HttpFoundation\StreamedResponse(function() use ($url, $apiKey, $message) {
-            $ch = curl_init();
-            
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(['message' => $message]));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'X-API-Key: ' . $apiKey,
-                'Content-Type: application/x-www-form-urlencoded',
-            ]);
-            
-            // Timeout de conexão e total
-            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 300);
-            
-            // Função para repassar os chunks assim que chegarem
             curl_setopt($ch, CURLOPT_WRITEFUNCTION, function($ch, $data) {
                 echo $data;
                 if (ob_get_level() > 0) ob_flush();
