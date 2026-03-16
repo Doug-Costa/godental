@@ -630,16 +630,17 @@
                 return badges ? badges : match;
             });
 
+        function createEmptyBotMessage() {
+            const div = document.createElement('div');
+            div.className = 'message-row bot';
             div.innerHTML = `
-                                        <div style="width: 100%;">
-                                            ${badgeHtml}
-                                            ${reasoningHtml}
-                                            <div class="message-bubble">${formattedText}</div>
-                                            ${sourcesHtml}
-                                        </div>
-                                    `;
+                <div style="width: 100%;">
+                    <div class="message-bubble bot-response-area"></div>
+                </div>
+            `;
             chatArea.appendChild(div);
             scrollToBottom();
+            return div.querySelector('.bot-response-area');
         }
 
         function scrollToBottom() {
@@ -651,6 +652,9 @@
             messageInput.value = '';
             sendBtn.disabled = true;
             typingIndicator.style.display = 'block';
+
+            const botResponseArea = createEmptyBotMessage();
+            let fullContent = "";
 
             try {
                 const formData = new FormData();
@@ -668,12 +672,29 @@
                     throw new Error('Erro na comunicação com o servidor.');
                 }
 
-                const data = await response.json();
-                appendBotMessage(data.response, data.sources, data.confidence, data.reasoning_trace);
+                typingIndicator.style.display = 'none';
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    
+                    // Lógica simples: anexar texto. 
+                    // Se o seu FastAPI enviar JSON em cada chunk, precisaremos de um parser aqui.
+                    fullContent += chunk;
+                    
+                    // Atualiza a UI (com formatação básica de quebra de linha)
+                    botResponseArea.innerHTML = fullContent.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+                    scrollToBottom();
+                }
 
             } catch (error) {
                 console.error('Erro:', error);
-                appendBotMessage(`<span style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Ocorreu um erro ao processar sua consulta. Tente novamente mais tarde.</span>`);
+                botResponseArea.innerHTML = `<span style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Ocorreu um erro ao processar sua consulta. Tente novamente mais tarde.</span>`;
             } finally {
                 sendBtn.disabled = false;
                 typingIndicator.style.display = 'none';

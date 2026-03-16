@@ -30,38 +30,53 @@ class GoIntelligenceController extends Controller
     }
 
     /**
-     * Proxy request to Go Intelligence API.
+     * Proxy streaming request to Go Intelligence API.
      */
     public function proxy(Request $request)
     {
-        try {
-            $apiUrl = env('GOINTELLIGENCE_API_URL', 'http://host.docker.internal:8001');
-            $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
-            $message = $request->input('message');
+        $apiUrl = env('GOINTELLIGENCE_API_URL', 'http://host.docker.internal:8001');
+        $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
+        $message = $request->input('message');
 
-            $response = Http::timeout(260)
-                ->withHeaders(['X-API-Key' => $apiKey])
-                ->asForm()
-                ->post(rtrim($apiUrl, '/') . '/chat/message', [
-                    'message' => $message
-                ]);
+        // endpoint de streaming sugerido pelo usuário
+        $url = rtrim($apiUrl, '/') . '/query/stream';
 
-            if ($response->successful()) {
-                return response()->json($response->json());
+        return new \Symfony\Component\HttpFoundation\StreamedResponse(function() use ($url, $apiKey, $message) {
+            $ch = curl_init();
+            
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(['message' => $message]));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'X-API-Key: ' . $apiKey,
+                'Content-Type: application/x-www-form-urlencoded',
+            ]);
+            
+            // Timeout de conexão e total
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 300);
+            
+            // Função para repassar os chunks assim que chegarem
+            curl_setopt($ch, CURLOPT_WRITEFUNCTION, function($ch, $data) {
+                echo $data;
+                if (ob_get_level() > 0) ob_flush();
+                flush();
+                return strlen($data);
+            });
+
+            curl_exec($ch);
+            
+            if (curl_errno($ch)) {
+                Log::error('Go Intelligence Streaming Proxy Error: ' . curl_error($ch));
+                echo json_encode(['error' => true, 'response' => 'Erro na conexão de streaming: ' . curl_error($ch)]);
             }
-
-            Log::error('Go Intelligence Proxy Error: ' . $response->body());
-            return response()->json([
-                'response' => 'Erro ao processar sua solicitação com a inteligência.',
-                'error' => true
-            ], 500);
-
-        } catch (\Exception $e) {
-            Log::error('Go Intelligence Proxy Exception: ' . $e->getMessage());
-            return response()->json([
-                'response' => 'Erro interno ao processar a requisição.',
-                'error' => true
-            ], 500);
-        }
+            
+            curl_close($ch);
+        }, 200, [
+            'Content-Type' => 'text/event-stream',
+            'Cache-Control' => 'no-cache',
+            'Connection' => 'keep-alive',
+            'X-Accel-Buffering' => 'no', // Importante para Nginx
+        ]);
     }
 }
