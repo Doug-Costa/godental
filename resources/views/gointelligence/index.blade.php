@@ -629,6 +629,7 @@
 
                 return badges ? badges : match;
             });
+        }
 
         function createEmptyBotMessage() {
             const div = document.createElement('div');
