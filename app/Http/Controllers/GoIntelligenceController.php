@@ -46,7 +46,7 @@ class GoIntelligenceController extends Controller
             
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['message' => $message]));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['question' => $message]));
             curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'X-API-Key: ' . $apiKey,
                 'Content-Type: application/json',
