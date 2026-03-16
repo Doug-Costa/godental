@@ -654,53 +654,118 @@
             sendBtn.disabled = true;
             typingIndicator.style.display = 'block';
 
-            const botResponseArea = createEmptyBotMessage();
-            let fullContent = "";
+            const div = document.createElement('div');
+            div.className = 'message-row bot';
+            div.innerHTML = `<div style="width: 100%;"><div class="message-bubble bot-response-area"></div><div class="bot-sources-area"></div></div>`;
+            chatArea.appendChild(div);
+            scrollToBottom();
+
+            const botResponseArea = div.querySelector('.bot-response-area');
+            const botSourcesArea = div.querySelector('.bot-sources-area');
+            
+            let fullText = "";
+            let allSources = [];
+            let buffer = "";
 
             try {
-                const formData = new FormData();
-                formData.append('message', message);
-
                 const response = await fetch(API_URL, {
                     method: 'POST',
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    body: formData
+                    headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}', 'Accept': 'text/event-stream', 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message })
                 });
 
-                if (!response.ok) {
-                    throw new Error('Erro na comunicação com o servidor.');
-                }
-
-                typingIndicator.style.display = 'none';
+                if (!response.ok) throw new Error('Erro na comunicação com o servidor.');
 
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
-                
+                const msgHash = Math.random().toString(36).substr(2, 6);
+
                 while (true) {
                     const { done, value } = await reader.read();
                     if (done) break;
 
-                    const chunk = decoder.decode(value, { stream: true });
-                    
-                    // Lógica simples: anexar texto. 
-                    // Se o seu FastAPI enviar JSON em cada chunk, precisaremos de um parser aqui.
-                    fullContent += chunk;
-                    
-                    // Atualiza a UI (com formatação básica de quebra de linha)
-                    botResponseArea.innerHTML = fullContent.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-                    scrollToBottom();
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split("\n");
+                    buffer = lines.pop(); // Keep incomplete line in buffer
+
+                    for (const line of lines) {
+                        if (line.startsWith("data: ")) {
+                            try {
+                                const jsonStr = line.substring(6).trim();
+                                if (!jsonStr) continue;
+                                const payload = JSON.parse(jsonStr);
+
+                                if (payload.type === 'sources') {
+                                    allSources = payload.data.sources || [];
+                                    renderSources(botSourcesArea, allSources, msgHash);
+                                } else if (payload.type === 'content' || typeof payload.data === 'string') {
+                                    const content = payload.data?.content || payload.data || "";
+                                    fullText += content;
+                                    typingIndicator.style.display = 'none';
+                                    
+                                    // Update Text with citations
+                                    let formatted = fullText.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+                                    formatted = applyCitations(formatted, msgHash);
+                                    botResponseArea.innerHTML = formatted;
+                                    scrollToBottom();
+                                }
+                            } catch (e) {
+                                console.warn("Erro ao fazer parse de chunk:", e, line);
+                            }
+                        }
+                    }
                 }
 
             } catch (error) {
                 console.error('Erro:', error);
-                botResponseArea.innerHTML = `<span style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Ocorreu um erro ao processar sua consulta. Tente novamente mais tarde.</span>`;
+                botResponseArea.innerHTML = `<span style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Erro ao processar. Tente novamente.</span>`;
             } finally {
                 sendBtn.disabled = false;
                 typingIndicator.style.display = 'none';
                 messageInput.focus();
             }
+        }
+
+        function applyCitations(text, msgHash) {
+            return text.replace(/\[([\d,\s\-]+)\]/g, function (match, inner) {
+                const numbers = inner.split(/[,\-]/).map(n => n.trim()).filter(n => !isNaN(n) && n !== '');
+                let badges = '';
+                numbers.forEach(num => {
+                    badges += `<a href="#source-${msgHash}-${num}" class="citation-badge" title="Fonte ${num}" onclick="event.preventDefault(); document.getElementById('source-${msgHash}-${num}')?.scrollIntoView({behavior: 'smooth', block: 'center'});">${num}</a>`;
+                });
+                return badges ? badges : match;
+            });
+        }
+
+        function renderSources(container, sources, msgHash) {
+            if (!sources || sources.length === 0) {
+                container.innerHTML = "";
+                return;
+            }
+
+            let html = '<div class="mt-3"><h4 style="font-size: 0.75rem; font-weight: 600; color: #4b5563; text-transform: uppercase; margin-bottom: 0.5rem;">Fontes Consultadas</h4><div class="sources-grid">';
+            sources.forEach((src, index) => {
+                const num = index + 1;
+                const title = src.title || `Fonte ${num}`;
+                const snippet = src.brief || src.snippet || src.content_preview || '';
+                const journal = src.journal || src.journal_name || '';
+                const link = src.link || src.url || null;
+
+                html += `
+                    <div class="source-card ${link ? 'has-link' : ''}" id="source-${msgHash}-${num}" ${link ? `onclick="window.open('${link}', '_blank')"` : ''}>
+                        <div>
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 0.5rem;">
+                                <span class="source-card-number">${num}</span>
+                                <h5 class="source-card-title">${title}</h5>
+                            </div>
+                            <p class="source-card-snippet">${snippet}</p>
+                            ${journal ? `<div class="source-card-meta">${journal}</div>` : ''}
+                        </div>
+                        <div class="source-card-footer">${link ? 'Abrir Artigo' : 'Sem link'}</div>
+                    </div>`;
+            });
+            html += '</div></div>';
+            container.innerHTML = html;
         }
     </script>
 
