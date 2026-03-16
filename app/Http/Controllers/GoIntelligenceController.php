@@ -34,12 +34,21 @@ class GoIntelligenceController extends Controller
      */
     public function proxy(Request $request)
     {
-        $apiUrl = env('GOINTELLIGENCE_API_URL', 'http://host.docker.internal:8001');
-        $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
+        $version = $request->input('version', 'v3');
         $message = $request->input('message');
+        $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123');
 
-        // endpoint de streaming sugerido pelo usuário
+        // Seleção dinâmica da URL baseada na versão
+        if ($version === 'rag31') {
+            $apiUrl = env('GO_RAG_31_URL', 'http://187.77.48.78:8001');
+        } else {
+            $apiUrl = env('GOINTELLIGENCE_API_URL', 'http://187.77.48.78:8003');
+        }
+
+        // Endpoint de streaming
         $url = rtrim($apiUrl, '/') . '/query/stream';
+
+        Log::info("Go Intelligence Proxy: Routing request to {$version} at {$url}");
 
         return new \Symfony\Component\HttpFoundation\StreamedResponse(function() use ($url, $apiKey, $message) {
             $ch = curl_init();
@@ -53,11 +62,9 @@ class GoIntelligenceController extends Controller
                 'Accept: application/json',
             ]);
             
-            // Timeout de conexão e total
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
             curl_setopt($ch, CURLOPT_TIMEOUT, 300);
             
-            // Função para repassar os chunks assim que chegarem
             curl_setopt($ch, CURLOPT_WRITEFUNCTION, function($ch, $data) {
                 echo $data;
                 if (ob_get_level() > 0) ob_flush();
@@ -69,7 +76,7 @@ class GoIntelligenceController extends Controller
             
             if (curl_errno($ch)) {
                 Log::error('Go Intelligence Streaming Proxy Error: ' . curl_error($ch));
-                echo json_encode(['error' => true, 'response' => 'Erro na conexão de streaming: ' . curl_error($ch)]);
+                echo "data: " . json_encode(['type' => 'error', 'data' => 'Erro na conexão de streaming.']) . "\n\n";
             }
             
             curl_close($ch);
@@ -77,7 +84,7 @@ class GoIntelligenceController extends Controller
             'Content-Type' => 'text/event-stream',
             'Cache-Control' => 'no-cache',
             'Connection' => 'keep-alive',
-            'X-Accel-Buffering' => 'no', // Importante para Nginx
+            'X-Accel-Buffering' => 'no',
         ]);
     }
 }
