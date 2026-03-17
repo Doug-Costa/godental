@@ -439,18 +439,11 @@
             display: block;
         }
 
-        /* Animated Typing Indicator Inside Bar */
+        /* Animated Typing Indicator Inside Response Bubble */
         .typing-inside-wrapper {
-            position: absolute;
-            left: 20px;
-            right: 70px;
-            top: 0;
-            bottom: 0;
             display: none;
             align-items: center;
-            background: white;
-            border-radius: 50px;
-            z-index: 5;
+            background: transparent;
             pointer-events: none;
         }
 
@@ -498,14 +491,6 @@
 
             <form class="go-search-wrapper" id="homeSearchForm">
                 <textarea class="go-search-input" id="homeSearchInput" placeholder="Sua dúvida..." rows="1"></textarea>
-                <div class="typing-inside-wrapper" id="homeTypingInside">
-                    <span class="typing-text-inside">O GoIntelligence está analisando o acervo</span>
-                    <div class="magenta-dots-container">
-                        <div class="magenta-dot"></div>
-                        <div class="magenta-dot"></div>
-                        <div class="magenta-dot"></div>
-                    </div>
-                </div>
                 <button type="submit" class="go-search-btn"><i class="fa-solid fa-search"></i></button>
             </form>
 
@@ -537,14 +522,6 @@
         <div class="chat-input-container" id="chatInputContainer">
             <form id="chatForm" class="chat-input-wrapper">
                 <textarea id="messageInput" class="chat-input" placeholder="Pesquisar..." rows="1" autocomplete="off" required></textarea>
-                <div class="typing-inside-wrapper" id="chatTypingInside">
-                    <span class="typing-text-inside">O GoIntelligence está analisando o acervo</span>
-                    <div class="magenta-dots-container">
-                        <div class="magenta-dot"></div>
-                        <div class="magenta-dot"></div>
-                        <div class="magenta-dot"></div>
-                    </div>
-                </div>
                 <button type="submit" class="btn-send" id="sendBtn">
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -562,8 +539,17 @@
         const chatArea = document.getElementById('chatArea');
         const chatInputContainer = document.getElementById('chatInputContainer');
         const typingIndicator = document.getElementById('typingIndicator');
-        const homeTypingInside = document.getElementById('homeTypingInside');
-        const chatTypingInside = document.getElementById('chatTypingInside');
+
+        const TYPING_HTML = `
+            <div class="typing-inside-wrapper" style="display: flex;">
+                <span class="typing-text-inside">O GoIntelligence está analisando o acervo</span>
+                <div class="magenta-dots-container">
+                    <div class="magenta-dot"></div>
+                    <div class="magenta-dot"></div>
+                    <div class="magenta-dot"></div>
+                </div>
+            </div>
+        `;
 
         // Forms
         const homeSearchForm = document.getElementById('homeSearchForm');
@@ -608,12 +594,7 @@
             });
         }
 
-        function toggleTyping(show, isHome = false) {
-            if (isHome) {
-                homeTypingInside.style.display = show ? 'flex' : 'none';
-            } else {
-                chatTypingInside.style.display = show ? 'flex' : 'none';
-            }
+        function toggleTyping(show) {
             typingIndicator.style.display = show ? 'block' : 'none';
         }
 
@@ -752,11 +733,11 @@
             messageInput.value = '';
             messageInput.style.height = 'auto';
             sendBtn.disabled = true;
-            toggleTyping(true, isHomeSearch);
+            toggleTyping(true);
 
             const div = document.createElement('div');
             div.className = 'message-row bot';
-            div.innerHTML = `<div style="width: 100%;"><div class="message-bubble bot-response-area"></div><div class="bot-sources-area"></div></div>`;
+            div.innerHTML = `<div style="width: 100%;"><div class="message-bubble bot-response-area">${TYPING_HTML}</div><div class="bot-sources-area"></div></div>`;
             chatArea.appendChild(div);
             scrollToBottom();
 
@@ -840,7 +821,6 @@
             } finally {
                 sendBtn.disabled = false;
                 toggleTyping(false);
-                toggleTyping(false, true);
                 messageInput.focus();
             }
         }
