@@ -886,121 +886,222 @@
         });
     </script>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
+    
+    .dg-modal-container { font-family: 'DM Sans', sans-serif; }
+    .dg-modal-title { font-family: 'DM Serif Display', serif; }
+    
+    .dg-btn-primary {
+      background: #D4537E;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      letter-spacing: 0.02em;
+      transition: background 0.18s, transform 0.1s;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+    .dg-btn-primary:hover { background: #b8406a; transform: translateY(-1px); color: #fff; }
+    .dg-btn-primary:active { transform: scale(0.98); }
+    
+    .dg-btn-ghost {
+      background: transparent;
+      color: #888;
+      border: 0.5px solid #ddd;
+      border-radius: 8px;
+      padding: 11px 24px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      font-family: 'DM Sans', sans-serif;
+      width: 100%;
+    }
+    .dg-btn-ghost:hover { background: #f5f5f5; color: #444; }
+    
+    .dg-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 0.5px solid #f0f0f0;
+    }
+    .dg-feature-item:last-child { border-bottom: none; }
+    
+    .dg-icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #fdf0f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .dg-badge {
+      background: #fdf0f4;
+      color: #D4537E;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    
+    .dg-close-btn-round {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #f5f5f5;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #666;
+      font-size: 16px;
+      transition: background 0.15s, color 0.15s;
+      line-height: 1;
+      z-index: 10;
+      text-decoration: none;
+    }
+    .dg-close-btn-round:hover { background: #ececec; color: #222; }
+    
+    .dg-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin: 8px 0 4px;
+    }
+    
+    .dg-divider {
+      height: 0.5px;
+      background: #efefef;
+      margin: 16px 0;
+    }
+
+    /* Ajuste para o modal Bootstrap */
+    .premium-modal-content {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    .premium-modal-dialog {
+        max-width: 420px !important;
+    }
+</style>
+
 @if($modalConteudo !== 'permitido')
-    <!-- MODAL Assinar Plano (Local para GoIntelligence) -->
-    <div class="modal fade" id="go_vamosAssinar" tabindex="-1" aria-labelledby="go_vamosAssinarLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modalCentraliza">
-            <div class="modal-content conteudoDoModal modalRedondinho">
-                <div class="modal-head modal-head-Vantagem2">
-                    <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
-                    <div class="logo-modal">
-                        <img style="max-height:39px; margin: 20px auto; display:block " src="{{ asset('facelift2/img/go_logo_6.png') }}">
-                        <div class="modal-title tituloModal">
-                            <h5 class="modal-title" id="go_espacoParaAssinantesLabel">{{__("messages.ModMessgPlan")}}</h5>
-                            <p class="modal-title titulo-modalgeral1">{{__("messages.ModVenha")}}</p>
-                            <br>
-                            <p class="title-price-plan">{{__("messages.ModAssineApenas")}}</p>
-                            <h2 class="mb-3 title-price2-plan">R$ 89,00</h2>
-                            <br>
-                            <a href="https://www.dentalgo.com.br/checkoutnovo" class="btn btn-danger" alt="assinar">{{__("messages.ModAssine")}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body background-assinantemodal">
-                    <div class="row">
-                        <div class="col-md-12 modal-title-baixo"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-book-open"></i><h6 class="textoModal">{{__("messages.IconsBook")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-play"></i><h6 class="textoModal">{{__("messages.IconsVideo")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-house-laptop"></i><h6 class="textoModal">{{__("messages.IconsHouse")}}</h6></div>
-                    </div>
-                    <br><br>
-                    <div class="row">
-                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-calendar-days"></i><h6 class="textoModal">{{__("messages.IconsCalendar")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-tags"></i><h6 class="textoModal">{{__("messages.IconsDesc")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-medal"></i><h6 class="textoModal">{{__("messages.IconsMedal")}}</h6></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @php
+        $modalIds = ['go_vamosAssinar', 'go_espacoParaAssinantes', 'go_renoveOplano'];
+    @endphp
 
-    <!-- MODAL Espaço Para Assinantes (Local para GoIntelligence) -->
-    <div class="modal fade" id="go_espacoParaAssinantes" tabindex="-1" aria-labelledby="go_espacoParaAssinantesLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modalCentraliza">
-            <div class="modal-content conteudoDoModal modalRedondinho">
-                <div class="modal-head modal-head-Vantagem">
-                    <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
-                    <div class="logo-modal">
-                        <img style="max-height:39px; margin: 20px auto; display:block " src="{{ asset('facelift2/img/go_logo_6.png') }}">
-                        <div class="modal-title tituloModal">
-                            <h5 class="modal-title titulo-modalgeral" id="go_espacoParaAssinantesLabel">{{__("messages.ModTopo")}}</h5>
-                            <p class="modal-title titulo-modalgeral1">{{__("messages.ModVenha")}}</p>
-                            <br>
-                            <p class="title-price">{{__("messages.ModAssineApenas")}}</p>
-                            <h2 class="mb-3 title-price2">R$ 89,00</h2>
-                            <a href="https://www.dentalgo.com.br/checkoutnovo" class="btn btn-danger btn-modalmargin" alt="assinar">{{__("messages.ModAssine")}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body background-assinantemodal">
-                    <div class="row">
-                        <div class="col-md-12 modal-title-baixo"><a href="{{ route('logar') }}" style="item-align:center; font-family:prompt" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalLogin">{{__("messages.ModAssine2")}}</a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-book-open" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsBook")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-play" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsVideo")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-house-laptop" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsHouse")}}</h6></div>
-                    </div>
-                    <br><br>
-                    <div class="row">
-                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-calendar-days" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsCalendar")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-tags" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsDesc")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-medal" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsMedal")}}</h6></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @foreach($modalIds as $id)
+    <div class="modal fade" id="{{ $id }}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered premium-modal-dialog">
+            <div class="modal-content premium-modal-content">
+                <div class="dg-modal-container" style="background: #fff; border-radius: 16px; width: 100%; position: relative; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.22);">
+                    
+                    <a href="{{ route('facehome') }}" class="dg-close-btn-round">✕</a>
 
-    <!-- MODAL Renove o plano (Local para GoIntelligence) -->
-    <div class="modal fade" id="go_renoveOplano" tabindex="-1" aria-labelledby="go_renoveOplanoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modalCentraliza">
-            <div class="modal-content conteudoDoModal modalRedondinho">
-                <div class="modal-head modal-head-Vantagem">
-                    <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
-                    <div class="logo-modal">
-                        <img style="max-height:39px; margin: 20px auto; display:block " src="{{ asset('facelift2/img/go_logo_6.png') }}">
-                        <div class="modal-title tituloModal">
-                            <h5 class="modal-title" id="go_espacoParaAssinantesLabel">{{__("messages.ModTopoVenceu")}}</h5>
-                            <p class="modal-title">{{__("messages.ModRenove")}}</p>
-                            <br>
-                            <p class="title-price">{{__("messages.ModAssineApenas")}}</p>
-                            <h2 class="mb-3 title-price2">R$ 89,00</h2>
-                            <a href="https://www.dentalgo.com.br/checkoutnovo" class="btn btn-danger" alt="assinar">{{__("messages.ModRenovar")}}</a>
+                    <div style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 60%, #3d1a2e 100%); padding: 32px 28px 28px; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: -40px; right: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(212,83,126,0.12);"></div>
+                        <div style="position: absolute; bottom: -20px; left: 20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(212,83,126,0.08);"></div>
+
+                        <div style="position: relative;">
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+                                <span style="font-family: 'DM Serif Display', serif; font-size: 22px; color: #fff; letter-spacing: -0.01em;">Dental<span style="color: #D4537E;">Go</span></span>
+                                <span style="width: 6px; height: 6px; border-radius: 50%; background: #D4537E; margin-top: 2px;"></span>
+                            </div>
+
+                            @if($id === 'go_renoveOplano')
+                                <span class="dg-badge" style="background: rgba(212,83,126,0.2); color: #f48fb1; display: inline-block; margin-bottom: 12px;">Plano Expirado</span>
+                                <h2 class="dg-modal-title" style="color: #fff; font-size: 24px; margin: 0 0 8px; line-height: 1.3; font-weight: 400;">Renove seu acesso à ciência odontológica</h2>
+                            @elseif($id === 'go_espacoParaAssinantes')
+                                <span class="dg-badge" style="background: rgba(212,83,126,0.2); color: #f48fb1; display: inline-block; margin-bottom: 12px;">Área Restrita</span>
+                                <h2 class="dg-modal-title" style="color: #fff; font-size: 24px; margin: 0 0 8px; line-height: 1.3; font-weight: 400;">Espaço exclusivo para assinantes</h2>
+                            @else
+                                <span class="dg-badge" style="background: rgba(212,83,126,0.2); color: #f48fb1; display: inline-block; margin-bottom: 12px;">Acesso Premium</span>
+                                <h2 class="dg-modal-title" style="color: #fff; font-size: 24px; margin: 0 0 8px; line-height: 1.3; font-weight: 400;">Mais de 25 anos de ciência odontológica</h2>
+                            @endif
+                            
+                            <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin: 0; line-height: 1.6;">Acesse artigos, vídeos e conteúdos com especialistas renomados.</p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-body background-assinantemodal">
-                    <div class="row">
-                        <div class="col-md-12 modal-title-baixo"><button style="item-align:center; font-family:prompt" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Dúvidas, Fale Conosco</button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-book-open"></i><h6 class="textoModal">{{__("messages.IconsBook")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-play"></i><h6 class="textoModal">{{__("messages.IconsVideo")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-house-laptop"></i><h6 class="textoModal">{{__("messages.IconsHouse")}}</h6></div>
-                    </div>
-                    <br><br>
-                    <div class="row">
-                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-calendar-days"></i><h6 class="textoModal">{{__("messages.IconsCalendar")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-tags"></i><h6 class="textoModal">{{__("messages.IconsDesc")}}</h6></div>
-                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-medal"></i><h6 class="textoModal">{{__("messages.IconsMedal")}}</h6></div>
+
+                    <div style="padding: 24px 28px 28px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                            <div>
+                                <p style="font-size: 12px; color: #999; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.08em;">Assine por apenas</p>
+                                <div class="dg-price-row">
+                                    <span style="font-size: 13px; color: #444; font-weight: 500;">R$</span>
+                                    <span style="font-size: 36px; font-weight: 700; color: #1a1a2e; font-family: 'DM Serif Display', serif; line-height: 1;">89</span>
+                                    <span style="font-size: 14px; color: #888;">,00/mês</span>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="background: #eafaf1; color: #2d8a5e; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.04em;">Cancele quando quiser</span>
+                            </div>
+                        </div>
+
+                        <div class="dg-divider"></div>
+
+                        <div style="margin-bottom: 20px;">
+                            <div class="dg-feature-item">
+                                <div class="dg-icon-wrap">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                </div>
+                                <div>
+                                    <p style="font-size: 14px; font-weight: 500; color: #1a1a2e; margin: 0 0 2px;">Acervo de artigos científicos</p>
+                                    <p style="font-size: 12px; color: #999; margin: 0;">Mais de 25 anos de publicações indexadas</p>
+                                </div>
+                            </div>
+                            <div class="dg-feature-item">
+                                <div class="dg-icon-wrap">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                </div>
+                                <div>
+                                    <p style="font-size: 14px; font-weight: 500; color: #1a1a2e; margin: 0 0 2px;">Vídeos por especialidade</p>
+                                    <p style="font-size: 12px; color: #999; margin: 0;">Conteúdos de especialistas renomados</p>
+                                </div>
+                            </div>
+                            <div class="dg-feature-item">
+                                <div class="dg-icon-wrap">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4537E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                </div>
+                                <div>
+                                    <p style="font-size: 14px; font-weight: 500; color: #1a1a2e; margin: 0 0 2px;">Acesse de qualquer dispositivo</p>
+                                    <p style="font-size: 12px; color: #999; margin: 0;">Web, app iOS e Android</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.dentalgo.com.br/checkoutnovo" class="dg-btn-primary">Começar agora</a>
+
+                        <div style="margin-top: 14px; text-align: center;">
+                            @if($id === 'go_espacoParaAssinantes')
+                                <button class="dg-btn-ghost" data-bs-toggle="modal" data-bs-target="#modalLogin">Já sou assinante — fazer login</button>
+                            @else
+                                <p style="font-size: 12px; color: #999; margin: 0;">Pagamento seguro via DentalPress</p>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 @endif
 
 @endsection
