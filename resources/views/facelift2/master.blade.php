@@ -437,7 +437,7 @@ if (null !== Request()->segment(5)) {
       <div class="modal-content conteudoDoModal modalRedondinho">
 
         <div class="modal-head modal-head-Vantagem2">
-          <a href="{{ route('faceindex') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
+          <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
 
           <div class="logo-modal">
 
@@ -571,7 +571,7 @@ if (null !== Request()->segment(5)) {
       <div class="modal-content conteudoDoModal modalRedondinho">
 
         <div class="modal-head modal-head-Vantagem">
-          <a href="{{ route('faceindex') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
+          <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
 
           <div class="logo-modal">
 
