@@ -16,7 +16,8 @@ class GoIntelligenceController extends Controller
     public function index()
     {
         // Get API URL and Key from env
-        $apiUrl = env('GOINTELLIGENCE_API_URL', 'http://host.docker.internal:8001');
+        // Usamos a URL externa para permitir acesso direto via Browser (HTTPS)
+        $apiUrl = env('GOINTELLIGENCE_EXTERNAL_URL', 'https://api.dentalgo.cloud:8004');
         $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123'); // API key for Dentino RAG
 
         // Em produção, isso virgaria do auth()->user()

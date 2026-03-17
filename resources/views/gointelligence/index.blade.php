@@ -489,7 +489,8 @@
     </div>
 
     <script>
-        const API_URL = '{{ route('gointelligence.proxy') }}';
+        const API_URL = '{{ $apiUrl }}';
+        const API_KEY = '{{ $apiKey }}';
         const goHomeState = document.getElementById('goHomeState');
         const chatArea = document.getElementById('chatArea');
         const chatInputContainer = document.getElementById('chatInputContainer');
@@ -668,13 +669,18 @@
             let buffer = "";
 
             try {
-                const response = await fetch(API_URL, {
+                // Direct request to the external AI API
+                const response = await fetch(`${API_URL.replace(/\/$/, '')}/query/stream`, {
                     method: 'POST',
-                    headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}', 'Accept': 'text/event-stream', 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: message })
+                    headers: { 
+                        'Accept': 'text/event-stream', 
+                        'Content-Type': 'application/json',
+                        'X-API-Key': API_KEY
+                    },
+                    body: JSON.stringify({ question: message })
                 });
 
-                if (!response.ok) throw new Error('Erro na comunicação com o servidor.');
+                if (!response.ok) throw new Error('Erro na comunicação direta com a API.');
 
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
@@ -772,7 +778,10 @@
                                 <h5 class="source-card-title">${title}</h5>
                             </div>
                             <p class="source-card-snippet">${snippet}</p>
-                            ${journal ? `<div class="source-card-meta">${journal}</div>` : ''}
+                            <div class="source-card-meta">
+                                ${src.authors ? `<span style="display:block; margin-bottom: 2px;"><b>Autores:</b> ${src.authors}</span>` : ''}
+                                ${journal ? `<span>${journal}</span>` : ''}
+                            </div>
                         </div>
                         <div class="source-card-footer">${link ? 'Abrir Artigo' : 'Sem link'}</div>
                     </div>`;
