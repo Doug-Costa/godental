@@ -437,7 +437,7 @@ if (null !== Request()->segment(5)) {
       <div class="modal-content conteudoDoModal modalRedondinho">
 
         <div class="modal-head modal-head-Vantagem2">
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="top: 40px; position:fixed; right: 10px;"></button> -->
+          <a href="{{ route('faceindex') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
 
           <div class="logo-modal">
 
@@ -504,8 +504,8 @@ if (null !== Request()->segment(5)) {
       <div class="modal-content conteudoDoModal modalRedondinho">
 
         <div class="modal-head modal-head-Vantagem">
-          <button type="button" class=" btn-close" data-bs-dismiss="modal" aria-label="Close"
-            style="top: 40px; position:fixed; right: 20px; color: #fff !important;"></button>
+          <a href="{{ route('faceindex') }}" class="btn-close" aria-label="Close"
+            style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
 
           <div class="logo-modal">
 
@@ -571,7 +571,7 @@ if (null !== Request()->segment(5)) {
       <div class="modal-content conteudoDoModal modalRedondinho">
 
         <div class="modal-head modal-head-Vantagem">
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="top: 40px; position:fixed; right: 10px;"></button> -->
+          <a href="{{ route('faceindex') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
 
           <div class="logo-modal">
 
@@ -590,7 +590,7 @@ if (null !== Request()->segment(5)) {
           </div>
         </div>
 
-        <div class="modal-body">
+        <div class="modal-body background-assinantemodal">
           <div class="row">
             <div class="col-md-12 modal-title-baixo"><button style="item-align:center; font-family:prompt"
                 class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Dúvidas, Fale

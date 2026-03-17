@@ -63,6 +63,9 @@
             outline: none;
             transition: all 0.3s ease;
             color: #333;
+            resize: none;
+            overflow-y: hidden;
+            min-height: 56px;
         }
 
         .go-search-input:focus {
@@ -207,6 +210,11 @@
             outline: none;
             font-size: 1rem;
             color: #333;
+            resize: none;
+            overflow-y: hidden;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
         }
 
         .btn-send {
@@ -432,7 +440,7 @@
         }
     </style>
 
-    <div class="chat-main">
+    <div class="chat-main" @if($modalConteudo !== 'permitido') style="filter: blur(8px); pointer-events: none; user-select: none;" @endif>
         <!-- HERO STATE -->
         <div class="go-home-hero" id="goHomeState">
             <!-- Using the target logo mentioned -->
@@ -445,7 +453,7 @@
                 ciência da odontologia</p>
 
             <form class="go-search-wrapper" id="homeSearchForm">
-                <input type="text" class="go-search-input" id="homeSearchInput" placeholder="Sua dúvida...">
+                <textarea class="go-search-input" id="homeSearchInput" placeholder="Sua dúvida..." rows="1"></textarea>
                 <button type="submit" class="go-search-btn"><i class="fa-solid fa-search"></i></button>
             </form>
 
@@ -476,8 +484,7 @@
 
         <div class="chat-input-container" id="chatInputContainer">
             <form id="chatForm" class="chat-input-wrapper">
-                <input type="text" id="messageInput" class="chat-input" placeholder="Pesquisar..." autocomplete="off"
-                    required>
+                <textarea id="messageInput" class="chat-input" placeholder="Pesquisar..." rows="1" autocomplete="off" required></textarea>
                 <button type="submit" class="btn-send" id="sendBtn">
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -523,6 +530,24 @@
             const text = messageInput.value.trim();
             if (text) sendMessage(text);
         });
+
+        // Auto-resize and Enter handling
+        function setupAutoResize(textarea, form) {
+            textarea.addEventListener('input', () => {
+                textarea.style.height = 'auto';
+                textarea.style.height = (textarea.scrollHeight) + 'px';
+            });
+
+            textarea.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    form.dispatchEvent(new Event('submit'));
+                }
+            });
+        }
+
+        setupAutoResize(homeSearchInput, homeSearchForm);
+        setupAutoResize(messageInput, chatForm);
 
         function appendUserMessage(text) {
             const div = document.createElement('div');
@@ -789,6 +814,21 @@
             html += '</div></div>';
             container.innerHTML = html;
         }
+
+        // Controle de Acesso: Dispara o modal se não estiver permitido
+        document.addEventListener('DOMContentLoaded', function() {
+            @if($modalConteudo !== 'permitido')
+                const modalId = '{{ $modalConteudo }}';
+                const modalElement = document.getElementById(modalId);
+                if (modalElement) {
+                    const modal = new bootstrap.Modal(modalElement, {
+                        backdrop: 'static',
+                        keyboard: false
+                    });
+                    modal.show();
+                }
+            @endif
+        });
     </script>
 
 @endsection

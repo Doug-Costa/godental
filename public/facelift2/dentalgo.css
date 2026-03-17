@@ -1174,8 +1174,7 @@ modal */
   opacity: 0.95;
   color: #666666;
   z-index: 1;
-
-
+  overflow: hidden; /* Garante que o fundo não 'vaze' o arredondamento */
 }
 
 /* ===========================
@@ -1299,8 +1298,9 @@ modal */
 =========================== */
 
 .modalRedondinho {
-  border-radius: 30px;
+  border-radius: 30px !important;
   background: transparent !important;
+  overflow: hidden;
 }
 
 .modalRedondinho1 {
@@ -1370,6 +1370,8 @@ modal */
 
 .background-assinantemodal {
   background-color: #212121;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 /* ===========================
