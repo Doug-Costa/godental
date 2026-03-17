@@ -438,6 +438,50 @@
         .reasoning-body.open {
             display: block;
         }
+
+        /* Animated Typing Indicator Inside Bar */
+        .typing-inside-wrapper {
+            position: absolute;
+            left: 20px;
+            right: 70px;
+            top: 0;
+            bottom: 0;
+            display: none;
+            align-items: center;
+            background: white;
+            border-radius: 50px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .typing-text-inside {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            margin-right: 8px;
+            font-style: italic;
+        }
+
+        .magenta-dots-container {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .magenta-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #a2123a; /* Deep Magenta */
+            border-radius: 50%;
+            animation: dot-pulse 1.4s infinite ease-in-out both;
+        }
+
+        .magenta-dot:nth-child(1) { animation-delay: -0.32s; }
+        .magenta-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes dot-pulse {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
     </style>
 
     <div class="chat-main" @if($modalConteudo !== 'permitido') style="filter: blur(8px); pointer-events: none; user-select: none;" @endif>
@@ -454,6 +498,14 @@
 
             <form class="go-search-wrapper" id="homeSearchForm">
                 <textarea class="go-search-input" id="homeSearchInput" placeholder="Sua dúvida..." rows="1"></textarea>
+                <div class="typing-inside-wrapper" id="homeTypingInside">
+                    <span class="typing-text-inside">O GoIntelligence está analisando o acervo</span>
+                    <div class="magenta-dots-container">
+                        <div class="magenta-dot"></div>
+                        <div class="magenta-dot"></div>
+                        <div class="magenta-dot"></div>
+                    </div>
+                </div>
                 <button type="submit" class="go-search-btn"><i class="fa-solid fa-search"></i></button>
             </form>
 
@@ -485,6 +537,14 @@
         <div class="chat-input-container" id="chatInputContainer">
             <form id="chatForm" class="chat-input-wrapper">
                 <textarea id="messageInput" class="chat-input" placeholder="Pesquisar..." rows="1" autocomplete="off" required></textarea>
+                <div class="typing-inside-wrapper" id="chatTypingInside">
+                    <span class="typing-text-inside">O GoIntelligence está analisando o acervo</span>
+                    <div class="magenta-dots-container">
+                        <div class="magenta-dot"></div>
+                        <div class="magenta-dot"></div>
+                        <div class="magenta-dot"></div>
+                    </div>
+                </div>
                 <button type="submit" class="btn-send" id="sendBtn">
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -502,6 +562,8 @@
         const chatArea = document.getElementById('chatArea');
         const chatInputContainer = document.getElementById('chatInputContainer');
         const typingIndicator = document.getElementById('typingIndicator');
+        const homeTypingInside = document.getElementById('homeTypingInside');
+        const chatTypingInside = document.getElementById('chatTypingInside');
 
         // Forms
         const homeSearchForm = document.getElementById('homeSearchForm');
@@ -544,6 +606,15 @@
                     form.dispatchEvent(new Event('submit'));
                 }
             });
+        }
+
+        function toggleTyping(show, isHome = false) {
+            if (isHome) {
+                homeTypingInside.style.display = show ? 'flex' : 'none';
+            } else {
+                chatTypingInside.style.display = show ? 'flex' : 'none';
+            }
+            typingIndicator.style.display = show ? 'block' : 'none';
         }
 
         setupAutoResize(homeSearchInput, homeSearchForm);
@@ -675,10 +746,13 @@
         }
 
         async function sendMessage(message) {
-            appendUserMessage(message);
+            const isHomeSearch = goHomeState.style.display !== 'none';
+            if (!isHomeSearch) appendUserMessage(message);
+            
             messageInput.value = '';
+            messageInput.style.height = 'auto';
             sendBtn.disabled = true;
-            typingIndicator.style.display = 'block';
+            toggleTyping(true, isHomeSearch);
 
             const div = document.createElement('div');
             div.className = 'message-row bot';
@@ -765,7 +839,8 @@
                 botResponseArea.innerHTML = `<span style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Erro ao processar. Tente novamente.</span>`;
             } finally {
                 sendBtn.disabled = false;
-                typingIndicator.style.display = 'none';
+                toggleTyping(false);
+                toggleTyping(false, true);
                 messageInput.focus();
             }
         }
