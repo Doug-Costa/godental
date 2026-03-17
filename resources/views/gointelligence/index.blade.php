@@ -1020,9 +1020,8 @@
                         <div style="position: absolute; bottom: -20px; left: 20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(212,83,126,0.08);"></div>
 
                         <div style="position: relative;">
-                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
-                                <span style="font-family: 'DM Serif Display', serif; font-size: 22px; color: #fff; letter-spacing: -0.01em;">Dental<span style="color: #D4537E;">Go</span></span>
-                                <span style="width: 6px; height: 6px; border-radius: 50%; background: #D4537E; margin-top: 2px;"></span>
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                                <img src="{{ asset('facelift2/img/assinatura-horizontal---BRANCA.png') }}" style="max-height: 28px; width: auto;">
                             </div>
 
                             @if($id === 'go_renoveOplano')
