@@ -999,6 +999,14 @@
     }
     .premium-modal-dialog {
         max-width: 420px !important;
+        margin-top: 60px !important; /* Posicionamento proximo ao topo */
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .premium-modal-content {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
     }
 </style>
 
@@ -1009,7 +1017,7 @@
 
     @foreach($modalIds as $id)
     <div class="modal fade" id="{{ $id }}" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered premium-modal-dialog">
+        <div class="modal-dialog premium-modal-dialog">
             <div class="modal-content premium-modal-content">
                 <div class="dg-modal-container" style="background: #fff; border-radius: 16px; width: 100%; position: relative; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.22);">
                     
