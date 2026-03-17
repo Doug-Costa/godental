@@ -17,7 +17,7 @@ class GoIntelligenceController extends Controller
     {
         // Get API URL and Key from env
         // Usamos a URL externa para permitir acesso direto via Browser (HTTPS)
-        $apiUrl = env('GOINTELLIGENCE_EXTERNAL_URL', 'https://api.dentalgo.cloud:8004');
+        $apiUrl = env('GOINTELLIGENCE_EXTERNAL_URL', 'https://api.dentalgo.cloud');
         $apiKey = env('GOINTELLIGENCE_API_KEY', 'test_key_123'); // API key for Dentino RAG
 
         // Lógica de permissão similar a revista.blade.php
@@ -31,19 +31,18 @@ class GoIntelligenceController extends Controller
                 $isValidUntil = session()->get('usuario')->subscription->isValidUntil ?? null;
                 if ($isValidUntil) {
                     $dataVencimento = explode('UTC', $isValidUntil)[0];
-                    $modalConteudo = ($dataVencimento >= date("Y-m-d")) ? 'permitido' : 'renoveOplano';
+                    $modalConteudo = (trim($dataVencimento) >= date("Y-m-d")) ? 'permitido' : 'renoveOplano';
                 } else {
                     $modalConteudo = 'renoveOplano';
                 }
             } elseif ($permissao == 'naotemSemPlano') {
                 $modalConteudo = 'vamosAssinar';
             } elseif (is_array($permissao)) {
-                // Se é um array de IDs de coleções, verificamos se tem acesso a alguma das principais ou se o plano é premium
-                // Para simplificar e garantir acesso aos assinantes, se o array não estiver vazio consideraremos permitido ou checaremos IDs específicos
-                // No caso do GoIntelligence, se o usuário tem alguma permissão ativa (é assinante), permitimos.
+                // Se o array de permissões contém IDs de coleções, verificamos se o usuário possui acesso ativo.
+                // Como regra geral para GoIntelligence (que utiliza a base total), qualquer assinatura ativa permite o acesso.
                 $modalConteudo = !empty($permissao) ? 'permitido' : 'espacoParaAssinantes';
             } else {
-                $modalConteudo = 'espacoParaAssinantes';
+                $modalConteudo = 'permitido'; // Default para quando existe token mas permissão não é explicitamente bloqueada
             }
         } else {
             $modalConteudo = 'espacoParaAssinantes';
@@ -80,9 +79,9 @@ class GoIntelligenceController extends Controller
 
         Log::info("Go Intelligence Proxy: Routing request to {$version} at {$url}");
 
-        return new \Symfony\Component\HttpFoundation\StreamedResponse(function() use ($url, $apiKey, $message) {
+        return new \Symfony\Component\HttpFoundation\StreamedResponse(function () use ($url, $apiKey, $message) {
             $ch = curl_init();
-            
+
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['question' => $message]));
@@ -91,24 +90,25 @@ class GoIntelligenceController extends Controller
                 'Content-Type: application/json',
                 'Accept: application/json',
             ]);
-            
+
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
             curl_setopt($ch, CURLOPT_TIMEOUT, 300);
-            
-            curl_setopt($ch, CURLOPT_WRITEFUNCTION, function($ch, $data) {
+
+            curl_setopt($ch, CURLOPT_WRITEFUNCTION, function ($ch, $data) {
                 echo $data;
-                if (ob_get_level() > 0) ob_flush();
+                if (ob_get_level() > 0)
+                    ob_flush();
                 flush();
                 return strlen($data);
             });
 
             curl_exec($ch);
-            
+
             if (curl_errno($ch)) {
                 Log::error('Go Intelligence Streaming Proxy Error: ' . curl_error($ch));
                 echo "data: " . json_encode(['type' => 'error', 'data' => 'Erro na conexão de streaming.']) . "\n\n";
             }
-            
+
             curl_close($ch);
         }, 200, [
             'Content-Type' => 'text/event-stream',
