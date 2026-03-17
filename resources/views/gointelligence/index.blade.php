@@ -886,4 +886,121 @@
         });
     </script>
 
+@if($modalConteudo !== 'permitido')
+    <!-- MODAL Assinar Plano (Local para GoIntelligence) -->
+    <div class="modal fade" id="go_vamosAssinar" tabindex="-1" aria-labelledby="go_vamosAssinarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modalCentraliza">
+            <div class="modal-content conteudoDoModal modalRedondinho">
+                <div class="modal-head modal-head-Vantagem2">
+                    <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
+                    <div class="logo-modal">
+                        <img style="max-height:39px; margin: 20px auto; display:block " src="{{ asset('facelift2/img/go_logo_6.png') }}">
+                        <div class="modal-title tituloModal">
+                            <h5 class="modal-title" id="go_espacoParaAssinantesLabel">{{__("messages.ModMessgPlan")}}</h5>
+                            <p class="modal-title titulo-modalgeral1">{{__("messages.ModVenha")}}</p>
+                            <br>
+                            <p class="title-price-plan">{{__("messages.ModAssineApenas")}}</p>
+                            <h2 class="mb-3 title-price2-plan">R$ 89,00</h2>
+                            <br>
+                            <a href="https://www.dentalgo.com.br/checkoutnovo" class="btn btn-danger" alt="assinar">{{__("messages.ModAssine")}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body background-assinantemodal">
+                    <div class="row">
+                        <div class="col-md-12 modal-title-baixo"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-book-open"></i><h6 class="textoModal">{{__("messages.IconsBook")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-play"></i><h6 class="textoModal">{{__("messages.IconsVideo")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-house-laptop"></i><h6 class="textoModal">{{__("messages.IconsHouse")}}</h6></div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-calendar-days"></i><h6 class="textoModal">{{__("messages.IconsCalendar")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-tags"></i><h6 class="textoModal">{{__("messages.IconsDesc")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-medal"></i><h6 class="textoModal">{{__("messages.IconsMedal")}}</h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL Espaço Para Assinantes (Local para GoIntelligence) -->
+    <div class="modal fade" id="go_espacoParaAssinantes" tabindex="-1" aria-labelledby="go_espacoParaAssinantesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modalCentraliza">
+            <div class="modal-content conteudoDoModal modalRedondinho">
+                <div class="modal-head modal-head-Vantagem">
+                    <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
+                    <div class="logo-modal">
+                        <img style="max-height:39px; margin: 20px auto; display:block " src="{{ asset('facelift2/img/go_logo_6.png') }}">
+                        <div class="modal-title tituloModal">
+                            <h5 class="modal-title titulo-modalgeral" id="go_espacoParaAssinantesLabel">{{__("messages.ModTopo")}}</h5>
+                            <p class="modal-title titulo-modalgeral1">{{__("messages.ModVenha")}}</p>
+                            <br>
+                            <p class="title-price">{{__("messages.ModAssineApenas")}}</p>
+                            <h2 class="mb-3 title-price2">R$ 89,00</h2>
+                            <a href="https://www.dentalgo.com.br/checkoutnovo" class="btn btn-danger btn-modalmargin" alt="assinar">{{__("messages.ModAssine")}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body background-assinantemodal">
+                    <div class="row">
+                        <div class="col-md-12 modal-title-baixo"><a href="{{ route('logar') }}" style="item-align:center; font-family:prompt" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalLogin">{{__("messages.ModAssine2")}}</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-book-open" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsBook")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-play" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsVideo")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-house-laptop" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsHouse")}}</h6></div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-calendar-days" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsCalendar")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-tags" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsDesc")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-medal" style="color: #d6d4ca"></i><h6 class="textoModal">{{__("messages.IconsMedal")}}</h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL Renove o plano (Local para GoIntelligence) -->
+    <div class="modal fade" id="go_renoveOplano" tabindex="-1" aria-labelledby="go_renoveOplanoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modalCentraliza">
+            <div class="modal-content conteudoDoModal modalRedondinho">
+                <div class="modal-head modal-head-Vantagem">
+                    <a href="{{ route('facehome') }}" class="btn-close" aria-label="Close" style="top: 20px; right: 20px; position: absolute; filter: brightness(0) invert(1);"></a>
+                    <div class="logo-modal">
+                        <img style="max-height:39px; margin: 20px auto; display:block " src="{{ asset('facelift2/img/go_logo_6.png') }}">
+                        <div class="modal-title tituloModal">
+                            <h5 class="modal-title" id="go_espacoParaAssinantesLabel">{{__("messages.ModTopoVenceu")}}</h5>
+                            <p class="modal-title">{{__("messages.ModRenove")}}</p>
+                            <br>
+                            <p class="title-price">{{__("messages.ModAssineApenas")}}</p>
+                            <h2 class="mb-3 title-price2">R$ 89,00</h2>
+                            <a href="https://www.dentalgo.com.br/checkoutnovo" class="btn btn-danger" alt="assinar">{{__("messages.ModRenovar")}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body background-assinantemodal">
+                    <div class="row">
+                        <div class="col-md-12 modal-title-baixo"><button style="item-align:center; font-family:prompt" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Dúvidas, Fale Conosco</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-book-open"></i><h6 class="textoModal">{{__("messages.IconsBook")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-play"></i><h6 class="textoModal">{{__("messages.IconsVideo")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-house-laptop"></i><h6 class="textoModal">{{__("messages.IconsHouse")}}</h6></div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-4 iconeVantagem"> <i class="fa-solid fa-calendar-days"></i><h6 class="textoModal">{{__("messages.IconsCalendar")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-tags"></i><h6 class="textoModal">{{__("messages.IconsDesc")}}</h6></div>
+                        <div class="col-4 iconeVantagem"><i class="fa-solid fa-medal"></i><h6 class="textoModal">{{__("messages.IconsMedal")}}</h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
 @endsection

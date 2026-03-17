@@ -26,26 +26,26 @@ class GoIntelligenceController extends Controller
 
         if (session()->has('token')) {
             if ($permissao == 'naotem') {
-                $modalConteudo = 'espacoParaAssinantes';
+                $modalConteudo = 'go_espacoParaAssinantes';
             } elseif ($permissao == 'naotemVencido') {
                 $isValidUntil = session()->get('usuario')->subscription->isValidUntil ?? null;
                 if ($isValidUntil) {
                     $dataVencimento = explode('UTC', $isValidUntil)[0];
-                    $modalConteudo = (trim($dataVencimento) >= date("Y-m-d")) ? 'permitido' : 'renoveOplano';
+                    $modalConteudo = (trim($dataVencimento) >= date("Y-m-d")) ? 'permitido' : 'go_renoveOplano';
                 } else {
-                    $modalConteudo = 'renoveOplano';
+                    $modalConteudo = 'go_renoveOplano';
                 }
             } elseif ($permissao == 'naotemSemPlano') {
-                $modalConteudo = 'vamosAssinar';
+                $modalConteudo = 'go_vamosAssinar';
             } elseif (is_array($permissao)) {
                 // Se o array de permissões contém IDs de coleções, verificamos se o usuário possui acesso ativo.
                 // Como regra geral para GoIntelligence (que utiliza a base total), qualquer assinatura ativa permite o acesso.
-                $modalConteudo = !empty($permissao) ? 'permitido' : 'espacoParaAssinantes';
+                $modalConteudo = !empty($permissao) ? 'permitido' : 'go_espacoParaAssinantes';
             } else {
                 $modalConteudo = 'permitido'; // Default para quando existe token mas permissão não é explicitamente bloqueada
             }
         } else {
-            $modalConteudo = 'espacoParaAssinantes';
+            $modalConteudo = 'go_espacoParaAssinantes';
         }
 
         // Em produção, isso virgaria do auth()->user()
